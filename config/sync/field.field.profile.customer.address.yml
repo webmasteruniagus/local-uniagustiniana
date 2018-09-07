@@ -1,5 +1,5 @@
 uuid: a85c39cb-136b-41fd-9e43-fa33ee38744f
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -34,4 +34,5 @@ settings:
     additionalName: additionalName
     familyName: familyName
   langcode_override: ''
+  field_overrides: {  }
 field_type: address

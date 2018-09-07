@@ -1,0 +1,10 @@
+##
+# Routings controller callback
+
+uniagustiniana.home:
+  path: 'home'
+  defaults:
+    _controller: '\Drupal\uniagustiniana\Controller\Home::View'
+    _title: 'Universidad agustiniana'
+  requirements:
+    _permission: 'access content'

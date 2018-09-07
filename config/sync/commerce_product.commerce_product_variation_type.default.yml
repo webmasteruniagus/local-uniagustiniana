@@ -1,5 +1,5 @@
 uuid: 645fcb63-b2d3-4a98-a22f-450248e2645b
-langcode: en
+langcode: es
 status: true
 dependencies: {  }
 _core:
@@ -9,3 +9,4 @@ label: Default
 orderItemType: default
 generateTitle: true
 traits: {  }
+locked: false

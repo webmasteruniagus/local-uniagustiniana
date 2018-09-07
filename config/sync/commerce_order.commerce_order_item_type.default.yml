@@ -1,5 +1,5 @@
 uuid: 767e63f1-a895-48a6-ae78-0546434bc214
-langcode: en
+langcode: es
 status: true
 dependencies:
   enforced:
@@ -12,3 +12,4 @@ id: default
 purchasableEntityType: commerce_product_variation
 orderType: default
 traits: {  }
+locked: false

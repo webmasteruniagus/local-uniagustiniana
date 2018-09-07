@@ -4,3 +4,4 @@ default_settings:
   view_display: ''
 _core:
   default_config_hash: GzcWXQv77pdUc9h43D9QI6jw_0efBoM8KeHz5jB-z4c
+langcode: es

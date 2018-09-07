@@ -1,5 +1,5 @@
 uuid: a67baa47-83ab-4b6f-a218-e10573b72576
-langcode: en
+langcode: es
 status: true
 dependencies: {  }
 _core:
@@ -7,8 +7,9 @@ _core:
 label: Default
 id: default
 workflow: order_default
-traits: {  }
 refresh_mode: customer
 refresh_frequency: 300
 sendReceipt: true
 receiptBcc: ''
+traits: {  }
+locked: false

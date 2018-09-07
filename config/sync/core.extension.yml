@@ -19,6 +19,8 @@ module:
   commerce_store: 0
   config: 0
   contact: 0
+  context: 0
+  context_ui: 0
   contextual: 0
   ctools: 0
   datetime: 0
@@ -68,6 +70,8 @@ module:
   tour: 0
   tvi: 0
   twitter_block: 0
+  uniagustiana: 0
+  uniagustiniana: 0
   update: 0
   user: 0
   views_infinite_scroll: 0
@@ -85,3 +89,4 @@ theme:
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 profile: standard
+langcode: es
