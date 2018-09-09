@@ -1,0 +1,14 @@
+uuid: 2242cd15-a349-4fc1-8a51-454d7e282088
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.programa
+id: programa-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: programa
+permissions_ui: true
+permissions: {  }

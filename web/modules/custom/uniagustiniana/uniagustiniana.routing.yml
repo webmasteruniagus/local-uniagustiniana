@@ -1,10 +1,27 @@
 ##
 # Routings controller callback
 
+uniagustiniana.main:
+  path: '/admin/uniagustiniana'
+  defaults:
+    _controller: '\Drupal\uniagustiniana\Controller\MainMenuUniagustiniana::Uniagustiniana'
+    link_id: 'uniagustiniana.main'
+    _title: 'Uniagustiniana'
+  requirements:
+    _permission: 'administer uniagustiniana_main_menu'
+
 uniagustiniana.home:
-  path: 'home'
+  path: 'home/{tid}'
   defaults:
     _controller: '\Drupal\uniagustiniana\Controller\Home::View'
     _title: 'Universidad agustiniana'
   requirements:
     _permission: 'access content'
+
+uniagustiniana.program_autocomplete:
+  path: '/uboyaca-program/autocomplete'
+  defaults:
+    _controller: '\Drupal\uniagustiniana\Controller\AutocompleteController::handleAutocomplete'
+    _format: json
+  requirements:
+    _access: 'TRUE'

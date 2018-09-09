@@ -1,0 +1,14 @@
+uuid: 63a586a1-6f21-45fc-ad5c-a05da27d29b4
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.programa
+id: programa-member
+label: Miembro
+weight: -100
+internal: true
+audience: member
+group_type: programa
+permissions_ui: true
+permissions: {  }

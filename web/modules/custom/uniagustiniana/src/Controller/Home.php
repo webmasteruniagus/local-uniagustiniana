@@ -26,7 +26,7 @@ class Home extends ControllerBase {
    * page. The theme system will later render and surround the content with the
    * appropriate blocks, navigation, and styling.
    */
-  public function View() {
+  public function View($tid) {
     return [
       '#markup' => ''
     ];

@@ -1,0 +1,17 @@
+uuid: 16632d16-ebb5-47af-9d99-9070382067d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.programa
+  module:
+    - user
+id: programa-group_membership
+label: 'Programa: Suscripción'
+description: 'Adds users to groups as members.'
+group_type: programa
+content_plugin: group_membership
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

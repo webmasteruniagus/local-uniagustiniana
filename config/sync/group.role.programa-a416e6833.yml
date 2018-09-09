@@ -1,0 +1,17 @@
+uuid: d573c9aa-acc2-41e4-95da-6d362cc736e9
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.programa
+  enforced:
+    config:
+      - user.role.administrator
+id: programa-a416e6833
+label: Administrator
+weight: 2
+internal: true
+audience: outsider
+group_type: programa
+permissions_ui: false
+permissions: {  }

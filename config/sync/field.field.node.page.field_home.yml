@@ -1,0 +1,23 @@
+uuid: d84434a5-61a0-4f2f-8fdc-e1a981d7aded
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home
+    - node.type.page
+id: node.page.field_home
+field_name: field_home
+entity_type: node
+bundle: page
+label: Home
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

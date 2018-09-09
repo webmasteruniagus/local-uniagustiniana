@@ -1,0 +1,24 @@
+uuid: 3c5a0864-6c7e-4657-8c6c-7216fe4889c3
+langcode: es
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - uniagustiniana
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: findtheprogramofyourinterest
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: SerchProgramBlock
+settings:
+  id: SerchProgramBlock
+  label: 'Find the program of your interest'
+  provider: uniagustiniana
+  label_display: '0'
+visibility: {  }

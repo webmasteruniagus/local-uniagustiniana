@@ -1,0 +1,6 @@
+uniagustiniana.main:
+  title: 'Uniagustiniana'
+  description: 'Uniagustiniana'
+  parent: system.admin
+  route_name: uniagustiniana.main
+  weight: 100

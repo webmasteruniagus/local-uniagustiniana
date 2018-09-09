@@ -25,12 +25,15 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  devel: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
   entity_reference_revisions: 0
   field: 0
   field_collection: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -40,12 +43,15 @@ module:
   gavias_view: 0
   gavias_views_magazine: 0
   gaviasthemer: 0
+  gnode: 0
+  group: 0
   help: 0
   history: 0
   image: 0
   image_url_formatter: 0
   imce: 0
   inline_entity_form: 0
+  kint: 0
   language: 0
   link: 0
   locale: 0
@@ -69,8 +75,8 @@ module:
   toolbar: 0
   tour: 0
   tvi: 0
+  twig_tweak: 0
   twitter_block: 0
-  uniagustiana: 0
   uniagustiniana: 0
   update: 0
   user: 0
