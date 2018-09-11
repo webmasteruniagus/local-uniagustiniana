@@ -1,0 +1,29 @@
+uuid: 47b7a272-ffe9-4812-9153-c2c386d04a6b
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - gaviasthemer
+    - webform
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: webform
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  provider: webform
+  label_display: '0'
+  webform_id: contact
+  default_data: ''
+  redirect: false
+visibility: {  }
