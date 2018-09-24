@@ -1,0 +1,27 @@
+uuid: 79dae7ae-ba6e-4663-8d67-7379b8512b9f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.pagina_basica.body
+    - node.type.pagina_basica
+  module:
+    - text
+    - user
+id: node.pagina_basica.default
+targetEntityType: node
+bundle: pagina_basica
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

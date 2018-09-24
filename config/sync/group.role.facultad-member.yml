@@ -1,0 +1,14 @@
+uuid: 997c5bc8-cdc5-4a6f-9859-4052a03c15d8
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.facultad
+id: facultad-member
+label: Miembro
+weight: -100
+internal: true
+audience: member
+group_type: facultad
+permissions_ui: true
+permissions: {  }

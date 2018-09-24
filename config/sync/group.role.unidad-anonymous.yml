@@ -1,0 +1,14 @@
+uuid: 1f080e3b-849b-4177-b95c-ab938926d0c9
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.unidad
+id: unidad-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: unidad
+permissions_ui: true
+permissions: {  }

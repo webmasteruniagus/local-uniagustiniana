@@ -1,0 +1,11 @@
+##
+# Routings controller callback
+
+uniagustiniana_migration.main:
+  path: '/admin/uniagustiniana/migration'
+  defaults:
+    _form: '\Drupal\uniagustiniana_migration\Form\MigrationNews'
+    _title: 'Uniagustiniana migracion noticias'
+  requirements:
+    _permission: 'administer uniagustiniana_main_menu'
+

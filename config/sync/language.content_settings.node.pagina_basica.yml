@@ -1,0 +1,11 @@
+uuid: e6c8b934-86aa-46dc-9041-3b39f90fbe94
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.pagina_basica
+id: node.pagina_basica
+target_entity_type_id: node
+target_bundle: pagina_basica
+default_langcode: site_default
+language_alterable: false

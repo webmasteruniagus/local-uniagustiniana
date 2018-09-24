@@ -1,0 +1,23 @@
+uuid: 155b0a11-8887-4f5b-9faf-b9b54bacf877
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group_content.field_menu_principal
+    - group.content_type.unidad-group_node-pagina_basica
+id: group_content.unidad-group_node-pagina_basica.field_menu_principal
+field_name: field_menu_principal
+entity_type: group_content
+bundle: unidad-group_node-pagina_basica
+label: 'Menu principal'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

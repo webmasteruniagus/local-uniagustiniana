@@ -1,0 +1,55 @@
+uuid: 1b3fa43b-1b52-430e-a444-afe887e8675e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.group.unidad.field_block_builder
+    - field.field.group.unidad.field_body
+    - group.type.unidad
+  module:
+    - gavias_blockbuilder
+    - path
+    - text
+id: group.unidad.default
+targetEntityType: group
+bundle: unidad
+mode: default
+content:
+  field_block_builder:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: blockbuilder_widget
+    region: content
+  field_body:
+    weight: 32
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  label:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true

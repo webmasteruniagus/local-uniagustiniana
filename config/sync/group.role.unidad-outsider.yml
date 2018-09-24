@@ -1,0 +1,14 @@
+uuid: 781eaab3-7f83-4711-91bc-fea9057f9aa9
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.unidad
+id: unidad-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: unidad
+permissions_ui: true
+permissions: {  }

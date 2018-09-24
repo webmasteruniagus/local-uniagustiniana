@@ -1,0 +1,14 @@
+uuid: 5de68502-7db1-4d00-9cf3-d758247ae808
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.facultad
+id: facultad-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: facultad
+permissions_ui: true
+permissions: {  }

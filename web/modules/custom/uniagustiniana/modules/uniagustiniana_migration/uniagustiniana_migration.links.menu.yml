@@ -1,0 +1,8 @@
+# Endpoints entity menu items definition
+uniagustiniana_migration.main:
+  title: 'Migracion noticias'
+  route_name: uniagustiniana_migration.main
+  route_parameters: { package: 'Migracion' }
+  description: 'Batch para la migracion de noticias joomla a drupal'
+  parent: uniagustiniana.main
+  weight: 98

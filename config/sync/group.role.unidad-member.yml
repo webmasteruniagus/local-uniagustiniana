@@ -1,0 +1,14 @@
+uuid: f06d2f0b-9aee-41f2-900b-97d9d246ec3f
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.unidad
+id: unidad-member
+label: Miembro
+weight: -100
+internal: true
+audience: member
+group_type: unidad
+permissions_ui: true
+permissions: {  }

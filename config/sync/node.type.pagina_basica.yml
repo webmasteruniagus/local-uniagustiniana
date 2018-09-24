@@ -1,0 +1,17 @@
+uuid: 1857abf8-db8d-4f10-8b55-a09435fefda7
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Pagina Basica'
+type: pagina_basica
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

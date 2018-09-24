@@ -1,0 +1,10 @@
+uuid: 5a2bbf7f-2852-475d-aa86-4bde65ffe909
+langcode: es
+status: true
+dependencies: {  }
+id: unidad
+label: Unidad
+description: ''
+creator_membership: true
+creator_wizard: true
+creator_roles: {  }
