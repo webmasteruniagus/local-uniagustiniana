@@ -14,17 +14,39 @@ use Drupal\node\Entity\Node;
 class BatchInsertNode {
     
     public static function InsertNodeNews($content, &$context){
-        // \Drupal\Core\Database\Database::setActiveConnection('slave');
-        //     $query = db_query("SELECT * FROM rl2tw_k2_items 
-        //     where id = :id", ['id' => $content->id])->fetchObject();
-        //     // $query = db_select('rl2tw_k2_items', 'nw');
-        //     // $query->addField('nw', 'id');
-        //     // $query->addField('nw', 'fulltext');
-        //     // $query->condition('nw.id', $content->id, '=');
-        //     // $result = $query->execute()->fetchObject();
-        // // Switch back
-        // \Drupal\Core\Database\Database::setActiveConnection();
-        // ksm($query);
+        \Drupal\Core\Database\Database::setActiveConnection('slave');
+            $query = db_query("SELECT * FROM rl2tw_k2_items it
+            where it.id = :id", ['id' => $content->id])->fetchObject();
+            
+        \Drupal\Core\Database\Database::setActiveConnection();
+        
+
+        if(!empty($query->introtext)){
+
+            $text1 = self::clearHtml($query->introtext);
+            $array_images = self::getImages($query->introtext);
+
+        }
+
+        if(!empty($query->fulltext)){
+            $img = isset($array_images) 
+                ? $array_images
+                : [];
+            $array_images = self::getImages($query->fulltext, $img);
+            $text2 = self::clearHtml($query->fulltext);
+        }
+
+        ksm($text1);
+        ksm($text2);
+
+
+        
+
+
+        
+        
+
+
         // if($content['group']){
 
         //     $query = db_select('group_content_field_data', 'gfd');
@@ -206,5 +228,34 @@ class BatchInsertNode {
             $message = t('Finished with an error.');
         }
         drupal_set_message($message);
+    }
+
+    public function getImages($string, $array = []){
+        preg_match_all( '@src="([^"]+)"@' , $string, $match );
+        $src = array_pop($match);
+        $resultado = array_merge($src, $array);
+
+        $return = FALSE;
+        if(!empty($resultado)){
+            foreach ($resultado as $value) {
+                $allowed =  array('gif','png' ,'jpg', 'jpeg');
+                $ext = pathinfo($value, PATHINFO_EXTENSION);
+                if(in_array($ext,$allowed) ) {
+                    $path = parse_url($value);
+                    if(isset($path['scheme'])){
+                        $return[] = $value;
+                    }else
+                    {
+                        $return[] = 'https://www.uniagustiniana.edu.co/Noticias/' . $value;
+                    }
+                }
+            }
+        }
+        return $return;
+    }
+
+    public function clearHtml($content){
+        $content = preg_replace("/<img[^>]+\>/i", "(image) ", $content); 
+        return $content;
     }
 }

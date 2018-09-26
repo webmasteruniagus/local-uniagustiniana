@@ -48,6 +48,7 @@ class MigrationNews extends FormBase {
             $db_or->condition('nw.catid', 53, '=');
             $query->condition($db_or);
             $query->condition('nw.created_by_alias', 'Super User', '<>');
+            $query->range(15,30);
             $results = $query->execute()->fetchAll();
         // Switch back
         \Drupal\Core\Database\Database::setActiveConnection();
