@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_block_builder
+    - field.field.node.page.field_home
     - node.type.page
   module:
     - text
@@ -28,6 +29,9 @@ content:
   links:
     weight: 101
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_block_builder: true
+  field_home: true
   langcode: true

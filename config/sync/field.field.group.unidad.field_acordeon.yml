@@ -1,0 +1,40 @@
+uuid: dce7d1c1-43b8-4eb6-870c-265047323eff
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_acordeon
+    - group.type.unidad
+    - paragraphs.paragraphs_type.titulo_resumen
+  module:
+    - entity_reference_revisions
+id: group.unidad.field_acordeon
+field_name: field_acordeon
+entity_type: group
+bundle: unidad
+label: Acordeon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      titulo_resumen: titulo_resumen
+    target_bundles_drag_drop:
+      titulo_resumen:
+        enabled: true
+        weight: 5
+      paragraphs_images:
+        weight: 6
+        enabled: false
+      paragraphs_text:
+        weight: 7
+        enabled: false
+      paragraphs_video:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

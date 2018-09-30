@@ -1,0 +1,9 @@
+uuid: 66977eb2-6eee-4b55-aadb-692e1e1e6377
+langcode: es
+status: true
+dependencies: {  }
+id: titulo_resumen
+label: 'Titulo - resumen'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

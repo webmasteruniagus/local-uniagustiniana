@@ -3,35 +3,29 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.group.unidad.field_acordeon
     - field.field.group.unidad.field_block_builder
-    - field.field.group.unidad.field_body
+    - field.field.group.unidad.field_resumen
+    - field.field.group.unidad.field_subtitulo
     - group.type.unidad
   module:
     - gavias_blockbuilder
-    - text
 id: group.unidad.default
 targetEntityType: group
 bundle: unidad
 mode: default
 content:
   field_block_builder:
-    weight: -4
-    label: above
+    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_formatter
     region: content
-  field_body:
-    weight: -3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   label:
     label: hidden
     type: string
-    weight: -5
+    weight: 0
     region: content
     settings:
       link_to_entity: false
@@ -39,5 +33,8 @@ content:
 hidden:
   changed: true
   created: true
+  field_acordeon: true
+  field_resumen: true
+  field_subtitulo: true
   langcode: true
   uid: true

@@ -1,0 +1,19 @@
+uuid: 1f409bed-1976-4858-b770-b03c2889ea29
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_subtitulo
+    - group.type.unidad
+id: group.unidad.field_subtitulo
+field_name: field_subtitulo
+entity_type: group
+bundle: unidad
+label: Subtitulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

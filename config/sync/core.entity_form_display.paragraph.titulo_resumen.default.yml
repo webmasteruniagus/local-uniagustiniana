@@ -1,0 +1,33 @@
+uuid: 87107e57-7b13-450c-b60a-946cc9ee54bb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.titulo_resumen.field_resumen
+    - field.field.paragraph.titulo_resumen.field_titulo
+    - paragraphs.paragraphs_type.titulo_resumen
+id: paragraph.titulo_resumen.default
+targetEntityType: paragraph
+bundle: titulo_resumen
+mode: default
+content:
+  field_resumen:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_titulo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
