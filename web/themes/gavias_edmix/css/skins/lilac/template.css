@@ -433,9 +433,9 @@ header .header-main {
   background: #fff;
 }
 header .site-branding-logo {
-  padding: 15px 0 10px;
+  padding: 10px 0 10px;
   display: inline-block;
-  max-height: 80px;
+  max-height: 100px;
 }
 @media (max-width: 991px) {
   header .site-branding {
@@ -608,7 +608,8 @@ header.header-v1 .gva-search-region .icon {
   color: #000;
 }
 header.header-v1 .header-inner {
-  padding-right: 55px;
+  position: relative;
+  padding-right: 40px;
 }
 header.header-v1 .header-main {
   position: relative;
@@ -8129,7 +8130,8 @@ body.open-popup:after {
     margin: 0;
   }
   .navigation .gva_menu {
-    float: right;
+    display: flex;
+    justify-content: space-between;
     position: relative;
     font-size: 0;
   }
