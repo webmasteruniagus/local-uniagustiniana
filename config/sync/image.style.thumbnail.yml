@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: V1125iHZR9-hPYV5Iu9_RGq9db10awTY4C46W6e5QYY
 name: thumbnail
-label: 'Thumbnail (150×150)'
+label: 'Miniatura (100×100)'
 effects:
   d2b6caee-0c96-4a61-8e1a-2630d7bae4ab:
     uuid: d2b6caee-0c96-4a61-8e1a-2630d7bae4ab
@@ -14,3 +14,4 @@ effects:
     data:
       width: 150
       height: 150
+      anchor: center-center

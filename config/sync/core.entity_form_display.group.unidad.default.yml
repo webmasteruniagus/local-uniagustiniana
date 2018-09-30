@@ -3,36 +3,73 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.group.unidad.field_acordeon
     - field.field.group.unidad.field_block_builder
-    - field.field.group.unidad.field_body
+    - field.field.group.unidad.field_resumen
+    - field.field.group.unidad.field_subtitulo
     - group.type.unidad
   module:
+    - field_group
     - gavias_blockbuilder
+    - paragraphs
     - path
-    - text
+third_party_settings:
+  field_group:
+    group_resumen:
+      children:
+        - field_subtitulo
+        - field_resumen
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Resumen
 id: group.unidad.default
 targetEntityType: group
 bundle: unidad
 mode: default
 content:
+  field_acordeon:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_block_builder:
-    weight: 31
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_widget
     region: content
-  field_body:
-    weight: 32
+  field_resumen:
+    weight: 33
     settings:
-      rows: 9
-      summary_rows: 3
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea_with_summary
+    type: string_textarea
+    region: content
+  field_subtitulo:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   label:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -47,7 +84,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

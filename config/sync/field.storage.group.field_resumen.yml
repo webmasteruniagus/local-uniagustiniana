@@ -1,16 +1,16 @@
-uuid: 81871b69-7cce-4ed9-a019-a4a5e06e5c8f
+uuid: 932a764a-b3e2-40c9-9857-0de60c627b08
 langcode: es
 status: true
 dependencies:
   module:
     - group
-    - text
-id: group.field_body
-field_name: field_body
+id: group.field_resumen
+field_name: field_resumen
 entity_type: group
-type: text_with_summary
-settings: {  }
-module: text
+type: string_long
+settings:
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

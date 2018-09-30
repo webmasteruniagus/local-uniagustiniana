@@ -20,7 +20,7 @@ class BatchInsertNode {
             
         \Drupal\Core\Database\Database::setActiveConnection();
         
-
+        ksm($query);
         if(!empty($query->introtext)){
 
             $text1 = self::clearHtml($query->introtext);
@@ -36,12 +36,17 @@ class BatchInsertNode {
             $text2 = self::clearHtml($query->fulltext);
         }
 
-        ksm($text1);
-        ksm($text2);
+        // ksm($text1);
+        // ksm($text2);
 
+        // $node = Node::create(['type' => 'inmueble']);
+        // $node->set('title', $content['titulo']);
+        //ksm($array_images);
+        foreach ($array_images as $key => $image) {
+           ksm($image);
+            // $file = system_retrieve_file($image, 'public://noticias', TRUE, FILE_EXISTS_REPLACE);
 
-        
-
+        }
 
         
         
@@ -238,15 +243,15 @@ class BatchInsertNode {
         $return = FALSE;
         if(!empty($resultado)){
             foreach ($resultado as $value) {
-                $allowed =  array('gif','png' ,'jpg', 'jpeg');
+                $allowed =  array('png' ,'jpg', 'jpeg');
                 $ext = pathinfo($value, PATHINFO_EXTENSION);
                 if(in_array($ext,$allowed) ) {
                     $path = parse_url($value);
                     if(isset($path['scheme'])){
-                        $return[] = $value;
+                        $return['absolute'][] = $value;
                     }else
                     {
-                        $return[] = 'https://www.uniagustiniana.edu.co/Noticias/' . $value;
+                        $return['relative'][] = $value;
                     }
                 }
             }
