@@ -1,6 +1,8 @@
-header{
+/****/
+header {
   z-index: 99;
 }
+
 .single-course .course-meta .meta-item:nth-child(3n+1) {
   clear: both;
 }
