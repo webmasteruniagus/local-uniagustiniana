@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.pagina_basica.body
+    - field.field.node.pagina_basica.field_image
+    - image.style.normal_size
     - node.type.pagina_basica
   module:
     - ds
+    - image
     - text
     - user
 third_party_settings:
@@ -17,17 +20,18 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
-        classes: {  }
         wrappers:
           ds_content: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
         link_custom: ''
+        classes:
+          layout_class: {  }
     regions:
       ds_content:
+        - field_image
         - body
-        - langcode
 id: node.pagina_basica.default
 targetEntityType: node
 bundle: pagina_basica
@@ -36,10 +40,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
-    region: content
+    region: ds_content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: normal_size
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: ds_content
 hidden:
   langcode: true
   links: true
