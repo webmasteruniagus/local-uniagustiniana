@@ -53,6 +53,22 @@ body{
       padding-top: 0;
     }
   }
+ 
+  .topbat-menu-right {
+    display: flex;
+    justify-content: flex-end;
+
+    .menu_rol,
+    .gva_topbar_menu {
+      display: flex;
+
+      li { margin-left: 10px; }
+      a {
+        color: $theme-color-rgba;
+        &:hover { color: darken($theme-color-rgba, 20%) }
+      }
+    }
+  }
   .topbar-right{
     .block{
       float: right;
