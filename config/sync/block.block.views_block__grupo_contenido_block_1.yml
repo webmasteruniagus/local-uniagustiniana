@@ -1,9 +1,9 @@
-uuid: 7e2f4075-90f1-4635-8995-8d97771267cc
-langcode: en
+uuid: d76be14c-e06b-4012-b2f7-ea7334b626af
+langcode: es
 status: true
 dependencies:
   config:
-    - views.view.categories_post
+    - views.view.grupo_contenido
   module:
     - ctools
     - gaviasthemer
@@ -13,24 +13,24 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: views_block__categories_post_block_2
+id: views_block__grupo_contenido_block_1
 theme: gavias_edmix
 region: sidebar_right
-weight: -6
+weight: -13
 provider: null
-plugin: 'views_block:categories_post-block_2'
+plugin: 'views_block:grupo_contenido-block_1'
 settings:
-  id: 'views_block:categories_post-block_2'
-  label: 'Tags '
+  id: 'views_block:grupo_contenido-block_1'
+  label: ''
   provider: views
-  label_display: visible
-  views_label: 'Tags '
+  label_display: '0'
+  views_label: ''
   items_per_page: none
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
-      article: article
+      pagina_basica: pagina_basica
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
