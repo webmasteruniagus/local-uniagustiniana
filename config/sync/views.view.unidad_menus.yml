@@ -271,6 +271,8 @@ display:
         filter_groups: false
         relationships: false
         fields: false
+        style: false
+        row: false
       filters:
         type:
           id: type
@@ -406,14 +408,14 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
-          element_label_type: ''
+          element_label_type: '0'
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: '0'
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -435,6 +437,18 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+          type: ul
+          wrapper_class: unidad-menu
+          class: gva_menu--units
+      row:
+        type: fields
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:

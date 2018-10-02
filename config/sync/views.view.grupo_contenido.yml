@@ -155,14 +155,14 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
-          element_label_type: ''
+          element_label_type: '0'
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: '0'
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -278,7 +278,7 @@ display:
           empty: false
           tokenize: true
           content:
-            value: '<h3>{{ label }}</h3>'
+            value: "<div class=\"widget gsc-heading  align-left style-default\">\r\n<h3>{{ label }}</h3>\r\n<div class=\"heading-line\"></div>\r\n</div>"
             format: full_html
           plugin_id: text
       footer: {  }
@@ -369,6 +369,7 @@ display:
           entity_field: nid
           plugin_id: node_nid
       display_extenders: {  }
+      css_class: unidad-menu-secundario
     cache_metadata:
       max-age: -1
       contexts:
