@@ -3,7 +3,7 @@
     <span class="icon-row <?php print $row_attr['icon'] ?>"></span>
   <?php } ?>
   <div class="<?php print $row_class ?>" <?php if(isset($row_attr['row_id']) && $row_attr['row_id']) print 'id="'.$row_attr['row_id'].'"' ?> style="<?php print $row_style ?>" <?php if($data_bg_video) print $data_bg_video; ?>>
-    <div class="bb-inner <?php if(isset($row_attr['style_space']) && $row_attr['style_space']) print $row_attr['style_space']; ?>">  
+    <div class="bb-inner remove_padding_top <?php if(isset($row_attr['style_space']) && $row_attr['style_space']) print $row_attr['style_space']; ?>">  
       <div class="bb-container <?php print $row_attr['layout'] ?>">
         <div class="row">
           <div class="row-wrapper clearfix">

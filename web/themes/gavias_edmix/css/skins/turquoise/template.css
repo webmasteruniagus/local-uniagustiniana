@@ -9214,10 +9214,13 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .widget.gsc-block-drupal.text-light .block-inner .block-title {
   color: #fff;
 }
-.widget.gsc-block-drupal.text-light .block-inner .block-content *, .widget.gsc-block-drupal.text-light .block-inner .block-content div {
+.widget.gsc-block-drupal.text-light .block-inner .block-content *,
+.widget.gsc-block-drupal.text-light .block-inner .block-content div {
   color: #fff;
 }
-.widget.gsc-block-drupal.text-light .block-inner .block-content *:after, .widget.gsc-block-drupal.text-light .block-inner .block-content *:before, .widget.gsc-block-drupal.text-light .block-inner .block-content div:after, .widget.gsc-block-drupal.text-light .block-inner .block-content div:before {
+.widget.gsc-block-drupal.text-light .block-inner .block-content *:after, .widget.gsc-block-drupal.text-light .block-inner .block-content *:before,
+.widget.gsc-block-drupal.text-light .block-inner .block-content div:after,
+.widget.gsc-block-drupal.text-light .block-inner .block-content div:before {
   color: rgba(255, 255, 255, 0.2);
 }
 .widget.gsc-block-drupal.remove-margin-on .block {
@@ -9780,7 +9783,8 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   -o-transform: scale(1);
   transform: scale(1);
 }
-.widget.gsc-team.team-circle .team-header, .widget.gsc-team.team-circle .box-hover {
+.widget.gsc-team.team-circle .team-header,
+.widget.gsc-team.team-circle .box-hover {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -10383,7 +10387,8 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
     padding: 30px 20px;
   }
 }
-.widget.milestone-block.text-light .milestone-number, .widget.milestone-block.text-light .milestone-text {
+.widget.milestone-block.text-light .milestone-number,
+.widget.milestone-block.text-light .milestone-text {
   color: #fff !important;
 }
 .widget.milestone-block.text-light .milestone-icon span {
@@ -11074,7 +11079,8 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .gsc-image-content.skin-v2:hover .content {
   background: rgba(0, 0, 0, 0.8);
 }
-.gsc-image-content.skin-v2:hover .desc, .gsc-image-content.skin-v2:hover .action {
+.gsc-image-content.skin-v2:hover .desc,
+.gsc-image-content.skin-v2:hover .action {
   margin-top: 0;
   opacity: 1;
   filter: alpha(opacity=100);
@@ -11546,10 +11552,12 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   line-height: 40px;
   font-size: 12px;
 }
-.gsc-socials.style-2 a i.fa-facebook-square, .gsc-socials.style-2 a i.fa-facebook {
+.gsc-socials.style-2 a i.fa-facebook-square,
+.gsc-socials.style-2 a i.fa-facebook {
   background: #3b5998;
 }
-.gsc-socials.style-2 a i.fa-twitter, .gsc-socials.style-2 a i.fa-twitter-square {
+.gsc-socials.style-2 a i.fa-twitter,
+.gsc-socials.style-2 a i.fa-twitter-square {
   background: #4099ff;
 }
 .gsc-socials.style-2 a i.fa-skype {
@@ -11558,7 +11566,8 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .gsc-socials.style-2 a i.fa-dribbble {
   background: #ea4c89;
 }
-.gsc-socials.style-2 a i.fa-linkedin-square, .gsc-socials.style-2 a i.fa-linkedin {
+.gsc-socials.style-2 a i.fa-linkedin-square,
+.gsc-socials.style-2 a i.fa-linkedin {
   background: #0e76a8;
 }
 .gsc-socials.style-2 a i.fa-apple {
@@ -11567,19 +11576,24 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .gsc-socials.style-2 a i[class*="fa-pinterest"] {
   background: #c92228;
 }
-.gsc-socials.style-2 a i.fa-google-plus-square, .gsc-socials.style-2 a i.fa-google-plus {
+.gsc-socials.style-2 a i.fa-google-plus-square,
+.gsc-socials.style-2 a i.fa-google-plus {
   background: #d34836;
 }
-.gsc-socials.style-2 a i.fa-youtube-square, .gsc-socials.style-2 a i.fa-youtube {
+.gsc-socials.style-2 a i.fa-youtube-square,
+.gsc-socials.style-2 a i.fa-youtube {
   background: #c4302b;
 }
-.gsc-socials.style-2 a i.fa-vimeo-square, .gsc-socials.style-2 a i.fa-vimeo {
+.gsc-socials.style-2 a i.fa-vimeo-square,
+.gsc-socials.style-2 a i.fa-vimeo {
   background: #4ebbff;
 }
-.gsc-socials.style-2 a i.fa-tumblr-square, .gsc-socials.style-2 a i.fa-tumblr {
+.gsc-socials.style-2 a i.fa-tumblr-square,
+.gsc-socials.style-2 a i.fa-tumblr {
   background: #35465c;
 }
-.gsc-socials.style-2 a i.fa-xing-square, .gsc-socials.style-2 a i.fa-xing {
+.gsc-socials.style-2 a i.fa-xing-square,
+.gsc-socials.style-2 a i.fa-xing {
   background: #126567;
 }
 .gsc-socials.style-2 a i.fa-instagram {
@@ -11638,7 +11652,9 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .gsc-testimonial-single .job {
   font-size: 12px;
 }
-.gsc-testimonial-single.text-light .quote, .gsc-testimonial-single.text-light .job, .gsc-testimonial-single.text-light .title {
+.gsc-testimonial-single.text-light .quote,
+.gsc-testimonial-single.text-light .job,
+.gsc-testimonial-single.text-light .title {
   color: #fff;
 }
 .gsc-testimonial-single.text-light .video a {

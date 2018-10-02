@@ -8,6 +8,7 @@ global-styling:
       css/font-awesome/css/font-awesome.min.css: {}
       css/animate.css: {}
       css/icon.css: {}
+      css/custom/menu-units.css: {}
       vendor/owl-carousel/assets/owl.carousel.css: {}
       vendor/owl-carousel/assets/owl.theme.default.min.css: {}
       vendor/prettyphoto/css/prettyPhoto.css: {}

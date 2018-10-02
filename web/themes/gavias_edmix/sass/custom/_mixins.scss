@@ -1,0 +1,38 @@
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+
+
+/*
+* @mixin: links
+*/
+
+@mixin links {
+    @include transition(all 0.35s);
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+    color: $black;
+    font-family: $font-second;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    &:hover,
+    &:after,
+    &:active {
+        color: $theme-color;
+        &:before {
+            @include opacity(1);
+        }
+    }
+    &.is-active {
+        color: $theme-color;
+        &:before {
+            @include opacity(1);
+        }
+    }
+}
