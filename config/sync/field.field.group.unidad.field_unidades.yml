@@ -1,0 +1,27 @@
+uuid: 2c8245d3-ee37-4b38-b960-5aa6cc0acaaa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_unidades
+    - group.type.unidad
+id: group.unidad.field_unidades
+field_name: field_unidades
+entity_type: group
+bundle: unidad
+label: Unidades
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      unidad: unidad
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

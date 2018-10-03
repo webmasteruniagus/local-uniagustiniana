@@ -1,0 +1,10 @@
+uuid: 030d4fbf-7eec-48bf-827d-e8eccbc906d8
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.presentacion
+label: Presentacion
+targetEntityType: node
+cache: true

@@ -5,36 +5,53 @@ dependencies:
   config:
     - field.field.group.unidad.field_acordeon
     - field.field.group.unidad.field_block_builder
+    - field.field.group.unidad.field_imagen
     - field.field.group.unidad.field_resumen
     - field.field.group.unidad.field_subtitulo
+    - field.field.group.unidad.field_unidades
     - group.type.unidad
   module:
+    - ds
     - gavias_blockbuilder
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_block_builder
 id: group.unidad.default
 targetEntityType: group
 bundle: unidad
 mode: default
 content:
   field_block_builder:
-    weight: 1
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_formatter
-    region: content
-  label:
-    label: hidden
-    type: string
-    weight: 0
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
+    region: ds_content
 hidden:
   changed: true
   created: true
   field_acordeon: true
+  field_imagen: true
   field_resumen: true
   field_subtitulo: true
+  field_unidades: true
+  label: true
   langcode: true
   uid: true

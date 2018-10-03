@@ -5,12 +5,16 @@ dependencies:
   config:
     - field.field.group.unidad.field_acordeon
     - field.field.group.unidad.field_block_builder
+    - field.field.group.unidad.field_imagen
     - field.field.group.unidad.field_resumen
     - field.field.group.unidad.field_subtitulo
+    - field.field.group.unidad.field_unidades
     - group.type.unidad
+    - image.style.thumbnail
   module:
     - field_group
     - gavias_blockbuilder
+    - image
     - paragraphs
     - path
 third_party_settings:
@@ -20,7 +24,7 @@ third_party_settings:
         - field_subtitulo
         - field_resumen
       parent_name: ''
-      weight: 3
+      weight: 5
       format_type: fieldset
       format_settings:
         id: ''
@@ -35,7 +39,7 @@ mode: default
 content:
   field_acordeon:
     type: entity_reference_paragraphs
-    weight: 5
+    weight: 6
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -46,10 +50,18 @@ content:
     third_party_settings: {  }
     region: content
   field_block_builder:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_widget
+    region: content
+  field_imagen:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_resumen:
     weight: 33
@@ -67,6 +79,15 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_unidades:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   label:
     type: string_textfield
     weight: 0
@@ -75,18 +96,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   path:
     type: path
-    weight: 4
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  langcode: true
   uid: true

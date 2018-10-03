@@ -12,5 +12,6 @@ audience: member
 group_type: unidad
 permissions_ui: true
 permissions:
-  - 'view group'
-  - 'view group_node:pagina_basica entity'
+  0: 'view group'
+  1: 'view group_node:pagina_basica entity'
+  3: 'view group_node:news entity'
