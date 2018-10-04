@@ -1,0 +1,28 @@
+@import "../vars/_theme_variables";
+@import "../mixins/template";
+// Landing del home parte izquierda (sin formulario)
+.landing-home {
+    .landing_faculties--title.widget.gsc-heading {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        .heading-line {
+            width: 100%;
+            height: 1px;
+        }
+    }
+    .landing_faculties {
+        padding: 0 20px;
+        .content-inner {
+            border: 1px solid $white;
+            min-height: auto;
+            padding: 18px;
+            margin-bottom: 10px;
+        }
+        .item:last-child {
+            float: none;
+            clear: both;
+            margin: 0 auto;
+        }
+    }
+}

@@ -12984,3 +12984,161 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .gavias_customize_form .form-group.action input#gavias_customize_reset {
   background: #f0ad4e;
 }
+
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @mixin: links
+*/
+/*
+===========================================================
+                        Units pages
+===========================================================
+*/
+.unidad-menu-principal .gva-menu--units {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 50px;
+}
+.unidad-menu-principal .gva-menu--units a {
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.unidad-menu-principal .gva-menu--units a:hover, .unidad-menu-principal .gva-menu--units a:after, .unidad-menu-principal .gva-menu--units a:active {
+  color: #4582FF;
+}
+.unidad-menu-principal .gva-menu--units a:hover:before, .unidad-menu-principal .gva-menu--units a:after:before, .unidad-menu-principal .gva-menu--units a:active:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.unidad-menu-principal .gva-menu--units a.is-active {
+  color: #4582FF;
+}
+.unidad-menu-principal .gva-menu--units a.is-active:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+@media (max-width: 767px) {
+  .unidad-menu-principal .gva-menu--units {
+    margin-bottom: 30px;
+  }
+}
+
+.unidad-menu-secundario header {
+  overflow: hidden;
+}
+.unidad-menu-secundario .item {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+.unidad-menu-secundario .item a {
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.unidad-menu-secundario .item a:hover, .unidad-menu-secundario .item a:after, .unidad-menu-secundario .item a:active {
+  color: #4582FF;
+}
+.unidad-menu-secundario .item a:hover:before, .unidad-menu-secundario .item a:after:before, .unidad-menu-secundario .item a:active:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.unidad-menu-secundario .item a.is-active {
+  color: #4582FF;
+}
+.unidad-menu-secundario .item a.is-active:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/*
+===========================================================
+                    End Units page
+===========================================================
+*/
+.form-contact .form-contact--header {
+  background: #3D99F1;
+}
+.form-contact .form-contact--header.widget.gsc-heading .heading-line {
+  display: none;
+}
+.form-contact .form-contact--wrapper {
+  padding: 42px;
+  background: #fff;
+}
+.form-contact .form-contact--wrapper textarea,
+.form-contact .form-contact--wrapper input {
+  border-radius: 3px;
+}
+.form-contact .form-contact--wrapper input {
+  height: 50px;
+}
+
+/****/
+.landing-home .landing_faculties--title.widget.gsc-heading {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.landing-home .landing_faculties--title.widget.gsc-heading .heading-line {
+  width: 100%;
+  height: 1px;
+}
+.landing-home .landing_faculties {
+  padding: 0 20px;
+}
+.landing-home .landing_faculties .content-inner {
+  border: 1px solid #fff;
+  min-height: auto;
+  padding: 18px;
+  margin-bottom: 10px;
+}
+.landing-home .landing_faculties .item:last-child {
+  float: none;
+  clear: both;
+  margin: 0 auto;
+}

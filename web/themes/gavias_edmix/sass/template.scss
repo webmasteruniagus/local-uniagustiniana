@@ -1,9 +1,7 @@
 @import "vars/_theme_variables";
-
 @import "mixins/mixins";
 @import "mixins/template";
-@import "rtl/rtl"; 
-
+@import "rtl/rtl";
 @import "template/base";
 @import "template/fonts";
 @import "template/layout";
@@ -25,8 +23,12 @@
 @import "template/module";
 @import "template/menu";
 @import "template/views";
-@import "template/block-builder"; 
-@import "template/views-magazine";   
+@import "template/block-builder";
+@import "template/views-magazine";
 @import "template/effect";
-@import "template/responsive"; 
+@import "template/responsive";
 @import "template/theme-settings";
+// Custom
+@import "custom/menu-units";
+@import "custom/forms";
+@import "custom/home-landing";

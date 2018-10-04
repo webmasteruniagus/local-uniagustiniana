@@ -1,0 +1,21 @@
+@import "../vars/_theme_variables";
+// Contat form
+.form-contact {
+    .form-contact--header {
+        background: $color_1;
+        &.widget.gsc-heading .heading-line {
+            display: none;
+        }
+    }
+    .form-contact--wrapper {
+        padding: 42px;
+        background: $white;
+        textarea,
+        input {
+            border-radius: 3px;
+        }
+        input {
+            height: 50px;
+        }
+    }
+}
