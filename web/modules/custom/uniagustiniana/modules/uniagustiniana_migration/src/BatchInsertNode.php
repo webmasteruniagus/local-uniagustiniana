@@ -9,7 +9,7 @@ namespace Drupal\uniagustiniana_migration;
 
 
 use Drupal\node\Entity\Node;
-
+use Drupal\group\Entity\Group;
 
 class BatchInsertNode {
     
@@ -20,7 +20,6 @@ class BatchInsertNode {
             
         \Drupal\Core\Database\Database::setActiveConnection();
         
-        ksm($query);
         if(!empty($query->introtext)){
 
             $text1 = self::clearHtml($query->introtext);
@@ -42,30 +41,58 @@ class BatchInsertNode {
         // $node = Node::create(['type' => 'inmueble']);
         // $node->set('title', $content['titulo']);
         //ksm($array_images);
-        foreach ($array_images as $key => $image) {
-           ksm($image);
-            // $file = system_retrieve_file($image, 'public://noticias', TRUE, FILE_EXISTS_REPLACE);
+        
 
+        $group = 2;
+        
+
+
+        if($group){
+
+            $query = db_select('group_content_field_data', 'gfd');
+            $query->addField('gfd', 'entity_id');
+            $query->condition('gfd.gid', $group, '=');
+            $query->condition('gfd.label', $query->title, '=');
+            $result=$query->execute()->fetchObject();
+            if($result && $result->entity_id){
+                $node = Node::load($result->entity_id);
+            }else{
+                // Create node object and save it.
+                // $node = Node::create(['type' => 'inmueble']);
+                // $node->set('title', $content['titulo']);
+
+                if($array_images){
+                    $images = [];
+                    foreach ($array_images as $key => $image) {
+                        //ksm($key);
+                        switch ($key){
+                            case 'absolute':
+                                //$file = system_retrieve_file($image, 'public://noticias', TRUE, FILE_EXISTS_REPLACE);
+                                $data = file_get_contents($image[0]);
+                                ksm($data);
+                            break;
+                            case 'relative':
+                                //$path = drupal_realpath('public://' . $image[0]);
+                                //ksm($path);
+                                $data = file_get_contents('public://' . $image[0]);
+                                ksm($data);
+                            break;
+                        }
+                        //ksm($image);
+                        
+                        // $file = file_save_data($data, "public://" . $image_url, FILE_EXISTS_RENAME);
+                        // $images[] = array(
+                        //     'target_id' => $file->id(),
+                        //     'alt' => $content['titulo']
+                        // );
+             
+                     }
+                        
+                    
+                    //$node->set('field_property_image', $images);
+                }
+            }
         }
-
-        
-        
-
-
-        // if($content['group']){
-
-        //     $query = db_select('group_content_field_data', 'gfd');
-        //     $query->addField('gfd', 'entity_id');
-        //     $query->condition('gfd.gid', $content['group'], '=');
-        //     $query->condition('gfd.label', $content['titulo'], '=');
-        //     $result=$query->execute()->fetchObject();
-        //     if($result && $result->entity_id){
-        //         $node = Node::load($result->entity_id);
-        //     }else{
-        //         // Create node object and save it.
-        //         $node = Node::create(['type' => 'inmueble']);
-        //         $node->set('title', $content['titulo']);
-        //     }
 
         //     if($content['codigo']){
         //         $node->set('field_codigo_inmueble', $content['codigo']);
