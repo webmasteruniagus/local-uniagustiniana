@@ -188,12 +188,12 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme: ''
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''
   email_notification:
     id: email
     label: 'Email notification'
@@ -237,9 +237,9 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme: ''
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      theme_name: ''
