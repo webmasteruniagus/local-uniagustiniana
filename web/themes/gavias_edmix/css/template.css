@@ -13106,6 +13106,11 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .form-contact .form-contact--header.widget.gsc-heading .heading-line {
   display: none;
 }
+@media (max-width: 480px) {
+  .form-contact .form-contact--header.widget.gsc-heading {
+    padding: 25px 20px;
+  }
+}
 .form-contact .form-contact--wrapper {
   padding: 42px;
   background: #fff;
@@ -13117,12 +13122,18 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .form-contact .form-contact--wrapper input {
   height: 50px;
 }
+@media (max-width: 480px) {
+  .form-contact .form-contact--wrapper {
+    padding: 30px;
+  }
+}
 
 /****/
 .landing-home .landing_faculties--title.widget.gsc-heading {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0;
+  padding: 40px 0 0;
+}
+.landing-home .landing_faculties--title.widget.gsc-heading .title {
+  padding: 0;
 }
 .landing-home .landing_faculties--title.widget.gsc-heading .heading-line {
   width: 100%;
@@ -13138,7 +13149,48 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   margin-bottom: 10px;
 }
 .landing-home .landing_faculties .item:last-child {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   float: none;
   clear: both;
-  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .landing-home .landing_faculties {
+    padding: 0;
+  }
+}
+
+/****/
+.search-program form {
+  text-align: center;
+}
+.search-program form h3 {
+  font-size: 32px;
+}
+.search-program form h3::after {
+  width: 50px;
+  height: 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: white;
+  content: '';
+}
+.search-program form input[type="text"] {
+  width: 80%;
+  height: 50px;
+  color: #636363;
+  border-radius: 25px;
+  margin-bottom: 50px;
+}
+@media (max-width: 991px) {
+  .search-program form input[type="text"] {
+    width: 100%;
+  }
+}
+.search-program form input[type="submit"] {
+  display: none;
 }

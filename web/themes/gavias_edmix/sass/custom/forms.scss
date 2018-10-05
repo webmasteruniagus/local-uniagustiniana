@@ -3,8 +3,13 @@
 .form-contact {
     .form-contact--header {
         background: $color_1;
-        &.widget.gsc-heading .heading-line {
-            display: none;
+        &.widget.gsc-heading {
+            .heading-line {
+                display: none;
+            }
+            @media (max-width: $screen-xs) {
+                padding: 25px 20px;
+            }
         }
     }
     .form-contact--wrapper {
@@ -16,6 +21,9 @@
         }
         input {
             height: 50px;
+        }
+        @media (max-width: $screen-xs) {
+            padding: 30px;
         }
     }
 }

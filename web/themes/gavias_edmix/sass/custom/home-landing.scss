@@ -1,11 +1,13 @@
+@import "../mixins/mixins";
 @import "../vars/_theme_variables";
 @import "../mixins/template";
 // Landing del home parte izquierda (sin formulario)
 .landing-home {
     .landing_faculties--title.widget.gsc-heading {
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 0;
+        padding: 40px 0 0;
+        .title {
+            padding: 0;
+        }
         .heading-line {
             width: 100%;
             height: 1px;
@@ -20,9 +22,12 @@
             margin-bottom: 10px;
         }
         .item:last-child {
+            @include center-block;
             float: none;
             clear: both;
-            margin: 0 auto;
+        }
+        @media (max-width: $screen-lg) {
+            padding: 0;
         }
     }
 }

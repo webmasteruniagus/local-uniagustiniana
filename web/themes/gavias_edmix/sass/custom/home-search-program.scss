@@ -1,0 +1,32 @@
+@import "../mixins/mixins";
+@import "../mixins/template";
+@import "../vars/_theme_variables";
+// Bloque de búsqueda de programa en el home
+.search-program {
+    form {
+        text-align: center;
+        h3 {
+            font-size: $font-size-h1;
+            &::after {
+                @include size(50px, 2px);
+                @include center-block;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background: white;
+                content: '';
+            }
+        }
+        input[type="text"] {
+            @include size(80%, 50px);
+            color: $text-color;
+            border-radius: 25px;
+            margin-bottom: 50px;
+            @media (max-width: $screen-sm-max) {
+                width: 100%;
+            }
+        }
+        input[type="submit"] {
+            display: none;
+        }
+    }
+}

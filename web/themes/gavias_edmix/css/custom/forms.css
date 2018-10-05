@@ -4,6 +4,11 @@
 .form-contact .form-contact--header.widget.gsc-heading .heading-line {
   display: none;
 }
+@media (max-width: 480px) {
+  .form-contact .form-contact--header.widget.gsc-heading {
+    padding: 25px 20px;
+  }
+}
 .form-contact .form-contact--wrapper {
   padding: 42px;
   background: #fff;
@@ -14,4 +19,9 @@
 }
 .form-contact .form-contact--wrapper input {
   height: 50px;
+}
+@media (max-width: 480px) {
+  .form-contact .form-contact--wrapper {
+    padding: 30px;
+  }
 }
