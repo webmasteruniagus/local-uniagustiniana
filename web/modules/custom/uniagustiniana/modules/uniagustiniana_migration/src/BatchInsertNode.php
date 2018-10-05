@@ -9,6 +9,7 @@ namespace Drupal\uniagustiniana_migration;
 
 
 use Drupal\node\Entity\Node;
+use Drupal\group\Entity;
 use Drupal\group\Entity\Group;
 
 class BatchInsertNode {
@@ -91,10 +92,10 @@ class BatchInsertNode {
             $node->body->format = 'full_html';
 
             $node->save();
-            // if(!$result){
-            //     $group=Group::load($group);
-            //     $group->addContent($node, 'group_node:' . $group->getGroupType()->id());
-            // }
+            if(!$result){
+                $group=Group::load($group);
+                $group->addContent($node, 'group_node:news');
+            }
 
         }
     }
