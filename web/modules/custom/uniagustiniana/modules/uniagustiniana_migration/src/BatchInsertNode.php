@@ -35,219 +35,71 @@ class BatchInsertNode {
             $text2 = self::clearHtml($query->fulltext);
         }
 
-        // ksm($text1);
-        // ksm($text2);
-
-        // $node = Node::create(['type' => 'inmueble']);
-        // $node->set('title', $content['titulo']);
-        //ksm($array_images);
-        
 
         $group = 2;
         
 
 
         if($group){
+            
 
-            $query = db_select('group_content_field_data', 'gfd');
-            $query->addField('gfd', 'entity_id');
-            $query->condition('gfd.gid', $group, '=');
-            $query->condition('gfd.label', $query->title, '=');
-            $result=$query->execute()->fetchObject();
+            $gquery = db_select('group_content_field_data', 'gfd');
+            $gquery->addField('gfd', 'entity_id');
+            $gquery->condition('gfd.gid', $group, '=');
+            $gquery->condition('gfd.label', $query->title, '=');
+            $result=$gquery->execute()->fetchObject();
+
             if($result && $result->entity_id){
                 $node = Node::load($result->entity_id);
             }else{
-                // Create node object and save it.
-                // $node = Node::create(['type' => 'inmueble']);
-                // $node->set('title', $content['titulo']);
-
-                if($array_images){
-                    $images = [];
-                    foreach ($array_images as $key => $image) {
-                        //ksm($key);
-                        switch ($key){
-                            case 'absolute':
-                                //$file = system_retrieve_file($image, 'public://noticias', TRUE, FILE_EXISTS_REPLACE);
-                                $data = file_get_contents($image[0]);
-                                ksm($data);
-                            break;
-                            case 'relative':
-                                //$path = drupal_realpath('public://' . $image[0]);
-                                //ksm($path);
-                                $data = file_get_contents('public://' . $image[0]);
-                                ksm($data);
-                            break;
-                        }
-                        //ksm($image);
-                        
-                        // $file = file_save_data($data, "public://" . $image_url, FILE_EXISTS_RENAME);
-                        // $images[] = array(
-                        //     'target_id' => $file->id(),
-                        //     'alt' => $content['titulo']
-                        // );
-             
-                     }
-                        
-                    
-                    //$node->set('field_property_image', $images);
-                }
+                //Create node object and save it.
+                $node = Node::create(['type' => 'news']);
+                $node->set('title', $query->title);
             }
+            if($array_images){
+                $images = [];
+                foreach ($array_images as $key => $image) {
+                    $image_url = basename($image[0]);
+                    switch ($key){
+                        case 'absolute':
+                            $data = file_get_contents($image[0]);
+                        break;
+                        case 'relative':
+                            $data = file_get_contents('public://' . $image[0]);
+                        break;
+                    }
+                    if($data){
+                        $file = file_save_data($data, "public://noticias/" . $image_url, FILE_EXISTS_RENAME);
+                        $images[] = array(
+                            'target_id' => $file->id(),
+                            'alt' => $query->title
+                        );
+                    }
+                }
+                    
+                $node->set('field_news_image', $images);
+            }
+
+            if($text1 && $text2){
+                $node->set('body', $text1 . '</br>' . $text2);
+            }elseif($text1){
+                $node->set('body', $text1);
+            }elseif($text2){
+                $node->set('body', $text2);
+            }
+
+            $node->body->format = 'full_html';
+
+            $node->save();
+            // if(!$result){
+            //     $group=Group::load($group);
+            //     $group->addContent($node, 'group_node:' . $group->getGroupType()->id());
+            // }
+
         }
-
-        //     if($content['codigo']){
-        //         $node->set('field_codigo_inmueble', $content['codigo']);
-        //     }
-        //     if($content['imagen']){
-        //         $images_url = explode(',', $content['imagen']);
-        //         $images = [];
-        //         foreach ($images_url as $image_url){
-        //             //Save Image in local from remote data.
-        //             $data = file_get_contents(file_directory_temp() . '/' . $_SESSION['folder']. '/' . $image_url);
-        //             $file = file_save_data($data, "public://" . $image_url, FILE_EXISTS_RENAME);
-        //             $images[] = array(
-        //                 'target_id' => $file->id(),
-        //                 'alt' => $content['titulo']
-        //             );
-        //         }
-        //         $node->set('field_property_image', $images);
-        //     }
-        //     if($content['tipo_operacion']){
-        //         $node->set('field_choose_operation_type', $content['tipo_operacion']);
-        //     }
-        //     if($content['ciudad']){
-        //         $node->set('field_city', $content['ciudad']);
-        //     }
-        //     if($content['zona']){
-        //         $node->set('field_barrio_zona', $content['zona']);
-        //     }
-        //     if($content['precio']){
-        //         $precio = trim($content['precio']);
-        //         if(is_numeric($precio)){
-        //             $node->set('field_precio_float', $precio);
-        //         }
-        //     }
-        //     if($content['administracion']){
-        //         $node->set('field_incluied_administration', $content['administracion']);
-        //         if($content['precio_administracion']){
-        //             $precio_administracion = trim($content['precio_administracion']);
-        //             if(is_numeric($precio_administracion)){
-        //                 $node->set('field_property_admin_price', $precio_administracion);
-        //             }
-        //         }
-        //     }
-        //     if($content['direccion']){
-        //         $field_collection_item = FieldCollectionItem::create([
-        //             'field_name' => 'field_property_location'
-        //         ]);
-
-
-        //         $node->field_property_location->appendItem($field_collection_item);
-
-        //         $field_collection_item->field_property_location_address->value = $content['direccion'];
-
-        //         if($content['coordenadas']){
-        //             $coordenada = explode(',', $content['coordenadas']);
-        //             $lat = $coordenada[0];
-        //             $lng = $coordenada[1];
-        //             $edit = array(
-        //                 'lat' => $lat,
-        //                 'lng' => $lng,
-        //             );
-        //             $field_collection_item->set('field_property_location_in_map', $edit);
-        //         }
-        //     }
-
-        //     if($content['inmueble_nuevo']){
-        //         $node->set('field_property_is_new', $content['inmueble_nuevo']);
-        //     }
-        //     if($content['inmueble_disponible']){
-        //         $node->set('field_state_property', $content['inmueble_disponible']);
-        //     }
-        //     if($content['piso']){
-        //         $node->set('field_property_level_floor', trim($content['piso']));
-        //     }
-        //     if($content['antiguedad']){
-        //         $node->set('field_property_rank_antiquity', $content['antiguedad']);
-        //     }
-        //     $field_collection_item2 = FieldCollectionItem::create([
-        //         'field_name' => 'field_about_property'
-        //     ]);
-        //     $node->field_about_property->appendItem($field_collection_item2);
-        //     if($content['area']){
-        //         $field_collection_item2->field_area->value = trim($content['area']);
-        //     }
-        //     if($content['banos']){
-        //         $field_collection_item2->field_property_bathrooms->value = trim($content['banos']);
-        //     }
-        //     if($content['habitaciones']){
-        //         $field_collection_item2->field_property_rooms->value = trim($content['habitaciones']);
-        //     }
-        //     if($content['estrato']){
-        //         $field_collection_item2->field_property_stratum->value = trim($content['estrato']);
-        //     }
-        //     if($content['tipo_inmueble']){
-        //         $node->set('field_tipo_de_inmueble', $content['tipo_inmueble']);
-        //     }
-        //     if($content['descripcion']){
-        //         $node->set('field_property_descrip', $content['descripcion']);
-        //     }
-        //     if($content['caracteristicas_sector']){
-        //         $carsector = explode(';', $content['caracteristicas_sector']);
-        //         $tid_csec = [];
-        //         foreach ($carsector as $csec){
-        //             $term = \Drupal::entityTypeManager()
-        //                 ->getStorage('taxonomy_term')
-        //                 ->loadByProperties(['name' => $csec]);
-        //             if($term){
-        //                 $term = reset($term);
-        //                 $tid_csec[] = $term->id();
-        //             }
-        //         }
-        //         $node->set('field_caracteristicas_del_sector', $tid_csec);
-        //     }
-        //     if($content['caracteristicas_exteriores']){
-        //         $carext = explode(';', $content['caracteristicas_exteriores']);
-        //         $tid_ext = [];
-        //         foreach ($carext as $cext){
-        //             $term = \Drupal::entityTypeManager()
-        //                 ->getStorage('taxonomy_term')
-        //                 ->loadByProperties(['name' => $cext]);
-        //             if($term){
-        //                 $term = reset($term);
-        //                 $tid_ext[] = $term->id();
-        //             }
-        //         }
-        //         $node->set('field_caracteristicas_exteriores', $tid_ext);
-        //     }
-        //     if($content['caracteristicas_interior']){
-        //         $carint = explode(';', $content['caracteristicas_interior']);
-        //         $tid_int = [];
-        //         foreach ($carint as $cint){
-        //             $term = \Drupal::entityTypeManager()
-        //                 ->getStorage('taxonomy_term')
-        //                 ->loadByProperties(['name' => $cint]);
-        //             if($term){
-        //                 $term = reset($term);
-        //                 $tid_int[] = $term->id();
-        //             }
-        //         }
-        //         $node->set('field_caracteristicas_interior', $tid_int);
-        //     }
-        //     $node->save();
-        //     if(!$result){
-        //         $group=Group::load($content['group']);
-        //         $group->addContent($node, 'group_node:inmueble');
-        //     }
-
-        //     $message = 'Insert Node...';
-        // }else{
-        //     $message = "no fue posible insertar el contenido";
-        // }
-        // $context['message'] = $message;
-        // $context['results'][] = 1;
     }
     
-    function InsertNodeInmuebleFinishedCallback($success, $results, $operations) {
+    function InsertNodeFinishedCallback($success, $results, $operations) {
         // The 'success' parameter means no fatal PHP errors were detected. All
         // other error management should be handled using 'results'.
         if ($success) {
@@ -288,6 +140,9 @@ class BatchInsertNode {
 
     public function clearHtml($content){
         $content = preg_replace("/<img[^>]+\>/i", "(image) ", $content); 
+        $content = str_replace('{module Compartir-redes}', '', $content);
+        $content = str_replace('(image)', '', $content);
+        $content = str_replace('<em>Haz clic sobre la imagen para ampliarla.</em>', '', $content);
         return $content;
     }
 }
