@@ -389,12 +389,18 @@ display:
     display_options:
       display_extenders: {  }
       block_hide_empty: true
+      arguments: {  }
+      defaults:
+        arguments: false
+        cache: false
+      cache:
+        type: none
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
       tags: {  }
   block_2:
     display_plugin: block
