@@ -250,7 +250,9 @@ class BatchInsertNode {
                             case 'relative':
                                 foreach ($image as $key => $img) {
                                     $image_url = basename($img);
+                                    ksm($img);
                                     $data = file_get_contents('public://backup_news/' . $img);
+                                    ksm($data);
                                     if($data){
                                         $file = file_save_data($data, $path . $image_url, FILE_EXISTS_REPLACE);
                                         $images[] = array(

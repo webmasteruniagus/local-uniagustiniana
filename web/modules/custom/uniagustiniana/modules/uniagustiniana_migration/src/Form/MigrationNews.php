@@ -56,7 +56,9 @@ class MigrationNews extends FormBase {
             $query->condition('nw.created', '%'.db_like('00:00:00').'%', 'NOT LIKE');
             $query->condition('nw.title', '%'.db_like('JA').'%', 'NOT LIKE');
             $query->condition('nw.title', '%'.db_like('etets').'%', 'NOT LIKE');
-            //$query->range(0, 50);
+            $query->condition('nw.title', 'Egresados fortalecen sus conocimientos en Conciliación Fiscal y Renta Personas Naturales', '=');
+            
+            $query->range(0, 10);
             $results = $query->execute()->fetchAll();
         // Switch back
         \Drupal\Core\Database\Database::setActiveConnection();
