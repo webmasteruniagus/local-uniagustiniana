@@ -1,0 +1,19 @@
+uuid: 08fb670e-8e90-4f98-8e28-aa7f4e741eb9
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.programa
+    - node.type.news
+  module:
+    - gnode
+    - node
+id: programa-group_node-news
+label: 'Programa: Group node (News)'
+description: 'Adds <em class="placeholder">News</em> content to groups both publicly and privately.'
+group_type: programa
+content_plugin: 'group_node:news'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

@@ -1,0 +1,15 @@
+uuid: f1de9dd3-d3ff-4ef0-a28f-ed4052a5b1cf
+langcode: es
+status: true
+dependencies: {  }
+name: 600x450
+label: 600x450
+effects:
+  08f53e06-7d42-41f9-be5d-0c4d3dbd70f2:
+    uuid: 08f53e06-7d42-41f9-be5d-0c4d3dbd70f2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 450
+      anchor: center-center

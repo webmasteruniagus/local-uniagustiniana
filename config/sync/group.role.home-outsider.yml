@@ -1,15 +1,15 @@
-uuid: b29f8061-540d-48d3-9fa1-4376428df6f1
+uuid: a4c2ef95-6ee3-403f-ae76-c40e27600a14
 langcode: es
 status: true
 dependencies:
   config:
-    - group.type.facultad
-id: facultad-anonymous
-label: Anonymous
-weight: -102
+    - group.type.home
+id: home-outsider
+label: Outsider
+weight: -101
 internal: true
-audience: anonymous
-group_type: facultad
+audience: outsider
+group_type: home
 permissions_ui: true
 permissions:
   - 'view group_node:event entity'

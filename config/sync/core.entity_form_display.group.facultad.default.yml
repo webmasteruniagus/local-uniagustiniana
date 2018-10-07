@@ -1,0 +1,44 @@
+uuid: acf329ff-1b84-4170-b56c-52dcccd1ccf2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.group.facultad.field_block_builder
+    - group.type.facultad
+  module:
+    - gavias_blockbuilder
+    - path
+id: group.facultad.default
+targetEntityType: group
+bundle: facultad
+mode: default
+content:
+  field_block_builder:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: blockbuilder_widget
+    region: content
+  label:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true

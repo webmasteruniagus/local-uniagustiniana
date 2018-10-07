@@ -11,4 +11,7 @@ internal: true
 audience: outsider
 group_type: facultad
 permissions_ui: true
-permissions: {  }
+permissions:
+  - 'view group_node:event entity'
+  - 'view group_node:news entity'
+  - 'view group'

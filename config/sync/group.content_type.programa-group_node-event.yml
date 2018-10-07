@@ -1,0 +1,19 @@
+uuid: 9f2964b9-6ea9-4aa7-9766-ff3113260c65
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.programa
+    - node.type.event
+  module:
+    - gnode
+    - node
+id: programa-group_node-event
+label: 'Programa: Group node (Event)'
+description: 'Adds <em class="placeholder">Event</em> content to groups both publicly and privately.'
+group_type: programa
+content_plugin: 'group_node:event'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

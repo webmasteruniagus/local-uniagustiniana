@@ -1,0 +1,10 @@
+uuid: d09a8da9-d445-472e-a583-35d37560c618
+langcode: es
+status: true
+dependencies: {  }
+id: home
+label: Home
+description: ''
+creator_membership: true
+creator_wizard: true
+creator_roles: {  }

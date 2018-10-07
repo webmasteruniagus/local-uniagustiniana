@@ -457,6 +457,7 @@ display:
         pager: false
         title: false
         relationships: false
+        header: false
       fields:
         rendered_entity:
           id: rendered_entity
@@ -641,6 +642,20 @@ display:
             'group_node:testimonial': '0'
           entity_type: group_content
           plugin_id: group_content_to_entity
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content:
+            value: "<div class=\"widget gsc-heading  align-left style-default\">\r\n<h3>Noticias</h3>\r\n<div class=\"heading-line\"></div>\r\n</div>"
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,0 +1,17 @@
+uuid: 890164c9-9728-41ca-b307-df89ff078f52
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.home
+  enforced:
+    config:
+      - user.role.administrator
+id: home-a416e6833
+label: Administrator
+weight: 2
+internal: true
+audience: outsider
+group_type: home
+permissions_ui: false
+permissions: {  }
