@@ -1,0 +1,21 @@
+uuid: 26f7e507-9220-44c5-be29-5ad10366dbeb
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_titulo_menu_secundario
+field_name: field_titulo_menu_secundario
+entity_type: group
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

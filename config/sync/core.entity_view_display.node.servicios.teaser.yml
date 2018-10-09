@@ -1,37 +1,31 @@
-uuid: 9bff550b-9bee-4a26-9f06-3d74bd02a440
+uuid: 2c16bf6d-82ad-450a-9af4-8192486e4c2b
 langcode: es
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.page.body
-    - field.field.node.page.field_block_builder
-    - field.field.node.page.field_home
-    - node.type.page
+    - field.field.node.servicios.body
+    - node.type.servicios
   module:
     - text
     - user
-_core:
-  default_config_hash: rN2zrScZAJ9xB16hm_Deb9QJKy6JXnn0PdI2n5Z3KRs
-id: node.page.teaser
+id: node.servicios.teaser
 targetEntityType: node
-bundle: page
+bundle: servicios
 mode: teaser
 content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 100
+    weight: 101
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
   links:
-    weight: 101
-    region: content
+    weight: 100
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
-  field_block_builder: true
-  field_home: true
   langcode: true

@@ -1,0 +1,19 @@
+uuid: 8007b814-9778-4929-9cbe-16aebfa28d33
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_resumen_menu_secundario
+field_name: field_resumen_menu_secundario
+entity_type: group
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

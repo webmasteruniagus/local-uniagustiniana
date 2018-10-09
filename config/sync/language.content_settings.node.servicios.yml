@@ -1,11 +1,11 @@
-uuid: d5c5cf70-341c-489c-bde6-5290f9dd850d
+uuid: 11930aa7-a0ee-4f90-a192-7472cfff246b
 langcode: es
 status: true
 dependencies:
   config:
-    - node.type.page
-id: node.page
+    - node.type.servicios
+id: node.servicios
 target_entity_type_id: node
-target_bundle: page
+target_bundle: servicios
 default_langcode: site_default
 language_alterable: false

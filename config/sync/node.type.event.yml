@@ -6,12 +6,11 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
 _core:
   default_config_hash: nvHF09iDWxhFYEptt2axVFtJ_SRBNwluPw06SlLgTs8
-name: Event
+name: Eventos
 type: event
 description: ''
 help: ''

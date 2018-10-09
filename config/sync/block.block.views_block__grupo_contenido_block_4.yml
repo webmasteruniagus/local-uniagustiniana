@@ -1,4 +1,4 @@
-uuid: d76be14c-e06b-4012-b2f7-ea7334b626af
+uuid: ff9a5226-9be1-410c-85bd-482b54b87a4e
 langcode: es
 status: true
 dependencies:
@@ -13,14 +13,14 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: views_block__grupo_contenido_block_1
+id: views_block__grupo_contenido_block_4
 theme: gavias_edmix
 region: sidebar_right
-weight: -14
+weight: -13
 provider: null
-plugin: 'views_block:grupo_contenido-block_1'
+plugin: 'views_block:grupo_contenido-block_4'
 settings:
-  id: 'views_block:grupo_contenido-block_1'
+  id: 'views_block:grupo_contenido-block_4'
   label: ''
   provider: views
   label_display: '0'
@@ -30,7 +30,7 @@ visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
-      pagina_basica: pagina_basica
+      news: news
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

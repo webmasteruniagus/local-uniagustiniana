@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_news_image
-    - image.style.small
+    - image.style.normal_size
     - node.type.news
   module:
     - file
@@ -135,7 +135,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: small
+            image_style: normal_size
             image_link: ''
           group_column: ''
           group_columns: {  }

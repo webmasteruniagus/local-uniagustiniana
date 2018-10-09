@@ -1,0 +1,19 @@
+uuid: 78c56265-04c5-489d-8576-45f4ae04b908
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_resumen_menu_secundario
+    - group.type.unidad
+id: group.unidad.field_resumen_menu_secundario
+field_name: field_resumen_menu_secundario
+entity_type: group
+bundle: unidad
+label: 'Resumen - Menu Secundario'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

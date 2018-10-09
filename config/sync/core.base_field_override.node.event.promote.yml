@@ -1,18 +1,17 @@
-uuid: d84434a5-61a0-4f2f-8fdc-e1a981d7aded
+uuid: 6d1f8ed1-f233-49d4-a1cf-eb70b105cba7
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.field_home
-    - node.type.page
-id: node.page.field_home
-field_name: field_home
+    - node.type.event
+id: node.event.promote
+field_name: promote
 entity_type: node
-bundle: page
-label: Home
+bundle: event
+label: 'Promoted to front page'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

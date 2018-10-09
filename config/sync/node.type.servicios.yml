@@ -1,4 +1,4 @@
-uuid: efa7b457-a3cd-4535-9c4e-5d1c46b5f774
+uuid: f043b91d-fa7f-4c6f-9109-a6ccea47a4b1
 langcode: es
 status: true
 dependencies:
@@ -8,10 +8,10 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Noticias
-type: news
+name: Servicios
+type: servicios
 description: ''
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: true

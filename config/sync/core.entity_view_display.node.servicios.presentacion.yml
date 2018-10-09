@@ -1,0 +1,71 @@
+uuid: 901de87e-7ee9-4bf6-ac75-21a242220237
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.presentacion
+    - field.field.node.servicios.body
+    - field.field.node.servicios.field_image
+    - image.style.square
+    - node.type.servicios
+  module:
+    - ds
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_image
+        - node_title
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h4
+          class: ''
+          link: false
+id: node.servicios.presentacion
+targetEntityType: node
+bundle: servicios
+mode: presentacion
+content:
+  body:
+    label: hidden
+    type: text_trimmed
+    weight: 2
+    settings:
+      trim_length: 150
+    third_party_settings: {  }
+    region: ds_content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: square
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: ds_content
+hidden:
+  langcode: true
+  links: true

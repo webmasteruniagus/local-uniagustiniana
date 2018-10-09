@@ -6,8 +6,11 @@ dependencies:
     - field.field.group.unidad.field_acordeon
     - field.field.group.unidad.field_block_builder
     - field.field.group.unidad.field_imagen
+    - field.field.group.unidad.field_imagen_menu_secundario
     - field.field.group.unidad.field_resumen
+    - field.field.group.unidad.field_resumen_menu_secundario
     - field.field.group.unidad.field_subtitulo
+    - field.field.group.unidad.field_titulo_menu_secundario
     - field.field.group.unidad.field_unidades
     - group.type.unidad
     - image.style.thumbnail
@@ -32,6 +35,25 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Resumen
+    group_menu_secundario:
+      children:
+        - field_imagen_menu_secundario
+        - field_titulo_menu_secundario
+        - field_resumen_menu_secundario
+      parent_name: ''
+      weight: 6
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Menu Secundario'
 id: group.unidad.default
 targetEntityType: group
 bundle: unidad
@@ -39,7 +61,7 @@ mode: default
 content:
   field_acordeon:
     type: entity_reference_paragraphs
-    weight: 6
+    weight: 7
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -63,6 +85,14 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
+  field_imagen_menu_secundario:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_resumen:
     weight: 33
     settings:
@@ -71,8 +101,24 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_resumen_menu_secundario:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_subtitulo:
     weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_titulo_menu_secundario:
+    weight: 9
     settings:
       size: 60
       placeholder: ''

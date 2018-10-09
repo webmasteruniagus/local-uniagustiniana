@@ -24,25 +24,23 @@ class MenuRol extends BlockBase {
      */
 
     public function build() {
-        $query = db_select('node_field_data', 'n');
-        $query->addField('n', 'nid');
-        $query->addField('n', 'title');
-        $query->join('node__field_home', 'nh', 'n.nid = nh.entity_id');
-        $query->condition('n.type', 'page', '=');
-        $query->condition('nh.field_home_value', 1, '=');
+        $query = db_select('groups_field_data', 'g');
+        $query->addField('g', 'id');
+        $query->addField('g', 'label');
+        $query->condition('g.type', 'home', '=');
         $results = $query->execute();
         $current_path = \Drupal::service('path.current')->getPath();
         $path =  explode('/', $current_path);
         $active_menu = false;
-        if($path[1] == 'node' && is_numeric($path[2])){
+        if($path[1] == 'group' && is_numeric($path[2])){
             $active_menu = $path[2];
         }
         $items = [];
         foreach ($results as $result){
-            $link = '/node/' . $result->nid;
+            $link = '/group/' . $result->id;
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath($link);
             $url = Url::fromUri('internal:' . $alias);
-            if($active_menu == $result->nid){
+            if($active_menu == $result->id){
                 $link_options = array(
                     'attributes' => array(
                         'class' => array(
@@ -51,9 +49,9 @@ class MenuRol extends BlockBase {
                     ),
                 );
                 $url->setOptions($link_options);
-                $link = Link::fromTextAndUrl($result->title, $url)->toString();
+                $link = Link::fromTextAndUrl($result->label, $url)->toString();
             }else{
-                $link = Link::fromTextAndUrl($result->title, $url)->toString();
+                $link = Link::fromTextAndUrl($result->label, $url)->toString();
             }
             $items[] = [
                 '#markup' => $link,

@@ -1,13 +1,16 @@
-uuid: 5ff15489-1b8f-4637-9c12-648acc0791ea
+uuid: 23eb6a56-52eb-43e2-8c82-ec59e75a70ef
 langcode: es
 status: true
 dependencies:
   config:
-    - field.field.group.home.field_block_builder
-    - group.type.home
+    - field.field.node.servicios.body
+    - field.field.node.servicios.field_image
+    - node.type.servicios
   module:
     - ds
-    - gavias_blockbuilder
+    - image
+    - text
+    - user
 third_party_settings:
   ds:
     layout:
@@ -26,22 +29,29 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - field_block_builder
-id: group.home.default
-targetEntityType: group
-bundle: home
+        - field_image
+        - body
+id: node.servicios.default
+targetEntityType: node
+bundle: servicios
 mode: default
 content:
-  field_block_builder:
-    weight: 0
+  body:
     label: hidden
+    type: text_default
+    weight: 1
     settings: {  }
     third_party_settings: {  }
-    type: blockbuilder_formatter
+    region: ds_content
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
     region: ds_content
 hidden:
-  changed: true
-  created: true
-  label: true
   langcode: true
-  uid: true
+  links: true

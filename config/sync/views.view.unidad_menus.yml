@@ -4,11 +4,15 @@ status: true
 dependencies:
   config:
     - field.storage.group.field_imagen
+    - field.storage.group.field_imagen_menu_secundario
     - field.storage.group.field_resumen
+    - field.storage.group.field_resumen_menu_secundario
     - field.storage.group.field_subtitulo
+    - field.storage.group.field_titulo_menu_secundario
     - field.storage.paragraph.field_resumen
     - field.storage.paragraph.field_titulo
     - group.type.unidad
+    - image.style.400x600
     - image.style.medium
   module:
     - gavias_views_magazine
@@ -476,6 +480,7 @@ display:
         filter_groups: false
         relationships: false
         fields: false
+        header: false
       filters:
         type:
           id: type
@@ -640,6 +645,145 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+        field_resumen_menu_secundario:
+          id: field_resumen_menu_secundario
+          table: group__field_resumen_menu_secundario
+          field: field_resumen_menu_secundario
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_titulo_menu_secundario:
+          id: field_titulo_menu_secundario
+          table: group__field_titulo_menu_secundario
+          field: field_titulo_menu_secundario
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content:
+            value: "<div class=\"widget gsc-heading  align-left style-default\">\r\n<h3>{{ field_titulo_menu_secundario }}</h3>\r\n<div class=\"heading-line\"></div>\r\n<p>{{ field_resumen_menu_secundario }}</p>\r\n</div>"
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -647,7 +791,9 @@ display:
         - 'languages:language_interface'
         - route
         - url
-      tags: {  }
+      tags:
+        - 'config:field.storage.group.field_resumen_menu_secundario'
+        - 'config:field.storage.group.field_titulo_menu_secundario'
   block_3:
     display_plugin: block
     id: block_3
@@ -1252,3 +1398,105 @@ display:
         - url
       tags:
         - 'config:field.storage.group.field_imagen'
+  block_6:
+    display_plugin: block
+    id: block_6
+    display_title: 'Imagen Menu Secundario'
+    position: 6
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      fields:
+        field_imagen_menu_secundario:
+          id: field_imagen_menu_secundario
+          table: group__field_imagen_menu_secundario
+          field: field_imagen_menu_secundario
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: 400x600
+            image_link: ''
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      defaults:
+        fields: false
+        filters: false
+        filter_groups: false
+        relationships: false
+      filters:
+        type:
+          id: type
+          table: groups_field_data
+          field: type
+          value:
+            unidad: unidad
+          entity_type: group
+          entity_field: type
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      relationships: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - route
+        - url
+      tags:
+        - 'config:field.storage.group.field_imagen_menu_secundario'
