@@ -1,0 +1,24 @@
+uuid: 709a6590-525a-4b9d-9c6d-f6f78c65d235
+langcode: es
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - social_media
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: socialsharingblock
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: social_sharing_block
+settings:
+  id: social_sharing_block
+  label: 'Social Sharing block'
+  provider: social_media
+  label_display: '0'
+visibility: {  }

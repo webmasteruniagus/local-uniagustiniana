@@ -1,0 +1,10 @@
+uuid: 5748f59b-4863-40cd-bad8-bbf58c9cf7ae
+langcode: es
+status: true
+dependencies: {  }
+id: node__pagina_basica
+label: 'Content: Pagina Basica'
+tags:
+  og_image: '[node:field_image:600x450:url]'
+  og_url: '[node:field_image:600x450:url]'
+  og_image_url: '[node:field_image:600x450:url]'

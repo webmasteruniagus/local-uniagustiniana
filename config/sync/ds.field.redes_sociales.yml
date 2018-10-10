@@ -1,0 +1,11 @@
+id: redes_sociales
+label: 'Redes sociales'
+ui_limit: ''
+properties:
+  block: social_sharing_block
+  use_block_title: false
+type: block
+type_label: 'Block field'
+entities:
+  group: group
+  node: node

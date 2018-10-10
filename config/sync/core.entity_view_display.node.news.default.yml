@@ -30,6 +30,13 @@ third_party_settings:
     regions:
       ds_content:
         - body
+        - 'dynamic_block_field:node-redes_sociales'
+    fields:
+      'dynamic_block_field:node-redes_sociales':
+        plugin_id: 'dynamic_block_field:node-redes_sociales'
+        weight: 1
+        label: hidden
+        formatter: default
 id: node.news.default
 targetEntityType: node
 bundle: news

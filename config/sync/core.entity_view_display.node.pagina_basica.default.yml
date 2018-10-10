@@ -32,6 +32,13 @@ third_party_settings:
       ds_content:
         - field_image
         - body
+        - 'dynamic_block_field:node-redes_sociales'
+    fields:
+      'dynamic_block_field:node-redes_sociales':
+        plugin_id: 'dynamic_block_field:node-redes_sociales'
+        weight: 2
+        label: hidden
+        formatter: default
 id: node.pagina_basica.default
 targetEntityType: node
 bundle: pagina_basica

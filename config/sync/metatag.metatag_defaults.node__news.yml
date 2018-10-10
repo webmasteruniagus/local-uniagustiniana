@@ -1,0 +1,9 @@
+uuid: b4cc8f28-2641-451e-a2ba-5f693c6f1b57
+langcode: es
+status: true
+dependencies: {  }
+id: node__news
+label: 'Content: Noticias'
+tags:
+  og_image: '[node:field_news_image:0:600x450:url]'
+  og_image_url: '[node:field_news_image:0:600x450:url]'
