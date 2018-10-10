@@ -16,7 +16,6 @@ dependencies:
   module:
     - ds
     - gavias_blockbuilder
-    - image
 third_party_settings:
   ds:
     layout:
@@ -48,37 +47,16 @@ content:
     third_party_settings: {  }
     type: blockbuilder_formatter
     region: ds_content
-  field_imagen_menu_secundario:
-    weight: 1
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_resumen_menu_secundario:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_titulo_menu_secundario:
-    weight: 2
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
 hidden:
   changed: true
   created: true
   field_acordeon: true
   field_imagen: true
+  field_imagen_menu_secundario: true
   field_resumen: true
+  field_resumen_menu_secundario: true
   field_subtitulo: true
+  field_titulo_menu_secundario: true
   field_unidades: true
   label: true
   langcode: true

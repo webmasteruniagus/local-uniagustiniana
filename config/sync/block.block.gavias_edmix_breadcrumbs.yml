@@ -3,9 +3,18 @@ langcode: en
 status: true
 dependencies:
   module:
+    - gaviasthemer
     - system
   theme:
     - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    breadcrumb_background_image_path: ''
+    breadcrumb_background_color: ''
+    breadcrumb_background_position: 'center top'
+    breadcrumb_background_repeat: no-repeat
+    breadcrumb_color_style: text-light
+    classes: ''
 _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: gavias_edmix_breadcrumbs
@@ -19,4 +28,9 @@ settings:
   label: Breadcrumbs
   provider: system
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
