@@ -11,6 +11,7 @@ dependencies:
     - node.type.news
   module:
     - ds
+    - field_group
     - image
     - text
     - user
@@ -32,25 +33,63 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
+        - group_news
         - field_news_image
-        - node_post_date
+        - group_caption
         - node_title
         - body
+        - node_post_date
     fields:
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 3
         label: hidden
         formatter: default
         settings:
           link: true
-          wrapper: h4
+          wrapper: h5
           class: ''
       node_post_date:
         plugin_id: node_post_date
-        weight: 1
+        weight: 5
         label: hidden
-        formatter: ds_post_date_short
+        formatter: ds_post_date_long
+  field_group:
+    group_news:
+      children:
+        - field_news_image
+        - group_caption
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: thumbnail
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: news
+    group_caption:
+      children:
+        - node_title
+        - body
+        - node_post_date
+      parent_name: group_news
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: caption
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: caption
 id: node.news.presentacion
 targetEntityType: node
 bundle: news
@@ -59,13 +98,13 @@ content:
   body:
     label: hidden
     type: text_trimmed
-    weight: 3
+    weight: 4
     settings:
       trim_length: 100
     third_party_settings: {  }
     region: ds_content
   field_news_image:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       image_style: square

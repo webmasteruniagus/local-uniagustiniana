@@ -1,4 +1,17 @@
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
 /****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @mixin: links
+*/
 .landing-home .landing_faculties--title.widget.gsc-heading {
   padding: 40px 0 0;
 }
@@ -13,10 +26,10 @@
   padding: 0 20px;
 }
 .landing-home .landing_faculties .content-inner {
+  margin-bottom: 10px !important;
   border: 1px solid #fff;
   min-height: auto;
   padding: 18px;
-  margin-bottom: 10px;
 }
 .landing-home .landing_faculties .item:last-child {
   display: block;

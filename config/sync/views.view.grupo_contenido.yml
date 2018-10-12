@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.presentacion
-    - core.entity_view_mode.node.teaser_2
     - node.type.news
     - node.type.servicios
   module:
@@ -580,7 +579,7 @@ display:
         type: mlayout_5
         options:
           grouping: {  }
-          row_class: ''
+          row_class: thumbnail--card
           default_row_class: false
           items_lg: '4'
           items_md: '4'

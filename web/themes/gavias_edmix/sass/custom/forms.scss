@@ -1,5 +1,6 @@
-@import "../vars/_theme_variables";
-// Contat form
+@import "./variables";
+@import "./mixins";
+// Contat
 .form-contact {
     .form-contact--header {
         background: $color_1;
@@ -17,13 +18,28 @@
         background: $white;
         textarea,
         input {
-            border-radius: 3px;
+            @include border-radius(3px);
         }
         input {
             height: 50px;
         }
         @media (max-width: $screen-xs) {
-            padding: 30px;
+            padding: 30px 25px;
         }
+    }
+}
+
+// Search
+.search-content {
+    top: 52px !important;
+    .search-form {
+        @include flexbox;
+    }
+    @media (max-width: $screen-md) {
+        top: 76px !important;
+    }
+    @media (max-width: $screen-xs) {
+        top: 52px !important;
+        left: calc((100vw / 1.7) * -1);
     }
 }

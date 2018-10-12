@@ -1,6 +1,5 @@
-@import "../mixins/mixins";
-@import "../mixins/template";
-@import "../vars/_theme_variables";
+@import "./variables";
+@import "./mixins";
 // Bloque de búsqueda de programa en el home
 .search-program {
     form {
@@ -10,17 +9,17 @@
             &::after {
                 @include size(50px, 2px);
                 @include center-block;
-                margin-top: 20px;
-                margin-bottom: 20px;
-                background: white;
+                @include margin(top, 20px);
+                @include margin(bottom, 20px);
+                background: $white;
                 content: '';
             }
         }
         input[type="text"] {
             @include size(80%, 50px);
+            @include border-radius(25px);
+            @include margin(bottom, 50px);
             color: $text-color;
-            border-radius: 25px;
-            margin-bottom: 50px;
             @media (max-width: $screen-sm-max) {
                 width: 100%;
             }

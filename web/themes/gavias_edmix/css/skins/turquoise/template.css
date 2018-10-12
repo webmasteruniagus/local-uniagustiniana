@@ -364,26 +364,6 @@ body.logged-in.toolbar-horizontal .header-v2 {
 .topbar .block .block-content {
   padding-top: 0;
 }
-.topbar .topbat-menu-right {
-  display: flex;
-  justify-content: flex-end;
-}
-.topbar .topbat-menu-right .menu_rol,
-.topbar .topbat-menu-right .gva_topbar_menu {
-  display: flex;
-}
-.topbar .topbat-menu-right .menu_rol li,
-.topbar .topbat-menu-right .gva_topbar_menu li {
-  margin-left: 10px;
-}
-.topbar .topbat-menu-right .menu_rol a,
-.topbar .topbat-menu-right .gva_topbar_menu a {
-  color: rgba(254, 184, 0, 0.8);
-}
-.topbar .topbat-menu-right .menu_rol a:hover,
-.topbar .topbat-menu-right .gva_topbar_menu a:hover {
-  color: rgba(152, 110, 0, 0.8);
-}
 .topbar .topbar-right .block {
   float: right;
   margin-right: 10px;
@@ -462,7 +442,8 @@ header .site-branding-logo {
     text-align: left;
     padding-bottom: 10px;
   }
-  header .header-right-inner, header .header-right-inner .block {
+  header .header-right-inner,
+  header .header-right-inner .block {
     text-align: center !important;
   }
 }

@@ -1,3 +1,17 @@
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @mixin: links
+*/
 .form-contact .form-contact--header {
   background: #3D99F1;
 }
@@ -16,12 +30,38 @@
 .form-contact .form-contact--wrapper textarea,
 .form-contact .form-contact--wrapper input {
   border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 .form-contact .form-contact--wrapper input {
   height: 50px;
 }
 @media (max-width: 480px) {
   .form-contact .form-contact--wrapper {
-    padding: 30px;
+    padding: 30px 25px;
+  }
+}
+
+.search-content {
+  top: 52px !important;
+}
+.search-content .search-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 992px) {
+  .search-content {
+    top: 76px !important;
+  }
+}
+@media (max-width: 480px) {
+  .search-content {
+    top: 52px !important;
+    left: calc((100vw / 1.7) * -1);
   }
 }

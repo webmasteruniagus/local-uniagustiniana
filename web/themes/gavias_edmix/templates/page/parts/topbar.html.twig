@@ -1,7 +1,7 @@
 <div class="topbar">
     <div class="container">
         <div class="row">
-            <div class="topbar-left col-sm-6 col-xs-6">
+            <div class="topbar-left col-sm-6 col-xs-12">
                 <div class="social-list">
                     {% if custom_social_link.facebook %}
                         <a href="{{custom_social_link.facebook}}">
@@ -60,7 +60,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="topbar-center topbat-menu-right col-sm-6 col-xs-6">
+            <div class="topbar-right col-sm-6 col-xs-12">
                 {{ drupal_block('MenuRol')}}
                 {% if custom_account == '' %}
                         <ul class="gva_topbar_menu">

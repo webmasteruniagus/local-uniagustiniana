@@ -1,7 +1,5 @@
-@import "../vars/_theme_variables";
-@import "../mixins/mixins";
-@import "../mixins/template";
-@import "mixins";
+@import "./variables";
+@import "./mixins";
 
 /*
 ===========================================================
@@ -35,6 +33,7 @@
         border-bottom: 1px dashed $border-color;
         a {
             @include links;
+            text-align: left;
             padding-left: 0;
             padding-right: 0;
         }

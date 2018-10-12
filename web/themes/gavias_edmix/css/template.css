@@ -364,26 +364,6 @@ body.logged-in.toolbar-horizontal .header-v2 {
 .topbar .block .block-content {
   padding-top: 0;
 }
-.topbar .topbat-menu-right {
-  display: flex;
-  justify-content: flex-end;
-}
-.topbar .topbat-menu-right .menu_rol,
-.topbar .topbat-menu-right .gva_topbar_menu {
-  display: flex;
-}
-.topbar .topbat-menu-right .menu_rol li,
-.topbar .topbat-menu-right .gva_topbar_menu li {
-  margin-left: 10px;
-}
-.topbar .topbat-menu-right .menu_rol a,
-.topbar .topbat-menu-right .gva_topbar_menu a {
-  color: rgba(254, 184, 0, 0.8);
-}
-.topbar .topbat-menu-right .menu_rol a:hover,
-.topbar .topbat-menu-right .gva_topbar_menu a:hover {
-  color: rgba(152, 110, 0, 0.8);
-}
 .topbar .topbar-right .block {
   float: right;
   margin-right: 10px;
@@ -462,7 +442,8 @@ header .site-branding-logo {
     text-align: left;
     padding-bottom: 10px;
   }
-  header .header-right-inner, header .header-right-inner .block {
+  header .header-right-inner,
+  header .header-right-inner .block {
     text-align: center !important;
   }
 }
@@ -12985,6 +12966,16 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   background: #f0ad4e;
 }
 
+/*
+===========================================================
+                        Custom imports
+===========================================================
+*/
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
 /****/
 /*
 ===========================================================
@@ -13077,6 +13068,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-align: left;
   padding-left: 0;
   padding-right: 0;
 }
@@ -13100,6 +13092,20 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
                     End Units page
 ===========================================================
 */
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @mixin: links
+*/
 .form-contact .form-contact--header {
   background: #3D99F1;
 }
@@ -13118,17 +13124,56 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 .form-contact .form-contact--wrapper textarea,
 .form-contact .form-contact--wrapper input {
   border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 .form-contact .form-contact--wrapper input {
   height: 50px;
 }
 @media (max-width: 480px) {
   .form-contact .form-contact--wrapper {
-    padding: 30px;
+    padding: 30px 25px;
   }
 }
 
+.search-content {
+  top: 52px !important;
+}
+.search-content .search-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 992px) {
+  .search-content {
+    top: 76px !important;
+  }
+}
+@media (max-width: 480px) {
+  .search-content {
+    top: 52px !important;
+    left: calc((100vw / 1.7) * -1);
+  }
+}
+
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
 /****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @mixin: links
+*/
 .landing-home .landing_faculties--title.widget.gsc-heading {
   padding: 40px 0 0;
 }
@@ -13143,10 +13188,10 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   padding: 0 20px;
 }
 .landing-home .landing_faculties .content-inner {
+  margin-bottom: 10px !important;
   border: 1px solid #fff;
   min-height: auto;
   padding: 18px;
-  margin-bottom: 10px;
 }
 .landing-home .landing_faculties .item:last-child {
   display: block;
@@ -13161,7 +13206,20 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   }
 }
 
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
 /****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @mixin: links
+*/
 .search-program form {
   text-align: center;
 }
@@ -13174,17 +13232,21 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background: white;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  background: #fff;
   content: '';
 }
 .search-program form input[type="text"] {
   width: 80%;
   height: 50px;
-  color: #636363;
   border-radius: 25px;
-  margin-bottom: 50px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin-bottom: 50px !important;
+  color: #636363;
 }
 @media (max-width: 991px) {
   .search-program form input[type="text"] {
@@ -13193,4 +13255,109 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 .search-program form input[type="submit"] {
   display: none;
+}
+
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @mixin: links
+*/
+.thumbnail--card .thumbnail {
+  -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
+  padding: 0;
+}
+.thumbnail--card .thumbnail,
+.thumbnail--card .thumbnail img {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.thumbnail--card .caption {
+  padding: 20px;
+}
+.thumbnail--card h5 {
+  margin-top: 0;
+}
+.thumbnail--card .field--name-body p {
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.thumbnail--card .field--name-node-post-date {
+  font-size: 12px;
+}
+
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @mixin: links
+*/
+.container-bg {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 480px) {
+  .topbar .topbar-left > div {
+    float: none;
+    text-align: center;
+  }
+}
+.topbar .topbar-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+}
+@media (max-width: 480px) {
+  .topbar .topbar-right {
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+  }
+}
+.topbar .topbar-right ul.menu_rol, .topbar .topbar-right ul.gva_topbar_menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+.topbar .topbar-right ul.menu_rol li, .topbar .topbar-right ul.gva_topbar_menu li {
+  background: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+}
+.topbar .topbar-right ul.menu_rol li a, .topbar .topbar-right ul.gva_topbar_menu li a {
+  color: rgba(254, 184, 0, 0.8);
+}
+.topbar .topbar-right ul.menu_rol li a:hover, .topbar .topbar-right ul.gva_topbar_menu li a:hover {
+  color: rgba(152, 110, 0, 0.8);
 }
