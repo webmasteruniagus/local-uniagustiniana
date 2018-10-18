@@ -10,7 +10,18 @@
 ===========================================================
 */
 /*
+* @function
+* @return path img + img
+*/
+/*
 * @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
 */
 .search-program form {
   text-align: center;

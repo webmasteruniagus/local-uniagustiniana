@@ -9,7 +9,18 @@
 
 
 /*
+* @function
+* @return path img + img
+*/
+
+@function svg($img) {
+    @return url($svg + $img + '.svg') no-repeat center / contain;
+}
+
+
+/*
 * @mixin: links
+* @description: links styles
 */
 
 @mixin links {
@@ -38,4 +49,28 @@
             @include opacity(1);
         }
     }
+}
+
+
+/*
+* @mixin: Center with flexbox
+*/
+
+@mixin align-items($justify) {
+    -webkit-align-items: $justify;
+    -moz-align-items: $justify;
+    -ms-align-items: $justify;
+    align-items: $justify;
+}
+
+
+/*
+* @mixin: Flex direction
+*/
+
+@mixin flex-direction($direction) {
+    -webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
 }

@@ -15,7 +15,7 @@ dependencies:
     - image.style.400x600
     - image.style.medium
   module:
-    - gavias_views_magazine
+    - gavias_view
     - group
     - image
     - node
@@ -473,7 +473,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      css_class: unidad-menu-secundario
+      css_class: ''
       defaults:
         css_class: false
         filters: false
@@ -481,6 +481,8 @@ display:
         relationships: false
         fields: false
         header: false
+        style: false
+        row: false
       filters:
         type:
           id: type
@@ -616,9 +618,9 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
-          element_label_type: ''
+          element_label_type: '0'
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
@@ -781,9 +783,21 @@ display:
           empty: false
           tokenize: true
           content:
-            value: "<div class=\"widget gsc-heading  align-left style-default\">\r\n<h3>{{ field_titulo_menu_secundario }}</h3>\r\n<div class=\"heading-line\"></div>\r\n<p>{{ field_resumen_menu_secundario }}</p>\r\n</div>"
+            value: "<div class=\"widget gsc-heading  align-left style-default\">\r\n<h3>{{ field_titulo_menu_secundario }}</h3>\r\n<div class=\"heading-line\"></div><br>\r\n<p>{{ field_resumen_menu_secundario }}</p>\r\n</div>"
             format: full_html
           plugin_id: text
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: 'panel panel-default'
+          default_row_class: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
+      row:
+        type: fields
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -1219,6 +1233,7 @@ display:
         style: false
         row: false
         relationships: false
+        header: false
       filters:
         type:
           id: type
@@ -1270,13 +1285,13 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: div
+          element_wrapper_class: img-rounded
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -1334,12 +1349,12 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
-          element_label_type: ''
+          element_label_type: '0'
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: h5
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
@@ -1364,15 +1379,27 @@ display:
           entity_field: label
           plugin_id: field
       style:
-        type: mlayout_5
+        type: gvaowl
         options:
           grouping: {  }
           row_class: ''
           default_row_class: false
+          items: '3'
           items_lg: '3'
           items_md: '3'
-          items_sm: '1'
+          items_sm: '3'
           items_xs: '1'
+          loop: 0
+          speed: '200'
+          auto_play: 0
+          auto_play_speed: '1000'
+          auto_play_timeout: '3000'
+          auto_play_hover: 1
+          navigation: 1
+          rewind_nav: 0
+          pagination: 0
+          mouse_drag: 1
+          touch_drag: 1
           el_class: ''
           el_id: ''
       row:
@@ -1389,6 +1416,20 @@ display:
           required: true
           plugin_id: standard
       block_hide_empty: true
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<div class=\"widget gsc-heading  align-center style-default\">\r\n<h2>Nuestras Unidades</h2>\r\n<div class=\"heading-line\"></div>\r\n</div>"
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

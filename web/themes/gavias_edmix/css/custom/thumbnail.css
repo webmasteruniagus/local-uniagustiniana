@@ -10,7 +10,18 @@
 ===========================================================
 */
 /*
+* @function
+* @return path img + img
+*/
+/*
 * @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
 */
 .thumbnail--card .thumbnail {
   -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
@@ -19,11 +30,11 @@
 }
 .thumbnail--card .thumbnail,
 .thumbnail--card .thumbnail img {
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .thumbnail--card .caption {
   padding: 20px;
