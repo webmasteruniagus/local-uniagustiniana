@@ -1,0 +1,9 @@
+uuid: d00e2205-7019-4250-a65e-87486085561c
+langcode: es
+status: true
+dependencies: {  }
+id: requisitos_de_ingreso
+label: 'Requisitos de ingreso'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

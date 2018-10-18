@@ -1,0 +1,43 @@
+uuid: 0ee0f9ef-85dc-4b6a-a58b-1a39b48de696
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_requisitos_de_ingreso
+    - group.type.programa
+    - paragraphs.paragraphs_type.requisitos_de_ingreso
+  module:
+    - entity_reference_revisions
+id: group.programa.field_requisitos_de_ingreso
+field_name: field_requisitos_de_ingreso
+entity_type: group
+bundle: programa
+label: 'Requisitos de ingreso'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      requisitos_de_ingreso: requisitos_de_ingreso
+    target_bundles_drag_drop:
+      requisitos_de_ingreso:
+        enabled: true
+        weight: 6
+      paragraphs_images:
+        weight: 7
+        enabled: false
+      paragraphs_text:
+        weight: 8
+        enabled: false
+      paragraphs_video:
+        weight: 9
+        enabled: false
+      titulo_resumen:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,33 @@
+uuid: 5147248c-9ec0-4b21-9b48-902eddd7bd81
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.requisitos_de_ingreso.field_resumen
+    - field.field.paragraph.requisitos_de_ingreso.field_titulo
+    - paragraphs.paragraphs_type.requisitos_de_ingreso
+id: paragraph.requisitos_de_ingreso.default
+targetEntityType: paragraph
+bundle: requisitos_de_ingreso
+mode: default
+content:
+  field_resumen:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_titulo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

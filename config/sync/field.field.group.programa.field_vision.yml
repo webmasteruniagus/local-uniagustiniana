@@ -1,0 +1,19 @@
+uuid: 907973f8-6ce2-4af0-bfea-235f7149f30b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_vision
+    - group.type.programa
+id: group.programa.field_vision
+field_name: field_vision
+entity_type: group
+bundle: programa
+label: Visión
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

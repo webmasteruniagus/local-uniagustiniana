@@ -1,0 +1,10 @@
+uuid: 3b398892-1236-4dc0-997e-5c36562ad75c
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.programa
+label: Programa
+targetEntityType: group
+cache: true

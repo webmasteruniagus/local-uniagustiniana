@@ -1,0 +1,21 @@
+uuid: c453d842-4778-41c8-bd4c-3d6ec63f2287
+langcode: es
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - group
+    - paragraphs
+id: group.field_requisitos_de_ingreso
+field_name: field_requisitos_de_ingreso
+entity_type: group
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

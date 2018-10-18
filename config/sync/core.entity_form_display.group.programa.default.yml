@@ -9,16 +9,22 @@ dependencies:
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_fecha_de_resolucion
     - field.field.group.programa.field_metodologia
+    - field.field.group.programa.field_mision
+    - field.field.group.programa.field_objetivo_del_programa
+    - field.field.group.programa.field_perfil_profesional
     - field.field.group.programa.field_periocidad
+    - field.field.group.programa.field_requisitos_de_ingreso
     - field.field.group.programa.field_sede
     - field.field.group.programa.field_tipo_de_formacion
     - field.field.group.programa.field_titulo
     - field.field.group.programa.field_total_creditos
     - field.field.group.programa.field_vigencia
+    - field.field.group.programa.field_vision
     - group.type.programa
   module:
     - datetime
     - gavias_blockbuilder
+    - paragraphs
     - path
 id: group.programa.default
 targetEntityType: group
@@ -68,11 +74,47 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_mision:
+    weight: 45
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_objetivo_del_programa:
+    weight: 44
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_perfil_profesional:
+    weight: 43
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_periocidad:
     weight: 40
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_requisitos_de_ingreso:
+    type: entity_reference_paragraphs
+    weight: 47
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_sede:
     weight: 37
@@ -110,6 +152,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_vision:
+    weight: 46
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   label:
     type: string_textfield

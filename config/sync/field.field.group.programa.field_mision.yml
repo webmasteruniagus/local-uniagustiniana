@@ -1,0 +1,19 @@
+uuid: 1ec2cab8-c7a9-4d9a-b84f-be744e74d560
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_mision
+    - group.type.programa
+id: group.programa.field_mision
+field_name: field_mision
+entity_type: group
+bundle: programa
+label: Misión
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

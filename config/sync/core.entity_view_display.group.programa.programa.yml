@@ -1,0 +1,271 @@
+uuid: ca672485-260a-4ab9-a1ca-26b9fb7c6917
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.group.programa
+    - field.field.group.programa.field_block_builder
+    - field.field.group.programa.field_ciudad
+    - field.field.group.programa.field_codigo_snies_8182
+    - field.field.group.programa.field_duracion
+    - field.field.group.programa.field_fecha_de_resolucion
+    - field.field.group.programa.field_metodologia
+    - field.field.group.programa.field_mision
+    - field.field.group.programa.field_objetivo_del_programa
+    - field.field.group.programa.field_perfil_profesional
+    - field.field.group.programa.field_periocidad
+    - field.field.group.programa.field_sede
+    - field.field.group.programa.field_tipo_de_formacion
+    - field.field.group.programa.field_titulo
+    - field.field.group.programa.field_total_creditos
+    - field.field.group.programa.field_vigencia
+    - field.field.group.programa.field_vision
+    - group.type.programa
+  module:
+    - datetime
+    - ds
+    - field_group
+    - options
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_programa_block_1
+        - field_perfil_profesional
+        - field_mision
+        - group_programa_block_2
+        - field_titulo
+        - field_objetivo_del_programa
+        - field_vision
+        - group_column_1
+        - group_column_2
+        - field_codigo_snies_8182
+        - field_fecha_de_resolucion
+        - field_vigencia
+        - field_ciudad
+        - field_sede
+        - field_metodologia
+        - field_tipo_de_formacion
+        - field_periocidad
+        - field_duracion
+        - field_total_creditos
+  field_group:
+    group_programa_block_1:
+      children:
+        - field_titulo
+        - field_codigo_snies_8182
+        - field_fecha_de_resolucion
+        - field_vigencia
+        - field_ciudad
+        - field_sede
+        - field_metodologia
+        - field_tipo_de_formacion
+        - field_periocidad
+        - field_duracion
+        - field_total_creditos
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: programa-block-1
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: programa-block-1
+    group_programa_block_2:
+      children:
+        - group_column_1
+        - group_column_2
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: programa-block-2
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: programa-block-2
+    group_column_1:
+      children:
+        - field_perfil_profesional
+        - field_objetivo_del_programa
+      parent_name: group_programa_block_2
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: block-2-column-1
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: column-1
+    group_column_2:
+      children:
+        - field_mision
+        - field_vision
+      parent_name: group_programa_block_2
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: block-2-column-2
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: column-2
+id: group.programa.programa
+targetEntityType: group
+bundle: programa
+mode: programa
+content:
+  field_ciudad:
+    type: entity_reference_label
+    weight: 5
+    region: ds_content
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_codigo_snies_8182:
+    type: string
+    weight: 2
+    region: ds_content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_duracion:
+    type: string
+    weight: 10
+    region: ds_content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_fecha_de_resolucion:
+    type: datetime_custom
+    weight: 3
+    region: ds_content
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'd \d\e F \d\e\l Y'
+    third_party_settings: {  }
+  field_metodologia:
+    type: list_default
+    weight: 7
+    region: ds_content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_mision:
+    type: basic_string
+    weight: 0
+    region: ds_content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_objetivo_del_programa:
+    type: basic_string
+    weight: 1
+    region: ds_content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_perfil_profesional:
+    type: basic_string
+    weight: 0
+    region: ds_content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_periocidad:
+    type: list_default
+    weight: 9
+    region: ds_content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_sede:
+    type: entity_reference_label
+    weight: 6
+    region: ds_content
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_tipo_de_formacion:
+    type: list_default
+    weight: 8
+    region: ds_content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_titulo:
+    type: string
+    weight: 1
+    region: ds_content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_total_creditos:
+    type: number_integer
+    weight: 11
+    region: ds_content
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: false
+    third_party_settings: {  }
+  field_vigencia:
+    type: number_integer
+    weight: 4
+    region: ds_content
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_vision:
+    type: basic_string
+    weight: 1
+    region: ds_content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  field_block_builder: true
+  label: true
+  langcode: true
+  uid: true
