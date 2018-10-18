@@ -1,0 +1,21 @@
+uuid: caeb6935-b794-4413-9749-107314aaa7bc
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_duracion
+field_name: field_duracion
+entity_type: group
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

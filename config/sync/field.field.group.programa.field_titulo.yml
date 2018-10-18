@@ -1,0 +1,19 @@
+uuid: 0c7abad9-8a12-4013-b881-e2dc514997c5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_titulo
+    - group.type.programa
+id: group.programa.field_titulo
+field_name: field_titulo
+entity_type: group
+bundle: programa
+label: Titulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

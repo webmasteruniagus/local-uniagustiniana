@@ -1,0 +1,11 @@
+uuid: 3b92bf3b-0c94-42d5-baf3-7a67b3eb83d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sede
+id: taxonomy_term.sede
+target_entity_type_id: taxonomy_term
+target_bundle: sede
+default_langcode: site_default
+language_alterable: false

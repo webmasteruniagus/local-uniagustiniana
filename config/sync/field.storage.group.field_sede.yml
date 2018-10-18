@@ -1,0 +1,20 @@
+uuid: 2a3dadfd-8815-4df9-a0ea-e3dd868990f4
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+    - taxonomy
+id: group.field_sede
+field_name: field_sede
+entity_type: group
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

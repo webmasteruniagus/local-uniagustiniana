@@ -1,0 +1,29 @@
+uuid: 11e68564-fe93-4e37-b7fb-15415ce94680
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_ciudad
+    - group.type.programa
+    - taxonomy.vocabulary.ciudad
+id: group.programa.field_ciudad
+field_name: field_ciudad
+entity_type: group
+bundle: programa
+label: Ciudad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ciudad: ciudad
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

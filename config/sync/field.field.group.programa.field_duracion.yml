@@ -1,0 +1,19 @@
+uuid: e0620100-a6c7-4db5-914d-af03f90d16ae
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_duracion
+    - group.type.programa
+id: group.programa.field_duracion
+field_name: field_duracion
+entity_type: group
+bundle: programa
+label: Duración
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

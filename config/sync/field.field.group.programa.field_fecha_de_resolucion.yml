@@ -1,0 +1,21 @@
+uuid: 15995a16-b58f-4983-892d-0255c1050fba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_fecha_de_resolucion
+    - group.type.programa
+  module:
+    - datetime
+id: group.programa.field_fecha_de_resolucion
+field_name: field_fecha_de_resolucion
+entity_type: group
+bundle: programa
+label: 'Fecha de Resolución'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

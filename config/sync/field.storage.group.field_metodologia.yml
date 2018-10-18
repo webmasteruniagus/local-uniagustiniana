@@ -1,0 +1,27 @@
+uuid: 61487ce6-2c8b-4e6d-b04a-f71732e3b74a
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+    - options
+id: group.field_metodologia
+field_name: field_metodologia
+entity_type: group
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: presencial
+      label: Presencial
+    -
+      value: virtual
+      label: Virtual
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

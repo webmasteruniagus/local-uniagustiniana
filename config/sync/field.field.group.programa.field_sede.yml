@@ -1,0 +1,29 @@
+uuid: e22b4f79-3141-470c-bff8-456615633c2f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_sede
+    - group.type.programa
+    - taxonomy.vocabulary.sede
+id: group.programa.field_sede
+field_name: field_sede
+entity_type: group
+bundle: programa
+label: Sede
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sede: sede
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: 4807d496-44d0-43fe-8e6f-3d641f6ac65e
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+    - options
+id: group.field_tipo_de_formacion
+field_name: field_tipo_de_formacion
+entity_type: group
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: tecnico
+      label: Tecnico
+    -
+      value: tecnologo
+      label: Tecnologo
+    -
+      value: profesional
+      label: Profesional
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

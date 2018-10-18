@@ -1,0 +1,22 @@
+uuid: 327971f4-c237-404d-9363-efab76b8eb98
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.materia
+id: node.materia.promote
+field_name: promote
+entity_type: node
+bundle: materia
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

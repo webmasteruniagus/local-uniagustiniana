@@ -1,0 +1,27 @@
+uuid: ba0b0388-10c5-427c-b8a8-842365397ca8
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+    - options
+id: group.field_periocidad
+field_name: field_periocidad
+entity_type: group
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: trimestral
+      label: Trimestral
+    -
+      value: semestral
+      label: Semestral
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
