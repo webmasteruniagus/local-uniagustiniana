@@ -1,0 +1,21 @@
+uuid: 8addbc0e-a0a5-4892-856b-2f0d16c9303a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_metodologia
+    - group.type.programa
+  module:
+    - options
+id: group.programa.field_metodologia
+field_name: field_metodologia
+entity_type: group
+bundle: programa
+label: Metodología
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

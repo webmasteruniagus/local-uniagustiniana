@@ -1,0 +1,21 @@
+uuid: cb0d9830-15a9-420e-952e-b63a9f4ccaf5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_tipo_de_formacion
+    - group.type.programa
+  module:
+    - options
+id: group.programa.field_tipo_de_formacion
+field_name: field_tipo_de_formacion
+entity_type: group
+bundle: programa
+label: 'Tipo de formación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

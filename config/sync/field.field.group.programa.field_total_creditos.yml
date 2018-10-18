@@ -1,0 +1,23 @@
+uuid: 245f0f82-3438-4e3e-8045-c9e82b7b5771
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_total_creditos
+    - group.type.programa
+id: group.programa.field_total_creditos
+field_name: field_total_creditos
+entity_type: group
+bundle: programa
+label: 'Total créditos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

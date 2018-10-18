@@ -1,0 +1,21 @@
+uuid: 99819099-6fbb-4443-affd-7684b04bffbe
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_periocidad
+    - group.type.programa
+  module:
+    - options
+id: group.programa.field_periocidad
+field_name: field_periocidad
+entity_type: group
+bundle: programa
+label: Periocidad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

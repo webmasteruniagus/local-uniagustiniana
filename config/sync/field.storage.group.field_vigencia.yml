@@ -1,0 +1,20 @@
+uuid: c6c7b845-8c89-4015-8abc-bcfa9c8f55d5
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_vigencia
+field_name: field_vigencia
+entity_type: group
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

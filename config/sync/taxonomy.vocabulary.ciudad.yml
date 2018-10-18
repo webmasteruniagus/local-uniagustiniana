@@ -1,0 +1,9 @@
+uuid: 74bacea6-b144-449e-8d82-ea634eb462e9
+langcode: es
+status: true
+dependencies: {  }
+name: Ciudad
+vid: ciudad
+description: ''
+hierarchy: 0
+weight: 0

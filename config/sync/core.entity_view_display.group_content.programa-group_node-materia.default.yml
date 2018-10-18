@@ -1,0 +1,24 @@
+uuid: d18bac48-ee4e-4a8f-bc84-be0744c6f92f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.group_content.programa-group_node-materia.field_semestre
+    - group.content_type.programa-group_node-materia
+id: group_content.programa-group_node-materia.default
+targetEntityType: group_content
+bundle: programa-group_node-materia
+mode: default
+content:
+  field_semestre:
+    weight: -4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  entity_id: true
+  langcode: true
+  uid: true

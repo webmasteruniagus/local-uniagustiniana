@@ -1,0 +1,20 @@
+uuid: 3d96b01f-958e-4605-8c86-d79f3e965bd2
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime
+    - group
+id: group.field_fecha_de_resolucion
+field_name: field_fecha_de_resolucion
+entity_type: group
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 9e143aa0-fde8-4305-b347-2cfa6c2433d3
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_total_creditos
+field_name: field_total_creditos
+entity_type: group
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

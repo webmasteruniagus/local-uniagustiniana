@@ -1,0 +1,21 @@
+uuid: aae41ca4-4b71-443d-ab11-ac1a211218fb
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_codigo_snies_8182
+field_name: field_codigo_snies_8182
+entity_type: group
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

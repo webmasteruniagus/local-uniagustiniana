@@ -1,0 +1,9 @@
+uuid: 105c06d2-8d94-4af8-b741-bc152de38394
+langcode: es
+status: true
+dependencies: {  }
+name: Semestre
+vid: semestre
+description: ''
+hierarchy: 0
+weight: 0

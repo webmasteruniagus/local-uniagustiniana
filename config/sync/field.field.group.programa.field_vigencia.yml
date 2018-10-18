@@ -1,0 +1,23 @@
+uuid: bbc3b7d1-db10-4d02-bd59-48a514f6da78
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_vigencia
+    - group.type.programa
+id: group.programa.field_vigencia
+field_name: field_vigencia
+entity_type: group
+bundle: programa
+label: Vigencia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: años
+field_type: integer
