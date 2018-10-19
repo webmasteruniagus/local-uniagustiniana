@@ -33,7 +33,7 @@
 * @mixin: Flex direction
 */
 .form-contact .form-contact--header {
-  background: var(--color_1);
+  background: #3D99F1;
 }
 .form-contact .form-contact--header.widget.gsc-heading .heading-line {
   display: none;
