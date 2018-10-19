@@ -11,7 +11,7 @@ id: group.programa.field_periocidad
 field_name: field_periocidad
 entity_type: group
 bundle: programa
-label: Periocidad
+label: 'Periocidad:'
 description: ''
 required: false
 translatable: false

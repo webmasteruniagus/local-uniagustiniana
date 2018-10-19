@@ -9,7 +9,7 @@ id: group.programa.field_titulo
 field_name: field_titulo
 entity_type: group
 bundle: programa
-label: Titulo
+label: 'Titulo:'
 description: ''
 required: false
 translatable: false

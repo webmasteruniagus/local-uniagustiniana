@@ -11,7 +11,7 @@ id: group.programa.field_metodologia
 field_name: field_metodologia
 entity_type: group
 bundle: programa
-label: Metodología
+label: 'Metodología:'
 description: ''
 required: false
 translatable: false

@@ -10,7 +10,7 @@ id: group.programa.field_sede
 field_name: field_sede
 entity_type: group
 bundle: programa
-label: Sede
+label: 'Sede:'
 description: ''
 required: false
 translatable: false

@@ -14,6 +14,7 @@ dependencies:
     - field.field.group.programa.field_objetivo_del_programa
     - field.field.group.programa.field_perfil_profesional
     - field.field.group.programa.field_periocidad
+    - field.field.group.programa.field_requisitos_de_ingreso
     - field.field.group.programa.field_sede
     - field.field.group.programa.field_tipo_de_formacion
     - field.field.group.programa.field_titulo
@@ -51,8 +52,6 @@ third_party_settings:
         - field_titulo
         - field_objetivo_del_programa
         - field_vision
-        - group_column_1
-        - group_column_2
         - field_codigo_snies_8182
         - field_fecha_de_resolucion
         - field_vigencia
@@ -63,6 +62,9 @@ third_party_settings:
         - field_periocidad
         - field_duracion
         - field_total_creditos
+        - group_column_1
+        - group_row_wrapper
+        - group_column_2
   field_group:
     group_programa_block_1:
       children:
@@ -81,66 +83,86 @@ third_party_settings:
       weight: 0
       format_type: html_element
       format_settings:
-        id: ''
-        classes: programa-block-1
+        label: programa-block-1
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'programa-block-1 mb-25'
       label: programa-block-1
     group_programa_block_2:
       children:
-        - group_column_1
-        - group_column_2
+        - group_row_wrapper
       parent_name: ''
       weight: 1
       format_type: html_element
       format_settings:
-        id: ''
-        classes: programa-block-2
+        label: programa-block-2
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'programa-block-2 container'
       label: programa-block-2
     group_column_1:
       children:
         - field_perfil_profesional
         - field_objetivo_del_programa
-      parent_name: group_programa_block_2
-      weight: 1
+      parent_name: group_row_wrapper
+      weight: 21
       format_type: html_element
       format_settings:
-        id: ''
-        classes: block-2-column-1
+        label: column-1
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'col-lg-6 col-md-6 col-sm-12 col-xs-12'
       label: column-1
     group_column_2:
       children:
         - field_mision
         - field_vision
-      parent_name: group_programa_block_2
-      weight: 2
+      parent_name: group_row_wrapper
+      weight: 22
       format_type: html_element
       format_settings:
-        id: ''
-        classes: block-2-column-2
+        label: column-2
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'col-lg-6 col-md-6 col-sm-12 col-xs-12'
       label: column-2
+    group_row_wrapper:
+      children:
+        - group_column_1
+        - group_column_2
+      parent_name: group_programa_block_2
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'row wrapper'
 id: group.programa.programa
 targetEntityType: group
 bundle: programa
@@ -266,6 +288,7 @@ hidden:
   changed: true
   created: true
   field_block_builder: true
+  field_requisitos_de_ingreso: true
   label: true
   langcode: true
   uid: true

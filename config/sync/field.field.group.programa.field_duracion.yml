@@ -9,7 +9,7 @@ id: group.programa.field_duracion
 field_name: field_duracion
 entity_type: group
 bundle: programa
-label: Duración
+label: 'Duración:'
 description: ''
 required: false
 translatable: false

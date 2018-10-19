@@ -9,7 +9,7 @@ id: group.programa.field_vigencia
 field_name: field_vigencia
 entity_type: group
 bundle: programa
-label: Vigencia
+label: 'Vigencia:'
 description: ''
 required: false
 translatable: false

@@ -11,7 +11,7 @@ id: group.programa.field_fecha_de_resolucion
 field_name: field_fecha_de_resolucion
 entity_type: group
 bundle: programa
-label: 'Fecha de Resolución'
+label: 'Fecha de Resolución:'
 description: ''
 required: false
 translatable: false

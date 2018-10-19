@@ -11,7 +11,7 @@ id: group.programa.field_tipo_de_formacion
 field_name: field_tipo_de_formacion
 entity_type: group
 bundle: programa
-label: 'Tipo de formación'
+label: 'Tipo de formación:'
 description: ''
 required: false
 translatable: false

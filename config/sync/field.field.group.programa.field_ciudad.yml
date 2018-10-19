@@ -10,7 +10,7 @@ id: group.programa.field_ciudad
 field_name: field_ciudad
 entity_type: group
 bundle: programa
-label: Ciudad
+label: 'Ciudad:'
 description: ''
 required: false
 translatable: false

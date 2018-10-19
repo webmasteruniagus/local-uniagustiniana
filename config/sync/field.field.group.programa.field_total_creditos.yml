@@ -9,7 +9,7 @@ id: group.programa.field_total_creditos
 field_name: field_total_creditos
 entity_type: group
 bundle: programa
-label: 'Total créditos'
+label: 'Total créditos:'
 description: ''
 required: false
 translatable: false
