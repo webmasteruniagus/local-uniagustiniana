@@ -14,7 +14,7 @@
 */
 
 @function svg($img) {
-    @return url($svg + $img + '.svg') no-repeat center / contain;
+    @return url($svg+$img+'.svg') no-repeat center / contain;
 }
 
 

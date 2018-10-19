@@ -3,6 +3,15 @@
                         Custom variables
 ===========================================================
 */
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
 /****/
 /*
 ===========================================================
@@ -171,7 +180,7 @@
   color: #0a4c8b;
 }
 .menu-block-unit .row-wrapper ul a:hover {
-  color: #0d66bb;
+  color: #6db2f4;
 }
 .menu-block-unit .row-wrapper ul a::after {
   display: inline-block;

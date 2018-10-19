@@ -12976,6 +12976,111 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
                         Custom variables
 ===========================================================
 */
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @function
+* @return path img + img
+*/
+/*
+* @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
+*/
+.programa-block-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .programa-block-1 {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+  }
+}
+.programa-block-1 .field--label-inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.programa-block-1 .field--label-inline .field__label {
+  font-weight: bold;
+}
+.programa-block-1 .field--label-inline .field__item {
+  margin: 0 5px;
+}
+@media (max-width: 480px) {
+  .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion .field__item {
+    margin: 0;
+  }
+}
+
+.programa-block-2 .field__label {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #2A2A2A;
+}
+
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
 /****/
 /*
 ===========================================================
@@ -13144,7 +13249,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   color: #0a4c8b;
 }
 .menu-block-unit .row-wrapper ul a:hover {
-  color: #0d66bb;
+  color: #6db2f4;
 }
 .menu-block-unit .row-wrapper ul a::after {
   display: inline-block;
@@ -13169,6 +13274,15 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
                         Custom variables
 ===========================================================
 */
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
 /****/
 /*
 ===========================================================
@@ -13190,7 +13304,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 * @mixin: Flex direction
 */
 .form-contact .form-contact--header {
-  background: #3D99F1;
+  background: var(--color_1);
 }
 .form-contact .form-contact--header.widget.gsc-heading .heading-line {
   display: none;
@@ -13248,6 +13362,15 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
                         Custom variables
 ===========================================================
 */
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
 /****/
 /*
 ===========================================================
@@ -13305,6 +13428,15 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
                         Custom variables
 ===========================================================
 */
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
 /****/
 /*
 ===========================================================
@@ -13367,6 +13499,15 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
                         Custom variables
 ===========================================================
 */
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
 /****/
 /*
 ===========================================================
@@ -13419,6 +13560,15 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
                         Custom variables
 ===========================================================
 */
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
 /****/
 /*
 ===========================================================
@@ -13490,19 +13640,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-1 {
-  margin-top: calc(1px * 1) !important;
+  margin-top: calc(1px * var(--multiplier)) !important;
 }
 
 .mb-1 {
-  margin-bottom: calc(1px * 1) !important;
+  margin-bottom: calc(1px * var(--multiplier)) !important;
 }
 
 .pt-1 {
-  padding-bottom: calc(1px * 1) !important;
+  padding-bottom: calc(1px * var(--multiplier)) !important;
 }
 
 .pb-1 {
-  padding-top: calc(1px * 1) !important;
+  padding-top: calc(1px * var(--multiplier)) !important;
 }
 
 .mr-1 {
@@ -13522,19 +13672,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-2 {
-  margin-top: calc(2px * 1) !important;
+  margin-top: calc(2px * var(--multiplier)) !important;
 }
 
 .mb-2 {
-  margin-bottom: calc(2px * 1) !important;
+  margin-bottom: calc(2px * var(--multiplier)) !important;
 }
 
 .pt-2 {
-  padding-bottom: calc(2px * 1) !important;
+  padding-bottom: calc(2px * var(--multiplier)) !important;
 }
 
 .pb-2 {
-  padding-top: calc(2px * 1) !important;
+  padding-top: calc(2px * var(--multiplier)) !important;
 }
 
 .mr-2 {
@@ -13554,19 +13704,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-3 {
-  margin-top: calc(3px * 1) !important;
+  margin-top: calc(3px * var(--multiplier)) !important;
 }
 
 .mb-3 {
-  margin-bottom: calc(3px * 1) !important;
+  margin-bottom: calc(3px * var(--multiplier)) !important;
 }
 
 .pt-3 {
-  padding-bottom: calc(3px * 1) !important;
+  padding-bottom: calc(3px * var(--multiplier)) !important;
 }
 
 .pb-3 {
-  padding-top: calc(3px * 1) !important;
+  padding-top: calc(3px * var(--multiplier)) !important;
 }
 
 .mr-3 {
@@ -13586,19 +13736,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-4 {
-  margin-top: calc(4px * 1) !important;
+  margin-top: calc(4px * var(--multiplier)) !important;
 }
 
 .mb-4 {
-  margin-bottom: calc(4px * 1) !important;
+  margin-bottom: calc(4px * var(--multiplier)) !important;
 }
 
 .pt-4 {
-  padding-bottom: calc(4px * 1) !important;
+  padding-bottom: calc(4px * var(--multiplier)) !important;
 }
 
 .pb-4 {
-  padding-top: calc(4px * 1) !important;
+  padding-top: calc(4px * var(--multiplier)) !important;
 }
 
 .mr-4 {
@@ -13618,19 +13768,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-5 {
-  margin-top: calc(5px * 1) !important;
+  margin-top: calc(5px * var(--multiplier)) !important;
 }
 
 .mb-5 {
-  margin-bottom: calc(5px * 1) !important;
+  margin-bottom: calc(5px * var(--multiplier)) !important;
 }
 
 .pt-5 {
-  padding-bottom: calc(5px * 1) !important;
+  padding-bottom: calc(5px * var(--multiplier)) !important;
 }
 
 .pb-5 {
-  padding-top: calc(5px * 1) !important;
+  padding-top: calc(5px * var(--multiplier)) !important;
 }
 
 .mr-5 {
@@ -13649,148 +13799,20 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   padding-left: calc(5% * 1) !important;
 }
 
-.mt-6 {
-  margin-top: calc(6px * 1) !important;
-}
-
-.mb-6 {
-  margin-bottom: calc(6px * 1) !important;
-}
-
-.pt-6 {
-  padding-bottom: calc(6px * 1) !important;
-}
-
-.pb-6 {
-  padding-top: calc(6px * 1) !important;
-}
-
-.mr-6 {
-  margin-right: calc(6% * 1) !important;
-}
-
-.ml-6 {
-  margin-left: calc(6% * 1) !important;
-}
-
-.pr-6 {
-  padding-right: calc(6% * 1) !important;
-}
-
-.pl-6 {
-  padding-left: calc(6% * 1) !important;
-}
-
-.mt-7 {
-  margin-top: calc(7px * 1) !important;
-}
-
-.mb-7 {
-  margin-bottom: calc(7px * 1) !important;
-}
-
-.pt-7 {
-  padding-bottom: calc(7px * 1) !important;
-}
-
-.pb-7 {
-  padding-top: calc(7px * 1) !important;
-}
-
-.mr-7 {
-  margin-right: calc(7% * 1) !important;
-}
-
-.ml-7 {
-  margin-left: calc(7% * 1) !important;
-}
-
-.pr-7 {
-  padding-right: calc(7% * 1) !important;
-}
-
-.pl-7 {
-  padding-left: calc(7% * 1) !important;
-}
-
-.mt-8 {
-  margin-top: calc(8px * 1) !important;
-}
-
-.mb-8 {
-  margin-bottom: calc(8px * 1) !important;
-}
-
-.pt-8 {
-  padding-bottom: calc(8px * 1) !important;
-}
-
-.pb-8 {
-  padding-top: calc(8px * 1) !important;
-}
-
-.mr-8 {
-  margin-right: calc(8% * 1) !important;
-}
-
-.ml-8 {
-  margin-left: calc(8% * 1) !important;
-}
-
-.pr-8 {
-  padding-right: calc(8% * 1) !important;
-}
-
-.pl-8 {
-  padding-left: calc(8% * 1) !important;
-}
-
-.mt-9 {
-  margin-top: calc(9px * 1) !important;
-}
-
-.mb-9 {
-  margin-bottom: calc(9px * 1) !important;
-}
-
-.pt-9 {
-  padding-bottom: calc(9px * 1) !important;
-}
-
-.pb-9 {
-  padding-top: calc(9px * 1) !important;
-}
-
-.mr-9 {
-  margin-right: calc(9% * 1) !important;
-}
-
-.ml-9 {
-  margin-left: calc(9% * 1) !important;
-}
-
-.pr-9 {
-  padding-right: calc(9% * 1) !important;
-}
-
-.pl-9 {
-  padding-left: calc(9% * 1) !important;
-}
-
 .mt-10 {
-  margin-top: calc(10px * 1) !important;
+  margin-top: calc(10px * var(--multiplier)) !important;
 }
 
 .mb-10 {
-  margin-bottom: calc(10px * 1) !important;
+  margin-bottom: calc(10px * var(--multiplier)) !important;
 }
 
 .pt-10 {
-  padding-bottom: calc(10px * 1) !important;
+  padding-bottom: calc(10px * var(--multiplier)) !important;
 }
 
 .pb-10 {
-  padding-top: calc(10px * 1) !important;
+  padding-top: calc(10px * var(--multiplier)) !important;
 }
 
 .mr-10 {
@@ -13810,19 +13832,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-15 {
-  margin-top: calc(15px * 1) !important;
+  margin-top: calc(15px * var(--multiplier)) !important;
 }
 
 .mb-15 {
-  margin-bottom: calc(15px * 1) !important;
+  margin-bottom: calc(15px * var(--multiplier)) !important;
 }
 
 .pt-15 {
-  padding-bottom: calc(15px * 1) !important;
+  padding-bottom: calc(15px * var(--multiplier)) !important;
 }
 
 .pb-15 {
-  padding-top: calc(15px * 1) !important;
+  padding-top: calc(15px * var(--multiplier)) !important;
 }
 
 .mr-15 {
@@ -13842,19 +13864,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-20 {
-  margin-top: calc(20px * 1) !important;
+  margin-top: calc(20px * var(--multiplier)) !important;
 }
 
 .mb-20 {
-  margin-bottom: calc(20px * 1) !important;
+  margin-bottom: calc(20px * var(--multiplier)) !important;
 }
 
 .pt-20 {
-  padding-bottom: calc(20px * 1) !important;
+  padding-bottom: calc(20px * var(--multiplier)) !important;
 }
 
 .pb-20 {
-  padding-top: calc(20px * 1) !important;
+  padding-top: calc(20px * var(--multiplier)) !important;
 }
 
 .mr-20 {
@@ -13874,19 +13896,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-25 {
-  margin-top: calc(25px * 1) !important;
+  margin-top: calc(25px * var(--multiplier)) !important;
 }
 
 .mb-25 {
-  margin-bottom: calc(25px * 1) !important;
+  margin-bottom: calc(25px * var(--multiplier)) !important;
 }
 
 .pt-25 {
-  padding-bottom: calc(25px * 1) !important;
+  padding-bottom: calc(25px * var(--multiplier)) !important;
 }
 
 .pb-25 {
-  padding-top: calc(25px * 1) !important;
+  padding-top: calc(25px * var(--multiplier)) !important;
 }
 
 .mr-25 {
@@ -13906,19 +13928,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-30 {
-  margin-top: calc(30px * 1) !important;
+  margin-top: calc(30px * var(--multiplier)) !important;
 }
 
 .mb-30 {
-  margin-bottom: calc(30px * 1) !important;
+  margin-bottom: calc(30px * var(--multiplier)) !important;
 }
 
 .pt-30 {
-  padding-bottom: calc(30px * 1) !important;
+  padding-bottom: calc(30px * var(--multiplier)) !important;
 }
 
 .pb-30 {
-  padding-top: calc(30px * 1) !important;
+  padding-top: calc(30px * var(--multiplier)) !important;
 }
 
 .mr-30 {
@@ -13938,19 +13960,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-35 {
-  margin-top: calc(35px * 1) !important;
+  margin-top: calc(35px * var(--multiplier)) !important;
 }
 
 .mb-35 {
-  margin-bottom: calc(35px * 1) !important;
+  margin-bottom: calc(35px * var(--multiplier)) !important;
 }
 
 .pt-35 {
-  padding-bottom: calc(35px * 1) !important;
+  padding-bottom: calc(35px * var(--multiplier)) !important;
 }
 
 .pb-35 {
-  padding-top: calc(35px * 1) !important;
+  padding-top: calc(35px * var(--multiplier)) !important;
 }
 
 .mr-35 {
@@ -13970,19 +13992,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-40 {
-  margin-top: calc(40px * 1) !important;
+  margin-top: calc(40px * var(--multiplier)) !important;
 }
 
 .mb-40 {
-  margin-bottom: calc(40px * 1) !important;
+  margin-bottom: calc(40px * var(--multiplier)) !important;
 }
 
 .pt-40 {
-  padding-bottom: calc(40px * 1) !important;
+  padding-bottom: calc(40px * var(--multiplier)) !important;
 }
 
 .pb-40 {
-  padding-top: calc(40px * 1) !important;
+  padding-top: calc(40px * var(--multiplier)) !important;
 }
 
 .mr-40 {
@@ -14002,19 +14024,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-45 {
-  margin-top: calc(45px * 1) !important;
+  margin-top: calc(45px * var(--multiplier)) !important;
 }
 
 .mb-45 {
-  margin-bottom: calc(45px * 1) !important;
+  margin-bottom: calc(45px * var(--multiplier)) !important;
 }
 
 .pt-45 {
-  padding-bottom: calc(45px * 1) !important;
+  padding-bottom: calc(45px * var(--multiplier)) !important;
 }
 
 .pb-45 {
-  padding-top: calc(45px * 1) !important;
+  padding-top: calc(45px * var(--multiplier)) !important;
 }
 
 .mr-45 {
@@ -14034,19 +14056,19 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 }
 
 .mt-50 {
-  margin-top: calc(50px * 1) !important;
+  margin-top: calc(50px * var(--multiplier)) !important;
 }
 
 .mb-50 {
-  margin-bottom: calc(50px * 1) !important;
+  margin-bottom: calc(50px * var(--multiplier)) !important;
 }
 
 .pt-50 {
-  padding-bottom: calc(50px * 1) !important;
+  padding-bottom: calc(50px * var(--multiplier)) !important;
 }
 
 .pb-50 {
-  padding-top: calc(50px * 1) !important;
+  padding-top: calc(50px * var(--multiplier)) !important;
 }
 
 .mr-50 {

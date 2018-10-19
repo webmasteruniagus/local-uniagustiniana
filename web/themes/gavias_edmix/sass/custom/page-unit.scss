@@ -65,9 +65,9 @@
     ul {
         @include size(100%, auto);
         a {
-            color: $color_2;
+            color: darken($color_1, 30%);
             &:hover {
-                color: lighten($color_2, 10%);
+                color: lighten($color_1, 10%);
             }
             &::after {
                 @include inline-block;

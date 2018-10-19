@@ -45,22 +45,18 @@
 
 // Global margins and paddings for top and bottom
 @each $number in $numbers {
-    $multiplier: 2;
-    @media (max-width: $screen-sm) {
-        $multiplier: 1;
-    }
     // Pixels
     .mt-#{ $number } {
-        @include margin(top, calc(#{ $number }px * #{ $multiplier }))
+        @include margin(top, calc(#{ $number }px * #{ var(--multiplier) }))
     }
     .mb-#{ $number } {
-        @include margin(bottom, calc(#{ $number }px * #{ $multiplier }));
+        @include margin(bottom, calc(#{ $number }px * #{ var(--multiplier) }));
     }
     .pt-#{ $number } {
-        @include padding(bottom, calc(#{ $number }px * #{ $multiplier }));
+        @include padding(bottom, calc(#{ $number }px * #{ var(--multiplier) }));
     }
     .pb-#{ $number } {
-        @include padding(top, calc(#{ $number }px * #{ $multiplier }))
+        @include padding(top, calc(#{ $number }px * #{ var(--multiplier) }))
     }
     // Percentage
     .mr-#{ $number } {

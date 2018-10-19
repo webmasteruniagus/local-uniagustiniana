@@ -4,7 +4,7 @@
 .thumbnail--card {
     // Content card
     .thumbnail {
-        @include box-shadow(0 0 18px 0 $shadow);
+        @include box-shadow(0 0 18px 0 rgba($black, 0.09));
         padding: 0;
         // content card - image
         &,

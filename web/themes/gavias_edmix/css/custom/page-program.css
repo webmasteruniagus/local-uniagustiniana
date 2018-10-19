@@ -1,0 +1,95 @@
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @function
+* @return path img + img
+*/
+/*
+* @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
+*/
+.programa-block-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .programa-block-1 {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+  }
+}
+.programa-block-1 .field--label-inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.programa-block-1 .field--label-inline .field__label {
+  font-weight: bold;
+}
+.programa-block-1 .field--label-inline .field__item {
+  margin: 0 5px;
+}
+@media (max-width: 480px) {
+  .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion .field__item {
+    margin: 0;
+  }
+}
+
+.programa-block-2 .field__label {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #2A2A2A;
+}
