@@ -31,7 +31,21 @@
           ]
         %}
         <div {{ row.attributes.addClass(row_classes) }}>
-            {{ row.content }}
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-0{{ count }}" data-parent="#acordion-01" href="#collapse-0{{ count }}" class="collapsed">
+                        {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_semestre }}'] }}
+                    </a>
+                </h4>
+            </div>
+
+            <div id="collapse-0{{ count }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" arial-expanded="false">
+                <div class="panel-body">
+                    {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_materias }}'] }}
+                </div>
+            </div>
+            
+            {# {{ row.content }} #}
         </div>
     {% endfor %}
 </div>
