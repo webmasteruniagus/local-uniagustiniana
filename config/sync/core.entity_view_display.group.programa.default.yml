@@ -8,6 +8,9 @@ dependencies:
     - field.field.group.programa.field_codigo_snies_8182
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_fecha_de_resolucion
+    - field.field.group.programa.field_frase_plan_de_estudios
+    - field.field.group.programa.field_frase_requisitos
+    - field.field.group.programa.field_materias
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
     - field.field.group.programa.field_objetivo_del_programa
@@ -23,7 +26,6 @@ dependencies:
     - group.type.programa
   module:
     - ds
-    - entity_reference_revisions
     - gavias_blockbuilder
 third_party_settings:
   ds:
@@ -56,15 +58,6 @@ content:
     third_party_settings: {  }
     type: blockbuilder_formatter
     region: ds_content
-  field_requisitos_de_ingreso:
-    type: entity_reference_revisions_entity_view
-    weight: 1
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
 hidden:
   changed: true
   created: true
@@ -72,11 +65,15 @@ hidden:
   field_codigo_snies_8182: true
   field_duracion: true
   field_fecha_de_resolucion: true
+  field_frase_plan_de_estudios: true
+  field_frase_requisitos: true
+  field_materias: true
   field_metodologia: true
   field_mision: true
   field_objetivo_del_programa: true
   field_perfil_profesional: true
   field_periocidad: true
+  field_requisitos_de_ingreso: true
   field_sede: true
   field_tipo_de_formacion: true
   field_titulo: true

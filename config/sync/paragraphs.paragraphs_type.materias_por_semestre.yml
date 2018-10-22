@@ -1,0 +1,9 @@
+uuid: e27e006e-2eb2-4d55-8c92-a4f92f79cbe9
+langcode: es
+status: true
+dependencies: {  }
+id: materias_por_semestre
+label: 'Materias por semestre'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,49 @@
+uuid: 123df23b-66d4-46cb-8a8d-275ed290a089
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_materias
+    - paragraphs.paragraphs_type.materia
+    - paragraphs.paragraphs_type.materias_por_semestre
+  module:
+    - entity_reference_revisions
+id: paragraph.materia.field_materias
+field_name: field_materias
+entity_type: paragraph
+bundle: materia
+label: Materias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      materias_por_semestre: materias_por_semestre
+    target_bundles_drag_drop:
+      materias_por_semestre:
+        enabled: true
+        weight: 8
+      materia:
+        weight: 9
+        enabled: false
+      paragraphs_images:
+        weight: 10
+        enabled: false
+      paragraphs_text:
+        weight: 11
+        enabled: false
+      paragraphs_video:
+        weight: 12
+        enabled: false
+      requisitos_de_ingreso:
+        weight: 13
+        enabled: false
+      titulo_resumen:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

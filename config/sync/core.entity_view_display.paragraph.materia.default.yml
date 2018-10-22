@@ -1,0 +1,47 @@
+uuid: 6de43b1d-582b-4353-9e7e-b3069c97131f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.materia.field_materias
+    - field.field.paragraph.materia.field_semestre
+    - paragraphs.paragraphs_type.materia
+  module:
+    - ds
+    - entity_reference_revisions
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_titulo
+        - field_creditos
+id: paragraph.materia.default
+targetEntityType: paragraph
+bundle: materia
+mode: default
+content:
+  field_materias:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_semestre: true

@@ -1,0 +1,19 @@
+uuid: 7460c36a-11ef-45e9-a315-4ab2ea05c294
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_frase_plan_de_estudios
+field_name: field_frase_plan_de_estudios
+entity_type: group
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

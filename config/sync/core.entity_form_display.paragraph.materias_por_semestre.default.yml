@@ -1,0 +1,32 @@
+uuid: 350e4d1c-6477-42cb-b6f4-040531ac7e52
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.materias_por_semestre.field_creditos
+    - field.field.paragraph.materias_por_semestre.field_titulo
+    - paragraphs.paragraphs_type.materias_por_semestre
+id: paragraph.materias_por_semestre.default
+targetEntityType: paragraph
+bundle: materias_por_semestre
+mode: default
+content:
+  field_creditos:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_titulo:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

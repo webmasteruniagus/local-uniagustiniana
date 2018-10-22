@@ -1,0 +1,23 @@
+uuid: ccbd86dc-8ee5-4f2d-af7f-3ceb2fd355fa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_creditos
+    - paragraphs.paragraphs_type.materias_por_semestre
+id: paragraph.materias_por_semestre.field_creditos
+field_name: field_creditos
+entity_type: paragraph
+bundle: materias_por_semestre
+label: Creditos
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

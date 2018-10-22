@@ -1,11 +1,11 @@
-uuid: c30546a6-9440-47b1-9a47-104aa38d10c0
+uuid: 93cd55b1-a182-4bb8-87dd-5e8141e7870b
 langcode: es
 status: true
 dependencies:
   config:
-    - field.field.paragraph.requisitos_de_ingreso.field_resumen
-    - field.field.paragraph.requisitos_de_ingreso.field_titulo
-    - paragraphs.paragraphs_type.requisitos_de_ingreso
+    - field.field.paragraph.materias_por_semestre.field_creditos
+    - field.field.paragraph.materias_por_semestre.field_titulo
+    - paragraphs.paragraphs_type.materias_por_semestre
   module:
     - ds
 third_party_settings:
@@ -27,22 +27,24 @@ third_party_settings:
     regions:
       ds_content:
         - field_titulo
-        - field_resumen
-id: paragraph.requisitos_de_ingreso.default
+        - field_creditos
+id: paragraph.materias_por_semestre.default
 targetEntityType: paragraph
-bundle: requisitos_de_ingreso
+bundle: materias_por_semestre
 mode: default
 content:
-  field_resumen:
+  field_creditos:
     weight: 1
-    label: hidden
-    settings: {  }
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
-    type: basic_string
+    type: number_integer
     region: ds_content
   field_titulo:
     weight: 0
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }

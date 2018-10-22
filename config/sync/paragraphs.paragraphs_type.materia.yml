@@ -1,0 +1,9 @@
+uuid: e161f2e1-e1b5-4ac1-94eb-92be91012a8d
+langcode: es
+status: true
+dependencies: {  }
+id: materia
+label: 'Materia Semestre'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

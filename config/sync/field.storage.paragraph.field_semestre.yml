@@ -1,0 +1,20 @@
+uuid: 6bf20be5-2c9d-4d22-9b8c-d1d1df01b2ce
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_semestre
+field_name: field_semestre
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

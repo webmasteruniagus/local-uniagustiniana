@@ -1,0 +1,37 @@
+uuid: 8816cdce-64aa-400b-b932-2ad8a9d59657
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.materia.field_materias
+    - field.field.paragraph.materia.field_semestre
+    - paragraphs.paragraphs_type.materia
+  module:
+    - paragraphs
+id: paragraph.materia.default
+targetEntityType: paragraph
+bundle: materia
+mode: default
+content:
+  field_materias:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_semestre:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

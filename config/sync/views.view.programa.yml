@@ -4,9 +4,16 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.group.programa
+    - field.storage.group.field_frase_plan_de_estudios
+    - field.storage.group.field_frase_requisitos
+    - field.storage.paragraph.field_materias
+    - field.storage.paragraph.field_semestre
     - group.type.programa
   module:
+    - entity_reference_revisions
+    - gavias_view
     - group
+    - paragraphs
 id: programa
 label: Programa
 module: views
@@ -201,3 +208,597 @@ display:
         - route
         - url
       tags: {  }
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Requisitos de ingreso'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      style:
+        type: gvaowl
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          items: '1'
+          items_lg: '1'
+          items_md: '1'
+          items_sm: '1'
+          items_xs: '1'
+          loop: 0
+          speed: '200'
+          auto_play: 0
+          auto_play_speed: '1000'
+          auto_play_timeout: '3000'
+          auto_play_hover: 1
+          navigation: 0
+          rewind_nav: 0
+          pagination: 1
+          mouse_drag: 1
+          touch_drag: 1
+          el_class: ''
+          el_id: ''
+      defaults:
+        style: false
+        row: false
+        relationships: false
+        fields: false
+        pager: false
+        header: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      relationships:
+        field_requisitos_de_ingreso:
+          id: field_requisitos_de_ingreso
+          table: group__field_requisitos_de_ingreso
+          field: field_requisitos_de_ingreso
+          relationship: none
+          group_type: group
+          admin_label: 'field_requisitos_de_ingreso: Paragraph'
+          required: true
+          plugin_id: standard
+      fields:
+        rendered_entity:
+          id: rendered_entity
+          table: paragraphs_item
+          field: rendered_entity
+          relationship: field_requisitos_de_ingreso
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view_mode: default
+          entity_type: paragraph
+          plugin_id: rendered_entity
+      pager:
+        type: none
+        options:
+          offset: 0
+      header: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - route
+        - url
+      tags:
+        - 'config:core.entity_view_display.paragraph.materia.default'
+        - 'config:core.entity_view_display.paragraph.materias_por_semestre.default'
+        - 'config:core.entity_view_display.paragraph.paragraphs_images.default'
+        - 'config:core.entity_view_display.paragraph.paragraphs_text.default'
+        - 'config:core.entity_view_display.paragraph.paragraphs_video.default'
+        - 'config:core.entity_view_display.paragraph.requisitos_de_ingreso.default'
+        - 'config:core.entity_view_display.paragraph.titulo_resumen.default'
+  block_3:
+    display_plugin: block
+    id: block_3
+    display_title: 'Requisitos de ingreso Frase'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      defaults:
+        style: false
+        row: false
+        relationships: false
+        fields: false
+        pager: false
+        header: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      relationships: {  }
+      fields:
+        field_frase_requisitos:
+          id: field_frase_requisitos
+          table: group__field_frase_requisitos
+          field: field_frase_requisitos
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      pager:
+        type: none
+        options:
+          offset: 0
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<div class=\"widget gsc-heading  align-left style-default\">\r\n<h3>Requisitos de ingreso</h3>\r\n<div class=\"heading-line\"></div><br>\r\n</div>"
+            format: full_html
+          plugin_id: text
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - route
+        - url
+      tags:
+        - 'config:field.storage.group.field_frase_requisitos'
+  block_4:
+    display_plugin: block
+    id: block_4
+    display_title: 'Plan de estudios acordeon'
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      relationships:
+        field_materias:
+          id: field_materias
+          table: group__field_materias
+          field: field_materias
+          relationship: none
+          group_type: group
+          admin_label: 'field_materias: Paragraph'
+          required: true
+          plugin_id: standard
+      defaults:
+        relationships: false
+        style: false
+        row: false
+        fields: false
+        pager: false
+        sorts: false
+        query: false
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      fields:
+        counter:
+          id: counter
+          table: views
+          field: counter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          counter_start: 1
+          plugin_id: counter
+        field_semestre:
+          id: field_semestre
+          table: paragraph__field_semestre
+          field: field_semestre
+          relationship: field_materias
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"panel-heading\" role=\"tab\" id=\"headingOne\">\r\n      <h4 class=\"panel-title\">\r\n<a role=\"button\" data-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"collapse-0{{ counter }}\" data-parent=\"#acordion-01\" href=\"#collapse-0{{ counter }}\" class=\"collapsed\">{{ field_semestre }}</a>\r\n      </h4>\r\n    </div>\r\n"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: '0'
+          element_class: ''
+          element_label_type: '0'
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: panel-heading
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_materias:
+          id: field_materias
+          table: paragraph__field_materias
+          field: field_materias
+          relationship: field_materias
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div id=\"collapse-0{{ counter }}\" class=\"panel-collapse collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" arial-expanded=\"false\">\r\n<div class=\"panel-body\">\r\n{{ field_materias }}\r\n</div>\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: '0'
+          element_class: panel-body
+          element_label_type: '0'
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: '0'
+          element_wrapper_class: 'panel-collapse collapse'
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_revisions_entity_view
+          settings:
+            view_mode: default
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: ol
+          separator: ''
+          field_api_classes: false
+          plugin_id: field
+      pager:
+        type: none
+        options:
+          offset: 0
+      sorts: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - route
+        - url
+      tags:
+        - 'config:field.storage.paragraph.field_materias'
+        - 'config:field.storage.paragraph.field_semestre'
+  block_5:
+    display_plugin: block
+    id: block_5
+    display_title: 'Plan de estudios'
+    position: 5
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      style:
+        type: default
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        fields: false
+        header: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      fields:
+        field_frase_plan_de_estudios:
+          id: field_frase_plan_de_estudios
+          table: group__field_frase_plan_de_estudios
+          field: field_frase_plan_de_estudios
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<div class=\"widget gsc-heading  align-left style-default\">\r\n<h3>Plan de Estudio</h3>\r\n<div class=\"heading-line\"></div><br>\r\n</div>"
+            format: full_html
+          plugin_id: text
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - route
+        - url
+      tags:
+        - 'config:field.storage.group.field_frase_plan_de_estudios'

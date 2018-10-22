@@ -8,6 +8,9 @@ dependencies:
     - field.field.group.programa.field_codigo_snies_8182
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_fecha_de_resolucion
+    - field.field.group.programa.field_frase_plan_de_estudios
+    - field.field.group.programa.field_frase_requisitos
+    - field.field.group.programa.field_materias
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
     - field.field.group.programa.field_objetivo_del_programa
@@ -67,6 +70,34 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_frase_plan_de_estudios:
+    weight: 49
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_frase_requisitos:
+    weight: 48
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_materias:
+    type: entity_reference_paragraphs
+    weight: 50
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_metodologia:
     weight: 38
