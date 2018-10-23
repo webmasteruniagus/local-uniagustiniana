@@ -1,15 +1,16 @@
-uuid: 6c649b5b-f0d3-46e2-9ad0-7247551279b1
+uuid: 81cbc4b3-c7bd-476c-b33c-dc1f8a3d3425
 langcode: es
 status: true
 dependencies:
   module:
     - group
-id: group.field_frase_requisitos
-field_name: field_frase_requisitos
+    - taxonomy
+id: group.field_nivel_de_formacion
+field_name: field_nivel_de_formacion
 entity_type: group
-type: string_long
+type: entity_reference
 settings:
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

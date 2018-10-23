@@ -1,0 +1,58 @@
+uuid: 683b6797-a1b1-48f3-b132-68ab1e086c39
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.nivel_de_formacion.field_requisitos_de_ingreso
+    - taxonomy.vocabulary.nivel_de_formacion
+  module:
+    - paragraphs
+    - path
+    - text
+id: taxonomy_term.nivel_de_formacion.default
+targetEntityType: taxonomy_term
+bundle: nivel_de_formacion
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_requisitos_de_ingreso:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

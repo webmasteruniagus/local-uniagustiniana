@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.group.programa
     - field.storage.group.field_frase_plan_de_estudios
-    - field.storage.group.field_frase_requisitos
     - field.storage.paragraph.field_materias
     - field.storage.paragraph.field_semestre
     - group.type.programa
@@ -14,6 +13,8 @@ dependencies:
     - gavias_view
     - group
     - paragraphs
+    - taxonomy
+    - text
 id: programa
 label: Programa
 module: views
@@ -255,11 +256,20 @@ display:
           separator: ''
           hide_empty: false
       relationships:
+        field_nivel_de_formacion:
+          id: field_nivel_de_formacion
+          table: group__field_nivel_de_formacion
+          field: field_nivel_de_formacion
+          relationship: none
+          group_type: group
+          admin_label: 'field_nivel_de_formacion: Taxonomy term'
+          required: true
+          plugin_id: standard
         field_requisitos_de_ingreso:
           id: field_requisitos_de_ingreso
-          table: group__field_requisitos_de_ingreso
+          table: taxonomy_term__field_requisitos_de_ingreso
           field: field_requisitos_de_ingreso
-          relationship: none
+          relationship: field_nivel_de_formacion
           group_type: group
           admin_label: 'field_requisitos_de_ingreso: Paragraph'
           required: true
@@ -363,13 +373,22 @@ display:
           inline: {  }
           separator: ''
           hide_empty: false
-      relationships: {  }
-      fields:
-        field_frase_requisitos:
-          id: field_frase_requisitos
-          table: group__field_frase_requisitos
-          field: field_frase_requisitos
+      relationships:
+        field_nivel_de_formacion:
+          id: field_nivel_de_formacion
+          table: group__field_nivel_de_formacion
+          field: field_nivel_de_formacion
           relationship: none
+          group_type: group
+          admin_label: 'field_nivel_de_formacion: Taxonomy term'
+          required: true
+          plugin_id: standard
+      fields:
+        description__value:
+          id: description__value
+          table: taxonomy_term_field_data
+          field: description__value
+          relationship: field_nivel_de_formacion
           group_type: group
           admin_label: ''
           label: ''
@@ -414,7 +433,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: basic_string
+          type: text_default
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -426,6 +445,8 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: taxonomy_term
+          entity_field: description
           plugin_id: field
       pager:
         type: none
@@ -445,6 +466,7 @@ display:
             value: "<div class=\"widget gsc-heading  align-left style-default\">\r\n<h3>Requisitos de ingreso</h3>\r\n<div class=\"heading-line\"></div><br>\r\n</div>"
             format: full_html
           plugin_id: text
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -452,8 +474,7 @@ display:
         - 'languages:language_interface'
         - route
         - url
-      tags:
-        - 'config:field.storage.group.field_frase_requisitos'
+      tags: {  }
   block_4:
     display_plugin: block
     id: block_4
