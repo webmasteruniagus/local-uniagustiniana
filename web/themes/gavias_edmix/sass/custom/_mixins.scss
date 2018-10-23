@@ -74,3 +74,12 @@
     -ms-flex-direction: $direction;
     flex-direction: $direction;
 }
+
+/*
+* @mixin: Focus totally
+*/
+
+@mixin center-content {
+    @include justify-content(center);
+    @include align-items(center);
+}

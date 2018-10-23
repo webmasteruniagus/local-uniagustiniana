@@ -32,6 +32,9 @@
 /*
 * @mixin: Flex direction
 */
+/*
+* @mixin: Focus totally
+*/
 .container-bg {
   margin-bottom: 40px;
 }

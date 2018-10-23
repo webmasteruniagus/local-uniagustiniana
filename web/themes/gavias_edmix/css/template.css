@@ -13005,589 +13005,8 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 /*
 * @mixin: Flex direction
 */
-.programa-block-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-@media (max-width: 480px) {
-  .programa-block-1 {
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    -ms-align-items: flex-start;
-    align-items: flex-start;
-  }
-}
-.programa-block-1 .field--label-inline {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.programa-block-1 .field--label-inline .field__label {
-  font-weight: bold;
-}
-.programa-block-1 .field--label-inline .field__item {
-  margin: 0 5px;
-}
-@media (max-width: 480px) {
-  .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion {
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion .field__item {
-    margin: 0;
-  }
-}
-
-.programa-block-2 .field__label {
-  font-weight: bold;
-  margin: 10px 0;
-  color: #2A2A2A;
-}
-
 /*
-===========================================================
-                        Custom variables
-===========================================================
-*/
-:root {
-  --multiplier: 2;
-}
-
-@media (max-width: 768px) {
-  :root {
-    --multiplier: 1;
-  }
-}
-/****/
-/*
-===========================================================
-                        Custom mixins
-===========================================================
-*/
-/*
-* @function
-* @return path img + img
-*/
-/*
-* @mixin: links
-* @description: links styles
-*/
-/*
-* @mixin: Center with flexbox
-*/
-/*
-* @mixin: Flex direction
-*/
-/*
-===========================================================
-                        Units pages
-===========================================================
-*/
-.unidad-menu-principal .gva-menu--units {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  margin-bottom: 50px;
-}
-.unidad-menu-principal .gva-menu--units a {
-  -webkit-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  -ms-transition: all 0.35s;
-  display: inline-block;
-  position: relative;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 10px;
-  text-align: center;
-  color: #000;
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.unidad-menu-principal .gva-menu--units a:hover, .unidad-menu-principal .gva-menu--units a:after, .unidad-menu-principal .gva-menu--units a:active {
-  color: #4582FF;
-}
-.unidad-menu-principal .gva-menu--units a:hover:before, .unidad-menu-principal .gva-menu--units a:after:before, .unidad-menu-principal .gva-menu--units a:active:before {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-.unidad-menu-principal .gva-menu--units a.is-active {
-  color: #4582FF;
-}
-.unidad-menu-principal .gva-menu--units a.is-active:before {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-@media (max-width: 767px) {
-  .unidad-menu-principal .gva-menu--units {
-    margin-bottom: 30px;
-  }
-}
-
-.unidad-menu-secundario header {
-  overflow: hidden;
-}
-.unidad-menu-secundario .item {
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
-}
-.unidad-menu-secundario .item a {
-  -webkit-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  -ms-transition: all 0.35s;
-  display: inline-block;
-  position: relative;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 10px;
-  text-align: center;
-  color: #000;
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  text-align: left;
-  padding-left: 0;
-  padding-right: 0;
-}
-.unidad-menu-secundario .item a:hover, .unidad-menu-secundario .item a:after, .unidad-menu-secundario .item a:active {
-  color: #4582FF;
-}
-.unidad-menu-secundario .item a:hover:before, .unidad-menu-secundario .item a:after:before, .unidad-menu-secundario .item a:active:before {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-.unidad-menu-secundario .item a.is-active {
-  color: #4582FF;
-}
-.unidad-menu-secundario .item a.is-active:before {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-
-.menu-block-unit .row-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-@media (max-width: 768px) {
-  .menu-block-unit .row-wrapper {
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-.menu-block-unit .row-wrapper .gsc-column:first-child {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-}
-@media (max-width: 768px) {
-  .menu-block-unit .row-wrapper .gsc-column:first-child {
-    margin-bottom: 20px;
-  }
-}
-.menu-block-unit .row-wrapper .gsc-column:last-child > .column-inner {
-  height: 100%;
-}
-.menu-block-unit .row-wrapper ul {
-  width: 100%;
-  height: auto;
-}
-.menu-block-unit .row-wrapper ul a {
-  color: #0a4c8b;
-}
-.menu-block-unit .row-wrapper ul a:hover {
-  color: #6db2f4;
-}
-.menu-block-unit .row-wrapper ul a::after {
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 10px;
-  background: url("../images/svg/arrow-right.svg") no-repeat center/contain;
-  content: '';
-}
-.lt-ie8 .menu-block-unit .row-wrapper ul a::after {
-  display: inline;
-  zoom: 1;
-}
-
-/*
-===========================================================
-                    End Units page
-===========================================================
-*/
-/*
-===========================================================
-                        Custom variables
-===========================================================
-*/
-:root {
-  --multiplier: 2;
-}
-
-@media (max-width: 768px) {
-  :root {
-    --multiplier: 1;
-  }
-}
-/****/
-/*
-===========================================================
-                        Custom mixins
-===========================================================
-*/
-/*
-* @function
-* @return path img + img
-*/
-/*
-* @mixin: links
-* @description: links styles
-*/
-/*
-* @mixin: Center with flexbox
-*/
-/*
-* @mixin: Flex direction
-*/
-.form-contact .form-contact--header {
-  background: #3D99F1;
-}
-.form-contact .form-contact--header.widget.gsc-heading .heading-line {
-  display: none;
-}
-@media (max-width: 480px) {
-  .form-contact .form-contact--header.widget.gsc-heading {
-    padding: 25px 20px;
-  }
-}
-.form-contact .form-contact--wrapper {
-  padding: 42px;
-  background: #fff;
-}
-.form-contact .form-contact--wrapper textarea,
-.form-contact .form-contact--wrapper input {
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-}
-.form-contact .form-contact--wrapper input {
-  height: 50px;
-}
-@media (max-width: 480px) {
-  .form-contact .form-contact--wrapper {
-    padding: 30px 25px;
-  }
-}
-
-.search-content {
-  top: 52px !important;
-}
-.search-content .search-form {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-@media (max-width: 992px) {
-  .search-content {
-    top: 76px !important;
-  }
-}
-@media (max-width: 480px) {
-  .search-content {
-    top: 52px !important;
-    left: calc((100vw / 1.7) * -1);
-  }
-}
-
-/*
-===========================================================
-                        Custom variables
-===========================================================
-*/
-:root {
-  --multiplier: 2;
-}
-
-@media (max-width: 768px) {
-  :root {
-    --multiplier: 1;
-  }
-}
-/****/
-/*
-===========================================================
-                        Custom mixins
-===========================================================
-*/
-/*
-* @function
-* @return path img + img
-*/
-/*
-* @mixin: links
-* @description: links styles
-*/
-/*
-* @mixin: Center with flexbox
-*/
-/*
-* @mixin: Flex direction
-*/
-.landing-home .landing_faculties--title.widget.gsc-heading {
-  padding: 40px 0 0;
-}
-.landing-home .landing_faculties--title.widget.gsc-heading .title {
-  padding: 0;
-}
-.landing-home .landing_faculties--title.widget.gsc-heading .heading-line {
-  width: 100%;
-  height: 1px;
-}
-.landing-home .landing_faculties {
-  padding: 0 20px;
-}
-.landing-home .landing_faculties .content-inner {
-  margin-bottom: 10px !important;
-  border: 1px solid #fff;
-  min-height: auto;
-  padding: 18px;
-}
-.landing-home .landing_faculties .item:last-child {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
-  clear: both;
-}
-@media (max-width: 1200px) {
-  .landing-home .landing_faculties {
-    padding: 0;
-  }
-}
-
-/*
-===========================================================
-                        Custom variables
-===========================================================
-*/
-:root {
-  --multiplier: 2;
-}
-
-@media (max-width: 768px) {
-  :root {
-    --multiplier: 1;
-  }
-}
-/****/
-/*
-===========================================================
-                        Custom mixins
-===========================================================
-*/
-/*
-* @function
-* @return path img + img
-*/
-/*
-* @mixin: links
-* @description: links styles
-*/
-/*
-* @mixin: Center with flexbox
-*/
-/*
-* @mixin: Flex direction
-*/
-.search-program form {
-  text-align: center;
-}
-.search-program form h3 {
-  font-size: 32px;
-}
-.search-program form h3::after {
-  width: 50px;
-  height: 2px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px !important;
-  margin-bottom: 20px !important;
-  background: #fff;
-  content: '';
-}
-.search-program form input[type="text"] {
-  width: 80%;
-  height: 50px;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-  margin-bottom: 50px !important;
-  color: #636363;
-}
-@media (max-width: 991px) {
-  .search-program form input[type="text"] {
-    width: 100%;
-  }
-}
-.search-program form input[type="submit"] {
-  display: none;
-}
-
-/*
-===========================================================
-                        Custom variables
-===========================================================
-*/
-:root {
-  --multiplier: 2;
-}
-
-@media (max-width: 768px) {
-  :root {
-    --multiplier: 1;
-  }
-}
-/****/
-/*
-===========================================================
-                        Custom mixins
-===========================================================
-*/
-/*
-* @function
-* @return path img + img
-*/
-/*
-* @mixin: links
-* @description: links styles
-*/
-/*
-* @mixin: Center with flexbox
-*/
-/*
-* @mixin: Flex direction
-*/
-.thumbnail--card .thumbnail {
-  -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
-  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
-  padding: 0;
-}
-.thumbnail--card .thumbnail,
-.thumbnail--card .thumbnail img {
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-.thumbnail--card .caption {
-  padding: 20px;
-}
-.thumbnail--card h5 {
-  margin-top: 0;
-}
-.thumbnail--card .field--name-body p {
-  line-height: 20px;
-  margin-bottom: 10px;
-}
-.thumbnail--card .field--name-node-post-date {
-  font-size: 12px;
-}
-
-/*
-===========================================================
-                        Custom variables
-===========================================================
-*/
-:root {
-  --multiplier: 2;
-}
-
-@media (max-width: 768px) {
-  :root {
-    --multiplier: 1;
-  }
-}
-/****/
-/*
-===========================================================
-                        Custom mixins
-===========================================================
-*/
-/*
-* @function
-* @return path img + img
-*/
-/*
-* @mixin: links
-* @description: links styles
-*/
-/*
-* @mixin: Center with flexbox
-*/
-/*
-* @mixin: Flex direction
+* @mixin: Focus totally
 */
 .container-bg {
   margin-bottom: 40px;
@@ -14100,3 +13519,689 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
     text-align: center;
   }
 }
+
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @function
+* @return path img + img
+*/
+/*
+* @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
+*/
+/*
+* @mixin: Focus totally
+*/
+.form-contact .form-contact--header {
+  background: #3D99F1;
+}
+.form-contact .form-contact--header.widget.gsc-heading .heading-line {
+  display: none;
+}
+@media (max-width: 480px) {
+  .form-contact .form-contact--header.widget.gsc-heading {
+    padding: 25px 20px;
+  }
+}
+.form-contact .form-contact--wrapper {
+  padding: 42px;
+  background: #fff;
+}
+.form-contact .form-contact--wrapper textarea,
+.form-contact .form-contact--wrapper input {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+.form-contact .form-contact--wrapper input {
+  height: 50px;
+}
+@media (max-width: 480px) {
+  .form-contact .form-contact--wrapper {
+    padding: 30px 25px;
+  }
+}
+
+.search-content {
+  top: 52px !important;
+}
+.search-content .search-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 992px) {
+  .search-content {
+    top: 76px !important;
+  }
+}
+@media (max-width: 480px) {
+  .search-content {
+    top: 52px !important;
+    left: calc((100vw / 1.7) * -1);
+  }
+}
+
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @function
+* @return path img + img
+*/
+/*
+* @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
+*/
+/*
+* @mixin: Focus totally
+*/
+.thumbnail--card .thumbnail {
+  -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
+  padding: 0;
+}
+.thumbnail--card .thumbnail,
+.thumbnail--card .thumbnail img {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.thumbnail--card .caption {
+  padding: 20px;
+}
+.thumbnail--card h5 {
+  margin-top: 0;
+}
+.thumbnail--card .field--name-body p {
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.thumbnail--card .field--name-node-post-date {
+  font-size: 12px;
+}
+
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @function
+* @return path img + img
+*/
+/*
+* @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
+*/
+/*
+* @mixin: Focus totally
+*/
+.curriculum .mb-5 {
+  margin-bottom: 10px !important;
+}
+.curriculum .gsc-heading.style-default {
+  padding-bottom: 0;
+}
+.curriculum .panel-body .field--label-inline .field__label {
+  display: none;
+}
+.curriculum .panel-body .paragraph {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px dashed #969696;
+}
+.curriculum .panel-body .paragraph:first-child .field--label-inline .field__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.curriculum .panel-body .paragraph:last-child {
+  border-bottom: 0;
+}
+.curriculum .panel-body .paragraph .field--name-field-titulo {
+  width: 90%;
+}
+.curriculum .panel-body .paragraph .field--name-field-creditos {
+  width: 10%;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .curriculum .panel-body .paragraph:first-child .field--name-field-creditos {
+    display: block;
+  }
+  .curriculum .panel-body .paragraph:first-child .field--name-field-creditos .field__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 70%;
+  }
+  .curriculum .panel-body .paragraph .field--name-field-titulo {
+    width: 76%;
+  }
+  .curriculum .panel-body .paragraph .field--name-field-creditos {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    width: 24%;
+  }
+}
+
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @function
+* @return path img + img
+*/
+/*
+* @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
+*/
+/*
+* @mixin: Focus totally
+*/
+.landing-home .landing_faculties--title.widget.gsc-heading {
+  padding: 40px 0 0;
+}
+.landing-home .landing_faculties--title.widget.gsc-heading .title {
+  padding: 0;
+}
+.landing-home .landing_faculties--title.widget.gsc-heading .heading-line {
+  width: 100%;
+  height: 1px;
+}
+.landing-home .landing_faculties {
+  padding: 0 20px;
+}
+.landing-home .landing_faculties .content-inner {
+  margin-bottom: 10px !important;
+  border: 1px solid #fff;
+  min-height: auto;
+  padding: 18px;
+}
+.landing-home .landing_faculties .item:last-child {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  clear: both;
+}
+@media (max-width: 1200px) {
+  .landing-home .landing_faculties {
+    padding: 0;
+  }
+}
+
+.search-program form {
+  text-align: center;
+}
+.search-program form h3 {
+  font-size: 32px;
+}
+.search-program form h3::after {
+  width: 50px;
+  height: 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  background: #fff;
+  content: '';
+}
+.search-program form input[type="text"] {
+  width: 80%;
+  height: 50px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin-bottom: 50px !important;
+  color: #636363;
+}
+@media (max-width: 991px) {
+  .search-program form input[type="text"] {
+    width: 100%;
+  }
+}
+.search-program form input[type="submit"] {
+  display: none;
+}
+
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @function
+* @return path img + img
+*/
+/*
+* @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
+*/
+/*
+* @mixin: Focus totally
+*/
+.programa-block-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .programa-block-1 {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+  }
+}
+.programa-block-1 .field--label-inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.programa-block-1 .field--label-inline .field__label {
+  font-weight: bold;
+}
+.programa-block-1 .field--label-inline .field__item {
+  margin: 0 5px;
+}
+@media (max-width: 480px) {
+  .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion .field__item {
+    margin: 0;
+  }
+}
+
+.programa-block-2 .field__label {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #2A2A2A;
+}
+
+.block-believe-inyou .content {
+  position: relative;
+  z-index: 2;
+}
+
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @function
+* @return path img + img
+*/
+/*
+* @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
+*/
+/*
+* @mixin: Focus totally
+*/
+/*
+===========================================================
+                        Units pages
+===========================================================
+*/
+.unidad-menu-principal .gva-menu--units {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 50px;
+}
+.unidad-menu-principal .gva-menu--units a {
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.unidad-menu-principal .gva-menu--units a:hover, .unidad-menu-principal .gva-menu--units a:after, .unidad-menu-principal .gva-menu--units a:active {
+  color: #4582FF;
+}
+.unidad-menu-principal .gva-menu--units a:hover:before, .unidad-menu-principal .gva-menu--units a:after:before, .unidad-menu-principal .gva-menu--units a:active:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.unidad-menu-principal .gva-menu--units a.is-active {
+  color: #4582FF;
+}
+.unidad-menu-principal .gva-menu--units a.is-active:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+@media (max-width: 767px) {
+  .unidad-menu-principal .gva-menu--units {
+    margin-bottom: 30px;
+  }
+}
+
+.unidad-menu-secundario header {
+  overflow: hidden;
+}
+.unidad-menu-secundario .item {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+.unidad-menu-secundario .item a {
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+}
+.unidad-menu-secundario .item a:hover, .unidad-menu-secundario .item a:after, .unidad-menu-secundario .item a:active {
+  color: #4582FF;
+}
+.unidad-menu-secundario .item a:hover:before, .unidad-menu-secundario .item a:after:before, .unidad-menu-secundario .item a:active:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.unidad-menu-secundario .item a.is-active {
+  color: #4582FF;
+}
+.unidad-menu-secundario .item a.is-active:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.menu-block-unit .row-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .menu-block-unit .row-wrapper {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.menu-block-unit .row-wrapper .gsc-column:first-child {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .menu-block-unit .row-wrapper .gsc-column:first-child {
+    margin-bottom: 20px;
+  }
+}
+.menu-block-unit .row-wrapper .gsc-column:last-child > .column-inner {
+  height: 100%;
+}
+.menu-block-unit .row-wrapper ul {
+  width: 100%;
+  height: auto;
+}
+.menu-block-unit .row-wrapper ul a {
+  color: #0a4c8b;
+}
+.menu-block-unit .row-wrapper ul a:hover {
+  color: #6db2f4;
+}
+.menu-block-unit .row-wrapper ul a::after {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 10px;
+  background: url("../images/svg/arrow-right.svg") no-repeat center/contain;
+  content: '';
+}
+.lt-ie8 .menu-block-unit .row-wrapper ul a::after {
+  display: inline;
+  zoom: 1;
+}
+
+/*
+===========================================================
+                    End Units page
+===========================================================
+*/
