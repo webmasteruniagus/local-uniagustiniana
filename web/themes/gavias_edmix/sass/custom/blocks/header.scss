@@ -1,0 +1,52 @@
+@import "../variables";
+@import "../mixins";
+// Topbar first
+.topbar {
+    // Networks
+    .topbar-left {
+        >div {
+            @media (max-width: $screen-xs) {
+                float: none;
+                text-align: center;
+            }
+        }
+    }
+    // Menú top
+    .topbar-right {
+        @include flexbox;
+        @include justify-content(flex-end);
+        @media (max-width: $screen-xs) {
+            @include justify-content(center);
+        }
+        ul {
+            &.menu_rol,
+            &.gva_topbar_menu {
+                @include flexbox;
+                margin: 0;
+                li {
+                    background: none;
+                    margin: 0;
+                    padding: 0;
+                    margin-left: 10px;
+                    a {
+                        color: $theme-color-rgba;
+                        &:hover {
+                            color: darken($theme-color-rgba, 20%)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Header (Logo y menú principal)
+.menu--main .gva_menu {
+    > li > a {
+        letter-spacing: normal;
+        span{
+            @include absolute(left 50%);
+            @include translateX(-50%);
+        }
+    }
+}

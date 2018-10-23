@@ -5,42 +5,9 @@
     margin-bottom: 40px;
 }
 
-// Header - topbar
-.topbar {
-    .topbar-left {
-        >div {
-            @media (max-width: $screen-xs) {
-                float: none;
-                text-align: center;
-            }
-        }
-    }
-    .topbar-right {
-        @include flexbox;
-        @include justify-content(flex-end);
-        @media (max-width: $screen-xs) {
-            @include justify-content(center);
-        }
-        ul {
-            &.menu_rol,
-            &.gva_topbar_menu {
-                @include flexbox;
-                margin: 0;
-                li {
-                    background: none;
-                    margin: 0;
-                    padding: 0;
-                    margin-left: 10px;
-                    a {
-                        color: $theme-color-rgba;
-                        &:hover {
-                            color: darken($theme-color-rgba, 20%)
-                        }
-                    }
-                }
-            }
-        }
-    }
+// Breadcrumbs
+.gva-block-breadcrumb .breadcrumb-style {
+    background-size: cover;
 }
 
 // Global margins and paddings for top and bottom
