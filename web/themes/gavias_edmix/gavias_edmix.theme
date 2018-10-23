@@ -348,6 +348,7 @@ function gavias_edmix_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $f
 }
 
 function gavias_edmix_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  
   if ($node = \Drupal::request()->attributes->get('node')) {
     if($node->hasField('gva_node_layout')){
       $layout = $node->get('gva_node_layout')->value;
@@ -358,6 +359,11 @@ function gavias_edmix_theme_suggestions_page_alter(array &$suggestions, array $v
       } 
     }else{
       array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
+    }
+  }
+  if ($group = \Drupal::request()->attributes->get('group')) {
+    if($group->bundle() == 'home'){
+      array_splice($suggestions, 1, 0, 'page__group__' . $group->bundle());
     }
   }
 }

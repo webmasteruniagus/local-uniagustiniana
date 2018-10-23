@@ -1,0 +1,38 @@
+uuid: 6d93449c-3a23-4528-aeae-0fb05b5b6103
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_imagen
+    - taxonomy.vocabulary.nivel_de_formacion
+  module:
+    - image
+id: taxonomy_term.nivel_de_formacion.field_imagen
+field_name: field_imagen
+entity_type: taxonomy_term
+bundle: nivel_de_formacion
+label: Imagen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

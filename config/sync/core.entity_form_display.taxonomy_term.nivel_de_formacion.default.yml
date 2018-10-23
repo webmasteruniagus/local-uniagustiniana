@@ -3,11 +3,13 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.nivel_de_formacion.field_imagen
     - field.field.taxonomy_term.nivel_de_formacion.field_requisitos_de_ingreso
+    - image.style.thumbnail
     - taxonomy.vocabulary.nivel_de_formacion
   module:
+    - image
     - paragraphs
-    - path
     - text
 id: taxonomy_term.nivel_de_formacion.default
 targetEntityType: taxonomy_term
@@ -22,9 +24,17 @@ content:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
+  field_imagen:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_requisitos_de_ingreso:
     type: entity_reference_paragraphs
-    weight: 5
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -49,10 +59,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  path: true
