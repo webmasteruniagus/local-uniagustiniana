@@ -1,0 +1,29 @@
+uuid: 1fb761f3-9945-4c65-8072-06c77183df8f
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.documentos.documento
+    - field.storage.documentos.field_categoria
+    - taxonomy.vocabulary.category_news
+id: documentos.documento.field_categoria
+field_name: field_categoria
+entity_type: documentos
+bundle: documento
+label: Categoria
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      category_news: category_news
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

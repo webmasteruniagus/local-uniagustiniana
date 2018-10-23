@@ -1,0 +1,28 @@
+uuid: 98bb2f97-5130-453e-a2bf-a26592b6a446
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.documentos.documento
+    - field.storage.node.field_documentos
+    - node.type.pagina_basica
+id: node.pagina_basica.field_documentos
+field_name: field_documentos
+entity_type: node
+bundle: pagina_basica
+label: Documentos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:documentos'
+  handler_settings:
+    target_bundles:
+      documento: documento
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

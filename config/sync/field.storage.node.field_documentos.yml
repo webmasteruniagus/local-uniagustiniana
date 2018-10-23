@@ -1,0 +1,20 @@
+uuid: 42aec39c-fbab-4611-84df-3fff77f0d870
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+id: node.field_documentos
+field_name: field_documentos
+entity_type: node
+type: entity_reference
+settings:
+  target_type: documentos
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 9f7b4ef8-55ba-4290-b291-ca43fc652bb4
+langcode: es
+status: true
+dependencies:
+  module:
+    - eck
+    - taxonomy
+id: documentos.field_categoria
+field_name: field_categoria
+entity_type: documentos
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

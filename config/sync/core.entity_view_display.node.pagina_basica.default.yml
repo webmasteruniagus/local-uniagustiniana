@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.pagina_basica.body
+    - field.field.node.pagina_basica.field_documentos
     - field.field.node.pagina_basica.field_image
     - image.style.normal_size
     - node.type.pagina_basica
@@ -51,6 +52,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: ds_content
+  field_documentos:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_image:
     weight: 0
     label: hidden

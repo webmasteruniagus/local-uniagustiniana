@@ -1,0 +1,20 @@
+uuid: dd0e59c2-0f20-4d19-a7b9-aec9d86c14a8
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group_content.field_peso
+field_name: field_peso
+entity_type: group_content
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

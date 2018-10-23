@@ -1,0 +1,59 @@
+uuid: b89c12d0-eb75-4092-ab2c-14584218d49d
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.documentos.documento
+    - field.field.documentos.documento.field_archivo
+    - field.field.documentos.documento.field_categoria
+  module:
+    - file
+    - user
+id: documentos.documento.default
+targetEntityType: documentos
+bundle: documento
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_archivo:
+    weight: 1
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_categoria:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

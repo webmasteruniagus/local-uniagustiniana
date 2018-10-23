@@ -1,0 +1,59 @@
+uuid: d12e7d80-6c64-45ab-9823-317737ffcce4
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.documentos.documento
+    - field.field.documentos.documento.field_archivo
+    - field.field.documentos.documento.field_categoria
+  module:
+    - file
+id: documentos.documento.default
+targetEntityType: documentos
+bundle: documento
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_archivo:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_categoria:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

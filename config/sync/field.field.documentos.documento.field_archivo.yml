@@ -1,0 +1,27 @@
+uuid: f85a107c-af0f-4fac-8971-70e444861174
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.documentos.documento
+    - field.storage.documentos.field_archivo
+  module:
+    - file
+id: documentos.documento.field_archivo
+field_name: field_archivo
+entity_type: documentos
+bundle: documento
+label: Archivo
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf doc docx xls xlsx'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
