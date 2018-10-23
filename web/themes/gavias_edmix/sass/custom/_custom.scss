@@ -4,10 +4,17 @@
 ===========================================================
 */
 
-@import "page-program";
-@import "page-unit";
-@import "forms";
-@import "home-landing";
-@import "home-search-program";
-@import "thumbnail";
+// ------------------- Global
 @import "layout";
+
+// ------------------- Blocks
+
+@import "./blocks/forms";
+@import "./blocks/thumbnail";
+@import "./blocks/curriculum";
+
+// ------------------- Pages
+
+@import "./pages/page-home";
+@import "./pages/page-program";
+@import "./pages/page-unit";

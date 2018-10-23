@@ -32,6 +32,9 @@
 /*
 * @mixin: Flex direction
 */
+/*
+* @mixin: Focus totally
+*/
 .form-contact .form-contact--header {
   background: #3D99F1;
 }

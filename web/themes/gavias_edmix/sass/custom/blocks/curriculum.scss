@@ -1,0 +1,68 @@
+@import "../variables";
+@import "../mixins";
+// Plan de estudios de programa
+.curriculum {
+    // Título
+    .mb-5 {
+        margin-bottom: 10px !important;
+    }
+    .gsc-heading.style-default {
+        padding-bottom: 0;}
+    // Acordeon
+    .panel-body {
+        // Oculto todos los títulos
+        .field--label-inline .field__label {
+            display: none;
+        }
+        .paragraph {
+            @include flexbox;
+            padding: 10px 0;
+            border-bottom: 1px dashed lighten($text-color, 20%);
+            // Muestro solo los de la primer materia
+            &:first-child {
+                .field--label-inline .field__label {
+                    display: block;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            .field--name-field-titulo {
+                width: 90%;
+            }
+
+            .field--name-field-creditos {
+                width: 10%;
+                text-align: center;
+            }
+
+            @media (max-width: $screen-xs) {
+                &:first-child {
+                    .field--name-field-creditos {
+                        display: block;
+                        .field__item {
+                            @include flexbox;
+                            @include center-content;
+                            @include flex-wrap(wrap);
+                            height: 70%;
+                        }
+                    }
+                }
+
+                .field--name-field-titulo {
+                    width: 76%;
+                }
+    
+                .field--name-field-creditos {
+                    @include flexbox;
+                    @include center-content;
+                    width: 24%;
+                }
+            }
+        }
+    }
+}

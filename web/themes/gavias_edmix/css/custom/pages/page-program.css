@@ -32,6 +32,9 @@
 /*
 * @mixin: Flex direction
 */
+/*
+* @mixin: Focus totally
+*/
 .programa-block-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -92,4 +95,9 @@
   font-weight: bold;
   margin: 10px 0;
   color: #2A2A2A;
+}
+
+.block-believe-inyou .content {
+  position: relative;
+  z-index: 2;
 }

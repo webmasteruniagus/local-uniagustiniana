@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./mixins";
+@import "../variables";
+@import "../mixins";
 // Page programs
 .programa-block-1 {
     @include flexbox;
@@ -28,11 +28,16 @@
         }
     }
 }
-
+// Bloque de requisitos de programa
 .programa-block-2 {
     .field__label {
         font-weight: bold;
         margin: 10px 0;
         color: $color_2;
     }
+}
+// BLoque con imagen de fondo
+.block-believe-inyou .content {
+    position: relative;
+    z-index: 2;
 }

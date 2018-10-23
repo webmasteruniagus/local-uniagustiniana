@@ -32,6 +32,9 @@
 /*
 * @mixin: Flex direction
 */
+/*
+* @mixin: Focus totally
+*/
 .thumbnail--card .thumbnail {
   -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
