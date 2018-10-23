@@ -1,0 +1,29 @@
+uuid: ade74b09-5540-40d3-a36c-a19919c3d929
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_nivel_de_formacion
+    - group.type.programa
+    - taxonomy.vocabulary.nivel_de_formacion
+id: group.programa.field_nivel_de_formacion
+field_name: field_nivel_de_formacion
+entity_type: group
+bundle: programa
+label: 'Nivel de formación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      nivel_de_formacion: nivel_de_formacion
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

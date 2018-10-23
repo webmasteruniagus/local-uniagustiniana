@@ -1,14 +1,14 @@
-uuid: c453d842-4778-41c8-bd4c-3d6ec63f2287
+uuid: 9e75d237-0fce-4a69-b722-b921207cda89
 langcode: es
 status: true
 dependencies:
   module:
     - entity_reference_revisions
-    - group
     - paragraphs
-id: group.field_requisitos_de_ingreso
+    - taxonomy
+id: taxonomy_term.field_requisitos_de_ingreso
 field_name: field_requisitos_de_ingreso
-entity_type: group
+entity_type: taxonomy_term
 type: entity_reference_revisions
 settings:
   target_type: paragraph
