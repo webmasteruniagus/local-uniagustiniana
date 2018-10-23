@@ -9,6 +9,9 @@ dependencies:
     - field.field.group.programa.field_codigo_snies_8182
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_fecha_de_resolucion
+    - field.field.group.programa.field_frase_plan_de_estudios
+    - field.field.group.programa.field_frase_requisitos
+    - field.field.group.programa.field_materias
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
     - field.field.group.programa.field_objetivo_del_programa
@@ -48,10 +51,10 @@ third_party_settings:
         - group_programa_block_1
         - field_perfil_profesional
         - field_mision
-        - group_programa_block_2
-        - field_titulo
         - field_objetivo_del_programa
         - field_vision
+        - group_programa_block_2
+        - field_titulo
         - field_codigo_snies_8182
         - field_fecha_de_resolucion
         - field_vigencia
@@ -288,6 +291,9 @@ hidden:
   changed: true
   created: true
   field_block_builder: true
+  field_frase_plan_de_estudios: true
+  field_frase_requisitos: true
+  field_materias: true
   field_requisitos_de_ingreso: true
   label: true
   langcode: true

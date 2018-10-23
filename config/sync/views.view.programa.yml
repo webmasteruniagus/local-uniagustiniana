@@ -554,8 +554,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: "<div class=\"panel-heading\" role=\"tab\" id=\"headingOne\">\r\n      <h4 class=\"panel-title\">\r\n<a role=\"button\" data-toggle=\"collapse\" aria-expanded=\"false\" aria-controls=\"collapse-0{{ counter }}\" data-parent=\"#acordion-01\" href=\"#collapse-0{{ counter }}\" class=\"collapsed\">{{ field_semestre }}</a>\r\n      </h4>\r\n    </div>\r\n"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -617,8 +617,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: "<div id=\"collapse-0{{ counter }}\" class=\"panel-collapse collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" arial-expanded=\"false\">\r\n<div class=\"panel-body\">\r\n{{ field_materias }}\r\n</div>\r\n</div>"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -666,7 +666,7 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: ol
+          multi_type: separator
           separator: ''
           field_api_classes: false
           plugin_id: field
