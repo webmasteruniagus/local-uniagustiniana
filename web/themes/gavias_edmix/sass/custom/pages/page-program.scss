@@ -19,11 +19,12 @@
 
         &::before,
         &::after {
-            @include size(1px, 10px);
+            @include size(1px, 15px);
+            margin-top: 5px;
             background: rgba($black, .2);
             content: '';
         }
-
+        
         &:first-child { margin-left: 0; }
 
         .field__label,
@@ -34,11 +35,15 @@
         .field__item { margin-right: 5px; }
 
         @media (max-width: $screen-xs) {
-            &.field--name-field-fecha-de-resolucion {
-                @include flex-wrap(wrap);
+            @include flex-wrap(wrap);
+            
+            &::before,
+            &::after { display: none; }
 
-                .field__item { margin-left: 0; }
-            }
+            .field__label,
+            .field__item { margin: 0; }
+
+            .field__label { margin-right: 5px; }
         }
     }
 }

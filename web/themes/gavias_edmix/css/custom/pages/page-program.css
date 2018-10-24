@@ -77,7 +77,8 @@
 }
 .programa-block-1 .field--label-inline::before, .programa-block-1 .field--label-inline::after {
   width: 1px;
-  height: 10px;
+  height: 15px;
+  margin-top: 5px;
   background: rgba(0, 0, 0, 0.2);
   content: '';
 }
@@ -95,14 +96,21 @@
   margin-right: 5px;
 }
 @media (max-width: 480px) {
-  .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion {
+  .programa-block-1 .field--label-inline {
     -webkit-flex-wrap: wrap;
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion .field__item {
-    margin-left: 0;
+  .programa-block-1 .field--label-inline::before, .programa-block-1 .field--label-inline::after {
+    display: none;
+  }
+  .programa-block-1 .field--label-inline .field__label,
+  .programa-block-1 .field--label-inline .field__item {
+    margin: 0;
+  }
+  .programa-block-1 .field--label-inline .field__label {
+    margin-right: 5px;
   }
 }
 
