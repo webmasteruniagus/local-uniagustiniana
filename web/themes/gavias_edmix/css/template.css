@@ -13537,8 +13537,6 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
-}
-.form-contact .form-contact--wrapper input {
   height: 50px;
 }
 @media (max-width: 480px) {
@@ -14023,12 +14021,27 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 5px;
+  margin-left: -1px;
+}
+.programa-block-1 .field--label-inline::before, .programa-block-1 .field--label-inline::after {
+  width: 1px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+.programa-block-1 .field--label-inline:first-child {
+  margin-left: 0;
+}
+.programa-block-1 .field--label-inline .field__label,
+.programa-block-1 .field--label-inline .field__item {
+  margin-left: 5px;
 }
 .programa-block-1 .field--label-inline .field__label {
   font-weight: bold;
 }
 .programa-block-1 .field--label-inline .field__item {
-  margin: 0 5px;
+  margin-right: 5px;
 }
 @media (max-width: 480px) {
   .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion {
@@ -14038,7 +14051,7 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
     flex-wrap: wrap;
   }
   .programa-block-1 .field--label-inline.field--name-field-fecha-de-resolucion .field__item {
-    margin: 0;
+    margin-left: 0;
   }
 }
 
@@ -14213,14 +14226,14 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
   -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .menu-block-unit .row-wrapper .gsc-column:first-child {

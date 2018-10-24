@@ -8,18 +8,12 @@
         padding: 0;
         // content card - image
         &,
-        img {
-            @include border-radius(5px);
-        }
+        img { @include border-radius(5px); }
     }
     // Description
-    .caption {
-        padding: 20px;
-    }
+    .caption { padding: 20px; }
     // Title
-    h5 {
-        margin-top: 0;
-    }
+    h5 { margin-top: 0; }
     // Summary
     .field--name-body {
         p {
@@ -28,7 +22,5 @@
         }
     }
     // Date
-    .field--name-node-post-date {
-        font-size: 12px;
-    }
+    .field--name-node-post-date { font-size: 12px; }
 }
