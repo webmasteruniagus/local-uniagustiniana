@@ -1,13 +1,25 @@
 @import "./variables";
 @import "./mixins";
 // Global styles
-.container-bg {
-    margin-bottom: 40px;
-}
+.container-bg { margin-bottom: 40px; }
 
 // Breadcrumbs
-.gva-block-breadcrumb .breadcrumb-style {
-    background-size: cover;
+.gva-block-breadcrumb .breadcrumb-style { background-size: cover; }
+
+// Redes sociales
+.field--name-dynamic-block-fieldnode-redes-sociales { margin: 2rem 0; }
+
+// Images
+.img-rounded img {
+    @include border-radius(5px);
+}
+
+// Carousel
+.owl-carousel .owl-item {
+    // 768px
+    @media (max-width: 767px) {
+        text-align: center;
+    }
 }
 
 // Global margins and paddings for top and bottom
@@ -37,18 +49,5 @@
     }
     .pl-#{ $number } {
         @include padding(left, calc(#{ $number }% * 1));
-    }
-}
-
-// Images
-.img-rounded img {
-    @include border-radius(5px);
-}
-
-// Carousel
-.owl-carousel .owl-item {
-    // 768px
-    @media (max-width: 767px) {
-        text-align: center;
     }
 }

@@ -38,6 +38,7 @@ global-styling:
     vendor/slick/slick.min.js: {}
     vendor/popup-gallery/js/lightgallery.min.js: {}
     js/main.js: {}
+    js/custom.js: {}
   dependencies:
     - core/jquery
     - core/drupal
@@ -147,7 +148,6 @@ gavias_edmix.skin.yellow:
     theme: 
       css/skins/yellow/bootstrap.css: {}
       css/skins/yellow/template.css: {}
-
 
 gavias-edmix-admin:
   version: VERSION
