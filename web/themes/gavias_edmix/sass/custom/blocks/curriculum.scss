@@ -3,17 +3,14 @@
 // Plan de estudios de programa
 .curriculum {
     // Título
-    .mb-5 {
-        margin-bottom: 10px !important;
-    }
-    .gsc-heading.style-default {
-        padding-bottom: 0;}
+    .mb-5 { margin-bottom: 10px !important; }
+
+    .gsc-heading.style-default { padding-bottom: 0;}
     // Acordeon
     .panel-body {
         // Oculto todos los títulos
-        .field--label-inline .field__label {
-            display: none;
-        }
+        .field--label-inline .field__label { display: none; }
+
         .paragraph {
             @include flexbox;
             padding: 10px 0;
@@ -27,13 +24,9 @@
                 }
             }
 
-            &:last-child {
-                border-bottom: 0;
-            }
+            &:last-child { border-bottom: 0; }
 
-            .field--name-field-titulo {
-                width: 90%;
-            }
+            .field--name-field-titulo { width: 90%; }
 
             .field--name-field-creditos {
                 width: 10%;
@@ -44,6 +37,7 @@
                 &:first-child {
                     .field--name-field-creditos {
                         display: block;
+
                         .field__item {
                             @include flexbox;
                             @include center-content;
@@ -53,9 +47,7 @@
                     }
                 }
 
-                .field--name-field-titulo {
-                    width: 76%;
-                }
+                .field--name-field-titulo { width: 76%; }
     
                 .field--name-field-creditos {
                     @include flexbox;

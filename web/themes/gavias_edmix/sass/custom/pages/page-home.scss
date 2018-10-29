@@ -4,29 +4,28 @@
 .landing-home {
     .landing_faculties--title.widget.gsc-heading {
         padding: 40px 0 0;
-        .title {
-            padding: 0;
-        }
-        .heading-line {
-            @include size(100%, 1px);
-        }
+
+        .title { padding: 0; }
+        
+        .heading-line { @include size(100%, 1px); }
     }
     .landing_faculties {
         padding: 0 20px;
+
         .content-inner {
             @include margin(bottom, 10px);
             border: 1px solid $white;
             min-height: auto;
             padding: 18px;
         }
+
         .item:last-child {
             @include center-block;
             float: none;
             clear: both;
         }
-        @media (max-width: $screen-lg) {
-            padding: 0;
-        }
+
+        @media (max-width: $screen-lg) { padding: 0; }
     }
 }
 
@@ -34,8 +33,10 @@
 .search-program {
     form {
         text-align: center;
+
         h3 {
             font-size: $font-size-h1;
+
             &::after {
                 @include size(50px, 2px);
                 @include center-block;
@@ -45,17 +46,16 @@
                 content: '';
             }
         }
+
         input[type="text"] {
             @include size(80%, 50px);
             @include border-radius(25px);
             @include margin(bottom, 50px);
             color: $text-color;
-            @media (max-width: $screen-sm-max) {
-                width: 100%;
-            }
+
+            @media (max-width: $screen-sm-max) { width: 100%; }
         }
-        input[type="submit"] {
-            display: none;
-        }
+
+        input[type="submit"] { display: none; }
     }
 }

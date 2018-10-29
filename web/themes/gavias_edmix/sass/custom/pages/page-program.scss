@@ -6,30 +6,50 @@
     @include justify-content(center);
     @include align-items(center);
     @include flex-wrap(wrap);
+
     @media (max-width: $screen-xs) {
         @include flex-direction(column);
         @include align-items(flex-start);
     }
+
     .field--label-inline {
         @include flexbox;
-        .field__label {
-            font-weight: bold;
+        margin-bottom: 5px;
+        margin-left: -1px;
+
+        &::before,
+        &::after {
+            @include size(1px, 15px);
+            margin-top: 5px;
+            background: rgba($black, .2);
+            content: '';
         }
-        .field__item {
-            margin: 0 5px;
-        }
+        
+        &:first-child { margin-left: 0; }
+
+        .field__label,
+        .field__item { margin-left: 5px; }
+
+        .field__label { font-weight: bold; }
+
+        .field__item { margin-right: 5px; }
+
         @media (max-width: $screen-xs) {
-            &.field--name-field-fecha-de-resolucion {
-                @include flex-wrap(wrap);
-                .field__item {
-                    margin: 0;
-                }
-            }
+            @include flex-wrap(wrap);
+            
+            &::before,
+            &::after { display: none; }
+
+            .field__label,
+            .field__item { margin: 0; }
+
+            .field__label { margin-right: 5px; }
         }
     }
 }
 // Bloque de requisitos de programa
 .programa-block-2 {
+
     .field__label {
         font-weight: bold;
         margin: 10px 0;

@@ -47,28 +47,26 @@
     @media (max-width: $screen-sm) {
         @include flex-direction(column)
     }
+
     .gsc-column {
         &:first-child {
             @include flexbox;
-            @include align-items(center);
-            @include justify-content(center);
+            @include center-content;
             // 768px
-            @media (max-width: $screen-sm) {
-                margin-bottom: 20px;
-            }
+            @media (max-width: $screen-sm) { margin-bottom: 20px; }
         }
-        &:last-child>.column-inner {
-            height: 100%;
-        }
+
+        &:last-child>.column-inner { height: 100%; }
     }
     // Menú
     ul {
         @include size(100%, auto);
+
         a {
             color: darken($color_1, 30%);
-            &:hover {
-                color: lighten($color_1, 10%);
-            }
+
+            &:hover { color: lighten($color_1, 10%); }
+            
             &::after {
                 @include inline-block;
                 @include size(20px, 10px);
