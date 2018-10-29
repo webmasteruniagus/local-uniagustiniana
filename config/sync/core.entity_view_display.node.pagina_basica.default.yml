@@ -33,6 +33,7 @@ third_party_settings:
       ds_content:
         - field_image
         - body
+        - field_documentos
         - 'dynamic_block_field:node-redes_sociales'
     fields:
       'dynamic_block_field:node-redes_sociales':
@@ -54,12 +55,13 @@ content:
     region: ds_content
   field_documentos:
     weight: 2
-    label: above
+    label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
+    type: entity_reference_entity_view
+    region: ds_content
   field_image:
     weight: 0
     label: hidden

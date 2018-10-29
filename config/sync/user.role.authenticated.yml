@@ -21,4 +21,5 @@ permissions:
   - 'skip comment approval'
   - 'subscribe to newsletters'
   - 'use text format basic_html'
+  - 'view any documentos entities'
   - 'view commerce_product'

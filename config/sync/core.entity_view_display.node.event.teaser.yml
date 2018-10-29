@@ -6,8 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
     - field.field.node.event.field_event_address
+    - field.field.node.event.field_event_end
     - field.field.node.event.field_event_image
-    - field.field.node.event.field_event_map
     - field.field.node.event.field_event_start
     - field.field.node.event.field_event_time
     - image.style.medium
@@ -72,5 +72,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_event_map: true
+  field_event_end: true
   langcode: true

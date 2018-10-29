@@ -11,6 +11,7 @@ namespace Drupal\uniagustiniana_migration;
 use Drupal\node\Entity\Node;
 use Drupal\group\Entity;
 use Drupal\group\Entity\Group;
+use Drupal\Core\Database\Database;
 
 class BatchInsertNode {
     
@@ -285,8 +286,188 @@ class BatchInsertNode {
                 $group->addContent($node, 'group_node:news');
             }
 
-        }else{
-            ksm($query);
+        }
+    }
+
+    public static function InsertNodeEvents($content, &$context){
+        Database::setActiveConnection('eventos');
+            $query = db_select('wp_posts', 'p');
+            $query->addField('p', 'post_date');
+            $query->addField('p', 'post_title');
+            $query->addField('p', 'post_content');
+            $query->innerJoin('wp_postmeta', 'pms', 'p.ID = pms.post_id');
+            $query->addField('pms', 'meta_value');
+            $query->innerJoin('wp_postmeta', 'pme', 'p.ID = pme.post_id');
+            $query->addField('pme', 'meta_value');
+            $query->innerJoin('wp_term_relationships', 'tr', 'p.ID = tr.object_id');
+            $query->innerJoin('wp_terms', 't', 'tr.term_taxonomy_id = t.term_id');
+            $query->addField('t', 'term_id');
+            $query->condition('p.ID', $content->ID, '=');
+            $query->condition('pms.meta_key', '_EventStartDate', '=');
+            $query->condition('pme.meta_key', '_EventEndDate', '=');
+            $result = $query->execute()->fetchObject();
+        // Switch back
+        Database::setActiveConnection();
+
+        switch ($result->term_id) {
+            case 85:
+                $group = 40;
+                break;
+            case 82:
+                $group = 12;
+                break;
+            case 94:
+                $group = 57;
+                break;
+            case 95:
+                $group = 61;
+                break;
+            case 109:
+                $group = 36;
+                break;
+            case 86:
+                $group = 62;
+                break;
+            case 93:
+                $group = 63;
+                break;
+            case 110:
+                $group = 62;
+                break;
+            case 108:
+                $group = 12;
+                break;
+            case 104:
+                $group = 17;
+                break;
+            case 101:
+                $group = 6;
+                break;
+            case 83:
+                $group = 37;
+                break;
+            case 89:
+                $group = 54;
+                break;
+            case 112:
+                $group = 29;
+                break;
+            case 100:
+                $group = 46;
+                break;
+            case 114:
+                $group = 3;
+                break;
+            case 87:
+                $group = 38;
+                break;
+            case 113:
+                $group = 3;
+                break;
+            case 91:
+                $group = 35;
+                break;
+            case 96:
+                $group = 14;
+                break;
+            case 105:
+                $group = 31;
+                break;
+            case 107:
+                $group = 30;
+                break;
+            case 106:
+                $group = 42;
+                break;
+            case 84:
+                $group = 51;
+                break;
+        }
+
+        if(isset($group) && is_numeric($group)){
+
+            $gquery = db_select('group_content_field_data', 'gfd');
+            $gquery->addField('gfd', 'entity_id');
+            $gquery->condition('gfd.gid', $group, '=');
+            $gquery->condition('gfd.label', $result->post_title, '=');
+            $gresult=$gquery->execute()->fetchObject();
+
+            if($gresult && $gresult->entity_id){
+                $node = Node::load($gresult->entity_id);
+            }else{
+                //Create node object and save it.
+                $node = Node::create(['type' => 'event']);
+                $node->set('title', $result->post_title);
+                $node->set('created', strtotime($result->post_date));
+            }
+
+            $text = self::clearHtml($result->post_content, false);
+            
+            $node->set('body', $text);
+            
+            $node->body->format = 'full_html';
+
+            $star_date = format_date(strtotime($result->meta_value), 'custom', 'Y-m-d');
+
+            if($star_date){
+                $node->set('field_event_start', $star_date);
+            }
+            
+            $end_date = format_date(strtotime($result->pme_meta_value), 'custom', 'Y-m-d');
+
+            if($end_date){
+                $node->set('field_event_end', $end_date);
+            }
+
+            $star_hour = format_date(strtotime($result->meta_value), 'custom', 'H:i');
+
+            $end_hour = format_date(strtotime($result->pme_meta_value), 'custom', 'H:i');
+            
+            if($star_hour && $end_hour){
+                $node->set('field_event_time', $star_hour . ' - ' . $end_hour);
+            }
+            
+            $array_images = self::getImages($result->post_content);
+
+            if($array_images){
+                $folder = format_date(strtotime($result->post_date), 'custom', 'm-Y');
+                $path = 'public://eventos/' . $folder . '/';
+                if(!is_dir($path)){
+                    drupal_mkdir($path, NULL, TRUE);
+                }
+                foreach ($array_images as $key => $image) {
+                    switch ($key){
+                        case 'absolute':
+                            foreach ($image as $key => $img) {
+                                $image_url = basename($img);
+                                if(preg_match('/172.16.1.10\b/', $img)){
+                                    $replace = str_replace('http://172.16.1.10/eventos/wp-content/uploads/2018/', '', $img);
+                                    $data = file_get_contents('public://backup_events/' . $replace);
+                                }else{
+                                    $data = file_get_contents($img);
+                                }                               
+                            
+                                if($data){
+                                    $file = file_save_data($data, $path . $image_url, FILE_EXISTS_REPLACE);
+                                    $images[] = array(
+                                        'target_id' => $file->id(),
+                                        'alt' => $result->post_title
+                                    );
+                                }
+                            } 
+                            if(isset($images)){
+                                $node->set('field_event_image', $images);
+                            }
+                            break;
+                    }
+                }
+            }
+            $node->save();
+            if(!$gresult){
+                $group=Group::load($group);
+                $group->addContent($node, 'group_node:event');
+            }
+
         }
     }
     
@@ -329,9 +510,11 @@ class BatchInsertNode {
         return $return;
     }
 
-    public function clearHtml($content){
+    public function clearHtml($content, $link = true){
         $content = preg_replace("/<img[^>]+\>/i", "(image) ", $content); 
-        $content = preg_replace('#<a.*?>(.*?)</a>#i', '', $content);
+        if($link){
+            $content = preg_replace('#<a.*?>(.*?)</a>#i', '', $content);
+        }
         $content = str_replace('{module Compartir-redes}', '', $content);
         $content = str_replace('(image)', '', $content);
         $content = str_replace('<em>Haz clic sobre la imagen para ampliarla.</em>', '', $content);

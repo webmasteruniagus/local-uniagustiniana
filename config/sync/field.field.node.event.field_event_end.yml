@@ -1,0 +1,21 @@
+uuid: daa273e6-4298-410e-9273-ba07bd748c55
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_end
+    - node.type.event
+  module:
+    - datetime
+id: node.event.field_event_end
+field_name: field_event_end
+entity_type: node
+bundle: event
+label: 'Event End'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

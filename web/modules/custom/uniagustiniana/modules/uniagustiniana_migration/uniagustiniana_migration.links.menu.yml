@@ -6,3 +6,11 @@ uniagustiniana_migration.main:
   description: 'Batch para la migracion de noticias joomla a drupal'
   parent: uniagustiniana.main
   weight: 98
+
+uniagustiniana_migration.events:
+  title: 'Migracion eventos'
+  route_name: uniagustiniana_migration.events
+  route_parameters: { package: 'Migracion' }
+  description: 'Batch para la migracion de eventos joomla a drupal'
+  parent: uniagustiniana.main
+  weight: 99
