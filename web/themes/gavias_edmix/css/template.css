@@ -13008,6 +13008,9 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 /*
 * @mixin: Focus totally
 */
+/*
+* @mixin: Init pseudo elemento
+*/
 .container-bg {
   margin-bottom: 40px;
 }
@@ -13519,6 +13522,14 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 /*
 * @mixin: Focus totally
 */
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        Forms block
+===========================================================
+*/
 .form-contact .form-contact--header {
   background: #3D99F1;
 }
@@ -13573,6 +13584,11 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 
 /*
 ===========================================================
+                        End Forms block
+===========================================================
+*/
+/*
+===========================================================
                         Custom variables
 ===========================================================
 */
@@ -13607,6 +13623,14 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 */
 /*
 * @mixin: Focus totally
+*/
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        Card block
+===========================================================
 */
 .thumbnail--card .thumbnail {
   -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
@@ -13637,6 +13661,11 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 
 /*
 ===========================================================
+                        End card block
+===========================================================
+*/
+/*
+===========================================================
                         Custom variables
 ===========================================================
 */
@@ -13671,6 +13700,14 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 */
 /*
 * @mixin: Focus totally
+*/
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        Curriculum block
+===========================================================
 */
 .curriculum .mb-5 {
   margin-bottom: 10px !important;
@@ -13752,6 +13789,11 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 
 /*
 ===========================================================
+                        End Curriculum block
+===========================================================
+*/
+/*
+===========================================================
                         Custom variables
 ===========================================================
 */
@@ -13786,6 +13828,14 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 */
 /*
 * @mixin: Focus totally
+*/
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        Header block
+===========================================================
 */
 @media (max-width: 480px) {
   .topbar .topbar-left > div {
@@ -13847,6 +13897,11 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 
 /*
 ===========================================================
+                        End Header block
+===========================================================
+*/
+/*
+===========================================================
                         Custom variables
 ===========================================================
 */
@@ -13881,6 +13936,175 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 */
 /*
 * @mixin: Focus totally
+*/
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        File block - ECK ENTITY
+===========================================================
+*/
+.eck-entity .field--type-string,
+.eck-entity .field--type-entity-reference .field__label,
+.eck-entity .field--type-file .field__label {
+  font-weight: bold;
+}
+.eck-entity .field--type-file {
+  margin-top: 10px;
+}
+.eck-entity .field__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+@media screen and (max-width: 470px) {
+  .eck-entity .field__items {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.eck-entity .field__items a {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  width: 200px;
+  height: auto;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
+  position: relative;
+  display: block;
+  color: #252525;
+  overflow: hidden;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 470px) {
+  .eck-entity .field__items a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.eck-entity .field__items a::before {
+  width: 25px;
+  height: 30px;
+  display: block;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.lt-ie8 .eck-entity .field__items a::before {
+  display: inline;
+  zoom: 1;
+}
+.eck-entity .field__items a::after {
+  top: -40%;
+  left: 50%;
+  position: absolute;
+  display: block;
+  content: "";
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  z-index: -1;
+  background: url("../images/svg/download.svg") no-repeat center/contain;
+}
+.eck-entity .field__items a:hover {
+  -webkit-box-shadow: 0px 4px 26px 3px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 4px 26px 3px rgba(0, 0, 0, 0.09);
+}
+.eck-entity .field__items a:hover::after {
+  top: 50%;
+}
+.eck-entity .file--application-pdf a::before {
+  background: url("../images/svg/pdf.svg") no-repeat center/contain;
+}
+.eck-entity .file--x-office-spreadsheet a::before {
+  background: url("../images/svg/excel.svg") no-repeat center/contain;
+}
+.eck-entity .file--x-office-document a::before {
+  background: url("../images/svg/doc.svg") no-repeat center/contain;
+}
+
+/*
+===========================================================
+                        End File block - ECK ENTITY
+===========================================================
+*/
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @function
+* @return path img + img
+*/
+/*
+* @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
+*/
+/*
+* @mixin: Focus totally
+*/
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        Home page
+===========================================================
 */
 .landing-home .landing_faculties--title.widget.gsc-heading {
   padding: 40px 0 0;
@@ -13921,6 +14145,8 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   font-size: 32px;
 }
 .search-program form h3::after {
+  display: block;
+  content: "";
   width: 50px;
   height: 2px;
   display: block;
@@ -13929,7 +14155,6 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   margin-top: 20px !important;
   margin-bottom: 20px !important;
   background: #fff;
-  content: '';
 }
 .search-program form input[type="text"] {
   width: 80%;
@@ -13951,6 +14176,11 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   display: none;
 }
 
+/*
+===========================================================
+                        End home page
+===========================================================
+*/
 /*
 ===========================================================
                         Custom variables
@@ -13987,6 +14217,14 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 */
 /*
 * @mixin: Focus totally
+*/
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        Programs pages
+===========================================================
 */
 .programa-block-1 {
   display: -webkit-box;
@@ -14029,11 +14267,12 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   margin-left: -1px;
 }
 .programa-block-1 .field--label-inline::before, .programa-block-1 .field--label-inline::after {
+  display: block;
+  content: "";
   width: 1px;
   height: 15px;
   margin-top: 5px;
   background: rgba(0, 0, 0, 0.2);
-  content: '';
 }
 .programa-block-1 .field--label-inline:first-child {
   margin-left: 0;
@@ -14080,6 +14319,11 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 
 /*
 ===========================================================
+                        End programs pages
+===========================================================
+*/
+/*
+===========================================================
                         Custom variables
 ===========================================================
 */
@@ -14114,6 +14358,9 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
 */
 /*
 * @mixin: Focus totally
+*/
+/*
+* @mixin: Init pseudo elemento
 */
 /*
 ===========================================================
@@ -14266,12 +14513,13 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
   color: #6db2f4;
 }
 .menu-block-unit .row-wrapper ul a::after {
+  display: block;
+  content: "";
   display: inline-block;
   vertical-align: middle;
   width: 20px;
   height: 10px;
   background: url("../images/svg/arrow-right.svg") no-repeat center/contain;
-  content: '';
 }
 .lt-ie8 .menu-block-unit .row-wrapper ul a::after {
   display: inline;

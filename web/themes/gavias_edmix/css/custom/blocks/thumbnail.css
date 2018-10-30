@@ -35,6 +35,14 @@
 /*
 * @mixin: Focus totally
 */
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        Card block
+===========================================================
+*/
 .thumbnail--card .thumbnail {
   -webkit-box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.09);
@@ -61,3 +69,9 @@
 .thumbnail--card .field--name-node-post-date {
   font-size: 12px;
 }
+
+/*
+===========================================================
+                        End card block
+===========================================================
+*/

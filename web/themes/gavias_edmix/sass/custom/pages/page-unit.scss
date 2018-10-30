@@ -68,10 +68,10 @@
             &:hover { color: lighten($color_1, 10%); }
             
             &::after {
+                @include pseudo-element;
                 @include inline-block;
                 @include size(20px, 10px);
                 background: svg(arrow-right);
-                content: '';
             }
         }
     }

@@ -35,6 +35,14 @@
 /*
 * @mixin: Focus totally
 */
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        Header block
+===========================================================
+*/
 @media (max-width: 480px) {
   .topbar .topbar-left > div {
     float: none;
@@ -92,3 +100,9 @@
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
+/*
+===========================================================
+                        End Header block
+===========================================================
+*/

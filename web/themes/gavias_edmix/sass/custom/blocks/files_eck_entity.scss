@@ -1,0 +1,82 @@
+@import "../variables";
+@import "../mixins";
+
+/*
+===========================================================
+                        File block - ECK ENTITY
+===========================================================
+*/
+
+// Basig page
+.eck-entity {
+    // Títles
+    .field--type-string,
+    .field--type-entity-reference .field__label,
+    .field--type-file .field__label {
+        font-weight: bold;
+    }
+    .field--type-file { margin-top: 10px; }
+    // Files
+    .field__items {
+        @include flexbox;
+        @include flex-wrap(wrap);
+        margin-top: 10px;
+
+        @media screen and(max-width: 470px) { @include flex-direction(column); }
+
+        a {
+            @include border-radius(3px);
+            @include size(200px, auto);
+            @include border(1px 1px 1px 1px, $list-group-border);
+            @include transition(all .5s);
+            @include box-shadow(0 0 18px 0 rgba($black, .09));
+            position: relative;
+            display: block;
+            color: $link-color;
+            overflow: hidden;
+            padding: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+
+            @media screen and(max-width: 470px) {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            &::before {
+                @include size(25px, 30px);
+                @include pseudo-element();
+                @include inline-block;
+                margin-right: 10px;
+            }
+
+            &::after {
+                @include absolute(top -40% right auto bottom auto left 50%);
+                @include pseudo-element();
+                @include translate(-50%, -50%);
+                @include size(50px, 50px);
+                @include transition(all .3s);
+                z-index: -1;
+                background: svg('download');
+            }
+
+            &:hover {
+                @include box-shadow(0px 4px 26px 3px rgba($black, .09));
+
+                &::after { top: 50%; }
+            }
+        }
+    }
+    // pdf
+    .file--application-pdf a::before { background: svg('pdf'); }
+    // Excel
+    .file--x-office-spreadsheet a::before { background: svg('excel'); }
+    // Word
+    .file--x-office-document a::before { background: svg('doc'); }
+}
+
+/*
+===========================================================
+                        End File block - ECK ENTITY
+===========================================================
+*/

@@ -1,6 +1,12 @@
 @import "../variables";
 @import "../mixins";
-// Page programs
+
+/*
+===========================================================
+                        Programs pages
+===========================================================
+*/
+
 .programa-block-1 {
     @include flexbox;
     @include justify-content(center);
@@ -19,10 +25,10 @@
 
         &::before,
         &::after {
+            @include pseudo-element;
             @include size(1px, 15px);
             margin-top: 5px;
             background: rgba($black, .2);
-            content: '';
         }
         
         &:first-child { margin-left: 0; }
@@ -61,3 +67,9 @@
     position: relative;
     z-index: 2;
 }
+
+/*
+===========================================================
+                        End programs pages
+===========================================================
+*/

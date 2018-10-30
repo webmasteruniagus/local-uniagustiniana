@@ -35,6 +35,9 @@
 /*
 * @mixin: Focus totally
 */
+/*
+* @mixin: Init pseudo elemento
+*/
 .container-bg {
   margin-bottom: 40px;
 }
