@@ -12,9 +12,34 @@ dependencies:
     - node.type.event
   module:
     - datetime
+    - ds
     - image
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - links
+        - field_event_image
+        - field_event_start
+        - field_event_end
+        - node_title
+        - field_event_address
+        - field_event_time
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 4
+        label: hidden
+        formatter: default
 _core:
   default_config_hash: X_ZWdSTtX0E5WXi737vU8PR2IYNzcqePceWtaz-cwbs
 id: node.event.default
@@ -25,7 +50,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -38,16 +63,16 @@ content:
     type: string
     region: content
   field_event_end:
-    weight: 4
+    weight: 3
     label: hidden
     settings:
-      timezone_override: ''
-      format_type: html_date
+      timezone_override: America/Bogota
+      format_type: html_yearless_date
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_event_image:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       image_style: ''
@@ -56,11 +81,11 @@ content:
     type: image
     region: content
   field_event_start:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
-      timezone_override: ''
-      format_type: html_date
+      timezone_override: America/Bogota
+      format_type: html_yearless_date
     third_party_settings: {  }
     type: datetime_default
     region: content
