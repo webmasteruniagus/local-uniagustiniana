@@ -1,0 +1,33 @@
+uuid: 13e48f43-3bc5-4a9c-b569-9fcc2e617e44
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.categoria
+  module:
+    - facets
+    - gaviasthemer
+    - system
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: categoria
+theme: gavias_edmix
+region: content_top
+weight: 0
+provider: null
+plugin: 'facet_block:categoria'
+settings:
+  id: 'facet_block:categoria'
+  label: Categoria
+  provider: facets
+  label_display: '0'
+  block_id: categoria
+visibility:
+  request_path:
+    id: request_path
+    pages: /noticias
+    negate: false
+    context_mapping: {  }

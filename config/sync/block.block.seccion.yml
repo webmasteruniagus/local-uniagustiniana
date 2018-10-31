@@ -1,0 +1,33 @@
+uuid: 8a23508f-7e36-4beb-907b-15166cbcbb05
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.seccion
+  module:
+    - facets
+    - gaviasthemer
+    - system
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: seccion
+theme: gavias_edmix
+region: content_top
+weight: -14
+provider: null
+plugin: 'facet_block:seccion'
+settings:
+  id: 'facet_block:seccion'
+  label: Sección
+  provider: facets
+  label_display: '0'
+  block_id: seccion
+visibility:
+  request_path:
+    id: request_path
+    pages: /noticias
+    negate: false
+    context_mapping: {  }
