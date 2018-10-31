@@ -68,6 +68,7 @@ module:
   path: 0
   profile: 0
   rdf: 0
+  responsive_image: 0
   search: 0
   search_api: 0
   search_api_db: 0

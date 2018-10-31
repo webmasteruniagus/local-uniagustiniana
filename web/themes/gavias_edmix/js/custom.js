@@ -12,14 +12,15 @@
 
     function queryMatch(query) {
         if (query.matches) {
-            document.querySelector(select_3).appendChild(document.querySelector(select_2));
+            $(select_3).append($(select_2));
         } else {
-            document.querySelector(select_4).appendChild(document.querySelector(select_2));
+            $(select_4).append($(select_2));
         }
     }
 
     UniCustom = (function() {
         return {
+            // Página de noticias
             news_page: function() {
                 queryMatch(query_1);
                 query_1.addListener(queryMatch);
@@ -28,7 +29,7 @@
     }());
 
     window.onload = function() {
-        if (document.querySelector(select_1)) {
+        if ($(select_1)) {
             UniCustom.news_page();
         }
     };

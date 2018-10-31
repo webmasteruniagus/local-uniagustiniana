@@ -11,7 +11,7 @@ id: documentos.documento.field_archivo
 field_name: field_archivo
 entity_type: documentos
 bundle: documento
-label: Archivo
+label: Archivos
 description: ''
 required: true
 translatable: false

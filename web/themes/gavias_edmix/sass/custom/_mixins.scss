@@ -83,3 +83,13 @@
     @include justify-content(center);
     @include align-items(center);
 }
+
+
+/*
+* @mixin: Init pseudo elemento
+*/
+
+@mixin pseudo-element($display: block, $content: '') {
+    display: $display;
+    content: $content;
+}

@@ -35,6 +35,14 @@
 /*
 * @mixin: Focus totally
 */
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        Programs pages
+===========================================================
+*/
 .programa-block-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -76,11 +84,12 @@
   margin-left: -1px;
 }
 .programa-block-1 .field--label-inline::before, .programa-block-1 .field--label-inline::after {
+  display: block;
+  content: "";
   width: 1px;
   height: 15px;
   margin-top: 5px;
   background: rgba(0, 0, 0, 0.2);
-  content: '';
 }
 .programa-block-1 .field--label-inline:first-child {
   margin-left: 0;
@@ -124,3 +133,9 @@
   position: relative;
   z-index: 2;
 }
+
+/*
+===========================================================
+                        End programs pages
+===========================================================
+*/

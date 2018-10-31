@@ -1,5 +1,12 @@
 @import "../variables";
 @import "../mixins";
+
+/*
+===========================================================
+                        Home page
+===========================================================
+*/
+
 // Landing del home parte izquierda (sin formulario)
 .landing-home {
     .landing_faculties--title.widget.gsc-heading {
@@ -38,12 +45,12 @@
             font-size: $font-size-h1;
 
             &::after {
+                @include pseudo-element;
                 @include size(50px, 2px);
                 @include center-block;
                 @include margin(top, 20px);
                 @include margin(bottom, 20px);
                 background: $white;
-                content: '';
             }
         }
 
@@ -59,3 +66,9 @@
         input[type="submit"] { display: none; }
     }
 }
+
+/*
+===========================================================
+                        End home page
+===========================================================
+*/

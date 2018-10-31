@@ -1,0 +1,23 @@
+gavias_edmix.events.extra_small:
+  label: Extra small
+  mediaQuery: 'all and (max-width: 767px)'
+  weight: 3
+  multipliers:
+    - 1x
+  group: Events
+
+gavias_edmix.events.small:
+  label: Small
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 991px)'
+  weight: 2
+  multipliers:
+    - 1x
+  group: Events
+
+gavias_edmix.events.large:
+  label: Large
+  mediaQuery: 'all and (min-width: 992px)'
+  weight: 1
+  multipliers:
+    - 1x
+  group: Events

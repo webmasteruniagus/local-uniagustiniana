@@ -12,9 +12,35 @@ dependencies:
     - node.type.event
   module:
     - datetime
+    - ds
     - image
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - links
+        - field_event_image
+        - field_event_start
+        - field_event_end
+        - field_event_time
+        - field_event_address
+        - body
 _core:
   default_config_hash: X_ZWdSTtX0E5WXi737vU8PR2IYNzcqePceWtaz-cwbs
 id: node.event.default
@@ -25,10 +51,10 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 6
     settings: {  }
     third_party_settings: {  }
-    region: content
+    region: ds_content
   field_event_address:
     weight: 5
     label: hidden
@@ -36,45 +62,45 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: ds_content
   field_event_end:
-    weight: 4
-    label: hidden
+    weight: 3
+    label: above
     settings:
-      timezone_override: ''
-      format_type: html_date
+      timezone_override: America/Bogota
+      format_type: fecha_eventos
     third_party_settings: {  }
     type: datetime_default
-    region: content
+    region: ds_content
   field_event_image:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
+    region: ds_content
   field_event_start:
-    weight: 3
-    label: hidden
+    weight: 2
+    label: above
     settings:
-      timezone_override: ''
-      format_type: html_date
+      timezone_override: America/Bogota
+      format_type: fecha_eventos
     third_party_settings: {  }
     type: datetime_default
-    region: content
+    region: ds_content
   field_event_time:
-    weight: 6
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: ds_content
   links:
     weight: 0
-    region: content
+    region: ds_content
     settings: {  }
     third_party_settings: {  }
 hidden:

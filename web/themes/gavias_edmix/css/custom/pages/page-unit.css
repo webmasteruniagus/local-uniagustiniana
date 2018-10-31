@@ -36,6 +36,9 @@
 * @mixin: Focus totally
 */
 /*
+* @mixin: Init pseudo elemento
+*/
+/*
 ===========================================================
                         Units pages
 ===========================================================
@@ -186,12 +189,13 @@
   color: #6db2f4;
 }
 .menu-block-unit .row-wrapper ul a::after {
+  display: block;
+  content: "";
   display: inline-block;
   vertical-align: middle;
   width: 20px;
   height: 10px;
   background: url("../images/svg/arrow-right.svg") no-repeat center/contain;
-  content: '';
 }
 .lt-ie8 .menu-block-unit .row-wrapper ul a::after {
   display: inline;
