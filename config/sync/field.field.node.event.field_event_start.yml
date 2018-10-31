@@ -13,7 +13,7 @@ id: node.event.field_event_start
 field_name: field_event_start
 entity_type: node
 bundle: event
-label: 'Event Start'
+label: Desde
 description: ''
 required: false
 translatable: false

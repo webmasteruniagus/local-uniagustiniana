@@ -67,6 +67,7 @@ module:
   path: 0
   profile: 0
   rdf: 0
+  responsive_image: 0
   search: 0
   shortcut: 0
   simplenews: 0

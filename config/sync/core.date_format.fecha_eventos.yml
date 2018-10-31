@@ -1,0 +1,8 @@
+uuid: 8b20fb22-5593-46fc-bf2f-978e2e1ca00c
+langcode: es
+status: true
+dependencies: {  }
+id: fecha_eventos
+label: 'Fecha eventos'
+locked: false
+pattern: 'd F'
