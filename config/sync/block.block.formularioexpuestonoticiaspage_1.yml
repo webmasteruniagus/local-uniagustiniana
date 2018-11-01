@@ -1,30 +1,30 @@
-uuid: 8a23508f-7e36-4beb-907b-15166cbcbb05
+uuid: 822d61c3-9365-47c2-8957-cd0d769222ef
 langcode: es
 status: true
 dependencies:
   config:
-    - facets.facet.seccion
+    - views.view.noticias
   module:
-    - facets
     - gaviasthemer
     - system
+    - views
   theme:
     - gavias_edmix
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: seccion
+id: formularioexpuestonoticiaspage_1
 theme: gavias_edmix
 region: content_top
-weight: -14
+weight: 0
 provider: null
-plugin: 'facet_block:seccion'
+plugin: 'views_exposed_filter_block:noticias-page_1'
 settings:
-  id: 'facet_block:seccion'
-  label: Sección
-  provider: facets
+  id: 'views_exposed_filter_block:noticias-page_1'
+  label: ''
+  provider: views
   label_display: '0'
-  block_id: seccion
+  views_label: ''
 visibility:
   request_path:
     id: request_path

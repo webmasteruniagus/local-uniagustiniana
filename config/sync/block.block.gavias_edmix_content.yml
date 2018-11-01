@@ -11,7 +11,7 @@ _core:
 id: gavias_edmix_content
 theme: gavias_edmix
 region: content
-weight: -9
+weight: -15
 provider: null
 plugin: system_main_block
 settings:
