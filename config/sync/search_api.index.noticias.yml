@@ -8,7 +8,6 @@ dependencies:
     - search_api.server.server
   module:
     - node
-    - taxonomy
     - search_api
     - uniagustiniana
 id: noticias
@@ -24,6 +23,10 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
+  category_content_news:
+    label: 'Category Content'
+    property_path: search_api_category_content_news
+    type: string
   created:
     label: Fecha
     datasource_id: 'entity:node'
@@ -44,14 +47,6 @@ field_settings:
     label: 'ID Group'
     property_path: search_api_id_group
     type: string
-  name:
-    label: Name
-    datasource_id: 'entity:taxonomy_term'
-    property_path: name
-    type: string
-    dependencies:
-      module:
-        - taxonomy
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -96,17 +91,10 @@ datasource_settings:
     languages:
       default: true
       selected: {  }
-  'entity:taxonomy_term':
-    bundles:
-      default: false
-      selected:
-        - category_news
-    languages:
-      default: true
-      selected: {  }
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  category_content_news: {  }
   content_access:
     weights:
       preprocess_query: -30

@@ -15,8 +15,8 @@ third_party_settings:
     classes: ''
 id: seccion
 theme: gavias_edmix
-region: content_top
-weight: -14
+region: sidebar_left
+weight: -15
 provider: null
 plugin: 'facet_block:seccion'
 settings:

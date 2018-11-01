@@ -1,4 +1,4 @@
-uuid: 45355207-ecc7-495b-b1c6-5ff3f7e178da
+uuid: cbf7b216-c512-40b0-9ae1-fbb0afd498db
 langcode: es
 status: true
 dependencies:
@@ -13,7 +13,7 @@ url_alias: categoria
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: name
+field_identifier: category_content_news
 facet_source_id: 'search_api:views_page__noticias__page_1'
 widget:
   type: checkbox

@@ -1,4 +1,4 @@
-uuid: 13e48f43-3bc5-4a9c-b569-9fcc2e617e44
+uuid: f3144949-3679-472f-9387-d47657c0032f
 langcode: es
 status: true
 dependencies:
@@ -15,7 +15,7 @@ third_party_settings:
     classes: ''
 id: categoria
 theme: gavias_edmix
-region: content_top
+region: sidebar_left
 weight: 0
 provider: null
 plugin: 'facet_block:categoria'
