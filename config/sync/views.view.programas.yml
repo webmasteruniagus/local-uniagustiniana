@@ -286,7 +286,49 @@ display:
           entity_type: null
           entity_field: null
           plugin_id: search_api_field
-      filters: {  }
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_programas
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: Programa
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
       sorts: {  }
       title: Programas
       header: {  }
@@ -300,6 +342,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
       tags:
         - 'config:field.storage.group.field_duracion'
@@ -316,11 +359,13 @@ display:
         type: none
       defaults:
         cache: false
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
       tags:
         - 'config:field.storage.group.field_duracion'

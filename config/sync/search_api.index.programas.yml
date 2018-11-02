@@ -43,6 +43,14 @@ field_settings:
     dependencies:
       module:
         - group
+  label_1:
+    label: Title
+    datasource_id: 'entity:group'
+    property_path: label
+    type: string
+    dependencies:
+      module:
+        - group
   programa_nivel_formacion:
     label: 'Programa Nivel de formacion'
     property_path: search_api_programa_nivel_formacion
