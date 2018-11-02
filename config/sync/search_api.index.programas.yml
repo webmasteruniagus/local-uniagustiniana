@@ -1,0 +1,78 @@
+uuid: 43a18065-2286-4228-ba50-65ffe5af1c3e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_duracion
+    - field.storage.group.field_imagen
+    - search_api.server.server
+  module:
+    - group
+    - search_api
+    - uniagustiniana
+id: programas
+name: Programas
+description: ''
+read_only: false
+field_settings:
+  field_duracion:
+    label: Duración
+    datasource_id: 'entity:group'
+    property_path: field_duracion
+    type: string
+    dependencies:
+      config:
+        - field.storage.group.field_duracion
+  field_imagen:
+    label: Imagen
+    datasource_id: 'entity:group'
+    property_path: field_imagen
+    type: string
+    dependencies:
+      config:
+        - field.storage.group.field_imagen
+  group_program_facultad:
+    label: 'Programa facultad'
+    property_path: search_api_group_program_facultad
+    type: string
+  label:
+    label: Title
+    datasource_id: 'entity:group'
+    property_path: label
+    type: text
+    dependencies:
+      module:
+        - group
+  programa_nivel_formacion:
+    label: 'Programa Nivel de formacion'
+    property_path: search_api_programa_nivel_formacion
+    type: string
+  programa_sede:
+    label: 'Programa Sede'
+    property_path: search_api_programa_sede
+    type: string
+datasource_settings:
+  'entity:group':
+    bundles:
+      default: false
+      selected:
+        - programa
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  category_content_news: {  }
+  group_program_facultad: {  }
+  id_group_content: {  }
+  programa_nivel_formacion: {  }
+  programa_sede: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: server

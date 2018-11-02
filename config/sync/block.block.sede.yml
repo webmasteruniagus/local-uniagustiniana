@@ -1,33 +1,33 @@
-uuid: 822d61c3-9365-47c2-8957-cd0d769222ef
+uuid: 89690961-d284-4770-badf-f56567642b4b
 langcode: es
 status: true
 dependencies:
   config:
-    - views.view.noticias
+    - facets.facet.sede
   module:
+    - facets
     - gaviasthemer
     - system
-    - views
   theme:
     - gavias_edmix
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: formularioexpuestonoticiaspage_1
+id: sede
 theme: gavias_edmix
 region: content_top
-weight: -14
+weight: -11
 provider: null
-plugin: 'views_exposed_filter_block:noticias-page_1'
+plugin: 'facet_block:sede'
 settings:
-  id: 'views_exposed_filter_block:noticias-page_1'
-  label: ''
-  provider: views
+  id: 'facet_block:sede'
+  label: Sede
+  provider: facets
   label_display: '0'
-  views_label: ''
+  block_id: sede
 visibility:
   request_path:
     id: request_path
-    pages: /noticias
+    pages: /programas
     negate: false
     context_mapping: {  }

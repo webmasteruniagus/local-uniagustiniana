@@ -1,0 +1,28 @@
+uuid: 89e932f6-ea04-4cf9-9066-ae68ce210b73
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_facultad
+    - group.type.facultad
+    - group.type.programa
+id: group.programa.field_facultad
+field_name: field_facultad
+entity_type: group
+bundle: programa
+label: Facultad
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      facultad: facultad
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 64f4b3dd-73e3-4e65-84e7-d86e89e1845a
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_facultad
+field_name: field_facultad
+entity_type: group
+type: entity_reference
+settings:
+  target_type: group
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

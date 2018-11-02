@@ -1,33 +1,33 @@
-uuid: 822d61c3-9365-47c2-8957-cd0d769222ef
+uuid: d9ba7e0b-b674-41f6-8489-0dcd55b5b642
 langcode: es
 status: true
 dependencies:
   config:
-    - views.view.noticias
+    - facets.facet.facultad
   module:
+    - facets
     - gaviasthemer
     - system
-    - views
   theme:
     - gavias_edmix
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: formularioexpuestonoticiaspage_1
+id: facultad
 theme: gavias_edmix
 region: content_top
-weight: -14
+weight: -13
 provider: null
-plugin: 'views_exposed_filter_block:noticias-page_1'
+plugin: 'facet_block:facultad'
 settings:
-  id: 'views_exposed_filter_block:noticias-page_1'
-  label: ''
-  provider: views
+  id: 'facet_block:facultad'
+  label: Facultad
+  provider: facets
   label_display: '0'
-  views_label: ''
+  block_id: facultad
 visibility:
   request_path:
     id: request_path
-    pages: /noticias
+    pages: /programas
     negate: false
     context_mapping: {  }

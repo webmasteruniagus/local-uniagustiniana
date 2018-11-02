@@ -1,33 +1,33 @@
-uuid: 822d61c3-9365-47c2-8957-cd0d769222ef
+uuid: ec672333-f3b4-48d7-ab15-cfc4fe569e0e
 langcode: es
 status: true
 dependencies:
   config:
-    - views.view.noticias
+    - facets.facet.nivel_de_formacion
   module:
+    - facets
     - gaviasthemer
     - system
-    - views
   theme:
     - gavias_edmix
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: formularioexpuestonoticiaspage_1
+id: niveldeformacion
 theme: gavias_edmix
 region: content_top
-weight: -14
+weight: -12
 provider: null
-plugin: 'views_exposed_filter_block:noticias-page_1'
+plugin: 'facet_block:nivel_de_formacion'
 settings:
-  id: 'views_exposed_filter_block:noticias-page_1'
-  label: ''
-  provider: views
+  id: 'facet_block:nivel_de_formacion'
+  label: 'Nivel de formación'
+  provider: facets
   label_display: '0'
-  views_label: ''
+  block_id: niveldeformacion
 visibility:
   request_path:
     id: request_path
-    pages: /noticias
+    pages: /programas
     negate: false
     context_mapping: {  }

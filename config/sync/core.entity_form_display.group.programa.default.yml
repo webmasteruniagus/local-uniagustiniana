@@ -7,8 +7,10 @@ dependencies:
     - field.field.group.programa.field_ciudad
     - field.field.group.programa.field_codigo_snies_8182
     - field.field.group.programa.field_duracion
+    - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
     - field.field.group.programa.field_frase_plan_de_estudios
+    - field.field.group.programa.field_imagen
     - field.field.group.programa.field_materias
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
@@ -23,9 +25,11 @@ dependencies:
     - field.field.group.programa.field_vigencia
     - field.field.group.programa.field_vision
     - group.type.programa
+    - image.style.thumbnail
   module:
     - datetime
     - gavias_blockbuilder
+    - image
     - paragraphs
     - path
 id: group.programa.default
@@ -34,19 +38,19 @@ bundle: programa
 mode: default
 content:
   field_block_builder:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_widget
     region: content
   field_ciudad:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_codigo_snies_8182:
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -54,30 +58,47 @@ content:
     type: string_textfield
     region: content
   field_duracion:
-    weight: 14
+    weight: 15
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_facultad:
+    weight: 23
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_fecha_de_resolucion:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_frase_plan_de_estudios:
-    weight: 22
+    weight: 21
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_imagen:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_materias:
     type: entity_reference_paragraphs
-    weight: 23
+    weight: 22
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -88,13 +109,13 @@ content:
     third_party_settings: {  }
     region: content
   field_metodologia:
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_mision:
-    weight: 18
+    weight: 19
     settings:
       rows: 5
       placeholder: ''
@@ -102,13 +123,13 @@ content:
     type: string_textarea
     region: content
   field_nivel_de_formacion:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_objetivo_del_programa:
-    weight: 17
+    weight: 18
     settings:
       rows: 5
       placeholder: ''
@@ -116,7 +137,7 @@ content:
     type: string_textarea
     region: content
   field_perfil_profesional:
-    weight: 16
+    weight: 17
     settings:
       rows: 5
       placeholder: ''
@@ -124,25 +145,25 @@ content:
     type: string_textarea
     region: content
   field_periocidad:
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_sede:
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_tipo_de_formacion:
-    weight: 12
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_titulo:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -150,21 +171,21 @@ content:
     type: string_textfield
     region: content
   field_total_creditos:
-    weight: 15
+    weight: 16
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_vigencia:
-    weight: 7
+    weight: 8
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_vision:
-    weight: 19
+    weight: 20
     settings:
       rows: 5
       placeholder: ''
@@ -181,14 +202,14 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 2
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
