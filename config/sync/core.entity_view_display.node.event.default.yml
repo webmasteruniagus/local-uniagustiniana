@@ -13,7 +13,8 @@ dependencies:
   module:
     - datetime
     - ds
-    - image
+    - field_group
+    - responsive_image
     - text
     - user
 third_party_settings:
@@ -35,12 +36,95 @@ third_party_settings:
     regions:
       ds_content:
         - links
+        - group_event_full
         - field_event_image
+        - group_event_info
+        - node_title
+        - body
+        - group_date
+        - group_adress
+        - field_event_start
+        - field_event_address
+        - field_event_end
+        - field_event_time
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 10
+        label: hidden
+        formatter: default
+  field_group:
+    group_event_full:
+      children:
+        - field_event_image
+        - group_event_info
+        - node_title
+        - body
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: event-full
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Event full'
+    group_event_info:
+      children:
+        - group_date
+        - group_adress
+      parent_name: group_event_full
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: event-info
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Event info'
+    group_date:
+      children:
         - field_event_start
         - field_event_end
         - field_event_time
+      parent_name: group_event_info
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: Date
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'date clearfix'
+      label: Date
+    group_adress:
+      children:
         - field_event_address
-        - body
+      parent_name: group_event_info
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: adress
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Adress
 _core:
   default_config_hash: X_ZWdSTtX0E5WXi737vU8PR2IYNzcqePceWtaz-cwbs
 id: node.event.default
@@ -50,13 +134,14 @@ mode: default
 content:
   body:
     label: hidden
-    type: text_default
-    weight: 6
-    settings: {  }
+    type: text_trimmed
+    weight: 11
+    settings:
+      trim_length: 600
     third_party_settings: {  }
     region: ds_content
   field_event_address:
-    weight: 5
+    weight: 23
     label: hidden
     settings:
       link_to_entity: false
@@ -64,7 +149,7 @@ content:
     type: string
     region: ds_content
   field_event_end:
-    weight: 3
+    weight: 23
     label: above
     settings:
       timezone_override: America/Bogota
@@ -73,16 +158,16 @@ content:
     type: datetime_default
     region: ds_content
   field_event_image:
-    weight: 1
+    weight: 4
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      responsive_image_style: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: ds_content
   field_event_start:
-    weight: 2
+    weight: 22
     label: above
     settings:
       timezone_override: America/Bogota
@@ -91,7 +176,7 @@ content:
     type: datetime_default
     region: ds_content
   field_event_time:
-    weight: 4
+    weight: 24
     label: hidden
     settings:
       link_to_entity: false

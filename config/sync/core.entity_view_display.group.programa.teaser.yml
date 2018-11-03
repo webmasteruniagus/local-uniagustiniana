@@ -95,6 +95,7 @@ hidden:
   field_block_builder: true
   field_ciudad: true
   field_codigo_snies_8182: true
+  field_facultad: true
   field_fecha_de_resolucion: true
   field_frase_plan_de_estudios: true
   field_materias: true
