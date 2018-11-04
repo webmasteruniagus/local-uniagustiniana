@@ -1,4 +1,4 @@
-uuid: 33f80f91-9414-4f52-bde5-0fcd5db1b817
+uuid: 6e91ac84-5a1b-491e-8c87-db34f587fec0
 langcode: es
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
     - views.view.eventos
   module:
     - search_api
-id: sede_eventos
-name: Sección
-url_alias: sede_eventos
+id: evento_sede
+name: 'Evento Sede'
+url_alias: evento_sede
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: id_group
+field_identifier: programa_sede
 facet_source_id: 'search_api:views_page__eventos__page_1'
 widget:
   type: checkbox

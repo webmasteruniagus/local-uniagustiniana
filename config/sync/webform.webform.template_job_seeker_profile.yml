@@ -1,12 +1,9 @@
-uuid: b7c20217-2fdb-4d79-b6ce-d4c54b7de8f5
 langcode: es
 status: closed
 dependencies:
   enforced:
     module:
       - webform_templates
-_core:
-  default_config_hash: MC_YZ1E6FqTfXEZauCReKqJAG3UE48WA5arzKeTPEOw
 open: null
 close: null
 weight: 0
@@ -26,6 +23,7 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -52,6 +50,7 @@ settings:
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
+  form_file_limit: ''
   submission_label: ''
   submission_log: false
   submission_views: {  }
@@ -64,6 +63,9 @@ settings:
   submission_access_denied_attributes: {  }
   submission_exception_message: ''
   submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -104,9 +106,11 @@ settings:
   limit_total: null
   limit_total_interval: null
   limit_total_message: ''
+  limit_total_unique: false
   limit_user: null
   limit_user_interval: null
   limit_user_message: ''
+  limit_user_unique: false
   entity_limit_total: null
   entity_limit_total_interval: null
   entity_limit_user: null
@@ -194,3 +198,6 @@ handlers:
       sender_mail: ''
       sender_name: ''
       theme_name: ''
+uuid: b7c20217-2fdb-4d79-b6ce-d4c54b7de8f5
+_core:
+  default_config_hash: MC_YZ1E6FqTfXEZauCReKqJAG3UE48WA5arzKeTPEOw

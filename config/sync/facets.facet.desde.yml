@@ -1,4 +1,4 @@
-uuid: 33f80f91-9414-4f52-bde5-0fcd5db1b817
+uuid: c8481bc3-eb03-49dd-894b-bf78ab089f21
 langcode: es
 status: true
 dependencies:
@@ -7,16 +7,16 @@ dependencies:
     - views.view.eventos
   module:
     - search_api
-id: sede_eventos
-name: Sección
-url_alias: sede_eventos
+id: desde
+name: Desde
+url_alias: desde
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: id_group
+field_identifier: field_event_start
 facet_source_id: 'search_api:views_page__eventos__page_1'
 widget:
-  type: checkbox
+  type: links
   config:
     show_numbers: true
     soft_limit: 0
@@ -43,6 +43,14 @@ processor_configs:
       sort: 30
     settings:
       sort: DESC
+  date_item:
+    processor_id: date_item
+    weights:
+      build: 35
+    settings:
+      date_display: actual_date
+      granularity: 5
+      date_format: ''
   display_value_widget_order:
     processor_id: display_value_widget_order
     weights:

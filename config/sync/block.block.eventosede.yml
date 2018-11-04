@@ -1,9 +1,9 @@
-uuid: 4d5f108d-2c25-46ee-ab35-1e0d34f0fbc9
+uuid: 265c05b3-8ff5-4152-b629-a33e98b2bb28
 langcode: es
 status: true
 dependencies:
   config:
-    - facets.facet.sede_eventos
+    - facets.facet.evento_sede
   module:
     - facets
     - gaviasthemer
@@ -13,18 +13,18 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: sede_2
+id: eventosede
 theme: gavias_edmix
 region: sidebar_left
 weight: 0
 provider: null
-plugin: 'facet_block:sede_eventos'
+plugin: 'facet_block:evento_sede'
 settings:
-  id: 'facet_block:sede_eventos'
-  label: 'Sección eventos'
+  id: 'facet_block:evento_sede'
+  label: 'Evento Sede'
   provider: facets
   label_display: '0'
-  block_id: sede_2
+  block_id: eventosede
 visibility:
   request_path:
     id: request_path
