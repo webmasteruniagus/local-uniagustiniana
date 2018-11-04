@@ -1,0 +1,41 @@
+/*
+===========================================================
+                        Página de eventos - Categoría
+===========================================================
+*/
+
+.path-eventos {
+    ul { @include clear-list; }
+    // Sidebar - filtros
+    .sidebar-inner {
+        .facet-item {
+            border-bottom: $border_1;
+
+            a,
+            .facets-checkbox + label {
+                @include links;
+                text-transform: lowercase;
+                font-size: 14px;
+                margin-bottom: 0;
+                cursor: pointer;
+                
+                &::first-letter { text-transform: uppercase }
+            }
+
+            a .js-facet-deactivate { display: none; }
+
+            .facets-checkbox {
+                display: none;
+
+                &:checked + label { color: $theme-color; }
+            }
+        }
+    }
+}
+
+/*
+===========================================================
+                        Fin de página de eventos - Categoría
+===========================================================
+*/
+

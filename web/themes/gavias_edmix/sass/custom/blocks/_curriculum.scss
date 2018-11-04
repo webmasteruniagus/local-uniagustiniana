@@ -1,9 +1,6 @@
-@import "../variables";
-@import "../mixins";
-
 /*
 ===========================================================
-                        Curriculum block
+                        Bloque de plan de estudios
 ===========================================================
 */
 
@@ -21,7 +18,7 @@
         .paragraph {
             @include flexbox;
             padding: 10px 0;
-            border-bottom: 1px dashed lighten($text-color, 20%);
+            border-bottom: $border_1;
             // Muestro solo los de la primer materia
             &:first-child {
                 .field--label-inline .field__label {
@@ -68,6 +65,6 @@
 
 /*
 ===========================================================
-                        End Curriculum block
+                        Fin de bloque de plan de estudio
 ===========================================================
 */

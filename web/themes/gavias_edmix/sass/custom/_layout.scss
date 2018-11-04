@@ -1,5 +1,9 @@
-@import "./variables";
-@import "./mixins";
+/*
+===========================================================
+                        Estilos globales
+===========================================================
+*/
+
 // Global styles
 .container-bg { margin-bottom: 40px; }
 
@@ -10,9 +14,7 @@
 .field--name-dynamic-block-fieldnode-redes-sociales { margin: 2rem 0; }
 
 // Images
-.img-rounded img {
-    @include border-radius(5px);
-}
+.img-rounded img { @include border-radius(5px); }
 
 // Carousel
 .owl-carousel .owl-item {

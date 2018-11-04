@@ -1,9 +1,6 @@
-@import "../variables";
-@import "../mixins";
-
 /*
 ===========================================================
-                        Units pages
+                        Página de únidad
 ===========================================================
 */
 
@@ -30,7 +27,7 @@
         overflow: hidden;
     }
     .item {
-        border-bottom: 1px dashed $border-color;
+        border-bottom: $border_1;
         a {
             @include links;
             text-align: left;
@@ -80,6 +77,6 @@
 
 /*
 ===========================================================
-                    End Units page
+                    Fin de página de unidad
 ===========================================================
 */

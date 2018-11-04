@@ -1,8 +1,6 @@
-@import "../vars/theme_variables";
-
 /*
 ===========================================================
-                        Custom variables
+                        Variables personalizadas
 ===========================================================
 */
 
@@ -11,9 +9,10 @@
 //-------- COLOR --------------
 $color_1: #3D99F1;
 $color_2: #2A2A2A;
-//--------- COLORS
+//-------- BORDERS
+$border_1: 1px dashed $border-color;
 // PATHS
-$svg: '../images/svg/';
+$svg: $base-theme-image-path + '/svg/';
 //-------- ARRAYS --------------
 //-------- PIXELS/PERCENTAGE INTERVAL 5 TO 5
 $numbers: 1,
