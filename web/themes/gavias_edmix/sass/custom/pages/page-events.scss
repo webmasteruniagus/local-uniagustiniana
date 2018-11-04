@@ -6,3 +6,39 @@
                         Events page
 ===========================================================
 */
+.node--type-event {
+    .calendar {
+        @include flexbox;
+        @include flex-wrap(wrap);
+        margin-right: 30px;
+    }
+
+    .time,
+    .sede {
+        @include flexbox;
+
+        .fa-building {
+            margin-right: 10px;
+            margin-top: 6px;
+        }
+    }
+
+    .field--name-field-category {
+        @include flexbox;
+        @include flex-wrap(wrap);
+        margin-top: 20px;
+
+        .field__item { margin-right: 10px; }
+    }
+
+    @media screen and (max-width: 340px) {
+        .calendar,
+        .time {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+
+        .date,
+        .sede a { font-size: 14px; }
+    }
+}

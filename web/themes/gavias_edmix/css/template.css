@@ -14531,3 +14531,99 @@ ul[data-drupal-views-infinite-scroll-pager].pager a:hover, ul[data-drupal-views-
                     End Units page
 ===========================================================
 */
+/*
+===========================================================
+                        Custom variables
+===========================================================
+*/
+:root {
+  --multiplier: 2;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --multiplier: 1;
+  }
+}
+/****/
+/*
+===========================================================
+                        Custom mixins
+===========================================================
+*/
+/*
+* @function
+* @return path img + img
+*/
+/*
+* @mixin: links
+* @description: links styles
+*/
+/*
+* @mixin: Center with flexbox
+*/
+/*
+* @mixin: Flex direction
+*/
+/*
+* @mixin: Focus totally
+*/
+/*
+* @mixin: Init pseudo elemento
+*/
+/*
+===========================================================
+                        Events page
+===========================================================
+*/
+.node--type-event .calendar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 30px;
+}
+.node--type-event .time,
+.node--type-event .sede {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.node--type-event .time .fa-building,
+.node--type-event .sede .fa-building {
+  margin-right: 10px;
+  margin-top: 6px;
+}
+.node--type-event .field--name-field-category {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.node--type-event .field--name-field-category .field__item {
+  margin-right: 10px;
+}
+@media screen and (max-width: 340px) {
+  .node--type-event .calendar,
+  .node--type-event .time {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .node--type-event .date,
+  .node--type-event .sede a {
+    font-size: 14px;
+  }
+}
