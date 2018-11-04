@@ -15,8 +15,8 @@ third_party_settings:
     classes: ''
 id: sede
 theme: gavias_edmix
-region: content_top
-weight: -11
+region: sidebar_left
+weight: -14
 provider: null
 plugin: 'facet_block:sede'
 settings:

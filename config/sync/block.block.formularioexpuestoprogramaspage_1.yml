@@ -1,30 +1,30 @@
-uuid: d9ba7e0b-b674-41f6-8489-0dcd55b5b642
+uuid: b352b75f-6b4a-4926-94be-7ae098084b4b
 langcode: es
 status: true
 dependencies:
   config:
-    - facets.facet.facultad
+    - views.view.programas
   module:
-    - facets
     - gaviasthemer
     - system
+    - views
   theme:
     - gavias_edmix
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: facultad
+id: formularioexpuestoprogramaspage_1
 theme: gavias_edmix
-region: sidebar_left
-weight: -16
+region: content_top
+weight: -17
 provider: null
-plugin: 'facet_block:facultad'
+plugin: 'views_exposed_filter_block:programas-page_1'
 settings:
-  id: 'facet_block:facultad'
-  label: Facultad
-  provider: facets
+  id: 'views_exposed_filter_block:programas-page_1'
+  label: ''
+  provider: views
   label_display: '0'
-  block_id: facultad
+  views_label: ''
 visibility:
   request_path:
     id: request_path

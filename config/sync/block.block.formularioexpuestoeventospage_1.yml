@@ -1,33 +1,33 @@
-uuid: d9ba7e0b-b674-41f6-8489-0dcd55b5b642
+uuid: b190039d-22ff-4af8-8767-268e3448eaef
 langcode: es
 status: true
 dependencies:
   config:
-    - facets.facet.facultad
+    - views.view.eventos
   module:
-    - facets
     - gaviasthemer
     - system
+    - views
   theme:
     - gavias_edmix
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: facultad
+id: formularioexpuestoeventospage_1
 theme: gavias_edmix
-region: sidebar_left
-weight: -16
+region: content_top
+weight: 0
 provider: null
-plugin: 'facet_block:facultad'
+plugin: 'views_exposed_filter_block:eventos-page_1'
 settings:
-  id: 'facet_block:facultad'
-  label: Facultad
-  provider: facets
+  id: 'views_exposed_filter_block:eventos-page_1'
+  label: ''
+  provider: views
   label_display: '0'
-  block_id: facultad
+  views_label: ''
 visibility:
   request_path:
     id: request_path
-    pages: /programas
+    pages: /eventos
     negate: false
     context_mapping: {  }

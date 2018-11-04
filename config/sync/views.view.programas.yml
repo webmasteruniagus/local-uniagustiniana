@@ -300,7 +300,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: Programa
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -327,7 +327,8 @@ display:
             group_items: {  }
           parse_mode: terms
           min_length: null
-          fields: {  }
+          fields:
+            - label
           plugin_id: search_api_fulltext
       sorts: {  }
       title: Programas

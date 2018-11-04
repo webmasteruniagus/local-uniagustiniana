@@ -1,0 +1,104 @@
+uuid: cd6d560b-71c2-4952-b9d3-fe8aec908f30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_start
+    - field.storage.node.field_event_image
+    - field.storage.node.field_event_time
+    - field.storage.node.field_event_end
+    - search_api.server.server
+  module:
+    - node
+    - search_api
+    - uniagustiniana
+id: eventos
+name: Eventos
+description: ''
+read_only: false
+field_settings:
+  category_content_news:
+    label: 'Category Content'
+    property_path: search_api_category_content_news
+    type: string
+  created:
+    label: Fecha
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_event_end:
+    label: Hasta
+    datasource_id: 'entity:node'
+    property_path: field_event_end
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_end
+  field_event_image:
+    label: 'Event Image'
+    datasource_id: 'entity:node'
+    property_path: field_event_image
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_image
+  field_event_start:
+    label: Desde
+    datasource_id: 'entity:node'
+    property_path: field_event_start
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_start
+  field_event_time:
+    label: 'Event Time'
+    datasource_id: 'entity:node'
+    property_path: field_event_time
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_time
+  id_group:
+    label: 'ID Group'
+    property_path: search_api_id_group
+    type: string
+  programa_sede:
+    label: 'Programa Sede'
+    property_path: search_api_programa_sede
+    type: string
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - event
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  category_content_news: {  }
+  group_program_facultad: {  }
+  id_group_content: {  }
+  programa_nivel_formacion: {  }
+  programa_sede: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: server

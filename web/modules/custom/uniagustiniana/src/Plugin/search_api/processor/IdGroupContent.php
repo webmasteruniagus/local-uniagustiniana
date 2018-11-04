@@ -54,7 +54,6 @@ class IdGroupContent extends ProcessorPluginBase {
     $query->join('group_content_field_data', 'gcfd', 'nfd.nid = gcfd.entity_id');
     $query->join('groups_field_data', 'gfd', 'gcfd.gid = gfd.id');
     $query->addField('gfd', 'label');
-    $query->condition('nfd.type', 'news', '=');
     $query->condition('nfd.nid', $entity->id(), '=');
     $result=$query->execute()->fetchObject();
     if(!$result || !$result->label){

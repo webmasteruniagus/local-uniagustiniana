@@ -1,9 +1,9 @@
-uuid: d9ba7e0b-b674-41f6-8489-0dcd55b5b642
+uuid: 4d5f108d-2c25-46ee-ab35-1e0d34f0fbc9
 langcode: es
 status: true
 dependencies:
   config:
-    - facets.facet.facultad
+    - facets.facet.sede_eventos
   module:
     - facets
     - gaviasthemer
@@ -13,21 +13,21 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: facultad
+id: sede_2
 theme: gavias_edmix
 region: sidebar_left
-weight: -16
+weight: 0
 provider: null
-plugin: 'facet_block:facultad'
+plugin: 'facet_block:sede_eventos'
 settings:
-  id: 'facet_block:facultad'
-  label: Facultad
+  id: 'facet_block:sede_eventos'
+  label: 'Sede eventos'
   provider: facets
   label_display: '0'
-  block_id: facultad
+  block_id: sede_2
 visibility:
   request_path:
     id: request_path
-    pages: /programas
+    pages: /eventos
     negate: false
     context_mapping: {  }

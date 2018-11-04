@@ -16,7 +16,7 @@ third_party_settings:
 id: formularioexpuestonoticiaspage_1
 theme: gavias_edmix
 region: content_top
-weight: -14
+weight: -18
 provider: null
 plugin: 'views_exposed_filter_block:noticias-page_1'
 settings:

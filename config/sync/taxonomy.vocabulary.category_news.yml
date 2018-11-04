@@ -2,7 +2,7 @@ uuid: 3c96ca75-d330-4521-90eb-397aad21c5e5
 langcode: es
 status: true
 dependencies: {  }
-name: 'Category news'
+name: Categorias
 vid: category_news
 description: ''
 hierarchy: 0

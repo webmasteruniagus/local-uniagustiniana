@@ -1,23 +1,24 @@
-uuid: 95e23fa6-4e4a-40e6-b7a1-3271c561c475
+uuid: 41f0b546-5854-4d7a-8260-38857033a01c
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - field.storage.node.field_news_image
+    - field.storage.node.field_event_end
+    - field.storage.node.field_event_image
+    - field.storage.node.field_event_start
     - image.style.square
-    - search_api.index.noticias
+    - search_api.index.eventos
   module:
+    - datetime
     - gavias_views_magazine
     - image
     - search_api
-    - text
-id: noticias
-label: Noticias
+id: eventos
+label: Eventos
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_noticias
+base_table: search_api_index_eventos
 base_field: search_api_id
 core: 8.x
 display:
@@ -51,7 +52,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 20
+          items_per_page: 9
           offset: 0
           id: 0
           total_pages: null
@@ -75,8 +76,8 @@ display:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          items_lg: '4'
-          items_md: '4'
+          items_lg: '3'
+          items_md: '3'
           items_sm: '2'
           items_xs: '2'
           el_class: ''
@@ -84,10 +85,10 @@ display:
       row:
         type: fields
       fields:
-        field_news_image:
-          id: field_news_image
-          table: search_api_index_noticias
-          field: field_news_image
+        field_event_image:
+          id: field_event_image
+          table: search_api_index_eventos
+          field: field_event_image
           relationship: none
           group_type: group
           admin_label: ''
@@ -140,11 +141,11 @@ display:
           group_column: ''
           group_columns: {  }
           group_rows: true
-          delta_limit: 1
+          delta_limit: 0
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: ul
+          multi_type: separator
           separator: ', '
           field_api_classes: false
           field_rendering: true
@@ -157,7 +158,7 @@ display:
           plugin_id: search_api_field
         title:
           id: title
-          table: search_api_index_noticias
+          table: search_api_index_eventos
           field: title
           relationship: none
           group_type: group
@@ -225,81 +226,10 @@ display:
             multi_type: separator
             multi_separator: ', '
           plugin_id: search_api_field
-        body:
-          id: body
-          table: search_api_index_noticias
-          field: body
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 60
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: true
-            trim: true
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-          entity_type: null
-          entity_field: null
-          plugin_id: search_api_field
-        created:
-          id: created
-          table: search_api_index_noticias
-          field: created
+        field_event_start:
+          id: field_event_start
+          table: search_api_index_eventos
+          field: field_event_start
           relationship: none
           group_type: group
           admin_label: ''
@@ -345,11 +275,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp
+          type: datetime_custom
           settings:
-            date_format: html_date
-            custom_date_format: ''
-            timezone: ''
+            timezone_override: ''
+            date_format: 'Y-m-d\TH:i:s'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -361,11 +290,79 @@ display:
           separator: ', '
           field_api_classes: false
           field_rendering: true
-          fallback_handler: search_api_date
+          fallback_handler: search_api
           fallback_options:
-            date_format: fallback
-            custom_date_format: ''
-            timezone: ''
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        field_event_end:
+          id: field_event_end
+          table: search_api_index_eventos
+          field: field_event_end
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'Y-m-d\TH:i:s'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
             link_to_item: false
             use_highlighting: false
             multi_type: separator
@@ -374,7 +371,7 @@ display:
       filters:
         search_api_fulltext:
           id: search_api_fulltext
-          table: search_api_index_noticias
+          table: search_api_index_eventos
           field: search_api_fulltext
           relationship: none
           group_type: group
@@ -385,7 +382,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: Buscar
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -413,13 +410,12 @@ display:
           parse_mode: terms
           min_length: null
           fields:
-            - body
             - title
           plugin_id: search_api_fulltext
       sorts:
         created:
           id: created
-          table: search_api_index_noticias
+          table: search_api_index_eventos
           field: created
           relationship: none
           group_type: group
@@ -429,7 +425,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: Noticias
+      title: Eventos
       header:
         result:
           id: result
@@ -446,7 +442,6 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -455,8 +450,9 @@ display:
         - url
         - url.query_args
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_news_image'
+        - 'config:field.storage.node.field_event_end'
+        - 'config:field.storage.node.field_event_image'
+        - 'config:field.storage.node.field_event_start'
   page_1:
     display_plugin: page
     id: page_1
@@ -464,12 +460,12 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: noticias
+      path: eventos
+      exposed_block: true
       cache:
         type: none
       defaults:
         cache: false
-      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -478,5 +474,6 @@ display:
         - url
         - url.query_args
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_news_image'
+        - 'config:field.storage.node.field_event_end'
+        - 'config:field.storage.node.field_event_image'
+        - 'config:field.storage.node.field_event_start'
