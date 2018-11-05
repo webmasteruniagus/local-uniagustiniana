@@ -4,29 +4,67 @@
 ===========================================================
 */
 
-// Cards - noticias
+// Cards - General
 .thumbnail--card {
-    // Content card
+    // Cards noticias
     .thumbnail {
         @include box-shadow(0 0 18px 0 rgba($black, 0.09));
         padding: 0;
         // content card - image
         &,
         img { @include border-radius(5px); }
-    }
-    // Description
-    .caption { padding: 20px; }
-    // Title
-    h5 { margin-top: 0; }
-    // Summary
-    .field--name-body {
+
+        // Description
+        .caption { padding: 20px; }
+        // Title
+        h5 { margin-top: 0; }
+        // Summary
         p {
-            line-height: 20px;
+            line-height: 25px;
             margin-bottom: 10px;
         }
+        // Date
+        .field--name-node-post-date { font-size: 12px; }
     }
-    // Date
-    .field--name-node-post-date { font-size: 12px; }
+}
+// Card - search
+.card--results {
+    // content card - image
+    .thumbnail {
+        @include position(relative, 0);
+
+        &,
+        img {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        // Fecha evento - rango de fecha
+        .date-range {
+            @include flexbox;
+            @include justify-content(center);
+            @include absolute(top 0 left 0);
+            @include size(100%);
+            padding: 10px;
+            background: $white;
+            font-size: 14px;
+            color: $theme-color;
+        }
+        // Sede
+        .views-field-field-sede {
+            margin-bottom: 10px;
+
+            &,
+            a { color: $theme-color; }
+        }
+        // Categorias
+        .views-field-field-category {
+            line-height: 16px;
+            margin-bottom: 5px;
+
+            &,
+            a { color: $brand-danger; }
+        }
+    }
 }
 
 /*

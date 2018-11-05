@@ -3,9 +3,12 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.storage.node.body
+    - field.storage.node.field_category
     - field.storage.node.field_event_end
     - field.storage.node.field_event_image
     - field.storage.node.field_event_start
+    - field.storage.node.field_sede
     - image.style.square
     - search_api.index.eventos
   module:
@@ -13,6 +16,8 @@ dependencies:
     - gavias_views_magazine
     - image
     - search_api
+    - text
+    - views_fieldsets
 id: eventos
 label: Eventos
 module: views
@@ -74,13 +79,13 @@ display:
         type: mlayout_5
         options:
           grouping: {  }
-          row_class: ''
-          default_row_class: true
+          row_class: thumbnail
+          default_row_class: false
           items_lg: '3'
           items_md: '3'
           items_sm: '2'
           items_xs: '2'
-          el_class: ''
+          el_class: 'thumbnail--card card--results'
           el_id: ''
       row:
         type: fields
@@ -121,7 +126,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -156,6 +161,315 @@ display:
             multi_type: separator
             multi_separator: ', '
           plugin_id: search_api_field
+        fieldset:
+          id: fieldset
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - fieldset_1
+            - title
+            - field_sede
+            - field_category
+            - body
+          wrapper: div
+          legend: ''
+          classes: caption
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        fieldset_1:
+          id: fieldset_1
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - field_event_start
+            - field_event_end
+            - nothing
+          wrapper: div
+          legend: ''
+          classes: date-range
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        field_event_start:
+          id: field_event_start
+          table: search_api_index_eventos
+          field: field_event_start
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: '0'
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'd F'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        field_event_end:
+          id: field_event_end
+          table: search_api_index_eventos
+          field: field_event_end
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: '0'
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'd F'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_event_start }} - {{ field_event_end }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: '0'
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
         title:
           id: title
           table: search_api_index_eventos
@@ -192,7 +506,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: h5
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -201,7 +515,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -226,18 +540,18 @@ display:
             multi_type: separator
             multi_separator: ', '
           plugin_id: search_api_field
-        field_event_start:
-          id: field_event_start
-          table: search_api_index_eventos
-          field: field_event_start
+        field_sede:
+          id: field_sede
+          table: search_api_datasource_eventos_entity_node
+          field: field_sede
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<i class=\"fa fa-map-marker\"></i>\r\n{{ field_sede }}"
             make_link: false
             path: ''
             absolute: false
@@ -262,7 +576,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -271,15 +585,14 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_custom
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            timezone_override: ''
-            date_format: 'Y-m-d\TH:i:s'
-          group_column: value
+            link: true
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -290,17 +603,40 @@ display:
           separator: ', '
           field_api_classes: false
           field_rendering: true
-          fallback_handler: search_api
+          fallback_handler: search_api_entity
           fallback_options:
             link_to_item: false
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
+            display_methods:
+              category:
+                display_method: label
+                view_mode: default
+              category_course:
+                display_method: label
+                view_mode: default
+              category_news:
+                display_method: label
+              ciudad:
+                display_method: label
+              nivel_de_formacion:
+                display_method: label
+                view_mode: default
+              portfolio_tags:
+                display_method: label
+              sede:
+                display_method: label
+              semestre:
+                display_method: label
+              tags:
+                display_method: label
+          entity_type: node
           plugin_id: search_api_field
-        field_event_end:
-          id: field_event_end
-          table: search_api_index_eventos
-          field: field_event_end
+        field_category:
+          id: field_category
+          table: search_api_datasource_eventos_entity_node
+          field: field_category
           relationship: none
           group_type: group
           admin_label: ''
@@ -333,7 +669,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -342,14 +678,106 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: /
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              category:
+                display_method: label
+                view_mode: default
+              category_course:
+                display_method: label
+                view_mode: default
+              category_news:
+                display_method: label
+              ciudad:
+                display_method: label
+              nivel_de_formacion:
+                display_method: label
+                view_mode: default
+              portfolio_tags:
+                display_method: label
+              sede:
+                display_method: label
+              semestre:
+                display_method: label
+              tags:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        body:
+          id: body
+          table: search_api_datasource_eventos_entity_node
+          field: body
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: '0'
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_custom
+          type: text_trimmed
           settings:
-            timezone_override: ''
-            date_format: 'Y-m-d\TH:i:s'
+            trim_length: 130
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -367,6 +795,7 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
+          entity_type: node
           plugin_id: search_api_field
       filters:
         search_api_fulltext:
@@ -442,6 +871,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: content-results
     cache_metadata:
       max-age: -1
       contexts:
@@ -450,9 +880,12 @@ display:
         - url
         - url.query_args
       tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_category'
         - 'config:field.storage.node.field_event_end'
         - 'config:field.storage.node.field_event_image'
         - 'config:field.storage.node.field_event_start'
+        - 'config:field.storage.node.field_sede'
   page_1:
     display_plugin: page
     id: page_1
@@ -474,6 +907,9 @@ display:
         - url
         - url.query_args
       tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_category'
         - 'config:field.storage.node.field_event_end'
         - 'config:field.storage.node.field_event_image'
         - 'config:field.storage.node.field_event_start'
+        - 'config:field.storage.node.field_sede'

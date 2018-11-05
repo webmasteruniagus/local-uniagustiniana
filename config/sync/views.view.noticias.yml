@@ -12,6 +12,7 @@ dependencies:
     - image
     - search_api
     - text
+    - views_fieldsets
 id: noticias
 label: Noticias
 module: views
@@ -73,13 +74,13 @@ display:
         type: mlayout_5
         options:
           grouping: {  }
-          row_class: ''
+          row_class: thumbnail
           default_row_class: true
-          items_lg: '4'
-          items_md: '4'
-          items_sm: '2'
-          items_xs: '2'
-          el_class: ''
+          items_lg: '3'
+          items_md: '3'
+          items_sm: '3'
+          items_xs: '1'
+          el_class: 'thumbnail--card card--results'
           el_id: ''
       row:
         type: fields
@@ -120,7 +121,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -144,8 +145,8 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: ul
-          separator: ', '
+          multi_type: separator
+          separator: ''
           field_api_classes: false
           field_rendering: true
           fallback_handler: search_api
@@ -155,10 +156,10 @@ display:
             multi_type: separator
             multi_separator: ', '
           plugin_id: search_api_field
-        title:
-          id: title
-          table: search_api_index_noticias
-          field: title
+        fieldset:
+          id: fieldset
+          table: views
+          field: fieldset
           relationship: none
           group_type: group
           admin_label: ''
@@ -195,6 +196,64 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - title
+            - created
+            - body
+          wrapper: div
+          legend: ''
+          classes: caption
+          collapsible: 1
+          collapsed: 0
+          plugin_id: fieldset
+        title:
+          id: title
+          table: search_api_index_noticias
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: h5
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
@@ -220,6 +279,81 @@ display:
           field_rendering: true
           fallback_handler: search_api
           fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        created:
+          id: created
+          table: search_api_index_noticias
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: '0'
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: html_date
+            custom_date_format: ''
+            timezone: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_date
+          fallback_options:
+            date_format: fallback
+            custom_date_format: ''
+            timezone: ''
             link_to_item: false
             use_highlighting: false
             multi_type: separator
@@ -261,7 +395,7 @@ display:
             trim: true
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -274,8 +408,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_default
-          settings: {  }
+          type: text_trimmed
+          settings:
+            trim_length: 130
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -296,81 +431,6 @@ display:
           entity_type: null
           entity_field: null
           plugin_id: search_api_field
-        created:
-          id: created
-          table: search_api_index_noticias
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
-          settings:
-            date_format: html_date
-            custom_date_format: ''
-            timezone: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_date
-          fallback_options:
-            date_format: fallback
-            custom_date_format: ''
-            timezone: ''
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -385,7 +445,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: Buscar
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -447,6 +507,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: false
+      css_class: content-results
     cache_metadata:
       max-age: -1
       contexts:

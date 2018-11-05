@@ -1,0 +1,36 @@
+/*
+===========================================================
+                        Sidebar izquierdo con filtros de facets
+===========================================================
+*/
+.sidebar-inner {
+    ul { @include clear-list; }
+    .facet-item {
+        border-bottom: $border_1;
+
+        a,
+        .facets-checkbox + label {
+            @include links;
+            font-size: 14px;
+            text-align: left;
+            text-transform: lowercase;
+            margin-bottom: 0;
+            cursor: pointer;
+            
+            &::first-letter { text-transform: uppercase }
+        }
+
+        a .js-facet-deactivate { display: none; }
+
+        .facets-checkbox {
+            display: none;
+
+            &:checked + label { color: $theme-color; }
+        }
+    }
+}
+/*
+===========================================================
+                        Fin de sidebar izquierdo con filtros de facets
+===========================================================
+*/
