@@ -9,11 +9,66 @@
 
     @media screen and(max-width: 400px) { padding: 0; }
 }
+
 // Resultados
 .content-results {
     > header {
+        @include flexbox;
+        @include justify-content(space-between);
+        @include align-items(center);
         margin-bottom: 10px;
         font-weight: bold;
+    }
+
+    .all-filters {
+        @include flexbox;
+        @include justify-content(flex-end);
+        padding: 10px;
+
+        a {
+            font-weight: bold;
+
+            span {
+                font-size: 12px;
+                color: $theme_color;
+            }
+        }
+    }
+
+    .pager ul { padding: 0; }
+}
+
+
+@media (max-width: $screen-sm-max) {
+    .block-views-exposed-filter-blockprogramas-page-1,
+    .block-views-exposed-filter-blocknoticias-page-1,
+    .block-views-exposed-filter-blockeventos-page-1 { margin: 0; }
+
+    .page--filters .main-page {
+        @include position(relative, 0);
+        z-index: 100;
+    }
+    // Filtros
+    .sidebar--fixed {
+        @include position(fixed, top 0 right -100%);
+        @include transition(all .5s);
+        height: 100vh;
+        background: $white;
+        z-index: 99;
+
+        &.is--open { right: 0; }
+
+        .close-filters {
+            width: 100vw;
+            padding: 20px;
+            margin-left: -15px;
+            border-bottom: 1px solid $border-color;
+        }
+
+        > .sidebar-inner {
+            overflow: scroll;
+            height: calc(100vh - 66px);
+        }
     }
 }
 

@@ -63,6 +63,11 @@
         }
 
         @media (max-width: $screen-sm-max) {
+            & {
+                @include flexbox;
+                @include justify-content(flex-end);
+            }
+
             .right-topbar-h {
                 @include position(fixed, top 0 left -100%);
                 @include size(100%, 100vh);
