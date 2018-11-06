@@ -4,7 +4,7 @@
 ===========================================================
 */
 
-// Contat
+// Contat - home
 .form-contact {
     .form-contact--header {
         background: $color_1;
@@ -15,11 +15,11 @@
             @media (max-width: $screen-xs) { padding: 25px 20px; }
         }
     }
-    .form-contact--wrapper {
+    #webform-submission-contact-group-69-add-form {
         padding: 42px;
         background: $white;
+
         textarea,
-        
         input {
             @include border-radius(3px);
             height: 50px;
@@ -29,11 +29,60 @@
     }
 }
 
-// Search
+// Bloque de búsqueda de programa - home
+#search-program {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    margin-bottom: 30px;
+    text-align: center;
+
+    h3 {
+        @include flex-shrink(0);
+        @include size(100%);
+        font-size: $font-size-h1;
+
+        &::after {
+            @include pseudo-element;
+            @include size(50px, 2px);
+            @include center-block;
+            @include margin(top, 20px);
+            @include margin(bottom, 20px);
+            background: $white;
+        }
+    }
+
+    input[type="text"] {
+        @include size(100%, 50px);
+        @include border-radius(25px);
+        margin-bottom: 20px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        color: $text-color;
+    }
+
+    input[type="submit"] {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        height: 50px;
+    }
+
+    @media screen and (max-width: 648px) { .js-form-item-search { width: calc(100% - 100px) } }
+    @media screen and (max-width: 400px) {
+        .js-form-item-search {width: 100%; }
+        input[type="text"] { @include border-radius(25px); }
+        input[type="submit"] {
+            @include border-radius(25px);
+            @include size(50%, 50px);
+        }
+    }
+}
+
+// Search - global
 .search-content {
     top: 52px !important;
 
-    .search-form { @include flexbox; }
+    #search-block-form { @include flexbox; }
 
     @media (max-width: $screen-md) { top: 76px !important; }
     

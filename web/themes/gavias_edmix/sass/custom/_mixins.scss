@@ -73,6 +73,17 @@
 }
 
 /*
+* @mixin: Flex shrink
+*/
+
+@mixin flex-shrink($shrink) {
+    -webkit-flex-shrink: $shrink;
+    -moz-flex-shrink: $shrink;
+    -ms-flex-shrink: $shrink;
+    flex-shrink: $shrink;
+}
+
+/*
 * @mixin: Focus totally
 */
 

@@ -33,37 +33,6 @@
     }
 }
 
-// Bloque de búsqueda de programa en el home
-.search-program {
-    form {
-        text-align: center;
-
-        h3 {
-            font-size: $font-size-h1;
-
-            &::after {
-                @include pseudo-element;
-                @include size(50px, 2px);
-                @include center-block;
-                @include margin(top, 20px);
-                @include margin(bottom, 20px);
-                background: $white;
-            }
-        }
-
-        input[type="text"] {
-            @include size(80%, 50px);
-            @include border-radius(25px);
-            @include margin(bottom, 50px);
-            color: $text-color;
-
-            @media (max-width: $screen-sm-max) { width: 100%; }
-        }
-
-        input[type="submit"] { display: none; }
-    }
-}
-
 /*
 ===========================================================
                         Fin de página principal - Home

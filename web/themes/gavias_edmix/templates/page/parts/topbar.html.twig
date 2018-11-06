@@ -1,7 +1,7 @@
 <div class="topbar">
     <div class="container">
         <div class="row">
-            <div class="topbar-left col-sm-6 col-xs-12">
+            <div class="topbar-left col-sm-4 col-xs-9">
                 <div class="social-list">
                     {% if custom_social_link.facebook %}
                         <a href="{{custom_social_link.facebook}}">
@@ -60,9 +60,13 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="topbar-right col-sm-6 col-xs-12">
-                {{ drupal_block('MenuRol')}}
-                {% if custom_account == '' %}
+            <div class="topbar-right col-sm-8 col-xs-3">
+                <div class="right-topbar-h">
+                    <div class="topbar-close hidden-lg hidden-md">
+                        <i class="fa fa-times"></i>
+                    </div>
+                    {{ drupal_block('MenuRol')}}
+                    {% if custom_account == '' %}
                         <ul class="gva_topbar_menu">
                             <li>
                                 <a href="{{ login_link }}">{{'Login'|t}}</a>
@@ -76,6 +80,12 @@
                             <li>{{ custom_account|raw }}</li>
                         </ul>
                     {% endif %}
+                </div>
+                <div id="menu-bartop" class="menu-bartop hidden-lg hidden-md">
+                    <span class="one"></span>
+                    <span class="two"></span>
+                    <span class="three"></span>
+                </div>
             </div>
         </div>
     </div>

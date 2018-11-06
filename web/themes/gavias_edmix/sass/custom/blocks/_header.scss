@@ -42,6 +42,98 @@
                 }
             }
         }
+
+        // Menu hamburguesa
+        .menu-bartop {
+            @include flexbox;
+            @include size(36px, 32px);
+            @include flex-direction(column);
+            @include justify-content(space-between);
+            cursor: pointer;
+            padding: 5px;
+
+            span {
+                @include size(24px, 2px);
+                @include transition(all .5s);
+                display: block;
+                background: $theme-color-rgba;
+            }
+        }
+
+        @media (max-width: $screen-sm-max) {
+            .right-topbar-h {
+                @include position(fixed, top 0 left -100%);
+                @include size(100%, 100vh);
+                @include transition(all .5s);
+                max-width: 350px;
+                background: $color_3;
+                z-index: 999;
+                overflow: scroll;
+
+                .topbar-close {
+                    color: $theme-color-rgba;
+                    text-align: center;
+                    padding: 15px 0;
+                    border-bottom: 1px solid rgba($theme-color-rgba, .1);
+
+                    i { font-size: 24px; }
+                }
+
+                .block-uniagustiniana {
+                    @include size(100%);
+                    padding: 30px 20px 0;
+                    padding-bottom: 0;
+                    margin: 0;
+                }
+
+                .gva_topbar_menu {
+                    @include size(100%);
+                    padding: 20px;
+                    padding-top: 0;
+
+                    li:last-child a { border-bottom: 0; }
+                }
+
+                .menu_rol,
+                .gva_topbar_menu {
+                    @include flex-direction(column);
+
+                    li {
+                        @include size(100%);
+                        margin: 0;
+    
+                        a {
+                            display: block;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            padding-bottom: 8px;
+                            margin-bottom: 8px;
+                            border-bottom: 1px solid rgba($theme-color-rgba, .1);
+                        }
+                    }
+                }
+            }
+
+            &.is--open {
+                .right-topbar-h {
+                    left: 0;
+                }
+
+                .menu-bartop {
+                    .one {
+                        @include rotate(225deg);
+                        @include transform-origin(15px, 5px);
+                    }
+
+                    .two { opacity: 0; }
+
+                    .three {
+                        @include rotate(-225deg);
+                        @include transform-origin(15px, -4px);
+                    }
+                }
+            }
+        }
     }
 }
 
