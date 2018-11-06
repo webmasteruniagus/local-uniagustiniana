@@ -17,8 +17,10 @@
     }
     // Menú top
     .topbar-right {
-        @include flexbox;
-        @include justify-content(flex-end);
+        .right-topbar-h {
+            @include flexbox;
+            @include justify-content(flex-end);
+        }
 
         @media (max-width: $screen-xs) { @include justify-content(center); }
 
@@ -65,6 +67,8 @@
                 @include position(fixed, top 0 left -100%);
                 @include size(100%, 100vh);
                 @include transition(all .5s);
+                @include flex-direction(column);
+                @include justify-content(flex-start);
                 max-width: 350px;
                 background: $color_3;
                 z-index: 999;
