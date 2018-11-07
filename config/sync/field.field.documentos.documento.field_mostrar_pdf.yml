@@ -1,0 +1,23 @@
+uuid: 524dd59b-9352-4540-b09c-63388069a003
+langcode: es
+status: true
+dependencies:
+  config:
+    - eck.eck_type.documentos.documento
+    - field.storage.documentos.field_mostrar_pdf
+id: documentos.documento.field_mostrar_pdf
+field_name: field_mostrar_pdf
+entity_type: documentos
+bundle: documento
+label: 'Mostrar pdf'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
