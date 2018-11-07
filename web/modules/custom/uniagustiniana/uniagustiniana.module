@@ -39,3 +39,16 @@ function uniagustiniana_views_query_alter(ViewExecutable $view, QueryPluginBase 
         break;
     }
 }
+
+/**
+ * Implements hook_theme().
+ */
+function uniagustiniana_theme($existing, $type, $theme, $path) {
+	return [
+		'pdf_documents' => [
+			'variables' => [
+				'pdfs' => null
+			]
+		]
+	];
+}
