@@ -10,8 +10,8 @@
 * @return path img + img
 */
 
-@function svg($imgid) {
-    @return url($svg+'#'+$imgid) no-repeat center / contain;
+@function svg($img) {
+    @return url($svg+$img+'.svg') no-repeat center / contain;
 }
 
 

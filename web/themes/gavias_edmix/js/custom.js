@@ -3,9 +3,9 @@
 
     var UniCustom = {},
 
-        select_1 = "body.node--type-news",
+        select_1 = ".sidebar-right .views-element-container",
         select_2 = ".field--name-dynamic-block-fieldnode-redes-sociales",
-        select_3 = ".block-views-blockgrupo-contenido-block-4",
+        select_3 = ".content-main",
         select_4 = ".block-system-main-block .node--type-news",
         select_5 = "#menu-bartop",
         select_6 = ".topbar-right",
@@ -41,14 +41,14 @@
                 });
             },
 
-            news_page: function() {
+            move_networks: function() {
                 $(window).on("resize", function() {
                     let query = window.matchMedia("(max-width: 991px)").matches;
 
                     if (query) {
-                        $(select_3).append($(select_2));
+                        $(select_1).append($(select_2));
                     } else {
-                        $(select_4).append($(select_2));
+                        $(select_3).append($(select_2));
                     }
                 }).trigger("resize");
             },
@@ -110,9 +110,13 @@
         // Global
         UniCustom.global_script();
         // Página de noticias
-        if ($(select_1)) { UniCustom.news_page(); }
+        if ($(select_1).length > 0 && $(select_2).length > 0) {
+            UniCustom.move_networks();
+        }
         // Página de resultados con filtros
-        if ($(select_8)) { UniCustom.page_filters(); }
+        if ($(select_8).length > 0) {
+            UniCustom.page_filters();
+        }
     });
 
 }(jQuery));
