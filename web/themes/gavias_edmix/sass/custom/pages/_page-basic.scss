@@ -1,0 +1,27 @@
+/*
+===========================================================
+                        Página básica
+===========================================================
+*/
+// Vista previa del pdf
+.eck-entity {
+    .field--type-file { margin-top: 10px; }
+    // Títles
+    .field--type-string,
+    .field--type-entity-reference .field__label,
+    .field--type-file .field__label {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    // PDF preview
+    .portalpdf {
+        @include box-shadow(0 0 18px 0 rgba($black, .09));
+        height: 768px;
+        margin-bottom: 30px;
+    }
+    // Oculto bloque de pdf ya que no es soportado en móviles
+    @media screen and (max-width: $screen-sm-max + 1){
+        .field--name-title.field--type-string,
+        .field--name-document-pdf { display: none; }
+    }
+}

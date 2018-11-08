@@ -4,60 +4,29 @@
 ===========================================================
 */
 
-.programa-block-1 {
-    @include flexbox;
-    @include justify-content(center);
-    @include align-items(center);
-    @include flex-wrap(wrap);
-
-    @media (max-width: $screen-xs) {
-        @include flex-direction(column);
-        @include align-items(flex-start);
-    }
-
-    .field--label-inline {
-        @include flexbox;
-        margin-bottom: 5px;
-        margin-left: -1px;
-
-        &::before,
-        &::after {
-            @include pseudo-element;
-            @include size(1px, 15px);
-            margin-top: 5px;
-            background: rgba($black, .2);
-        }
-        
-        &:first-child { margin-left: 0; }
-
-        .field__label,
-        .field__item { margin-left: 5px; }
-
-        .field__label { font-weight: bold; }
-
-        .field__item { margin-right: 5px; }
-
-        @media (max-width: $screen-xs) {
-            @include flex-wrap(wrap);
-            
-            &::before,
-            &::after { display: none; }
-
-            .field__label,
-            .field__item { margin: 0; }
-
-            .field__label { margin-right: 5px; }
-        }
-    }
-}
 // Bloque de requisitos de programa
-.programa-block-2 {
-
+.characteristics-and-profile {
     .field__label {
         font-weight: bold;
         margin: 10px 0;
         color: $color_2;
     }
+
+    .characteristics {
+        .field--label-inline {
+            @include flexbox;
+            @include align-items(center);
+            @include flex-wrap(wrap);
+            margin-bottom: 10px;
+
+            .field__label {
+                margin: 0;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $screen-xs-max) { padding: 0; }
 }
 // Bloque de requisitos del programa
 .program-requirements {
