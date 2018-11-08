@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Template for the order receipt.
+ *
+ * Available variables:
+ * - pdfs: array pdfs
+ * @ingroup themeable
+ */
+#}
+<div class="gsc-tabs ">
+    <div class="tabs_wrapper tabs_vertical">
+        <ul class="nav nav-tabs">
+            {% for key, list in programas %}
+
+                <li {% if key == 0 %}class="active"{% endif %}> 
+                    <a data-toggle="tab" href="#tab-pro-{{ key }}">{{ list.label }}</a>
+                </li> 
+            {% endfor %}
+        </ul>
+        <div class="tab-content">
+            {% for key, list in programas %}
+                <div id="tab-pro-{{ key }}" class="tab-pane fade {% if key == 0 %}in active{% endif %}"> 
+                    <p>
+                        <a href="/group/{{ list.id }}">{{ list.label }}</a>
+                        <br>
+                        <b>Nivel academico: </b>{{ list.name }}
+                        <br>
+                        <b>Modalidad: </b>{{ list.field_metodologia_value }}
+                        <br>
+                        <b>Sede: </b>{{ list.tds_name }}
+                        <br>
+                        <b>Total créditos: </b>{{ list.field_total_creditos_value }}
+                        <br>
+                        <b>Tipo de formación: </b>{{ list.field_tipo_de_formacion_value }}
+                        <br>
+                        <br>
+                        Dirigido a: {{ list.field_perfil_profesional_value }}
+                    </p>
+                </div> 
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+

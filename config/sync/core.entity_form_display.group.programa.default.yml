@@ -38,7 +38,7 @@ bundle: programa
 mode: default
 content:
   field_block_builder:
-    weight: 4
+    weight: 23
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_widget
@@ -66,13 +66,10 @@ content:
     type: string_textfield
     region: content
   field_facultad:
-    weight: 23
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    weight: 1
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_fecha_de_resolucion:
     weight: 7
@@ -89,7 +86,7 @@ content:
     type: string_textarea
     region: content
   field_imagen:
-    weight: 1
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -202,14 +199,14 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

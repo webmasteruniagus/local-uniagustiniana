@@ -1,0 +1,24 @@
+uuid: a33d2d7e-8c3f-4450-934b-34de8bc82cf9
+langcode: es
+status: true
+dependencies:
+  module:
+    - gaviasthemer
+    - uniagustiniana
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: programasdefacultad
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: ProgramasFacultad
+settings:
+  id: ProgramasFacultad
+  label: 'Programas de facultad'
+  provider: uniagustiniana
+  label_display: '0'
+visibility: {  }

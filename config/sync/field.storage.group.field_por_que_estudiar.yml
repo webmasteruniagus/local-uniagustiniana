@@ -1,0 +1,19 @@
+uuid: 4c8f9fb4-085c-4c7d-bcab-cf00878a9a0d
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_por_que_estudiar
+field_name: field_por_que_estudiar
+entity_type: group
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 0fe5f53d-6bbb-492b-95fc-12e596f09a90
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_mision
+    - group.type.facultad
+id: group.facultad.field_mision
+field_name: field_mision
+entity_type: group
+bundle: facultad
+label: Misión
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.group.facultad.field_block_builder
+    - field.field.group.facultad.field_mision
+    - field.field.group.facultad.field_por_que_estudiar
     - group.type.facultad
   module:
     - gavias_blockbuilder
@@ -18,6 +20,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_widget
+    region: content
+  field_mision:
+    weight: 33
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_por_que_estudiar:
+    weight: 32
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   label:
     type: string_textfield

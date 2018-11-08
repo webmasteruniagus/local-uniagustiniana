@@ -49,6 +49,11 @@ function uniagustiniana_theme($existing, $type, $theme, $path) {
 			'variables' => [
 				'pdfs' => null
 			]
-		]
+        ],
+        'programas_facultad' => [
+            'variables' => [
+                'programas' => null 
+            ]
+        ]
 	];
 }

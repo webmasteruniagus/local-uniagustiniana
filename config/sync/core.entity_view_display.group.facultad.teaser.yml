@@ -1,0 +1,99 @@
+uuid: 9ae43a51-8a4d-49f4-a4c6-987ffddbe091
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.group.teaser
+    - field.field.group.facultad.field_block_builder
+    - field.field.group.facultad.field_mision
+    - field.field.group.facultad.field_por_que_estudiar
+    - group.type.facultad
+  module:
+    - ds
+    - field_group
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_pestana
+        - field_por_que_estudiar
+        - field_mision
+        - group__por_que_estudiar_con_noso
+        - group_nuestra_mision
+  field_group:
+    group_pestana:
+      children:
+        - group__por_que_estudiar_con_noso
+        - group_nuestra_mision
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Pestaña
+    group__por_que_estudiar_con_noso:
+      children:
+        - field_por_que_estudiar
+      parent_name: group_pestana
+      weight: 11
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+      label: '¿Por qué estudiar con nosotros?'
+    group_nuestra_mision:
+      children:
+        - field_mision
+      parent_name: group_pestana
+      weight: 12
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Nuestra Misión'
+id: group.facultad.teaser
+targetEntityType: group
+bundle: facultad
+mode: teaser
+content:
+  field_mision:
+    type: basic_string
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_por_que_estudiar:
+    type: basic_string
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  field_block_builder: true
+  label: true
+  langcode: true
+  uid: true
