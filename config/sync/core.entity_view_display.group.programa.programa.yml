@@ -8,8 +8,10 @@ dependencies:
     - field.field.group.programa.field_ciudad
     - field.field.group.programa.field_codigo_snies_8182
     - field.field.group.programa.field_duracion
+    - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
     - field.field.group.programa.field_frase_plan_de_estudios
+    - field.field.group.programa.field_imagen
     - field.field.group.programa.field_materias
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
@@ -29,6 +31,7 @@ dependencies:
     - ds
     - field_group
     - options
+    - taxonomy
 third_party_settings:
   ds:
     layout:
@@ -47,17 +50,16 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - group_programa_block_1
-        - field_mision
         - field_perfil_profesional
-        - field_titulo
-        - field_objetivo_del_programa
         - group_programa_block_2
-        - field_vision
+        - field_objetivo_del_programa
+        - field_titulo
         - field_codigo_snies_8182
         - field_fecha_de_resolucion
+        - group_column_1
         - field_vigencia
         - field_ciudad
+        - group_column_2
         - field_sede
         - field_nivel_de_formacion
         - field_metodologia
@@ -65,38 +67,8 @@ third_party_settings:
         - field_periocidad
         - field_duracion
         - field_total_creditos
-        - group_column_1
-        - group_column_2
         - group_row_wrapper
   field_group:
-    group_programa_block_1:
-      children:
-        - field_titulo
-        - field_codigo_snies_8182
-        - field_fecha_de_resolucion
-        - field_vigencia
-        - field_ciudad
-        - field_sede
-        - field_nivel_de_formacion
-        - field_metodologia
-        - field_tipo_de_formacion
-        - field_periocidad
-        - field_duracion
-        - field_total_creditos
-      parent_name: ''
-      weight: 0
-      format_type: html_element
-      format_settings:
-        label: programa-block-1
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-        id: ''
-        classes: 'programa-block-1 mb-25'
-      label: programa-block-1
     group_programa_block_2:
       children:
         - group_row_wrapper
@@ -104,7 +76,7 @@ third_party_settings:
       weight: 1
       format_type: html_element
       format_settings:
-        label: programa-block-2
+        label: 'Características y perfil'
         element: div
         show_label: false
         label_element: h3
@@ -112,17 +84,45 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: 'programa-block-2 container'
-      label: programa-block-2
+        classes: 'characteristics-and-profile container'
+      label: 'Características y perfil'
     group_column_1:
+      children:
+        - field_titulo
+        - field_codigo_snies_8182
+        - field_fecha_de_resolucion
+        - field_vigencia
+        - field_ciudad
+        - field_sede
+        - field_nivel_de_formacion
+        - field_metodologia
+        - field_tipo_de_formacion
+        - field_periocidad
+        - field_duracion
+        - field_total_creditos
+      parent_name: group_row_wrapper
+      weight: 4
+      format_type: html_element
+      format_settings:
+        label: Características
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-lg-6 col-md-6 col-sm-12 col-xs-12 characteristics'
+      label: Características
+    group_column_2:
       children:
         - field_perfil_profesional
         - field_objetivo_del_programa
       parent_name: group_row_wrapper
-      weight: 21
+      weight: 5
       format_type: html_element
       format_settings:
-        label: column-1
+        label: Perfil
         element: div
         show_label: false
         label_element: h3
@@ -130,26 +130,8 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: 'col-lg-6 col-md-6 col-sm-12 col-xs-12'
-      label: column-1
-    group_column_2:
-      children:
-        - field_mision
-        - field_vision
-      parent_name: group_row_wrapper
-      weight: 22
-      format_type: html_element
-      format_settings:
-        label: column-2
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-        id: ''
-        classes: 'col-lg-6 col-md-6 col-sm-12 col-xs-12'
-      label: column-2
+        classes: 'col-lg-6 col-md-6 col-sm-12 col-xs-12 profile'
+      label: Perfil
     group_row_wrapper:
       children:
         - group_column_1
@@ -173,12 +155,11 @@ bundle: programa
 mode: programa
 content:
   field_ciudad:
-    type: entity_reference_label
+    type: entity_reference_rss_category
     weight: 5
     region: ds_content
     label: inline
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
   field_codigo_snies_8182:
     type: string
@@ -197,13 +178,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
   field_fecha_de_resolucion:
-    type: datetime_custom
+    type: datetime_time_ago
     weight: 3
     region: ds_content
     label: inline
     settings:
-      timezone_override: ''
-      date_format: 'd \d\e F \d\e\l Y'
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
     third_party_settings: {  }
   field_metodologia:
     type: list_default
@@ -212,20 +194,12 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-  field_mision:
-    type: basic_string
-    weight: 0
-    region: ds_content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_nivel_de_formacion:
-    type: entity_reference_label
+    type: entity_reference_rss_category
     weight: 7
     region: ds_content
     label: inline
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
   field_objetivo_del_programa:
     type: basic_string
@@ -249,12 +223,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_sede:
-    type: entity_reference_label
+    type: entity_reference_rss_category
     weight: 6
     region: ds_content
     label: inline
-    settings:
-      link: false
+    settings: {  }
     third_party_settings: {  }
   field_tipo_de_formacion:
     type: list_default
@@ -272,36 +245,29 @@ content:
       link_to_entity: false
     third_party_settings: {  }
   field_total_creditos:
-    type: number_integer
+    type: number_unformatted
     weight: 12
     region: ds_content
     label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: false
+    settings: {  }
     third_party_settings: {  }
   field_vigencia:
-    type: number_integer
+    type: number_unformatted
     weight: 4
     region: ds_content
     label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-  field_vision:
-    type: basic_string
-    weight: 1
-    region: ds_content
-    label: above
     settings: {  }
     third_party_settings: {  }
 hidden:
   changed: true
   created: true
   field_block_builder: true
+  field_facultad: true
   field_frase_plan_de_estudios: true
+  field_imagen: true
   field_materias: true
+  field_mision: true
+  field_vision: true
   label: true
   langcode: true
   uid: true

@@ -6,20 +6,6 @@
 
 // Basig page
 .eck-entity {
-    // Títles
-    .field--type-string,
-    .field--type-entity-reference .field__label,
-    .field--type-file .field__label {
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    .field--type-file { margin-top: 10px; }
-    // PDF preview
-    .portalpdf {
-        @include box-shadow(0 0 18px 0 rgba($black, .09));
-        height: 768px;
-        margin-bottom: 30px;
-    }
     // Files
     .field__items {
         @include flexbox;
