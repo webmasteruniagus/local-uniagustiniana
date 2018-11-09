@@ -1,0 +1,70 @@
+/*
+===========================================================
+                        Bloque de tabs horizontales en página de facultad
+===========================================================
+*/
+#facultad-horizontal-tabs { // Id para sobre escribir
+    .horizontal-tabs {
+        border: 0;
+    }
+    // Tabs
+    .horizontal-tabs-list {
+        border: 0;
+        background: none;
+
+        li {
+            @include box-shadow(0 1px 6px rgba($black, 0.1));
+            border: 0;
+            padding: 0;
+            margin-right: 20px;
+            margin-bottom: 15px;
+            background: $white;
+
+            a {
+                font-size: 12px;
+                padding: 8px 18px;
+                text-transform: uppercase;
+
+                &:hover {
+                    background: $color_4;
+                    color: $theme_color;
+                }
+            }
+
+            &.selected a {
+                background: $white;
+                color: $theme_color;
+            }
+        }
+    }
+    // Content
+    .horizontal-tabs-panes .horizontal-tabs-pane {
+        @include box-shadow(0 1px 6px rgba($black, 0.1));
+        @include transition(opacity .50s linear);
+        opacity: 1;
+        padding: 30px;
+        
+        &.horizontal-tab-hidden { opacity: 0; }
+    }
+}
+// Modo acordeon en móviles
+@media screen and (max-width: 767px) {
+    .acordeon-is--active {
+        #facultad-horizontal-tabs {
+            .horizontal-tabs-list {
+                @include flexbox;
+                @include flex-direction(column);
+
+                li {
+                    margin: 0;
+                    margin-bottom: 2px;
+                }
+            }
+        }
+    }
+}
+/*
+===========================================================
+                        Fin Bloque de tabs horizontales en página de facultad
+===========================================================
+*/
