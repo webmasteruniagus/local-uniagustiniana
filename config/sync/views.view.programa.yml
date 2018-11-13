@@ -3,7 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.group.programa
+    - core.entity_view_mode.group.header
     - field.storage.group.field_frase_plan_de_estudios
     - field.storage.paragraph.field_materias
     - field.storage.paragraph.field_semestre
@@ -67,7 +67,7 @@ display:
         type: 'entity:group'
         options:
           relationship: none
-          view_mode: programa
+          view_mode: header
       fields:
         label:
           table: groups_field_data
@@ -943,3 +943,19 @@ display:
         - url
       tags:
         - 'config:field.storage.taxonomy_term.field_imagen'
+  block_7:
+    display_plugin: block
+    id: block_7
+    display_title: Header
+    position: 7
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - route
+        - url
+      tags: {  }
