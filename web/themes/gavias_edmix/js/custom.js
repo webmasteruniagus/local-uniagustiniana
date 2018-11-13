@@ -6,7 +6,7 @@
         select_1 = ".sidebar-right .views-element-container",
         select_2 = ".field--name-dynamic-block-fieldnode-redes-sociales",
         select_3 = ".content-main",
-        select_4 = ".block-system-main-block .node--type-news",
+        select_4 = ".facultad-horizontal-tabs",
         select_5 = "#menu-bartop",
         select_6 = ".topbar-right",
         select_7 = ".topbar-close",
@@ -19,10 +19,12 @@
         select_14 = "body",
         select_15 = ".close-filters",
         select_16 = ".facet-item",
+        select_17 = ".group--type-facultad.group--view-mode-full",
 
         class_1 = "is--open",
         class_2 = "sidebar--fixed",
         class_3 = "page--filters",
+        class_4 = "acordeon-is--active",
         
         query_1;
 
@@ -102,6 +104,18 @@
                 });
 
                 if (query) $(select_11 + ' .fa').before('<span>('+ filtersDone +') &nbsp;</span>');
+            },
+
+            facultad_acordeon: function() {
+                $(window).on("resize", function() {
+                    let query = window.matchMedia("(max-width: 767px)").matches;
+
+                    if (query) {
+                        $(select_17).addClass(class_4);
+                    } else {
+                        $(select_17).removeClass(class_4);
+                    }
+                }).trigger("resize");
             }
         };
     }());
@@ -116,6 +130,10 @@
         // Página de resultados con filtros
         if ($(select_8).length > 0) {
             UniCustom.page_filters();
+        }
+        // Página de facultad
+        if ($(select_17).length > 0) {
+            UniCustom.facultad_acordeon();
         }
     });
 
