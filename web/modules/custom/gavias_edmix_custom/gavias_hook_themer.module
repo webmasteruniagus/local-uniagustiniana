@@ -164,6 +164,11 @@ function gavias_hook_themer_preprocess_page(&$variables) {
       }  
     }
   }
+  if ($group = \Drupal::request()->attributes->get('group')) {
+    if($group->bundle() == 'programa'){
+      unset($variables['page']['breadcrumbs']);
+    }
+  }
 }
 
 function gavias_hook_themer_sliderlayer_styles_alter(&$variables){
