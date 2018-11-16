@@ -28,7 +28,8 @@ dependencies:
     - group.type.programa
   module:
     - ds
-    - image
+    - field_group
+    - responsive_image
 third_party_settings:
   ds:
     layout:
@@ -48,9 +49,30 @@ third_party_settings:
     regions:
       ds_content:
         - label
-        - field_codigo_snies_8182
         - field_imagen
+        - group_contenido_sobre_la_imagen
+        - field_codigo_snies_8182
         - field_sede
+  field_group:
+    group_contenido_sobre_la_imagen:
+      children:
+        - label
+        - field_codigo_snies_8182
+        - field_sede
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: 'Contenido sobre la imagen'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'content-on-image container container-bg'
+      label: 'Contenido sobre la imagen'
 id: group.programa.header
 targetEntityType: group
 bundle: programa
@@ -58,20 +80,20 @@ mode: header
 content:
   field_codigo_snies_8182:
     type: string
-    weight: 1
+    weight: 2
     region: ds_content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_imagen:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      responsive_image_style: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: ds_content
   field_sede:
     type: entity_reference_label
@@ -91,32 +113,11 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: expert
+          id: default
           settings:
-            lb: h1
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
+            lb: ''
             lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
+            classes: {  }
 hidden:
   changed: true
   created: true
