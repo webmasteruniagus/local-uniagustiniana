@@ -16,10 +16,13 @@ show_only_one_result: false
 field_identifier: category_content_news
 facet_source_id: 'search_api:views_page__noticias__page_1'
 widget:
-  type: dropdown
+  type: checkbox
   config:
     show_numbers: true
-    default_option_label: Choose
+    soft_limit: 10
+    soft_limit_settings:
+      show_less_label: 'Ver menos'
+      show_more_label: 'Ver más'
 query_operator: or
 use_hierarchy: false
 expand_hierarchy: false

@@ -19,10 +19,10 @@ widget:
   type: links
   config:
     show_numbers: true
-    soft_limit: 0
+    soft_limit: 10
     soft_limit_settings:
-      show_less_label: 'Show less'
-      show_more_label: 'Show more'
+      show_less_label: 'Ver menos'
+      show_more_label: 'Ver más'
 query_operator: or
 use_hierarchy: false
 expand_hierarchy: false

@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.group.header
     - core.entity_view_mode.group.programa
     - field.storage.group.field_frase_plan_de_estudios
     - field.storage.paragraph.field_materias
@@ -341,12 +342,12 @@ display:
         - url
       tags:
         - 'config:core.entity_view_display.paragraph.materia.default'
+        - 'config:core.entity_view_display.paragraph.materias_por_semestre.default'
         - 'config:core.entity_view_display.paragraph.paragraphs_images.default'
         - 'config:core.entity_view_display.paragraph.paragraphs_text.default'
         - 'config:core.entity_view_display.paragraph.paragraphs_video.default'
-        - 'config:core.entity_view_display.paragraph.titulo_resumen.default'
-        - 'config:core.entity_view_display.paragraph.materias_por_semestre.default'
         - 'config:core.entity_view_display.paragraph.requisitos_de_ingreso.default'
+        - 'config:core.entity_view_display.paragraph.titulo_resumen.default'
   block_3:
     display_plugin: block
     id: block_3
@@ -951,6 +952,17 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
+      style:
+        type: default
+        options: {  }
+      defaults:
+        style: false
+        row: false
+      row:
+        type: 'entity:group'
+        options:
+          relationship: none
+          view_mode: header
     cache_metadata:
       max-age: -1
       contexts:
