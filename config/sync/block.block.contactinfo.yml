@@ -20,7 +20,7 @@ provider: null
 plugin: 'block_content:7da38301-272f-4979-8de1-06b564010f17'
 settings:
   id: 'block_content:7da38301-272f-4979-8de1-06b564010f17'
-  label: 'Contact info'
+  label: Información
   provider: block_content
   label_display: visible
   status: true

@@ -6,6 +6,8 @@ dependencies:
     - field.field.group.programa.field_block_builder
     - field.field.group.programa.field_ciudad
     - field.field.group.programa.field_codigo_snies_8182
+    - field.field.group.programa.field_color_principal
+    - field.field.group.programa.field_color_secundario
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
@@ -27,6 +29,7 @@ dependencies:
     - group.type.programa
     - image.style.thumbnail
   module:
+    - color_field
     - datetime
     - gavias_blockbuilder
     - image
@@ -56,6 +59,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_color_principal:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_color_secundario:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
     region: content
   field_duracion:
     weight: 15

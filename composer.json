@@ -59,7 +59,8 @@
         "drupal/eck": "^1.0@alpha",
         "drupal/search_api": "^1.10",
         "drupal/facets": "^1.1",
-        "drupal/views_fieldsets": "^3.3"
+        "drupal/views_fieldsets": "^3.3",
+        "drupal/color_field": "^2.0"
     },
     "require-dev": {
         "behat/mink": "~1.7",

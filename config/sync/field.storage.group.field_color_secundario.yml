@@ -1,0 +1,20 @@
+uuid: e57465da-2faa-4f5d-95d6-f7e83f5698dd
+langcode: es
+status: true
+dependencies:
+  module:
+    - color_field
+    - group
+id: group.field_color_secundario
+field_name: field_color_secundario
+entity_type: group
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

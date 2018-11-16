@@ -20,7 +20,7 @@ provider: null
 plugin: 'block_content:f68ff84d-6af0-4c49-8b85-ae338addc541'
 settings:
   id: 'block_content:f68ff84d-6af0-4c49-8b85-ae338addc541'
-  label: 'Link Footer'
+  label: 'Enlaces de interes'
   provider: block_content
   label_display: visible
   status: true

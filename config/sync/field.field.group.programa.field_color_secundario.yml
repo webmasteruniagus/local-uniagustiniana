@@ -1,0 +1,22 @@
+uuid: 447928e5-9858-4118-8df6-4f6d4027875f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_color_secundario
+    - group.type.programa
+  module:
+    - color_field
+id: group.programa.field_color_secundario
+field_name: field_color_secundario
+entity_type: group
+bundle: programa
+label: 'Color secundario'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type
