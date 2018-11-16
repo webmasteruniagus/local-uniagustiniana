@@ -4,6 +4,38 @@
 ===========================================================
 */
 
+// Landing de programa - imagen principal
+.program-landing {
+    @include position(relative, 0);
+    width: 100vw;
+    margin-left: calc(((100vw - 100%) / 2) * -1);
+
+    .gsc-column { padding: 0; }
+
+    .field--name-field-imagen {
+        @include position(relative, 0);
+
+        &::after {
+            @include absolute(top 0 left 0);
+            @include square(100%);
+            @include pseudo-element;
+            background: rgba(254, 184, 0, 0.5);
+        }
+    }
+
+    .content-on-image {
+        @include absolute(top 50% left 50%);
+        @include translate(-50%, -50%);
+        color: darken($theme_color, 50%);
+        margin: 0;
+
+        .field--name-label {
+            font-size: 40px;
+            font-weight: bold;
+        }
+    }
+}
+
 // Bloque de requisitos de programa
 .characteristics-and-profile {
     .field__label {
