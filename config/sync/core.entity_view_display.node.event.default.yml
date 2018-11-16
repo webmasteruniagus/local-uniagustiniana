@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_category
+    - field.field.node.event.field_documentos
     - field.field.node.event.field_event_end
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_start
@@ -38,6 +39,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_documentos:
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_event_end:
     weight: 3

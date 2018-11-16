@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_category
+    - field.field.node.event.field_documentos
     - field.field.node.event.field_event_end
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_start
@@ -16,6 +17,7 @@ dependencies:
     - datetime
     - image
     - imce
+    - inline_entity_form
     - path
     - text
 _core:
@@ -48,6 +50,22 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_documentos:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
     region: content
   field_event_end:
     weight: 15

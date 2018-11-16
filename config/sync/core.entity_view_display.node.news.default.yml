@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_category
+    - field.field.node.news.field_documentos
     - field.field.node.news.field_news_image
     - field.field.node.news.field_sede
     - node.type.news
@@ -33,6 +34,7 @@ third_party_settings:
         - body
         - field_sede
         - 'dynamic_block_field:node-redes_sociales'
+        - field_documentos
     fields:
       'dynamic_block_field:node-redes_sociales':
         plugin_id: 'dynamic_block_field:node-redes_sociales'
@@ -50,6 +52,15 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: ds_content
+  field_documentos:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: ds_content
   field_sede:
     weight: 1
