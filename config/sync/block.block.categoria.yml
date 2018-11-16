@@ -23,7 +23,7 @@ settings:
   id: 'facet_block:categoria'
   label: Categoria
   provider: facets
-  label_display: '0'
+  label_display: visible
   block_id: categoria
 visibility:
   request_path:

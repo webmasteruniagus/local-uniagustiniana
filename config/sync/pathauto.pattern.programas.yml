@@ -1,0 +1,23 @@
+uuid: 2e9aaf3a-cd86-482b-af7c-ef15d9ba5e15
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - group
+id: programas
+label: Programas
+type: 'canonical_entities:group'
+pattern: 'programas/[group:title]'
+selection_criteria:
+  db05d967-10cc-41d0-a2d7-42050cc9dc6e:
+    id: 'entity_bundle:group'
+    bundles:
+      programa: programa
+    negate: false
+    context_mapping:
+      group: group
+    uuid: db05d967-10cc-41d0-a2d7-42050cc9dc6e
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,23 @@
+uuid: d49330ab-d987-4a2e-8989-fd6669412758
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - group
+id: facultad
+label: Facultad
+type: 'canonical_entities:group'
+pattern: '[group:title]'
+selection_criteria:
+  c8c49ad5-d0bd-41c3-a1f0-c23013397dd8:
+    id: 'entity_bundle:group'
+    bundles:
+      facultad: facultad
+    negate: false
+    context_mapping:
+      group: group
+    uuid: c8c49ad5-d0bd-41c3-a1f0-c23013397dd8
+selection_logic: and
+weight: -5
+relationships: {  }

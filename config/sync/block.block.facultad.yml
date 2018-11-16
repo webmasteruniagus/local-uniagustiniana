@@ -23,7 +23,7 @@ settings:
   id: 'facet_block:facultad'
   label: Facultad
   provider: facets
-  label_display: '0'
+  label_display: visible
   block_id: facultad
 visibility:
   request_path:

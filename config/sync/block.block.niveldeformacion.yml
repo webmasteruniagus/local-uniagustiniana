@@ -23,7 +23,7 @@ settings:
   id: 'facet_block:nivel_de_formacion'
   label: 'Nivel de formación'
   provider: facets
-  label_display: '0'
+  label_display: visible
   block_id: niveldeformacion
 visibility:
   request_path:

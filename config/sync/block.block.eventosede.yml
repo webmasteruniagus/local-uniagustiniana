@@ -21,9 +21,9 @@ provider: null
 plugin: 'facet_block:evento_sede'
 settings:
   id: 'facet_block:evento_sede'
-  label: 'Evento Sede'
+  label: Sede
   provider: facets
-  label_display: '0'
+  label_display: visible
   block_id: eventosede
 visibility:
   request_path:

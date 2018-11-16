@@ -21,9 +21,9 @@ provider: null
 plugin: 'facet_block:sede_eventos'
 settings:
   id: 'facet_block:sede_eventos'
-  label: 'Sección eventos'
+  label: Sección
   provider: facets
-  label_display: '0'
+  label_display: visible
   block_id: sede_2
 visibility:
   request_path:

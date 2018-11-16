@@ -7,16 +7,16 @@ dependencies:
 id: noticias
 label: Noticias
 type: 'canonical_entities:node'
-pattern: 'noticia/[node:title]'
+pattern: 'noticias/[node:title]'
 selection_criteria:
-  9359e535-d593-47c5-992f-ffa1223d4ffe:
+  3d5ae131-4d7d-49b9-bc4f-e44e710a0686:
     id: node_type
     bundles:
       news: news
     negate: false
     context_mapping:
       node: node
-    uuid: 9359e535-d593-47c5-992f-ffa1223d4ffe
+    uuid: 3d5ae131-4d7d-49b9-bc4f-e44e710a0686
 selection_logic: and
 weight: -5
 relationships: {  }

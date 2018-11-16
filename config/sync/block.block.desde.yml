@@ -21,9 +21,9 @@ provider: null
 plugin: 'facet_block:desde'
 settings:
   id: 'facet_block:desde'
-  label: Desde
+  label: Fecha
   provider: facets
-  label_display: '0'
+  label_display: visible
   block_id: desde
 visibility:
   request_path:

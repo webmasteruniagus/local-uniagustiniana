@@ -23,7 +23,7 @@ settings:
   id: 'facet_block:sede'
   label: Sede
   provider: facets
-  label_display: '0'
+  label_display: visible
   block_id: sede
 visibility:
   request_path:
