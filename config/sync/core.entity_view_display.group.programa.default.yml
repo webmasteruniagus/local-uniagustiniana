@@ -28,7 +28,6 @@ dependencies:
   module:
     - ds
     - gavias_blockbuilder
-    - image
 third_party_settings:
   ds:
     layout:
@@ -48,8 +47,6 @@ third_party_settings:
     regions:
       ds_content:
         - field_block_builder
-        - field_imagen
-        - field_facultad
 id: group.programa.default
 targetEntityType: group
 bundle: programa
@@ -62,31 +59,16 @@ content:
     third_party_settings: {  }
     type: blockbuilder_formatter
     region: ds_content
-  field_facultad:
-    weight: 2
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: ds_content
-  field_imagen:
-    weight: 1
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: ds_content
 hidden:
   changed: true
   created: true
   field_ciudad: true
   field_codigo_snies_8182: true
   field_duracion: true
+  field_facultad: true
   field_fecha_de_resolucion: true
   field_frase_plan_de_estudios: true
+  field_imagen: true
   field_materias: true
   field_metodologia: true
   field_mision: true
