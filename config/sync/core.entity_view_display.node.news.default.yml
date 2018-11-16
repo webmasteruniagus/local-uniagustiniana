@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.news.body
     - field.field.node.news.field_category
     - field.field.node.news.field_news_image
+    - field.field.node.news.field_sede
     - node.type.news
   module:
     - ds
@@ -30,6 +31,7 @@ third_party_settings:
     regions:
       ds_content:
         - body
+        - field_sede
         - 'dynamic_block_field:node-redes_sociales'
     fields:
       'dynamic_block_field:node-redes_sociales':
@@ -48,6 +50,14 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: ds_content
+  field_sede:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: ds_content
 hidden:
   field_category: true

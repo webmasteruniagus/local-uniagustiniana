@@ -1,0 +1,29 @@
+uuid: 843fd06c-0879-4aad-9928-2b4330206b86
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sede
+    - node.type.news
+    - taxonomy.vocabulary.sede
+id: node.news.field_sede
+field_name: field_sede
+entity_type: node
+bundle: news
+label: Sede
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sede: sede
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
