@@ -36,6 +36,32 @@ class MenuRol extends BlockBase {
             $active_menu = $path[2];
         }
         $items = [];
+        $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/noticias');
+        $url = Url::fromUri('internal:' . $alias);
+
+        $link = Link::fromTextAndUrl('Noticias', $url)->toString();
+
+        $items[] = [
+            '#markup' => $link,
+            '#wrapper_attributes' => [
+                'class' => [
+                    'menu_rol_item',
+                ],
+            ],
+        ];
+        $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/eventos');
+        $url = Url::fromUri('internal:' . $alias);
+
+        $link = Link::fromTextAndUrl('Eventos', $url)->toString();
+
+        $items[] = [
+            '#markup' => $link,
+            '#wrapper_attributes' => [
+                'class' => [
+                    'menu_rol_item',
+                ],
+            ],
+        ];
         foreach ($results as $result){
             $link = '/group/' . $result->id;
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath($link);

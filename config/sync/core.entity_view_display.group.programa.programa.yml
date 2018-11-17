@@ -7,6 +7,8 @@ dependencies:
     - field.field.group.programa.field_block_builder
     - field.field.group.programa.field_ciudad
     - field.field.group.programa.field_codigo_snies_8182
+    - field.field.group.programa.field_color_principal
+    - field.field.group.programa.field_color_secundario
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
@@ -31,7 +33,6 @@ dependencies:
     - ds
     - field_group
     - options
-    - taxonomy
 third_party_settings:
   ds:
     layout:
@@ -52,14 +53,14 @@ third_party_settings:
       ds_content:
         - field_perfil_profesional
         - group_programa_block_2
-        - field_objetivo_del_programa
         - field_titulo
+        - field_objetivo_del_programa
         - field_codigo_snies_8182
         - field_fecha_de_resolucion
-        - group_column_1
         - field_vigencia
-        - field_ciudad
+        - group_column_1
         - group_column_2
+        - field_ciudad
         - field_sede
         - field_nivel_de_formacion
         - field_metodologia
@@ -155,11 +156,12 @@ bundle: programa
 mode: programa
 content:
   field_ciudad:
-    type: entity_reference_rss_category
+    type: entity_reference_label
     weight: 5
     region: ds_content
     label: inline
-    settings: {  }
+    settings:
+      link: false
     third_party_settings: {  }
   field_codigo_snies_8182:
     type: string
@@ -195,12 +197,20 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_nivel_de_formacion:
-    type: entity_reference_rss_category
+    type: entity_reference_label
     weight: 7
     region: ds_content
     label: inline
-    settings: {  }
-    third_party_settings: {  }
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_objetivo_del_programa:
     type: basic_string
     weight: 1
@@ -223,11 +233,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_sede:
-    type: entity_reference_rss_category
+    type: entity_reference_label
     weight: 6
     region: ds_content
     label: inline
-    settings: {  }
+    settings:
+      link: false
     third_party_settings: {  }
   field_tipo_de_formacion:
     type: list_default
@@ -262,6 +273,8 @@ hidden:
   changed: true
   created: true
   field_block_builder: true
+  field_color_principal: true
+  field_color_secundario: true
   field_facultad: true
   field_frase_plan_de_estudios: true
   field_imagen: true

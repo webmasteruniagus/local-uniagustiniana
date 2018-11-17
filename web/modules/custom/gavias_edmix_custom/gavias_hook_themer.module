@@ -165,7 +165,7 @@ function gavias_hook_themer_preprocess_page(&$variables) {
     }
   }
   if ($group = \Drupal::request()->attributes->get('group')) {
-    if($group->bundle() == 'programa'){
+    if($group->bundle() == 'programa' || $group->bundle() == 'home'){
       unset($variables['page']['breadcrumbs']);
     }
   }

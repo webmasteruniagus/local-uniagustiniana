@@ -11,7 +11,6 @@ dependencies:
     - ds
     - field_group
     - file
-    - taxonomy
 third_party_settings:
   ds:
     layout:
@@ -72,15 +71,31 @@ content:
     label: above
     settings:
       use_description_as_link_text: true
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: file_default
     region: ds_content
   field_categoria:
     weight: 4
     label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: entity_reference_rss_category
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_label
     region: ds_content
   title:
     label: hidden

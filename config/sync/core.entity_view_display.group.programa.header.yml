@@ -123,6 +123,8 @@ hidden:
   created: true
   field_block_builder: true
   field_ciudad: true
+  field_color_principal: true
+  field_color_secundario: true
   field_duracion: true
   field_facultad: true
   field_fecha_de_resolucion: true
