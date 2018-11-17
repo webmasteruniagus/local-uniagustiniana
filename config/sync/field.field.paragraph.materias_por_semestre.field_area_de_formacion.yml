@@ -1,0 +1,21 @@
+uuid: 9782b813-e785-4ae4-a631-8b175d673021
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_area_de_formacion
+    - paragraphs.paragraphs_type.materias_por_semestre
+  module:
+    - options
+id: paragraph.materias_por_semestre.field_area_de_formacion
+field_name: field_area_de_formacion
+entity_type: paragraph
+bundle: materias_por_semestre
+label: 'Área de formación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

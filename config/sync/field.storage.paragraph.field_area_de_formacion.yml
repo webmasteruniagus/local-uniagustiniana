@@ -1,0 +1,30 @@
+uuid: 99c6157d-5a5c-43e5-8101-4b5dfe44eb16
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_area_de_formacion
+field_name: field_area_de_formacion
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Administrativa y de Negocios'
+    -
+      value: '1'
+      label: 'Estrategica y organizacional'
+    -
+      value: '2'
+      label: Transversal
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

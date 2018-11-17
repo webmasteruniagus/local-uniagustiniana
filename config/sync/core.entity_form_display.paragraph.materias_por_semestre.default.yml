@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.paragraph.materias_por_semestre.field_area_de_formacion
     - field.field.paragraph.materias_por_semestre.field_creditos
     - field.field.paragraph.materias_por_semestre.field_titulo
     - paragraphs.paragraphs_type.materias_por_semestre
@@ -11,6 +12,12 @@ targetEntityType: paragraph
 bundle: materias_por_semestre
 mode: default
 content:
+  field_area_de_formacion:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_creditos:
     weight: 1
     settings:

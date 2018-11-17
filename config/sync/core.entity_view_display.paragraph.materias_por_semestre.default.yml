@@ -3,11 +3,13 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.paragraph.materias_por_semestre.field_area_de_formacion
     - field.field.paragraph.materias_por_semestre.field_creditos
     - field.field.paragraph.materias_por_semestre.field_titulo
     - paragraphs.paragraphs_type.materias_por_semestre
   module:
     - ds
+    - options
 third_party_settings:
   ds:
     layout:
@@ -27,14 +29,22 @@ third_party_settings:
     regions:
       ds_content:
         - field_titulo
+        - field_area_de_formacion
         - field_creditos
 id: paragraph.materias_por_semestre.default
 targetEntityType: paragraph
 bundle: materias_por_semestre
 mode: default
 content:
-  field_creditos:
+  field_area_de_formacion:
     weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: ds_content
+  field_creditos:
+    weight: 2
     label: inline
     settings:
       thousand_separator: ''
