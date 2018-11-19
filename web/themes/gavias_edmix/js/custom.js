@@ -19,14 +19,25 @@
         select_14 = "body",
         select_15 = ".close-filters",
         select_16 = ".facet-item",
-        select_17 = ".group--type-facultad.group--view-mode-full",
+        select_17 = ".tabs_wrapper",
+        select_18 = ".group--type-programa",
+        select_19 = ".field--name-field-color-principal",
+        select_20 = ".field--name-field-color-secundario",
 
         class_1 = "is--open",
         class_2 = "sidebar--fixed",
         class_3 = "page--filters",
         class_4 = "acordeon-is--active",
+        class_5 = "page-program",
+        class_6 = "tabs_horizontal",
+        class_7 = "tabs_vertical",
         
         query_1;
+
+    // Crear variable css
+    function createVariableCss(name, value) {
+        document.documentElement.style.setProperty(`--${name}`, value);
+    }
 
     UniCustom = (function() {
         return {
@@ -98,7 +109,7 @@
                 });
                 // Contar filtros realizados
                 $(select_16).each(function() {
-                    let actived = $(this).children('.is-active')[0] !== undefined ? true : false;
+                    let actived = $(this).children('.is-active')[0] !== undefined;
                     
                     if (actived) filtersDone += 1;
                 });
@@ -111,11 +122,25 @@
                     let query = window.matchMedia("(max-width: 767px)").matches;
 
                     if (query) {
-                        $(select_17).addClass(class_4);
+                        $(select_17).removeClass(class_7);
+                        $(select_17).addClass(class_6);
                     } else {
-                        $(select_17).removeClass(class_4);
+                        $(select_17).addClass(class_7);
+                        $(select_17).removeClass(class_6);
                     }
                 }).trigger("resize");
+            },
+
+            colorProgram: function() {
+                let mainColor = $(select_19).text().split(' '),
+                  mainColorOpacity = mainColor[1],
+                  secondColor = $(select_20).text();
+
+                document.querySelector('body').classList.add(class_5);
+
+                createVariableCss('color_1', mainColor[0]);
+                createVariableCss('opacity_1', mainColorOpacity);
+                createVariableCss('color_2', secondColor);
             }
         };
     }());
@@ -136,5 +161,11 @@
             UniCustom.facultad_acordeon();
         }
     });
+
+    $(document).ready(function() {
+      if ($(select_18).length > 0) {
+        UniCustom.colorProgram();
+      }
+    })
 
 }(jQuery));

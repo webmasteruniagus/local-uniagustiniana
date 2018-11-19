@@ -1,0 +1,18 @@
+id: formulario
+label: Formulario
+ui_limit: ''
+properties:
+  block: webform_block
+  use_block_title: false
+  config:
+    id: webform_block
+    label: ''
+    provider: webform
+    label_display: visible
+    webform_id: contact
+    default_data: ''
+    redirect: false
+type: block
+type_label: 'Block field'
+entities:
+  group: group

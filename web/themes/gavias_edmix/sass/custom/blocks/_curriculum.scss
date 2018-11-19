@@ -13,50 +13,48 @@
     // Acordeon
     .panel-body {
         // Oculto todos los títulos
-        .field--label-inline .field__label { display: none; }
+        .field__label { display: none; }
 
         .paragraph {
             @include flexbox;
             padding: 10px 0;
             border-bottom: $border_1;
             // Muestro solo los de la primer materia
-            &:first-child {
-                .field--label-inline .field__label {
-                    display: block;
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                }
+            &:first-child .field__label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 10px;
             }
 
             &:last-child { border-bottom: 0; }
 
-            .field--name-field-titulo { width: 90%; }
+            .field--name-field-titulo { width: 100%; }
+
+            .field--name-field-area-de-formacion {
+                @include flex-shrink(0);
+                width: 30%;
+            }
 
             .field--name-field-creditos {
-                width: 10%;
+                @include flex-shrink(0);
+                width: 20%;
                 text-align: center;
             }
 
             @media (max-width: $screen-xs) {
-                &:first-child {
-                    .field--name-field-creditos {
-                        display: block;
+                @include flex-direction(column);
 
-                        .field__item {
-                            @include flexbox;
-                            @include center-content;
-                            @include flex-wrap(wrap);
-                            height: 70%;
-                        }
-                    }
+                &:first-child .field__label { margin-bottom: 0; }
+
+                .field--label-inline .field__label {
+                    display: block;
+                    font-weight: bold;
                 }
 
-                .field--name-field-titulo { width: 76%; }
-    
+                .field--name-field-area-de-formacion,
                 .field--name-field-creditos {
-                    @include flexbox;
-                    @include center-content;
-                    width: 24%;
+                    width: auto;
+                    text-align: left;
                 }
             }
         }

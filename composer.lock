@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4cf5c3d07e1c052d5bf8f51a56def39",
+    "content-hash": "a06862184045eeeb3e6bfd5743a7d565",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3376,7 +3376,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/date"
             },
-            "time": "2012-10-28 09:20:01"
+            "time": "2012-10-28T09:20:01+00:00"
         },
         {
             "name": "drupal/date_popup",
@@ -4043,6 +4043,53 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
             }
+        },
+        {
+            "name": "drupal/field_group_easy_responsive_tabs",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/field_group_easy_responsive_tabs",
+                "reference": "6534fcaa85096397a7fc7bf9935ed54f4b2235a9"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/field_group": "~1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0+1-dev",
+                    "datestamp": "1507791248",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "lonalore",
+                    "homepage": "https://www.drupal.org/user/1539304"
+                }
+            ],
+            "description": "Adds new fieldgroup formatters for Easy Responsive Tabs to Accordion.",
+            "homepage": "https://www.drupal.org/project/field_group_easy_responsive_tabs",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/field_group_easy_responsive_tabs",
+                "issues": "https://www.drupal.org/project/issues/field_group_easy_responsive_tabs"
+            },
+            "time": "2017-10-12T06:49:56+00:00"
         },
         {
             "name": "drupal/group",

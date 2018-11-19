@@ -7,6 +7,8 @@ dependencies:
     - field.field.group.programa.field_block_builder
     - field.field.group.programa.field_ciudad
     - field.field.group.programa.field_codigo_snies_8182
+    - field.field.group.programa.field_color_principal
+    - field.field.group.programa.field_color_secundario
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
@@ -48,17 +50,52 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - label
         - field_imagen
         - group_contenido_sobre_la_imagen
+        - 'dynamic_block_field:group-formulario'
+        - group_d
+        - label
         - field_codigo_snies_8182
         - field_sede
+        - group_formulario
+    fields:
+      'dynamic_block_field:group-formulario':
+        plugin_id: 'dynamic_block_field:group-formulario'
+        weight: 4
+        label: above
+        formatter: default
+        ft:
+          id: expert
+          settings:
+            lb: '!Bienvenido¡, permitenos darle la bienvenida a conocer nuestra institución, diligencia los siguientes datos'
+            prefix: ''
+            lbw: true
+            lbw-el: ''
+            lbw-cl: title
+            lbw-at: ''
+            lb-col: true
+            ow-el: ''
+            ow-cl: form-contact-wrapper
+            ow-at: ''
+            fis: true
+            fis-el: ''
+            fis-cl: form-contact--wrapper
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
   field_group:
     group_contenido_sobre_la_imagen:
       children:
-        - label
-        - field_codigo_snies_8182
-        - field_sede
+        - group_d
+        - group_formulario
       parent_name: ''
       weight: 2
       format_type: html_element
@@ -73,6 +110,40 @@ third_party_settings:
         id: ''
         classes: 'content-on-image container container-bg'
       label: 'Contenido sobre la imagen'
+    group_formulario:
+      children:
+        - 'dynamic_block_field:group-formulario'
+      parent_name: group_contenido_sobre_la_imagen
+      weight: 24
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: form-contact
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Formulario
+    group_d:
+      children:
+        - label
+        - field_codigo_snies_8182
+        - field_sede
+      parent_name: group_contenido_sobre_la_imagen
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: description-header
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Descripción
 id: group.programa.header
 targetEntityType: group
 bundle: programa
@@ -80,9 +151,9 @@ mode: header
 content:
   field_codigo_snies_8182:
     type: string
-    weight: 2
+    weight: 22
     region: ds_content
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -97,15 +168,15 @@ content:
     region: ds_content
   field_sede:
     type: entity_reference_label
-    weight: 3
+    weight: 23
     region: ds_content
-    label: hidden
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
   label:
     type: string
-    weight: 0
+    weight: 21
     region: ds_content
     label: hidden
     settings:

@@ -4,64 +4,62 @@
 ===========================================================
 */
 #facultad-horizontal-tabs { // Id para sobre escribir
-    .horizontal-tabs {
+    .resp-tab-item,
+    .resp-tab-content {
         border: 0;
     }
     // Tabs
-    .horizontal-tabs-list {
-        border: 0;
-        background: none;
+    .resp-tabs-list {
+        display: block !important;
+        overflow: hidden;
+        padding: 2px;
 
         li {
             @include box-shadow(0 1px 6px rgba($black, 0.1));
-            border: 0;
-            padding: 0;
+            border: 0 !important;
             margin-right: 20px;
-            margin-bottom: 15px;
             background: $white;
+            font-size: 12px;
+            padding: 8px 30px !important;
+            text-transform: uppercase;
 
-            a {
-                font-size: 12px;
-                padding: 8px 18px;
-                text-transform: uppercase;
-
-                &:hover {
-                    background: $color_4;
-                    color: $theme_color;
-                }
+            &:hover {
+                background: $color_4;
+                color: $theme_color;
             }
 
-            &.selected a {
+            &.resp-tab-active {
                 background: $white;
                 color: $theme_color;
             }
+
+            @media screen and (max-width: $screen-xs-max) {
+                margin: 0 !important;
+                box-shadow: none;
+            }
+        }
+
+        @media screen and (max-width: $screen-xs-max) {
+            @include box-shadow(0 1px 6px rgba($black, 0.1));
+            padding: 10px 0;
         }
     }
     // Content
-    .horizontal-tabs-panes .horizontal-tabs-pane {
-        @include box-shadow(0 1px 6px rgba($black, 0.1));
-        @include transition(opacity .50s linear);
-        opacity: 1;
-        padding: 30px;
-        
-        &.horizontal-tab-hidden { opacity: 0; }
-    }
-}
-// Modo acordeon en móviles
-@media screen and (max-width: 767px) {
-    .acordeon-is--active {
-        #facultad-horizontal-tabs {
-            .horizontal-tabs-list {
-                @include flexbox;
-                @include flex-direction(column);
+    .resp-tabs-container {
+        margin-top: 15px;
 
-                li {
-                    margin: 0;
-                    margin-bottom: 2px;
-                }
-            }
+        .resp-tab-content {
+            @include box-shadow(0 1px 6px rgba($black, 0.1));
+            @include transition(opacity .50s linear);
+            opacity: 0;
+            padding: 30px;
+            
+            &.resp-tab-content-active { opacity: 1; }
         }
     }
+
+    // Modo acordeon en móviles
+    @media screen and (max-width: $screen-xs-max) { .resp-accordion { display: none; } }
 }
 /*
 ===========================================================
