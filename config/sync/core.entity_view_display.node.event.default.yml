@@ -12,8 +12,10 @@ dependencies:
     - field.field.node.event.field_event_time
     - field.field.node.event.field_sede
     - node.type.event
+    - responsive_image.styles.imagen_principal_del_evento
   module:
     - datetime
+    - ds
     - responsive_image
     - text
     - user
@@ -62,9 +64,16 @@ content:
     weight: 1
     label: hidden
     settings:
+      responsive_image_style: imagen_principal_del_evento
       image_link: ''
-      responsive_image_style: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: responsive_image
     region: content
   field_event_start:

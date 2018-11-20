@@ -23,6 +23,11 @@
         select_18 = ".group--type-programa",
         select_19 = ".field--name-field-color-principal",
         select_20 = ".field--name-field-color-secundario",
+        select_21 = ".content-on-image",
+        select_22 = ".field--name-field-imagen",
+        select_23 = ".profile",
+        select_24 = ".characteristics",
+        select_25 = ".description-header",
 
         class_1 = "is--open",
         class_2 = "sidebar--fixed",
@@ -34,6 +39,11 @@
         
         query_1;
 
+    // Obtener ancho de la barra de scroll
+    function getScrollBarWidth() {
+        return window.innerWidth - document.documentElement.getBoundingClientRect().width;
+    }
+
     // Crear variable css
     function createVariableCss(name, value) {
         document.documentElement.style.setProperty(`--${name}`, value);
@@ -44,6 +54,19 @@
             global_script: function() {
                 $(window).on("resize", function() {
                     query_1 = window.matchMedia("(max-width: 991px)").matches;
+
+                    // Mover formulario en programa para dispositivos móviles
+                    if ($(select_18).length > 0) {
+                        let calcPading = ($(select_21).innerHeight() - $(select_22).innerHeight()) + 20;
+
+                        if (query_1) {
+                            $(select_24).css('padding-top', calcPading);
+                            $(select_23).css('padding-top', 0);
+                        } else {
+                            $(select_24).css('padding-top', 0);
+                            $(select_23).css('padding-top', calcPading);
+                        }
+                    }
                 }).trigger("resize");
 
                 // Abrir primer menú (naranja)
@@ -52,6 +75,9 @@
                         $(select_6).toggleClass(class_1);
                     }
                 });
+
+                // Crear variable con el ancho de la barra de scroll
+                createVariableCss('scrollWidth', getScrollBarWidth());
             },
 
             move_networks: function() {
@@ -131,7 +157,8 @@
                 }).trigger("resize");
             },
 
-            colorProgram: function() {
+            paginaPrograma: function() {
+                // Color del programa mandado desde administración
                 let mainColor = $(select_19).text().split(' '),
                   mainColorOpacity = mainColor[1],
                   secondColor = $(select_20).text();
@@ -141,6 +168,7 @@
                 createVariableCss('color_1', mainColor[0]);
                 createVariableCss('opacity_1', mainColorOpacity);
                 createVariableCss('color_2', secondColor);
+                
             }
         };
     }());
@@ -164,7 +192,7 @@
 
     $(document).ready(function() {
       if ($(select_18).length > 0) {
-        UniCustom.colorProgram();
+        UniCustom.paginaPrograma();
       }
     })
 

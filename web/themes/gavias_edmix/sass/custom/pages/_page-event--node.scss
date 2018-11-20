@@ -20,6 +20,25 @@
         }
     }
 
+    .sede {
+        @include align-items(center);
+
+        .field--name-field-sede {
+            @include flexbox;
+            margin-left: 10px;
+
+            .field__item {
+                &::after {
+                    display: inline-block;
+                    margin: 0 10px;
+                    content: '-';
+                }
+
+                &:last-child::after { display: none; }
+            }
+        }
+    }
+
     .field--name-field-category {
         @include flexbox;
         @include flex-wrap(wrap);

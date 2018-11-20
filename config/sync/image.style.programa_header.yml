@@ -1,0 +1,15 @@
+uuid: e0eb0199-10e6-4c5a-997f-9332d03daa6d
+langcode: es
+status: true
+dependencies: {  }
+name: programa_header
+label: 'Programa header (max-width: 767px)'
+effects:
+  d4728599-0a3b-4336-aeb2-5d8a8292d763:
+    uuid: d4728599-0a3b-4336-aeb2-5d8a8292d763
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 767
+      height: 480
+      anchor: center-center

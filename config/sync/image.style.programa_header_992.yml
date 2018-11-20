@@ -1,0 +1,15 @@
+uuid: c73a205d-42eb-4957-9e7b-2536d12f5659
+langcode: es
+status: true
+dependencies: {  }
+name: programa_header_992
+label: 'Programa header (min-width: 992px)'
+effects:
+  07a86630-755c-4f51-b342-696b29fcd39a:
+    uuid: 07a86630-755c-4f51-b342-696b29fcd39a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1280
+      anchor: center-center

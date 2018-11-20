@@ -9,11 +9,19 @@
     @include position(relative, 0);
     width: 100vw;
     margin-left: calc(((100vw - 100%) / 2) * -1);
+    z-index: 2;
 
     .gsc-column { padding: 0; }
 
     .field--name-field-imagen {
+        @include flexbox;
+        @include center-content;
         @include position(relative, 0);
+        @include size(calc(100vw - var( --scrollWidth)), 100vh);
+        min-height: 480px;
+        overflow: hidden;
+
+        img { max-width: none; }
 
         &::after {
             @include absolute(top 0 left 0);
@@ -27,8 +35,8 @@
     .content-on-image {
         @include flexbox;
         @include center-content;
-        @include absolute(top 50% left 50%);
-        @include translate(-50%, -50%);
+        @include absolute(top 5% left 50%);
+        @include translateX(-50%);
         margin: 0;
 
         .description-header {
@@ -53,10 +61,34 @@
                     font-weight: bold;
                     margin-right: 10px;
                 }
+
+                .field__items {
+                    @include flexbox;
+                    
+                    .field__item {
+                        &::after {
+                            display: inline-block;
+                            margin: 0 10px;
+                            content: '-';
+                        }
+
+                        &:last-child::after { display: none; }
+                    }
+                }
+            }
+
+            @media screen and (max-width: $screen-sm-max) {
+                width: 50%;
+
+                .field--name-label {
+                    font-size: 35px;
+                    line-height: 40px;
+                }
             }
         }
 
         .form-contact {
+            @include box-shadow(0 0 18px 0 rgba($black, 0.2));
             @include size(42%);
 
             .title {
@@ -67,6 +99,32 @@
                 padding: 30px 30px 20px;
                 margin: 0;
                 font-weight: bold;
+            }
+
+            @media screen and (max-width: $screen-sm-max) { width: 48%; }
+        }
+
+        @media screen and (max-width: $screen-sm) {
+            @include flex-direction(column);
+            width: 100%;
+            padding: 0 8%;
+
+            .description-header {
+                width: auto;
+                text-align: center;
+                margin-right: 0;
+                margin-bottom: 20px;
+
+                .field--label-inline {
+                    @include justify-content(center);
+                }
+            }
+
+            .form-contact {
+                width: auto;
+
+                .title,
+                .form-contact--wrapper { padding: 20px; }
             }
         }
     }
@@ -90,6 +148,20 @@
             .field__label {
                 margin: 0;
                 margin-right: 5px;
+            }
+
+            .field__items {
+                @include flexbox;
+                
+                .field__item {
+                    &::after {
+                        display: inline-block;
+                        margin: 0 10px;
+                        content: '-';
+                    }
+
+                    &:last-child::after { display: none; }
+                }
             }
         }
     }

@@ -1,0 +1,15 @@
+uuid: b134a212-d058-4193-b4d8-cf71a4aa65bb
+langcode: es
+status: true
+dependencies: {  }
+name: evento_imagen_767
+label: 'Evento imagen (max-width: 767px)'
+effects:
+  2ae470b4-e61b-40dd-b270-2f3105bc9eac:
+    uuid: 2ae470b4-e61b-40dd-b270-2f3105bc9eac
+    id: image_scale
+    weight: 1
+    data:
+      width: 767
+      height: null
+      upscale: false

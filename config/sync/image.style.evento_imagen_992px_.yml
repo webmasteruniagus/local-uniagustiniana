@@ -1,0 +1,15 @@
+uuid: a453926f-8f27-4e05-a553-8edd768e17de
+langcode: es
+status: true
+dependencies: {  }
+name: evento_imagen_992px_
+label: 'Evento imagen (min-width: 992px)'
+effects:
+  a2fb48a2-f302-4ece-b255-fe38a39c46f6:
+    uuid: a2fb48a2-f302-4ece-b255-fe38a39c46f6
+    id: image_scale
+    weight: 1
+    data:
+      width: 1170
+      height: null
+      upscale: false

@@ -1,0 +1,30 @@
+uuid: b3b49e73-519f-4ccd-b982-649666e297e0
+langcode: es
+status: true
+dependencies:
+  config:
+    - image.style.programa_header
+    - image.style.programa_header_768_991
+    - image.style.programa_header_992
+  theme:
+    - gavias_edmix
+id: imagen_principal_del_programa
+label: 'Imagen principal del programa'
+image_style_mappings:
+  -
+    breakpoint_id: gavias_edmix.agustiniana.extra_small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: programa_header
+  -
+    breakpoint_id: gavias_edmix.agustiniana.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: programa_header_768_991
+  -
+    breakpoint_id: gavias_edmix.agustiniana.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: programa_header_992
+breakpoint_group: agustiniana
+fallback_image_style: programa_header_768_991

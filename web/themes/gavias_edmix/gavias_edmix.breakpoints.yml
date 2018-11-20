@@ -1,23 +1,24 @@
-gavias_edmix.events.extra_small:
+# Global agustiniana
+gavias_edmix.agustiniana.extra_small:
   label: Extra small
   mediaQuery: 'all and (max-width: 767px)'
   weight: 3
   multipliers:
     - 1x
-  group: Events
+  group: agustiniana
 
-gavias_edmix.events.small:
+gavias_edmix.agustiniana.small:
   label: Small
   mediaQuery: 'all and (min-width: 768px) and (max-width: 991px)'
   weight: 2
   multipliers:
     - 1x
-  group: Events
+  group: agustiniana
 
-gavias_edmix.events.large:
+gavias_edmix.agustiniana.large:
   label: Large
   mediaQuery: 'all and (min-width: 992px)'
   weight: 1
   multipliers:
     - 1x
-  group: Events
+  group: agustiniana

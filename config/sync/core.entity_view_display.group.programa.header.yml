@@ -28,6 +28,7 @@ dependencies:
     - field.field.group.programa.field_vigencia
     - field.field.group.programa.field_vision
     - group.type.programa
+    - responsive_image.styles.imagen_principal_del_programa
   module:
     - ds
     - field_group
@@ -161,9 +162,16 @@ content:
     weight: 1
     label: hidden
     settings:
+      responsive_image_style: imagen_principal_del_programa
       image_link: ''
-      responsive_image_style: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: responsive_image
     region: ds_content
   field_sede:

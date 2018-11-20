@@ -1,0 +1,30 @@
+uuid: 21776a6d-dbd8-4f3b-9538-c936e1958a6b
+langcode: es
+status: true
+dependencies:
+  config:
+    - image.style.evento_imagen_767
+    - image.style.evento_imagen_992px_
+    - image.style.programa_header_min_768
+  theme:
+    - gavias_edmix
+id: imagen_principal_del_evento
+label: 'Imagen principal del evento'
+image_style_mappings:
+  -
+    breakpoint_id: gavias_edmix.agustiniana.extra_small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: evento_imagen_767
+  -
+    breakpoint_id: gavias_edmix.agustiniana.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: programa_header_min_768
+  -
+    breakpoint_id: gavias_edmix.agustiniana.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: evento_imagen_992px_
+breakpoint_group: agustiniana
+fallback_image_style: programa_header_min_768

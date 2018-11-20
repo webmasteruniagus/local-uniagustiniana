@@ -1,0 +1,15 @@
+uuid: 7a0a6322-6daa-4ca8-9efe-09e76dfea2f0
+langcode: es
+status: true
+dependencies: {  }
+name: programa_header_min_768
+label: 'Evento imagen (min-width: 768px) and (max-width: 991px)'
+effects:
+  8657f353-530b-470e-9b2a-e8ad3c5b75be:
+    uuid: 8657f353-530b-470e-9b2a-e8ad3c5b75be
+    id: image_scale
+    weight: 1
+    data:
+      width: 991
+      height: null
+      upscale: false
