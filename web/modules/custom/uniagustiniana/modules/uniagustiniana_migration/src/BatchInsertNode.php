@@ -122,9 +122,9 @@ class BatchInsertNode {
             case 41:
                 $group = 31;
                 break;
-            case 42:
-                $group = 56;
-                break;
+            // case 42:
+            //     $group = 56;
+            //     break;
             case 43:
                 $group = 32;
                 break;
@@ -158,9 +158,9 @@ class BatchInsertNode {
             case 56:
                 $group = 40;
                 break;
-            case 57:
-                $group = 41;
-                break;
+            // case 57:
+            //     $group = 41;
+            //     break;
             case 59:
                 $group = 42;
                 break;
@@ -231,7 +231,6 @@ class BatchInsertNode {
                 $path = 'public://noticias/' . $folder . '/';
                 drupal_mkdir($path);
                 if (file_prepare_directory($path, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
-                    $images = [];
                     foreach ($array_images as $key => $image) {
                         
                         switch ($key){
@@ -265,7 +264,9 @@ class BatchInsertNode {
                         }
                         
                     }
-                    $node->set('field_news_image', $images);
+                    if(isset($images)){
+                        $node->set('field_news_image', $images);
+                    }
                 }
             }
             
@@ -513,7 +514,7 @@ class BatchInsertNode {
     public function clearHtml($content, $link = true){
         $content = preg_replace("/<img[^>]+\>/i", "(image) ", $content); 
         if($link){
-            $content = preg_replace('#<a.*?>(.*?)</a>#i', '', $content);
+            $content = preg_replace('#<a.*?>(.*?)</a>#i', '$1', $content);
         }
         $content = str_replace('{module Compartir-redes}', '', $content);
         $content = str_replace('(image)', '', $content);
