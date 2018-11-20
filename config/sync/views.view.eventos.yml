@@ -84,7 +84,7 @@ display:
           items_lg: '3'
           items_md: '3'
           items_sm: '2'
-          items_xs: '2'
+          items_xs: '1'
           el_class: 'thumbnail--card card--results'
           el_id: ''
       row:

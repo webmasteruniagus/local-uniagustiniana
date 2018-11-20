@@ -2,6 +2,8 @@
 
 use Drupal\views\ViewExecutable;
 use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\group\Entity\Group;
 
 /**
  * Implement hook_views_query_alter
@@ -56,4 +58,24 @@ function uniagustiniana_theme($existing, $type, $theme, $path) {
             ]
         ]
 	];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function uniagustiniana_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+    if(isset($form['#webform_id']) && $form['#webform_id'] == 'contact'){
+        $current_path = \Drupal::service('path.current')->getPath();
+        $path =  explode('/', $current_path);
+        if(isset($path[1]) 
+            && $path[1] == 'group' 
+            && isset($path[2]) 
+            && is_numeric($path[2])){
+            $group=Group::load($path[2]);
+            if($group->bundle() == 'programa'){
+                $form['elements']['programa']['#default_value'] = $path[2];
+                $form['elements']['programa']['#access'] = FALSE;
+            }
+        }
+    }
 }
