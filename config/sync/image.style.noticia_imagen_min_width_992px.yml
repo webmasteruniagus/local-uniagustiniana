@@ -1,0 +1,15 @@
+uuid: cdb05649-b7ee-4283-ab9b-125ec64d7915
+langcode: es
+status: true
+dependencies: {  }
+name: noticia_imagen_min_width_992px
+label: 'Noticia imagen (min-width: 992px)'
+effects:
+  ae4c9f0b-2209-489a-aab1-98b5b9eee618:
+    uuid: ae4c9f0b-2209-489a-aab1-98b5b9eee618
+    id: image_scale
+    weight: 1
+    data:
+      width: 770
+      height: null
+      upscale: false
