@@ -1,0 +1,30 @@
+uuid: eb958eb5-85e2-4745-a36b-ca377e1f8bac
+langcode: es
+status: true
+dependencies:
+  config:
+    - image.style.noticia_imagen_max_767px
+    - image.style.noticia_imagen_min_768
+    - image.style.noticia_imagen_min_width_992px
+  theme:
+    - gavias_edmix
+id: imagen_principal_del_noticia
+label: 'Imagen principal del noticia'
+image_style_mappings:
+  -
+    breakpoint_id: gavias_edmix.agustiniana.extra_small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: noticia_imagen_max_767px
+  -
+    breakpoint_id: gavias_edmix.agustiniana.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: noticia_imagen_min_768
+  -
+    breakpoint_id: gavias_edmix.agustiniana.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: noticia_imagen_min_width_992px
+breakpoint_group: agustiniana
+fallback_image_style: noticia_imagen_min_768

@@ -4,13 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_news_image
-    - image.style.normal_size
     - node.type.news
+    - responsive_image.styles.imagen_principal_del_noticia
   module:
     - file
     - gavias_view
-    - image
     - node
+    - responsive_image
     - user
 id: contenido
 label: Contenido
@@ -133,9 +133,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: responsive_image
           settings:
-            image_style: normal_size
+            responsive_image_style: imagen_principal_del_noticia
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -237,6 +237,7 @@ display:
           entity_field: nid
           plugin_id: node_nid
       display_extenders: {  }
+      css_class: new-main-image
     cache_metadata:
       max-age: -1
       contexts:

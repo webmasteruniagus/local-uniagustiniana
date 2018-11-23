@@ -272,7 +272,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      css_class: unidad-menu-principal
+      css_class: unidad-menu-secundario
       defaults:
         css_class: false
         filters: false
@@ -447,14 +447,11 @@ display:
           entity_field: title
           plugin_id: field
       style:
-        type: html_list
+        type: default
         options:
           grouping: {  }
           row_class: ''
-          default_row_class: false
-          type: ul
-          wrapper_class: unidad-menu
-          class: gva_menu--units
+          default_row_class: true
       row:
         type: fields
         options: {  }

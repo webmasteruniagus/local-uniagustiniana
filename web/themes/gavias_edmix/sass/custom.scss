@@ -4,12 +4,13 @@
 @import 'custom/variables';
 @import 'custom/mixins';
 @import 'custom/layout';
-@import 'custom/pages/page-home';
-@import 'custom/pages/page-program--node';
 @import 'custom/pages/page-unit';
-@import 'custom/pages/page-results';
-@import 'custom/pages/page-event--node';
+@import 'custom/pages/page-home';
 @import 'custom/pages/page-basic';
+@import 'custom/pages/page-results';
+@import 'custom/pages/page-new--node';
+@import 'custom/pages/page-event--node';
+@import 'custom/pages/page-program--node';
 @import 'custom/blocks/forms';
 @import 'custom/blocks/thumbnail';
 @import 'custom/blocks/curriculum';

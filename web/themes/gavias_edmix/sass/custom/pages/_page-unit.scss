@@ -4,23 +4,6 @@
 ===========================================================
 */
 
-// Menu main
-.unidad-menu-principal {
-    .gva-menu--units {
-        @include flexbox;
-        @include justify-content(center);
-        @include flex-wrap(wrap);
-        @include clear-list;
-        margin-bottom: 50px;
-        a {
-            @include links;
-        }
-        @media (max-width: $screen-xs-max) {
-            margin-bottom: 30px;
-        }
-    }
-}
-
 // Second menu
 .unidad-menu-secundario {
     header {

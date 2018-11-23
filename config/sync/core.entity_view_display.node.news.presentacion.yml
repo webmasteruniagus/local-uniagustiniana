@@ -6,13 +6,15 @@ dependencies:
     - core.entity_view_mode.node.presentacion
     - field.field.node.news.body
     - field.field.node.news.field_category
+    - field.field.node.news.field_documentos
     - field.field.node.news.field_news_image
-    - image.style.square
+    - field.field.node.news.field_sede
     - node.type.news
+    - responsive_image.styles.imagen_principal_del_noticia
   module:
     - ds
     - field_group
-    - image
+    - responsive_image
     - text
     - user
 third_party_settings:
@@ -107,14 +109,22 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: square
+      responsive_image_style: imagen_principal_del_noticia
       image_link: ''
     third_party_settings:
       ds:
         ds_limit: '1'
-    type: image
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: responsive_image
     region: ds_content
 hidden:
   field_category: true
+  field_documentos: true
+  field_sede: true
   langcode: true
   links: true
