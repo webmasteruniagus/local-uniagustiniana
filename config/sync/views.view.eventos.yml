@@ -211,10 +211,6 @@ display:
           hide_alter_empty: true
           fields:
             - fieldset_1
-            - title
-            - field_sede
-            - field_category
-            - body
           wrapper: div
           legend: ''
           classes: caption
@@ -271,7 +267,9 @@ display:
           hide_alter_empty: true
           fields:
             - field_event_start
+            - field_event_start_1
             - field_event_end
+            - field_event_end_1
             - nothing
           wrapper: div
           legend: ''
@@ -285,7 +283,7 @@ display:
           field: field_event_start
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'Desde día'
           label: ''
           exclude: true
           alter:
@@ -331,7 +329,78 @@ display:
           type: datetime_custom
           settings:
             timezone_override: ''
-            date_format: 'd F'
+            date_format: d
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        field_event_start_1:
+          id: field_event_start_1
+          table: search_api_index_eventos
+          field: field_event_start
+          relationship: none
+          group_type: group
+          admin_label: 'Desde mes'
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: F
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -356,7 +425,7 @@ display:
           field: field_event_end
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'Hasta día'
           label: ''
           exclude: true
           alter:
@@ -402,7 +471,78 @@ display:
           type: datetime_custom
           settings:
             timezone_override: ''
-            date_format: 'd F'
+            date_format: d
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        field_event_end_1:
+          id: field_event_end_1
+          table: search_api_index_eventos
+          field: field_event_end
+          relationship: none
+          group_type: group
+          admin_label: 'Hasta mes'
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: F
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -432,7 +572,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_event_start }} - {{ field_event_end }}'
+            text: '{{ field_event_start }} {{ field_event_start_1 }} - {{ field_event_end }} {{ field_event_end_1 }}'
             make_link: false
             path: ''
             absolute: false
