@@ -211,6 +211,10 @@ display:
           hide_alter_empty: true
           fields:
             - fieldset_1
+            - title
+            - field_sede
+            - field_category
+            - body
           wrapper: div
           legend: ''
           classes: caption
