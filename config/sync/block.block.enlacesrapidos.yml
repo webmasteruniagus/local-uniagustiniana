@@ -1,0 +1,29 @@
+uuid: 02f71e9b-62e7-478f-9cd6-b105dfd460a1
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bc6fe579-eddc-4e8c-9626-05523c69c2f6'
+  module:
+    - block_content
+    - gaviasthemer
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: enlacesrapidos
+theme: gavias_edmix
+region: footer_third
+weight: 0
+provider: null
+plugin: 'block_content:bc6fe579-eddc-4e8c-9626-05523c69c2f6'
+settings:
+  id: 'block_content:bc6fe579-eddc-4e8c-9626-05523c69c2f6'
+  label: 'Enlaces Rapidos'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

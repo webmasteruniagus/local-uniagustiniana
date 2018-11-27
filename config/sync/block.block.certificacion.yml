@@ -1,0 +1,29 @@
+uuid: 62a4b9cc-2e6a-4179-96e3-5f3dd4a7bf33
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:66eece10-fbe3-49fb-8867-14f0ccbcf589'
+  module:
+    - block_content
+    - gaviasthemer
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: certificacion
+theme: gavias_edmix
+region: footer_four
+weight: 0
+provider: null
+plugin: 'block_content:66eece10-fbe3-49fb-8867-14f0ccbcf589'
+settings:
+  id: 'block_content:66eece10-fbe3-49fb-8867-14f0ccbcf589'
+  label: Certificación
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
