@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_category
+    - field.field.node.event.field_convocatoria
     - field.field.node.event.field_documentos
     - field.field.node.event.field_event_end
     - field.field.node.event.field_event_image
@@ -16,6 +17,7 @@ dependencies:
   module:
     - datetime
     - ds
+    - options
     - responsive_image
     - text
     - user
@@ -41,6 +43,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_convocatoria:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_documentos:
     weight: 8

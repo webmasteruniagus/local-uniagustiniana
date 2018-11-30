@@ -1,0 +1,33 @@
+uuid: c1674409-6e11-4330-b819-627f06c2ab2a
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.convocatoria
+  module:
+    - facets
+    - gaviasthemer
+    - system
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: convocatoria
+theme: gavias_edmix
+region: sidebar_left
+weight: 0
+provider: null
+plugin: 'facet_block:convocatoria'
+settings:
+  id: 'facet_block:convocatoria'
+  label: Convocatoria
+  provider: facets
+  label_display: visible
+  block_id: convocatoria
+visibility:
+  request_path:
+    id: request_path
+    pages: /eventos
+    negate: false
+    context_mapping: {  }
