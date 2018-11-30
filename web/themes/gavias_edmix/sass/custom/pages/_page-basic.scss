@@ -1,8 +1,9 @@
-/*
-===========================================================
-                        Página básica
-===========================================================
-*/
+////
+/// Página básica
+/// @group pages
+/// @author William Bautista
+////
+
 // Vista previa del pdf
 .eck-entity {
     .field--type-file { margin-top: 10px; }
@@ -25,9 +26,3 @@
         .field--name-document-pdf { display: none; }
     }
 }
-
-/*
-===========================================================
-                        Fin de página básica
-===========================================================
-*/

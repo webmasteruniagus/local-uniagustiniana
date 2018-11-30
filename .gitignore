@@ -18,6 +18,7 @@ web/sites/*/files
 # Ignore files and directories by front
 node_modules
 web/themes/*/.sass-cache
+web/themes/*/docs
 
 # Ignore configuration files that may contain sensitive information.
 web/sites/*/settings.local.php
