@@ -1,3 +1,9 @@
+/**
+ * @file custom.js
+ * @desc Código JavaScript personalizado
+ * @version 30112018
+ * @author William Bautista
+ */
 (function($, undefined) {
     "use strict";
 
@@ -39,16 +45,26 @@
         
         query_1;
 
-    // Obtener ancho de la barra de scroll
+    /**
+     * Obtener ancho de la barra de scroll
+     * @returns {number} ancho en px de la barra de scroll
+     */
     function getScrollBarWidth() {
         return window.innerWidth - document.documentElement.getBoundingClientRect().width;
     }
 
-    // Crear variable css
+    /**
+     * Crear variable css
+     * @param {string} name nombre de variable a crear
+     * @param {string} value valor asigando a la variable
+     */
     function createVariableCss(name, value) {
         document.documentElement.style.setProperty(`--${name}`, value);
     }
 
+    /**
+     * @returns {object} Objeto con funciones publicas
+     */
     UniCustom = (function() {
         return {
             global_script: function() {

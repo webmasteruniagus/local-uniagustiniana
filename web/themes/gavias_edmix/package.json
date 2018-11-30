@@ -1,0 +1,16 @@
+{
+  "name": "agustiniana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Bautista",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jsdoc3": "^2.0.0",
+    "sassdoc": "^2.5.1"
+  }
+}

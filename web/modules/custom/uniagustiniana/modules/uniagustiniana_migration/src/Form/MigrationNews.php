@@ -18,8 +18,13 @@ class MigrationNews extends FormBase {
     public function getFormId() {
         return 'migrations_news';
     }
+    
     /**
-     * {@inheritdoc}
+     * Formulario ejecucion batch migracion noticias
+     *
+     * @param array $form
+     * @param FormStateInterface $form_state
+     * @return object
      */
     public function buildForm(array $form, FormStateInterface $form_state) {
         

@@ -1,15 +1,14 @@
-/*
-===========================================================
-                        Mixins personalizados
-===========================================================
-*/
+////
+/// Mixins
+/// @group global
+/// @author William Bautista
+////
 
-
-/*
-* @function
-* @return path img + img
-*/
-
+////
+/// Imagen svg
+/// @parameter {string} $img - Nombre de la imagen sin extensión
+/// @returns url de la ubicación de la imagen
+////
 @function svg($img) {
     @return url($svg+$img+'.svg') no-repeat center / contain;
 }
