@@ -211,6 +211,10 @@ display:
           hide_alter_empty: true
           fields:
             - fieldset_1
+            - title
+            - field_sede
+            - field_category
+            - body
           wrapper: div
           legend: ''
           classes: caption
@@ -400,7 +404,7 @@ display:
           type: datetime_custom
           settings:
             timezone_override: ''
-            date_format: F
+            date_format: M
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -542,7 +546,7 @@ display:
           type: datetime_custom
           settings:
             timezone_override: ''
-            date_format: F
+            date_format: M
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -572,7 +576,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_event_start }} {{ field_event_start_1 }} - {{ field_event_end }} {{ field_event_end_1 }}'
+            text: "<div class=\"date-number\">{{ field_event_start }} <span>{{ field_event_end }}</span> </div>\r\n<div class=\"date-text\">{{ field_event_start_1 }} <span>Hasta el</span> {{ field_event_end_1 }}</div>"
             make_link: false
             path: ''
             absolute: false
@@ -599,12 +603,12 @@ display:
             html: false
           element_type: '0'
           element_class: ''
-          element_label_type: ''
+          element_label_type: '0'
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: '0'
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false

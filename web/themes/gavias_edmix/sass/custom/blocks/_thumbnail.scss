@@ -42,12 +42,50 @@
         .date-range {
             @include flexbox;
             @include justify-content(center);
-            @include absolute(top 0 left 0);
-            @include size(100%);
-            padding: 10px;
+            @include absolute(top 10px right 10px);
+            padding: 5px;
             background: $white;
-            font-size: 14px;
-            color: $theme-color;
+
+            > div {
+                @include flexbox;
+                @include flex-direction(column);
+                line-height: 100%;
+            }
+
+            .date-number {
+                color: $color_5;
+                margin-right: 5px;
+                text-align: right;
+                font: {
+                    weight: bold;
+                    size: 36px;
+                }
+
+                span {
+                    display: block;
+                    padding: 2px;
+                    color: $white;
+                    background: $color_5;
+                    font-size: 16px;
+                    line-height: 14px;
+                }
+            }
+
+            .date-text {
+                color: $color_5;
+                font-size: 18px;
+                text-transform: capitalize;
+
+                span {
+                    color: $black;
+                    font: {
+                        weight: bold;
+                        size: 8px;
+                    }
+                    line-height: 18px;
+                    text-transform: lowercase;
+                }
+            }
         }
         // Sede
         .views-field-field-sede {
