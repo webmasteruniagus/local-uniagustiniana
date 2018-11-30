@@ -15,6 +15,8 @@ class AutocompleteController extends ControllerBase {
 
     /**
      * Handler for autocomplete request.
+     * @param string $request se enviaron paramentros consultar
+     * @return json Valores encontrados en la consulta formato json
      */
     public function handleAutocomplete(Request $request) {
         $matches = array();

@@ -15,6 +15,13 @@ use Drupal\Core\Database\Database;
 
 class BatchInsertNode {
     
+    /**
+     * Funcion para insertar noticias a un grupo especifico
+     *
+     * @param array $content Trae el id de la noticia a insertar 
+     * @param undefined $context
+     * @return void
+     */
     public static function InsertNodeNews($content, &$context){
         \Drupal\Core\Database\Database::setActiveConnection('slave');
             $query = db_query("SELECT * FROM rl2tw_k2_items it
@@ -290,6 +297,13 @@ class BatchInsertNode {
         }
     }
 
+    /**
+     * Funcion para insertar eventos a un grupo especifico
+     *
+     * @param array $content Trae el id de el evento a insertar
+     * @param undefined $context
+     * @return void
+     */
     public static function InsertNodeEvents($content, &$context){
         Database::setActiveConnection('eventos');
             $query = db_select('wp_posts', 'p');
@@ -472,6 +486,14 @@ class BatchInsertNode {
         }
     }
     
+    /**
+     * Hace el conteo y finaliza el proceso bath
+     *
+     * @param bool $success indica si el proceso se hizo correctamente
+     * @param undefined $results
+     * @param [type] $operations
+     * @return void
+     */
     function InsertNodeFinishedCallback($success, $results, $operations) {
         // The 'success' parameter means no fatal PHP errors were detected. All
         // other error management should be handled using 'results'.
@@ -487,6 +509,13 @@ class BatchInsertNode {
         drupal_set_message($message);
     }
 
+    /**
+     * Extra imagenes de una cadena
+     *
+     * @param string $string cadena de caracteres
+     * @param array $array trae imagenes ya precargadas
+     * @return array devuelve url de imagenes
+     */
     public function getImages($string, $array = []){
         preg_match_all( '@src="([^"]+)"@' , $string, $match );
         $src = array_pop($match);
@@ -511,6 +540,13 @@ class BatchInsertNode {
         return $return;
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param string $content cadena de caracteres
+     * @param boolean $link indico si quiero quitar link o no
+     * @return void
+     */
     public function clearHtml($content, $link = true){
         $content = preg_replace("/<img[^>]+\>/i", "(image) ", $content); 
         if($link){

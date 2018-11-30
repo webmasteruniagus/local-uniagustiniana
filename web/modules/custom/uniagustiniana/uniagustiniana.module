@@ -7,6 +7,12 @@ use Drupal\group\Entity\Group;
 
 /**
  * Implement hook_views_query_alter
+ * 
+ * Se usa para alterar la consulta sql de la vista
+ * 
+ * @param view propiedades de la vista
+ * @param query consulta sql de la vista
+ * 
  */
 
 function uniagustiniana_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
@@ -44,6 +50,7 @@ function uniagustiniana_views_query_alter(ViewExecutable $view, QueryPluginBase 
 
 /**
  * Implements hook_theme().
+ * Este hook se usa para implementar twig
  */
 function uniagustiniana_theme($existing, $type, $theme, $path) {
 	return [

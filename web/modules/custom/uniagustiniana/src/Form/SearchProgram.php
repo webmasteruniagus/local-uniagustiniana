@@ -19,7 +19,11 @@ class SearchProgram extends FormBase {
         return 'search_program';
     }
     /**
+     * @brief Formulario de busqueda de programas.
      * {@inheritdoc}
+     * @param object $form valores por default formulario
+     * @param object $form_state valores por cambios en el formulario.
+     * @return object retorna formulario
      */
     public function buildForm(array $form, FormStateInterface $form_state) {
         
