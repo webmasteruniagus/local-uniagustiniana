@@ -10,6 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Class MigrationEvents.
  *
  * @package Drupal\uniagustiniana_migration\Form
+ * 
  */
 class MigrationEvents extends FormBase {
     /**
@@ -18,8 +19,13 @@ class MigrationEvents extends FormBase {
     public function getFormId() {
         return 'migrations_events';
     }
+
     /**
-     * {@inheritdoc}
+     * Formulario ejecucion batch migracion eventos
+     *
+     * @param array $form
+     * @param FormStateInterface $form_state
+     * @return object
      */
     public function buildForm(array $form, FormStateInterface $form_state) {
         
