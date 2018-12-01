@@ -1,0 +1,29 @@
+uuid: 82e4da28-73bf-4e07-95b5-c4591b3ce7fb
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.formulario_contacto
+  module:
+    - gaviasthemer
+    - webform
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: webform_2
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Contactenos
+  provider: webform
+  label_display: visible
+  webform_id: formulario_contacto
+  default_data: ''
+  redirect: false
+visibility: {  }

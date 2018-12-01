@@ -1,0 +1,19 @@
+uuid: a38aa4c7-8bc2-47b7-8707-5be87f77751f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_correo_de_contacto
+    - group.type.unidad
+id: group.unidad.field_correo_de_contacto
+field_name: field_correo_de_contacto
+entity_type: group
+bundle: unidad
+label: 'Correo de contacto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

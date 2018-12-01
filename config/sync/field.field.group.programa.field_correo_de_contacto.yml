@@ -1,0 +1,19 @@
+uuid: fad89bd4-f702-41ce-b07c-843008833ff9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_correo_de_contacto
+    - group.type.programa
+id: group.programa.field_correo_de_contacto
+field_name: field_correo_de_contacto
+entity_type: group
+bundle: programa
+label: 'Correo de contacto'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -4,6 +4,7 @@ use Drupal\views\ViewExecutable;
 use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\group\Entity\Group;
+use Drupal\Core\Render\BubbleableMetadata;
 
 /**
  * Implement hook_views_query_alter
@@ -85,4 +86,60 @@ function uniagustiniana_form_alter(&$form, FormStateInterface $form_state, $form
             }
         }
     }
+}
+
+/**
+ * Implements hook_token_info().
+ *
+ * @return array genera token
+ */
+function uniagustiniana_token_info()
+{
+    $info = array();
+    // Add any new tokens.
+    $info['tokens']['customtoken']['customemail'] = array(
+        'name' => t('Email'),
+        'description' => t('Email contact'),
+    );
+    // Return them.
+    return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ *
+ * @param string $type
+ * @param array $tokens
+ * @param array $data
+ * @param array $options
+ * @param BubbleableMetadata $bubbleable_metadata
+ * @return array
+ */
+function uniagustiniana_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+    $replacements = array();
+    if ($type == 'customtoken') {
+        // Loop through each of the available tokens.
+        foreach ($tokens as $name => $original) {
+            // Find the desired token by name
+            switch ($name) {
+                case 'customemail':
+                    $current_path = \Drupal::service('path.current')->getPath();
+                    $path_args = explode('/', $current_path);
+                    $email = \Drupal::config('system.site')->get('mail');
+                    if($path_args[1] == 'group' 
+                    && is_numeric($path_args[2])) {
+                        $group=Group::load($path_args[2]);
+                        if(isset($group->field_correo_de_contacto->value) 
+                        && !empty($group->field_correo_de_contacto->value)){
+                            $email = $group->field_correo_de_contacto->value;
+                        }
+                    }
+                    // Add the new value into the replacements array.
+                    $replacements[$original] = $email;
+                    break;
+            }
+        }
+    }
+    // Return the replacements.
+    return $replacements;
 }

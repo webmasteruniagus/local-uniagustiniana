@@ -8,6 +8,7 @@ dependencies:
     - field.field.group.programa.field_codigo_snies_8182
     - field.field.group.programa.field_color_principal
     - field.field.group.programa.field_color_secundario
+    - field.field.group.programa.field_correo_de_contacto
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
@@ -101,6 +102,7 @@ hidden:
   created: true
   field_ciudad: true
   field_codigo_snies_8182: true
+  field_correo_de_contacto: true
   field_duracion: true
   field_facultad: true
   field_fecha_de_resolucion: true

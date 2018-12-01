@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.group.unidad.field_acordeon
     - field.field.group.unidad.field_block_builder
+    - field.field.group.unidad.field_correo_de_contacto
     - field.field.group.unidad.field_imagen
     - field.field.group.unidad.field_imagen_menu_secundario
     - field.field.group.unidad.field_resumen
@@ -51,6 +52,7 @@ hidden:
   changed: true
   created: true
   field_acordeon: true
+  field_correo_de_contacto: true
   field_imagen: true
   field_imagen_menu_secundario: true
   field_resumen: true
