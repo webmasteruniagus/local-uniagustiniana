@@ -1,12 +1,16 @@
-/**
- * @file custom.js
- * @desc Código JavaScript personalizado
- * @version 30112018
- * @author William Bautista
- */
 (function($, undefined) {
     "use strict";
 
+    /**
+     * @file custom.js
+     * @desc Código JavaScript personalizado
+     * @version 30112018
+     * @author William Bautista
+     */
+
+    /**
+     * @namespace
+     */
     var UniCustom = {},
 
         select_1 = ".sidebar-right .views-element-container",

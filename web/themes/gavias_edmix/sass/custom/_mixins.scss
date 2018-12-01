@@ -1,24 +1,59 @@
 ////
-/// Mixins
-/// @group global
+/// @access public
 /// @author William Bautista
 ////
 
-////
-/// Imagen svg
-/// @parameter {string} $img - Nombre de la imagen sin extensión
-/// @returns url de la ubicación de la imagen
-////
+
+/// Crear ruta a una imagen en formato svg
+/// @parameter {string} $img - Nombre de la imagen (sin extensión)
+/// @returns {string} - ubicación de imagen svg
 @function svg($img) {
     @return url($svg+$img+'.svg') no-repeat center / contain;
 }
 
+/// Alinear elementos verticalmente cuando su contenedor es flexible (flex)
+/// @parameter {string} $justify [center] - Legal values: flex-start | flex-end | center | baseline | stretch
+@mixin align-items($justify:center) {
+    -webkit-align-items: $justify;
+    -moz-align-items: $justify;
+    -ms-align-items: $justify;
+    align-items: $justify;
+}
 
-/*
-* @mixin: links
-* @description: links styles
-*/
 
+/// Cambiar la dirección de los elementos
+/// @parameter {string} $justify [row] - Values: row | row-reverse | column | column-reverse
+@mixin flex-direction($direction:row) {
+    -webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+
+/// Establece el factor de contracción flexible de un elemento flexible. Si el tamaño de los elementos flexibles es mayor que el contenedor flexible, los elementos se encogen para ajustarse de acuerdo con flex-shrink
+/// @parameter {number} $shrink - Accepts a number.
+@mixin flex-shrink($shrink) {
+    -webkit-flex-shrink: $shrink;
+    -moz-flex-shrink: $shrink;
+    -ms-flex-shrink: $shrink;
+    flex-shrink: $shrink;
+}
+
+/// Centrar vertical y horizontalmente los elementos de un contenedor flexible
+@mixin center-content {
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+/// Inicializa un pseudo elemento
+/// @parameter {string} $display [block] - Tipo de display
+/// @parameter {string} $content [''] - Texto a mostrar
+@mixin pseudo-element($display: block, $content: '') {
+    display: $display;
+    content: $content;
+}
+
+/// Estilos para enlaces de menús o listas de enlaces en el sidebar derecho
 @mixin links {
     @include transition(all 0.35s);
     display: inline-block;
@@ -45,58 +80,4 @@
             @include opacity(1);
         }
     }
-}
-
-
-/*
-* @mixin: Center with flexbox
-*/
-
-@mixin align-items($justify) {
-    -webkit-align-items: $justify;
-    -moz-align-items: $justify;
-    -ms-align-items: $justify;
-    align-items: $justify;
-}
-
-
-/*
-* @mixin: Flex direction
-*/
-
-@mixin flex-direction($direction) {
-    -webkit-flex-direction: $direction;
-    -moz-flex-direction: $direction;
-    -ms-flex-direction: $direction;
-    flex-direction: $direction;
-}
-
-/*
-* @mixin: Flex shrink
-*/
-
-@mixin flex-shrink($shrink) {
-    -webkit-flex-shrink: $shrink;
-    -moz-flex-shrink: $shrink;
-    -ms-flex-shrink: $shrink;
-    flex-shrink: $shrink;
-}
-
-/*
-* @mixin: Focus totally
-*/
-
-@mixin center-content {
-    @include justify-content(center);
-    @include align-items(center);
-}
-
-
-/*
-* @mixin: Init pseudo elemento
-*/
-
-@mixin pseudo-element($display: block, $content: '') {
-    display: $display;
-    content: $content;
 }
