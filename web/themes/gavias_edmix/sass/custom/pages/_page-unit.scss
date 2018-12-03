@@ -42,6 +42,8 @@
     ul {
         @include size(100%, auto);
 
+        li { margin: 0; }
+
         a {
             color: darken($color_1, 30%);
 
@@ -55,6 +57,11 @@
             }
         }
     }
+}
+
+.networks-form-contact {
+    @include size(100vw);
+    margin-left: calc(((100vw - 100%) / 2) * -1);
 }
 
 

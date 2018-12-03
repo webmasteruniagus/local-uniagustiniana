@@ -8,9 +8,7 @@
      * @author William Bautista
      */
 
-    /**
-     * @namespace
-     */
+    /** @namespace */
     var UniCustom = {},
 
         select_1 = ".sidebar-right .views-element-container",
@@ -51,6 +49,7 @@
 
     /**
      * Obtener ancho de la barra de scroll
+     * @property {Function} getScrollBarWidth
      * @returns {number} ancho en px de la barra de scroll
      */
     function getScrollBarWidth() {
@@ -59,8 +58,9 @@
 
     /**
      * Crear variable css
+     * @property {Function} createVariableCss
      * @param {string} name nombre de variable a crear
-     * @param {string} value valor asigando a la variable
+     * @param {string} value - valor asigando a la variable
      */
     function createVariableCss(name, value) {
         document.documentElement.style.setProperty(`--${name}`, value);
