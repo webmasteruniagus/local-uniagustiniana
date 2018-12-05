@@ -596,9 +596,9 @@ display:
           grouping: {  }
           row_class: thumbnail--card
           default_row_class: false
-          items_lg: '4'
-          items_md: '4'
-          items_sm: '2'
+          items_lg: '3'
+          items_md: '3'
+          items_sm: '1'
           items_xs: '1'
           el_class: ''
           el_id: ''
@@ -608,7 +608,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 4
+          items_per_page: 3
           offset: 0
       display_description: ''
       title: Noticias
@@ -694,8 +694,12 @@ display:
         - 'config:core.entity_view_display.node.gallery.teaser'
         - 'config:core.entity_view_display.node.lesson.default'
         - 'config:core.entity_view_display.node.lesson.teaser'
+        - 'config:core.entity_view_display.node.news.default'
         - 'config:core.entity_view_display.node.news.presentacion'
+        - 'config:core.entity_view_display.node.news.teaser'
         - 'config:core.entity_view_display.node.news.teaser_2'
+        - 'config:core.entity_view_display.node.pagina_basica.default'
+        - 'config:core.entity_view_display.node.pagina_basica.teaser'
         - 'config:core.entity_view_display.node.portfolio.default'
         - 'config:core.entity_view_display.node.portfolio.teaser'
         - 'config:core.entity_view_display.node.servicios.default'
@@ -706,15 +710,11 @@ display:
         - 'config:core.entity_view_display.node.simplenews_issue.email_plain'
         - 'config:core.entity_view_display.node.simplenews_issue.email_textalt'
         - 'config:core.entity_view_display.node.simplenews_issue.teaser'
+        - 'config:core.entity_view_display.node.team.default'
+        - 'config:core.entity_view_display.node.team.teaser'
         - 'config:core.entity_view_display.node.team.teaser_2'
         - 'config:core.entity_view_display.node.testimonial.default'
         - 'config:core.entity_view_display.node.testimonial.teaser'
-        - 'config:core.entity_view_display.node.news.default'
-        - 'config:core.entity_view_display.node.news.teaser'
-        - 'config:core.entity_view_display.node.pagina_basica.default'
-        - 'config:core.entity_view_display.node.pagina_basica.teaser'
-        - 'config:core.entity_view_display.node.team.default'
-        - 'config:core.entity_view_display.node.team.teaser'
   block_3:
     display_plugin: block
     id: block_3

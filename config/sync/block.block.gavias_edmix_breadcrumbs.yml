@@ -9,7 +9,7 @@ dependencies:
     - gavias_edmix
 third_party_settings:
   gaviasthemer:
-    breadcrumb_background_image_path: ''
+    breadcrumb_background_image_path: 'public://Uniagustiniana2.jpg'
     breadcrumb_background_color: ''
     breadcrumb_background_position: 'center top'
     breadcrumb_background_repeat: no-repeat

@@ -238,8 +238,21 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Event
-      header: {  }
+      title: Eventos
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content:
+            value: "<div class=\"widget gsc-heading  align-center style-default\">\r\n<h3>Eventos</h3>\r\n<div class=\"heading-line\"></div>\r\n</div>"
+            format: full_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships:
@@ -315,6 +328,9 @@ display:
           entity_field: id
           plugin_id: group_id
       display_extenders: {  }
+      use_more: false
+      use_more_always: true
+      use_more_text: más...
     cache_metadata:
       max-age: -1
       contexts:
@@ -401,7 +417,12 @@ display:
         css_class: false
       row:
         type: fields
-        options: {  }
+        options:
+          default_field_elements: true
+          inline:
+            title: title
+          separator: ''
+          hide_empty: false
       fields:
         title:
           id: title
@@ -734,7 +755,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"event-block-list\">\n     <div class=\"event-date\"><span class=\"day\">{{ field_event_start }}</span><span class=\"month\">{{ field_event_start_1 }}</span></div>\n    <div class=\"event-content\">\n           <div class=\"event-title\">{{ title }}</div>\n           <div class=\"event-address\"><i class=\"fa fa-map-marker\"></i>{{ field_event_address }}</div>\n    </div>  \n</div>"
+            text: "<div class=\"event-block-list\">\r\n     <div class=\"event-date\"><span class=\"day\">{{ field_event_start }}</span><span class=\"month\">{{ field_event_start_1 }}</span></div>\r\n    <div class=\"event-content\">\r\n           <div class=\"event-title\">{{ title }}</div>\r\n           <div class=\"event-address\"><i class=\"fa fa-map-marker\"></i>{{ field_event_address }}</div>\r\n    </div>  \r\n</div>"
             make_link: false
             path: ''
             absolute: false

@@ -9,7 +9,7 @@ id: group.facultad.field_mision
 field_name: field_mision
 entity_type: group
 bundle: facultad
-label: Misión
+label: 'Perfil Profesional'
 description: ''
 required: false
 translatable: true
