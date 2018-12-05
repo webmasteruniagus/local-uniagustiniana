@@ -1,0 +1,21 @@
+uuid: b0afdc7a-2d1c-43df-ae68-9c48f7904685
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_campo_de_formacion
+    - paragraphs.paragraphs_type.materias_por_semestre
+  module:
+    - options
+id: paragraph.materias_por_semestre.field_campo_de_formacion
+field_name: field_campo_de_formacion
+entity_type: paragraph
+bundle: materias_por_semestre
+label: 'Campo de formación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

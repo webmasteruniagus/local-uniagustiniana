@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.materias_por_semestre.field_area_de_formacion
+    - field.field.paragraph.materias_por_semestre.field_campo_de_formacion
     - field.field.paragraph.materias_por_semestre.field_creditos
     - field.field.paragraph.materias_por_semestre.field_titulo
     - paragraphs.paragraphs_type.materias_por_semestre
@@ -31,6 +32,7 @@ third_party_settings:
         - field_titulo
         - field_area_de_formacion
         - field_creditos
+        - field_campo_de_formacion
 id: paragraph.materias_por_semestre.default
 targetEntityType: paragraph
 bundle: materias_por_semestre
@@ -38,6 +40,13 @@ mode: default
 content:
   field_area_de_formacion:
     weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: ds_content
+  field_campo_de_formacion:
+    weight: 3
     label: inline
     settings: {  }
     third_party_settings: {  }

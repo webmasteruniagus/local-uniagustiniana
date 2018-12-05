@@ -1,0 +1,30 @@
+uuid: 0b09eca1-c455-4a0b-a7d7-5cd49da7e788
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_campo_de_formacion
+field_name: field_campo_de_formacion
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Disciplinar
+    -
+      value: '1'
+      label: Institucional
+    -
+      value: '2'
+      label: Integrador
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
