@@ -20,6 +20,69 @@ settings:
     -
       value: '2'
       label: Transversal
+    -
+      value: '3'
+      label: 'Disciplinar, Institucional, integrador:'
+    -
+      value: '4'
+      label: 'Areas de formación:'
+    -
+      value: '5'
+      label: 'Administrativa y de negocios'
+    -
+      value: '6'
+      label: 'Estratégica y Organizacional'
+    -
+      value: '7'
+      label: Transversal
+    -
+      value: '8'
+      label: 'Gestión Ambiental Publica'
+    -
+      value: '9'
+      label: 'Gestión Ambiental Privada'
+    -
+      value: '10'
+      label: Diagnostico
+    -
+      value: '11'
+      label: Estratégica
+    -
+      value: '12'
+      label: 'Comercial y Distribución'
+    -
+      value: '13'
+      label: Humanístico
+    -
+      value: '14'
+      label: Investigación
+    -
+      value: '15'
+      label: Fundamentación
+    -
+      value: '16'
+      label: Tributación
+    -
+      value: '17'
+      label: Planeación
+    -
+      value: '18'
+      label: 'Área de Formación Gerencial'
+    -
+      value: '19'
+      label: 'Área de Formación Competitividad'
+    -
+      value: '20'
+      label: 'Área de Formación Mejora'
+    -
+      value: '21'
+      label: 'Área de Formación Transversal'
+    -
+      value: '22'
+      label: 'Área de Formación Educación y pedagogía'
+    -
+      value: '23'
+      label: 'Área de Formación Didáctica y Creatividad (editado)'
   allowed_values_function: ''
 module: options
 locked: false

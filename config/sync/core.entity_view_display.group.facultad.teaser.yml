@@ -74,11 +74,10 @@ third_party_settings:
       weight: 12
       format_type: ertta_tab
       format_settings:
+        label: 'perfil profesional'
         id: ''
         classes: ''
-        formatter: closed
-        description: ''
-      label: 'Nuestra Misión'
+      label: 'perfil profesional'
 id: group.facultad.teaser
 targetEntityType: group
 bundle: facultad
@@ -90,7 +89,14 @@ content:
     region: ds_content
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: 'Perfil profesional'
+            lb-col: true
+            classes: {  }
   field_por_que_estudiar:
     type: basic_string
     weight: 1
