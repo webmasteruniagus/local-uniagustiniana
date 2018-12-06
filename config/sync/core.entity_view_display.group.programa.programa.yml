@@ -9,6 +9,7 @@ dependencies:
     - field.field.group.programa.field_codigo_snies_8182
     - field.field.group.programa.field_color_principal
     - field.field.group.programa.field_color_secundario
+    - field.field.group.programa.field_correo_de_contacto
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
@@ -57,10 +58,10 @@ third_party_settings:
         - field_objetivo_del_programa
         - field_codigo_snies_8182
         - field_fecha_de_resolucion
-        - field_vigencia
         - group_column_1
-        - group_column_2
+        - field_vigencia
         - field_ciudad
+        - group_column_2
         - field_sede
         - field_nivel_de_formacion
         - field_metodologia
@@ -113,7 +114,7 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: 'col-lg-6 col-md-6 col-sm-12 col-xs-12 characteristics'
+        classes: 'col-lg-4 col-md-6 col-sm-12 col-xs-12 characteristics'
       label: Características
     group_column_2:
       children:
@@ -131,7 +132,7 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: 'col-lg-6 col-md-6 col-sm-12 col-xs-12 profile'
+        classes: 'col-lg-8 col-md-6 col-sm-12 col-xs-12 profile'
       label: Perfil
     group_row_wrapper:
       children:
@@ -275,6 +276,7 @@ hidden:
   field_block_builder: true
   field_color_principal: true
   field_color_secundario: true
+  field_correo_de_contacto: true
   field_facultad: true
   field_frase_plan_de_estudios: true
   field_imagen: true
