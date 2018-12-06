@@ -224,7 +224,6 @@
     .block.block-simplenews .form-actions input#edit-subscribe:hover,
     .copyright a,
     .contact-info i,
-    .content-on-image,
     .footer-social h5,
     .navigation .gva_menu>li.menu-item--active-trail>a,
     .gsc-image-content .action a { color: var(--color_2) !important; }
@@ -234,6 +233,17 @@
             &:hover,
             &:focus,
             &:active { color: var(--color_2) }
+        }
+    }
+    // Color de texto
+    .content-on-image {
+        color: var(--color_3);
+
+        a {
+            color: var(--color_3) !important;
+            &:hover,
+            &:focus,
+            &:active { color: var(--color_3) }
         }
     }
 }

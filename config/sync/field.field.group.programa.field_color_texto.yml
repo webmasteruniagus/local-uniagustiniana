@@ -1,0 +1,22 @@
+uuid: e95e82c5-4b33-4c42-9365-c058ebbadb0f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_color_texto
+    - group.type.programa
+  module:
+    - color_field
+id: group.programa.field_color_texto
+field_name: field_color_texto
+entity_type: group
+bundle: programa
+label: 'Color texto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

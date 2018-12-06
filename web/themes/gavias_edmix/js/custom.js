@@ -36,6 +36,7 @@
         select_23 = ".profile",
         select_24 = ".characteristics",
         select_25 = ".block-uniagustiniana > div",
+        select_26 = ".field--name-field-color-texto",
 
         class_1 = "is--open",
         class_2 = "sidebar--fixed",
@@ -202,6 +203,7 @@
                 // Color del programa mandado desde administración
                 let mainColor = $(select_19).text().split(' '),
                   mainColorOpacity = mainColor[1],
+                  textColor = $(select_26).text(),
                   secondColor = $(select_20).text();
 
                 document.querySelector('body').classList.add(class_5);
@@ -209,6 +211,7 @@
                 createVariableCss('color_1', mainColor[0]);
                 createVariableCss('opacity_1', mainColorOpacity);
                 createVariableCss('color_2', secondColor);
+                createVariableCss('color_3', textColor);
                 
             }
         };
