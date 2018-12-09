@@ -18,6 +18,7 @@
         @include center-content;
         @include position(relative, 0);
         @include size(calc(100vw - var( --scrollWidth)), 100vh);
+        max-height: 740px;
         min-height: 480px;
         overflow: hidden;
 
