@@ -8,7 +8,7 @@ logo:
 favicon:
   use_default: 1
 theme_skin: ''
-enable_customize: '1'
+enable_customize: '0'
 sticky_menu: '0'
 site_layout: wide
 preloader: '0'

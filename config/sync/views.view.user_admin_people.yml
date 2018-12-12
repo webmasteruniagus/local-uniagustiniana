@@ -56,7 +56,7 @@ display:
             previous: '‹ Anterior'
             next: 'Siguiente >'
             first: '« First'
-            last: 'Last »'
+            last: 'Última »'
           expose:
             items_per_page: false
             items_per_page_label: 'Elementos por página'

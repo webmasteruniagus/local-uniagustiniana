@@ -11,7 +11,7 @@ uid: null
 template: true
 archive: false
 id: template_subscribe
-title: Subscribe
+title: Suscribir
 description: 'A subscribe to mailing list webform template.'
 category: ''
 elements: "first_name:\n  '#title': 'First Name'\n  '#type': textfield\n  '#required': true\nlast_name:\n  '#title': 'Last Name'\n  '#type': textfield\n  '#required': true\nemail:\n  '#title': Email\n  '#type': email\n  '#required': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Subscribe\n"

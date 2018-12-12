@@ -20,7 +20,7 @@ provider: null
 plugin: 'block_content:7e26e9e5-a2f4-4e12-9643-7c8954f954ef'
 settings:
   id: 'block_content:7e26e9e5-a2f4-4e12-9643-7c8954f954ef'
-  label: 'Social links footer'
+  label: 'Conectate con nosotros'
   provider: block_content
   label_display: '0'
   status: true
