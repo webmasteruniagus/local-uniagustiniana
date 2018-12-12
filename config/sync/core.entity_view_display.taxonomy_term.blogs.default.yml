@@ -1,0 +1,33 @@
+uuid: be89038a-6c2a-4ee6-bbf5-2a63865300d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blogs
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - 'dynamic_block_field:taxonomy_term-blogs'
+    fields:
+      'dynamic_block_field:taxonomy_term-blogs':
+        plugin_id: 'dynamic_block_field:taxonomy_term-blogs'
+        weight: 0
+        label: hidden
+        formatter: default
+id: taxonomy_term.blogs.default
+targetEntityType: taxonomy_term
+bundle: blogs
+mode: default
+content: {  }
+hidden:
+  description: true
+  langcode: true
