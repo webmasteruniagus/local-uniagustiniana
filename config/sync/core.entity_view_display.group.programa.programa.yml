@@ -276,6 +276,7 @@ hidden:
   field_block_builder: true
   field_color_principal: true
   field_color_secundario: true
+  field_color_texto: true
   field_correo_de_contacto: true
   field_facultad: true
   field_frase_plan_de_estudios: true

@@ -1,0 +1,23 @@
+uuid: d3a6f41e-13ad-4be9-95c1-7f56bc569e05
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group_content.field_peso
+    - group.content_type.home-group_node-pagina_basica
+id: group_content.home-group_node-pagina_basica.field_peso
+field_name: field_peso
+entity_type: group_content
+bundle: home-group_node-pagina_basica
+label: Peso
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
