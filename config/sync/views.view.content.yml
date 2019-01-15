@@ -49,7 +49,7 @@ display:
             previous: '‹ Anterior'
             next: 'Siguiente >'
             first: '« First'
-            last: 'Last »'
+            last: 'Última »'
       style:
         type: table
         options:

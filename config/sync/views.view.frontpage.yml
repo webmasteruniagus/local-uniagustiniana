@@ -182,7 +182,7 @@ display:
             previous: '‹ Anterior'
             next: 'Siguiente >'
             first: '« First'
-            last: 'Last »'
+            last: 'Última »'
           quantity: 9
       query:
         type: views_query

@@ -376,6 +376,9 @@ display:
           plugin_id: node_nid
       display_extenders: {  }
       css_class: unidad-menu-secundario
+      use_more: false
+      use_more_always: true
+      use_more_text: more
     cache_metadata:
       max-age: -1
       contexts:

@@ -14,10 +14,10 @@
         select_1 = ".sidebar-right .views-element-container",
         select_2 = ".field--name-dynamic-block-fieldnode-redes-sociales",
         select_3 = ".content-main",
-        select_4 = ".facultad-horizontal-tabs",
-        select_5 = "#menu-bartop",
-        select_6 = ".topbar-right",
-        select_7 = ".topbar-close",
+        select_4 = ".gva_topbar_menu",
+        select_5 = ".right-topbar-h",
+        select_6 = ".gva_menu_main",
+        select_7 = ".menu_rol",
         select_8 = ".sidebar-left .block-facets",
         select_9 = ".content-results",
         select_10 = ".all-filters",
@@ -35,12 +35,13 @@
         select_22 = ".field--name-field-imagen",
         select_23 = ".profile",
         select_24 = ".characteristics",
-        select_25 = ".description-header",
+        select_25 = ".block-uniagustiniana > div",
+        select_26 = ".field--name-field-color-texto",
 
         class_1 = "is--open",
         class_2 = "sidebar--fixed",
         class_3 = "page--filters",
-        class_4 = "acordeon-is--active",
+        class_4 = "gva_menu",
         class_5 = "page-program",
         class_6 = "tabs_horizontal",
         class_7 = "tabs_vertical",
@@ -48,28 +49,52 @@
         query_1;
 
     /**
-     * Obtener ancho de la barra de scroll
-     * @property {Function} getScrollBarWidth
-     * @returns {number} ancho en px de la barra de scroll
-     */
-    function getScrollBarWidth() {
-        return window.innerWidth - document.documentElement.getBoundingClientRect().width;
-    }
-
-    /**
-     * Crear variable css
-     * @property {Function} createVariableCss
-     * @param {string} name nombre de variable a crear
-     * @param {string} value - valor asigando a la variable
-     */
-    function createVariableCss(name, value) {
-        document.documentElement.style.setProperty(`--${name}`, value);
-    }
-
-    /**
      * @returns {object} Objeto con funciones publicas
      */
     UniCustom = (function() {
+        /* Private */
+        let mq1 = window.matchMedia('(max-width: 991px)');
+
+        /**
+         * Obtener ancho de la barra de scroll
+         * @property {Function} getScrollBarWidth
+         * @returns {number} ancho en px de la barra de scroll
+         */
+        function getScrollBarWidth() {
+            return window.innerWidth - document.documentElement.getBoundingClientRect().width;
+        }
+
+        /**
+         * Crear variable css
+         * @property {Function} createVariableCss
+         * @param {string} name nombre de variable a crear
+         * @param {string} value - valor asigando a la variable
+         */
+        function createVariableCss(name, value) {
+            document.documentElement.style.setProperty(`--${name}`, value);
+        }
+
+        function moveMenuRol(e) {
+            let select1 = document.querySelector(select_6),
+                select2 = document.querySelector(select_7),
+                select3 = document.querySelector(select_4),
+                parent1 = document.querySelector(select_5),
+                parent2 = document.querySelector(select_25);
+
+            if (e.matches) {
+                select2.classList.add(class_4);
+                select3.classList.add(class_4);
+                select1.parentNode.insertBefore(select2, select1);
+                select1.parentNode.insertBefore(select3, select1);
+            } else {
+                select2.classList.remove(class_4);
+                select3.classList.remove(class_4);
+                parent1.prepend(select3);
+                parent2.append(select2);
+            }
+        }
+
+        /* Public */
         return {
             global_script: function() {
                 $(window).on("resize", function() {
@@ -89,15 +114,12 @@
                     }
                 }).trigger("resize");
 
-                // Abrir primer menú (naranja)
-                $(select_5 + ', ' + select_7).on("click", function() {
-                    if (query_1) {
-                        $(select_6).toggleClass(class_1);
-                    }
-                });
-
                 // Crear variable con el ancho de la barra de scroll
                 createVariableCss('scrollWidth', getScrollBarWidth());
+
+                // Escuchar cambio en media query
+                mq1.addListener(moveMenuRol);
+                moveMenuRol(mq1);
             },
 
             move_networks: function() {
@@ -181,6 +203,7 @@
                 // Color del programa mandado desde administración
                 let mainColor = $(select_19).text().split(' '),
                   mainColorOpacity = mainColor[1],
+                  textColor = $(select_26).text(),
                   secondColor = $(select_20).text();
 
                 document.querySelector('body').classList.add(class_5);
@@ -188,6 +211,7 @@
                 createVariableCss('color_1', mainColor[0]);
                 createVariableCss('opacity_1', mainColorOpacity);
                 createVariableCss('color_2', secondColor);
+                createVariableCss('color_3', textColor);
                 
             }
         };

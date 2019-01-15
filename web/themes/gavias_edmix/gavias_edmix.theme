@@ -362,7 +362,7 @@ function gavias_edmix_theme_suggestions_page_alter(array &$suggestions, array $v
     }
   }
   if ($group = \Drupal::request()->attributes->get('group')) {
-    if($group->bundle() == 'home'){
+    if($group->bundle() == 'home' || $group->bundle() == 'facultad'){
       array_splice($suggestions, 1, 0, 'page__group__' . $group->bundle());
     }
   }
@@ -373,4 +373,3 @@ function gavias_edmix_theme_suggestions_field_alter(&$suggestions, $variables) {
   $variables['element']['#field_name'] . '__' . 
   $variables['element']['#view_mode'];
 }
-

@@ -16,9 +16,20 @@
         .field__label { display: none; }
 
         .paragraph {
-            @include flexbox;
+            display: grid;
             padding: 10px 0;
             border-bottom: $border_1;
+            grid-template-columns: 45% 20% 15% 20%;
+
+            &::before { display: none; }
+
+            .field { justify-self: flex-start; }
+
+            .field--name-field-creditos {
+                justify-self: center;
+                .field__item { text-align: center; }
+            }
+
             // Muestro solo los de la primer materia
             &:first-child .field__label {
                 display: block;
@@ -28,33 +39,27 @@
 
             &:last-child { border-bottom: 0; }
 
-            .field--name-field-titulo { width: 100%; }
-
-            .field--name-field-area-de-formacion {
-                @include flex-shrink(0);
-                width: 30%;
-            }
-
-            .field--name-field-creditos {
-                @include flex-shrink(0);
-                width: 20%;
-                text-align: center;
-            }
-
-            @media (max-width: $screen-xs) {
-                @include flex-direction(column);
-
+            @media (max-width: $screen-xs-max) {
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+                
                 &:first-child .field__label { margin-bottom: 0; }
 
-                .field--label-inline .field__label {
-                    display: block;
-                    font-weight: bold;
-                }
+                .field { justify-self: flex-start; }
 
-                .field--name-field-area-de-formacion,
-                .field--name-field-creditos {
-                    width: auto;
-                    text-align: left;
+                .field--label-inline {
+                    .field__label {
+                        @include flex-shrink(0);
+                        display: inline;
+                        font-weight: bold;
+    
+                        &::after {
+                            @include pseudo-element(inline-block, ':');
+                            margin-right: 5px;
+                        }
+                    }
+
+                    .field__item { display: inline; }
                 }
             }
         }

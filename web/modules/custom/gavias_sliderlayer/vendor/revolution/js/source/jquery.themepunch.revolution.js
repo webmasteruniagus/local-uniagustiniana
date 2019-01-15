@@ -1639,7 +1639,6 @@ var initSlider = function (container,opt) {
 
 		// IF RESIZED, NEED TO STOP ACTUAL TRANSITION AND RESIZE ACTUAL IMAGES
 		jQuery(window).on(resizid,function() {
-			console.log("happening")
 			if (container==undefined) return false;
 			
 			if (jQuery('body').find(container)!=0) 				

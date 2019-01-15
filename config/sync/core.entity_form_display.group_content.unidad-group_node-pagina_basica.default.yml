@@ -3,11 +3,13 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.group_content.unidad-group_node-pagina_basica.field_blog
     - field.field.group_content.unidad-group_node-pagina_basica.field_menu_principal
     - field.field.group_content.unidad-group_node-pagina_basica.field_menu_secundario
     - field.field.group_content.unidad-group_node-pagina_basica.field_peso
     - group.content_type.unidad-group_node-pagina_basica
   module:
+    - inline_entity_form
     - path
 id: group_content.unidad-group_node-pagina_basica.default
 targetEntityType: group_content
@@ -23,6 +25,22 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
+  field_blog:
+    weight: 34
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
   field_menu_principal:
     weight: 31
     settings:

@@ -45,7 +45,7 @@ class MenuRol extends BlockBase {
             '#markup' => $link,
             '#wrapper_attributes' => [
                 'class' => [
-                    'menu_rol_item',
+                    'menu_rol_item menu-item',
                 ],
             ],
         ];
@@ -58,7 +58,7 @@ class MenuRol extends BlockBase {
             '#markup' => $link,
             '#wrapper_attributes' => [
                 'class' => [
-                    'menu_rol_item',
+                    'menu_rol_item menu-item',
                 ],
             ],
         ];
@@ -83,7 +83,7 @@ class MenuRol extends BlockBase {
                 '#markup' => $link,
                 '#wrapper_attributes' => [
                     'class' => [
-                        'menu_rol_item',
+                        'menu_rol_item menu-item',
                     ],
                 ],
             ];

@@ -8,6 +8,7 @@ dependencies:
     - field.field.group.programa.field_codigo_snies_8182
     - field.field.group.programa.field_color_principal
     - field.field.group.programa.field_color_secundario
+    - field.field.group.programa.field_color_texto
     - field.field.group.programa.field_correo_de_contacto
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_facultad
@@ -53,6 +54,7 @@ third_party_settings:
         - field_block_builder
         - field_color_principal
         - field_color_secundario
+        - field_color_texto
 id: group.programa.default
 targetEntityType: group
 bundle: programa
@@ -95,6 +97,15 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    type: color_field_formatter_text
+    region: ds_content
+  field_color_texto:
+    weight: 3
+    label: hidden
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
     type: color_field_formatter_text
     region: ds_content
 hidden:
