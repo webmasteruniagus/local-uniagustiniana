@@ -1,4 +1,4 @@
-uuid: c9bdbf48-9f0e-4850-aa14-e84e3fe4ad30
+uuid: ecd3e530-595c-4b72-81e1-ba995c80dcbd
 langcode: en
 status: true
 dependencies:
@@ -17,12 +17,13 @@ dependencies:
     - group
     - image
     - node
+    - options
     - text
     - user
 _core:
   default_config_hash: 5TOkl-JEC_tBrpG9q0g9otynmK9E24YyGK2BEfy3Wf8
-id: event
-label: Event
+id: convocatoria
+label: Convocatoria
 module: views
 description: ''
 tag: ''
@@ -238,7 +239,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Eventos
+      title: Concocatorias
       header:
         area:
           id: area
@@ -250,7 +251,7 @@ display:
           empty: false
           tokenize: true
           content:
-            value: "<div class=\"widget gsc-heading  align-center style-default\">\r\n<h1>Eventos</h1>\r\n<div class=\"heading-line\"></div>\r\n</div>"
+            value: "<div class=\"widget gsc-heading  align-center style-default\">\r\n<h3>Eventos</h3>\r\n<div class=\"heading-line\"></div>\r\n</div>"
             format: full_html
           plugin_id: text
       footer: {  }
@@ -356,10 +357,10 @@ display:
           row_class: ''
           default_row_class: true
           uses_fields: false
-          items: '2'
-          items_lg: '2'
-          items_md: '2'
-          items_sm: '2'
+          items: '1'
+          items_lg: '1'
+          items_md: '1'
+          items_sm: '1'
           items_xs: '1'
           loop: 0
           speed: '200'
@@ -368,7 +369,7 @@ display:
           auto_play_timeout: '3000'
           auto_play_hover: 1
           navigation: 1
-          rewind_nav: 1
+          rewind_nav: 0
           pagination: 0
           mouse_drag: 1
           touch_drag: 1
@@ -377,11 +378,77 @@ display:
       defaults:
         style: false
         row: false
+        filters: false
+        filter_groups: false
       row:
         type: 'entity:node'
         options:
           relationship: none
           view_mode: teaser
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            event: event
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_convocatoria_value:
+          id: field_convocatoria_value
+          table: node__field_convocatoria
+          field: field_convocatoria_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            Convocatoria: Convocatoria
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
