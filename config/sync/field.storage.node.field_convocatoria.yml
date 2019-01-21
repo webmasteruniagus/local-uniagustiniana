@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: Eventos
+      label: Eventos
+    -
       value: Convocatoria
       label: Convocatoria
   allowed_values_function: ''

@@ -11,7 +11,7 @@ id: node.event.field_convocatoria
 field_name: field_convocatoria
 entity_type: node
 bundle: event
-label: Convocatoria
+label: 'Tipo de evento'
 description: ''
 required: false
 translatable: false

@@ -7,16 +7,16 @@ dependencies:
 id: evento
 label: Evento
 type: 'canonical_entities:node'
-pattern: 'eventos/[node:title]'
+pattern: '[node:field_convocatoria:value]/[node:title]'
 selection_criteria:
-  45a5e140-1f9a-41b5-aa8e-02e617701ab6:
+  e6b729dd-c0fe-4dad-a260-b427421651d1:
     id: node_type
     bundles:
       event: event
     negate: false
     context_mapping:
       node: node
-    uuid: 45a5e140-1f9a-41b5-aa8e-02e617701ab6
+    uuid: e6b729dd-c0fe-4dad-a260-b427421651d1
 selection_logic: and
 weight: -5
 relationships: {  }
