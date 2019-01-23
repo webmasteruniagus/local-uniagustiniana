@@ -1,0 +1,29 @@
+uuid: 82b294b4-eccf-41ca-9604-653cb27dba1a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group_content.field_blog
+    - group.content_type.unidad-group_node-event
+    - taxonomy.vocabulary.blogs
+id: group_content.unidad-group_node-event.field_blog
+field_name: field_blog
+entity_type: group_content
+bundle: unidad-group_node-event
+label: Blog
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      blogs: blogs
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
