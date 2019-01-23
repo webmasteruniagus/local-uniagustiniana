@@ -1,0 +1,24 @@
+uuid: 87689045-da71-4794-a05c-5b2f0fac80cb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.group_content.unidad-group_node-event.field_blog
+    - group.content_type.unidad-group_node-event
+id: group_content.unidad-group_node-event.default
+targetEntityType: group_content
+bundle: unidad-group_node-event
+mode: default
+content:
+  field_blog:
+    weight: -4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  entity_id: true
+  langcode: true
+  uid: true

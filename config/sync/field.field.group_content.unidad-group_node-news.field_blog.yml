@@ -1,0 +1,29 @@
+uuid: 451adc2b-38c4-4ca3-a03c-67cecf3ca7c9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group_content.field_blog
+    - group.content_type.unidad-group_node-news
+    - taxonomy.vocabulary.blogs
+id: group_content.unidad-group_node-news.field_blog
+field_name: field_blog
+entity_type: group_content
+bundle: unidad-group_node-news
+label: Blog
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      blogs: blogs
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

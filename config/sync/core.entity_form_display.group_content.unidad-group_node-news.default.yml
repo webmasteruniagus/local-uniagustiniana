@@ -1,0 +1,55 @@
+uuid: 0315d6c8-f03a-4341-86a7-5fa946d65045
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.group_content.unidad-group_node-news.field_blog
+    - group.content_type.unidad-group_node-news
+  module:
+    - inline_entity_form
+    - path
+id: group_content.unidad-group_node-news.default
+targetEntityType: group_content
+bundle: unidad-group_node-news
+mode: default
+content:
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  field_blog:
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true
