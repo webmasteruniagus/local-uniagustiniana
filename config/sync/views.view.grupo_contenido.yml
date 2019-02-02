@@ -674,7 +674,7 @@ display:
           empty: false
           tokenize: true
           content:
-            value: "<div class=\"widget gsc-heading  align-center style-default\">\r\n<h3>Noticias</h3>\r\n<div class=\"heading-line\"></div>\r\n</div>"
+            value: "<div class=\"widget gsc-heading  align-center style-default\">\r\n<h1>Noticias</h1>\r\n<div class=\"heading-line\"></div>\r\n</div>"
             format: full_html
           plugin_id: text
       css_class: ''

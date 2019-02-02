@@ -6,7 +6,27 @@ dependencies:
     - field.field.group.home.field_block_builder
     - group.type.home
   module:
+    - ds
     - gavias_blockbuilder
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_block_builder
 id: group.home.default
 targetEntityType: group
 bundle: home
@@ -18,7 +38,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_formatter
-    region: content
+    region: ds_content
 hidden:
   changed: true
   created: true

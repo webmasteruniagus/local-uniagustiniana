@@ -27,7 +27,9 @@ class MenuRol extends BlockBase {
         $query = db_select('groups_field_data', 'g');
         $query->addField('g', 'id');
         $query->addField('g', 'label');
+        $query->innerJoin('group__field_activar_menu', 'gm', 'g.id = gm.entity_id');
         $query->condition('g.type', 'home', '=');
+        $query->condition('gm.field_activar_menu_value', 1, '=');
         $results = $query->execute();
         $current_path = \Drupal::service('path.current')->getPath();
         $path =  explode('/', $current_path);

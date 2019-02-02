@@ -12,11 +12,11 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: Eventos
-      label: Eventos
-    -
       value: Convocatoria
       label: Convocatoria
+    -
+      value: Eventos
+      label: Eventos
   allowed_values_function: ''
 module: options
 locked: false
