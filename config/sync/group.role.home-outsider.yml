@@ -12,6 +12,10 @@ audience: outsider
 group_type: home
 permissions_ui: true
 permissions:
-  - 'view group_node:event entity'
-  - 'view group_node:news entity'
-  - 'view group'
+  0: 'view group_node:event entity'
+  1: 'view group_node:news entity'
+  2: 'view group'
+  3: 'view group_node:pagina_basica entity'
+  6: 'view group_node:event content'
+  8: 'view group_node:news content'
+  10: 'view group_node:pagina_basica content'
