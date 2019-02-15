@@ -41,11 +41,11 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Aplicar
+          submit_button: Buscar
           reset_button: false
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:

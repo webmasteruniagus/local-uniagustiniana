@@ -33,6 +33,7 @@ module:
   entity: 0
   entity_reference_revisions: 0
   facets: 0
+  facets_summary: 0
   field: 0
   field_collection: 0
   field_group: 0
@@ -87,7 +88,6 @@ module:
   token: 0
   toolbar: 0
   tour: 0
-  tracker: 0
   tvi: 0
   twig_tweak: 0
   twitter_block: 0
