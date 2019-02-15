@@ -1,0 +1,14 @@
+uuid: f8da9d3a-1959-4ac5-9e63-1c0e73ca09f7
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.comunicaciones
+  module:
+    - user
+id: user_add_role_action.comunicaciones
+label: 'Añade el rol Comunicaciones al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: comunicaciones

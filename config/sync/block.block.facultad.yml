@@ -16,7 +16,7 @@ third_party_settings:
 id: facultad
 theme: gavias_edmix
 region: sidebar_left
-weight: -16
+weight: -21
 provider: null
 plugin: 'facet_block:facultad'
 settings:

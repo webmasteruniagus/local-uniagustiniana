@@ -1,0 +1,17 @@
+uuid: 4478e924-b564-4014-a440-dce8792fe090
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.facultad
+  enforced:
+    config:
+      - user.role.comunicaciones
+id: facultad-40bc37817
+label: Comunicaciones
+weight: 3
+internal: true
+audience: outsider
+group_type: facultad
+permissions_ui: false
+permissions: {  }

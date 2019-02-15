@@ -1,0 +1,17 @@
+uuid: 21b3b644-7d83-4413-9af1-10908ead6cd9
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.programa
+  enforced:
+    config:
+      - user.role.comunicaciones
+id: programa-40bc37817
+label: Comunicaciones
+weight: 3
+internal: true
+audience: outsider
+group_type: programa
+permissions_ui: false
+permissions: {  }

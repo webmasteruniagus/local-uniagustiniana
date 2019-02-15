@@ -1,0 +1,17 @@
+uuid: bfb69211-545f-489e-9c7c-9d8da78f72e0
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.home
+  enforced:
+    config:
+      - user.role.comunicaciones
+id: home-40bc37817
+label: Comunicaciones
+weight: 3
+internal: true
+audience: outsider
+group_type: home
+permissions_ui: false
+permissions: {  }
