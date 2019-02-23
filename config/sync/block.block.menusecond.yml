@@ -15,7 +15,7 @@ third_party_settings:
 id: menusecond
 theme: gavias_edmix
 region: sidebar_right
-weight: -7
+weight: -18
 provider: null
 plugin: 'system_menu_block:menu-second'
 settings:

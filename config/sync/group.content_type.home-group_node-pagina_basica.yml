@@ -1,0 +1,19 @@
+uuid: 2053c5b0-da27-4054-8523-371056fc8af4
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.home
+    - node.type.pagina_basica
+  module:
+    - gnode
+    - node
+id: home-group_node-pagina_basica
+label: 'Home: Group node (Pagina Basica)'
+description: 'Adds <em class="placeholder">Pagina Basica</em> content to groups both publicly and privately.'
+group_type: home
+content_plugin: 'group_node:pagina_basica'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

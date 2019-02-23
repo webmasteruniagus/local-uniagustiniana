@@ -1,0 +1,30 @@
+uuid: 652a9c9d-b3c6-4ef1-83f9-fc5a25fb3d23
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blogs
+  module:
+    - path
+id: taxonomy_term.blogs.default
+targetEntityType: taxonomy_term
+bundle: blogs
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true

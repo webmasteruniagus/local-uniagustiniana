@@ -1,0 +1,17 @@
+uuid: 178f89ba-597c-4849-be90-6413931fd061
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.unidad
+  enforced:
+    config:
+      - user.role.comunicaciones
+id: unidad-40bc37817
+label: Comunicaciones
+weight: 3
+internal: true
+audience: outsider
+group_type: unidad
+permissions_ui: false
+permissions: {  }

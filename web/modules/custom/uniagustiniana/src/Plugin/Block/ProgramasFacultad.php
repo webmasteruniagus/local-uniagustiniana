@@ -20,7 +20,7 @@ class ProgramasFacultad extends BlockBase {
 
 
   /**
-   * {@inheritdoc}
+   * Description: consulta que trae los programas por facultad.
    */
 
   public function build() {
@@ -42,15 +42,28 @@ class ProgramasFacultad extends BlockBase {
         $query->leftJoin('group__field_nivel_de_formacion', 'gnf', 'gd.id = gnf.entity_id');
         $query->leftJoin('taxonomy_term_field_data', 'td', 'gnf.field_nivel_de_formacion_target_id = td.tid');
         $query->addField('td', 'name');
-        $query->leftJoin('group__field_sede', 'gfs', 'gd.id = gfs.entity_id');
-        $query->leftJoin('taxonomy_term_field_data', 'tds', 'gfs.field_sede_target_id = tds.tid');
-        $query->addField('tds', 'name');
         $query->condition('gd.type', 'programa', '=');
         $query->condition('gff.field_facultad_target_id', $path[2], '=');
-        $result=$query->execute()->fetchAll();
+
+        $results=$query->execute()->fetchAll();
+        foreach($results as $key => &$result){
+            $subquery = db_select('group__field_sede', 'gfs');
+            $subquery->leftJoin('taxonomy_term_field_data', 'tds', 'gfs.field_sede_target_id = tds.tid');
+            $subquery->addField('tds', 'name');
+            $subquery->condition('gfs.entity_id', $result->id, '=');
+            $subresults= $subquery->execute();
+            $sede = false;
+            foreach($subresults as $skey => $subresult){
+                $sede[] = $subresult->name;
+            }
+            if($sede && is_array($sede)){
+                $result->tds_name = implode(" - ", $sede);
+            }
+        }
+        
         return [
             '#theme' => 'programas_facultad',
-            '#programas' => $result,
+            '#programas' => $results,
             '#cache' => [
                 'max-age' => 0
             ]

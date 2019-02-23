@@ -16,7 +16,7 @@ third_party_settings:
 id: categoria
 theme: gavias_edmix
 region: sidebar_left
-weight: -17
+weight: -24
 provider: null
 plugin: 'facet_block:categoria'
 settings:

@@ -1,0 +1,20 @@
+uuid: 26af6ed6-8006-402e-ac12-125de75c820a
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+    - taxonomy
+id: group_content.field_blog
+field_name: field_blog
+entity_type: group_content
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

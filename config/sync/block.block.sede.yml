@@ -16,7 +16,7 @@ third_party_settings:
 id: sede
 theme: gavias_edmix
 region: sidebar_left
-weight: -14
+weight: -22
 provider: null
 plugin: 'facet_block:sede'
 settings:

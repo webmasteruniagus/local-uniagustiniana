@@ -5,19 +5,22 @@ features:
   favicon: 1
 logo:
   use_default: 1
+  path: 'public://logo.png'
 favicon:
   use_default: 1
+  path: 'public://favicon.ico'
+  mimetype: image/vnd.microsoft.icon
 theme_skin: ''
-enable_customize: '1'
+enable_customize: '0'
 sticky_menu: '0'
 site_layout: wide
 preloader: '0'
 default_header: header
 facebook: 'https://www.facebook.com/uniagustiniana?ref=hl'
 twitter: 'https://twitter.com/UniagustOficial'
-skype: '#'
+skype: ''
 instagram: '#'
-dribbble: '#'
+dribbble: ''
 linkedin: 'https://www.linkedin.com/edu/school?id=377057&trk=prof-following-school-logo'
 pinterest: ''
 google: ''
@@ -29,4 +32,4 @@ footer_first_size: '3'
 footer_second_size: '3'
 footer_third_size: '3'
 footer_four_size: '3'
-customize_css: ''
+customize_css: ".Top-butonECN{\r\n    margin-top: 20px;\r\n    display: inline-block;\r\n}\r\n\r\n.img-border2{\r\n  display: inline-block;\r\n    max-width: 100%;\r\n    height: auto;\r\n    padding: 4px;\r\n    line-height: 1.42857143;\r\n    background-color: #fff;\r\n    border: 1px solid #ddd;\r\n    border-radius: 4px;\r\n    -webkit-transition: all .2s ease-in-out;\r\n    -o-transition: all .2s ease-in-out;\r\n    transition: all .2s ease-in-out;\r\n}\r\n.img2-space{\r\n   margin: 20px;\r\n   width: 30%;\r\n}\r\n.img3-space{\r\n   margin: 20px;\r\n}\r\n"

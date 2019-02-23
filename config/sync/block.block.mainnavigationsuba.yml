@@ -1,0 +1,33 @@
+uuid: 61c36b35-0b80-4fb7-a6a1-17ef77b9f684
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main-navigation-suba
+  module:
+    - gaviasthemer
+    - system
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: mainnavigationsuba
+theme: gavias_edmix
+region: main_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main-navigation-suba'
+settings:
+  id: 'system_menu_block:main-navigation-suba'
+  label: 'Main navigation suba'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: /group/57
+    negate: false
+    context_mapping: {  }

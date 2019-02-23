@@ -14,6 +14,9 @@ settings:
     -
       value: Convocatoria
       label: Convocatoria
+    -
+      value: Eventos
+      label: Eventos
   allowed_values_function: ''
 module: options
 locked: false

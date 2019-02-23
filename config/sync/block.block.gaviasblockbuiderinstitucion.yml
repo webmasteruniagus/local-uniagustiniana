@@ -1,0 +1,24 @@
+uuid: 0d578341-6194-47e5-ab97-403d3a25eb8e
+langcode: es
+status: true
+dependencies:
+  module:
+    - gavias_blockbuilder
+    - gaviasthemer
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: gaviasblockbuiderinstitucion
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: 'gavias_blockbuilder_block:gavias_blockbuilder_block____31'
+settings:
+  id: 'gavias_blockbuilder_block:gavias_blockbuilder_block____31'
+  label: 'Gavias Blockbuider Institucion'
+  provider: gavias_blockbuilder
+  label_display: '0'
+visibility: {  }

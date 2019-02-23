@@ -5,29 +5,73 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.pagina_basica.body
+    - field.field.node.pagina_basica.field_documentos
     - field.field.node.pagina_basica.field_image
+    - image.style.small
     - node.type.pagina_basica
   module:
-    - text
+    - ds
+    - image
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_image
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.pagina_basica.teaser
 targetEntityType: node
 bundle: pagina_basica
 mode: teaser
 content:
-  body:
+  field_image:
+    type: image
+    weight: 0
+    region: ds_content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
+      image_style: small
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
-  field_image: true
+  body: true
+  field_documentos: true
   langcode: true
+  links: true

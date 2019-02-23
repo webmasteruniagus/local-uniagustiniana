@@ -1,0 +1,23 @@
+uuid: e2c39239-c56d-45cf-b6d6-928e1711dc0a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group_content.field_menu_secundario
+    - group.content_type.home-group_node-pagina_basica
+id: group_content.home-group_node-pagina_basica.field_menu_secundario
+field_name: field_menu_secundario
+entity_type: group_content
+bundle: home-group_node-pagina_basica
+label: 'Menu secundario'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

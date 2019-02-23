@@ -1,0 +1,32 @@
+uuid: 364d34a5-1375-4be2-9eb0-3ab8d2609562
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.reset_program
+  module:
+    - facets_summary
+    - gaviasthemer
+    - system
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: resetprogram
+theme: gavias_edmix
+region: sidebar_left
+weight: -25
+provider: null
+plugin: 'facets_summary_block:reset_program'
+settings:
+  id: 'facets_summary_block:reset_program'
+  label: 'Reset program'
+  provider: facets_summary
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /programas
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,9 @@
+uuid: 3c8d4e09-14ec-41c6-aadb-774619eaf05b
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__programas__page_1
+name: 'search_api:views_page__programas__page_1'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

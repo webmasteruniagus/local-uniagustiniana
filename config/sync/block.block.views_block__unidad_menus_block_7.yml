@@ -1,0 +1,29 @@
+uuid: 398c03b7-eda2-4083-aed1-4a253a2163e1
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.unidad_menus
+  module:
+    - gaviasthemer
+    - views
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: views_block__unidad_menus_block_7
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: 'views_block:unidad_menus-block_7'
+settings:
+  id: 'views_block:unidad_menus-block_7'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility: {  }

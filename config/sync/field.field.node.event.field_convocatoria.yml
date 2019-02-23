@@ -11,11 +11,13 @@ id: node.event.field_convocatoria
 field_name: field_convocatoria
 entity_type: node
 bundle: event
-label: Convocatoria
+label: 'Tipo de evento'
 description: ''
-required: false
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: Eventos
 default_value_callback: ''
 settings: {  }
 field_type: list_string

@@ -1,9 +1,12 @@
+uuid: eb926d00-31f7-426a-ad17-c741d7d1c182
 langcode: es
 status: closed
 dependencies:
   enforced:
     module:
       - webform_templates
+_core:
+  default_config_hash: vsT_UtX5EPoLrpVw4MZKQscP0swNbrlv9h6RELRleDs
 open: null
 close: null
 weight: 0
@@ -164,6 +167,3 @@ access:
     users: {  }
     permissions: {  }
 handlers: {  }
-uuid: eb926d00-31f7-426a-ad17-c741d7d1c182
-_core:
-  default_config_hash: vsT_UtX5EPoLrpVw4MZKQscP0swNbrlv9h6RELRleDs
