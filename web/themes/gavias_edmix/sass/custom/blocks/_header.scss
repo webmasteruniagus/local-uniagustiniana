@@ -39,6 +39,7 @@
                     a {
                         color: $theme-color-rgba;
 
+                        &.active,
                         &:hover { color: darken($theme-color-rgba, 20%) }
                     }
                 }
@@ -153,6 +154,20 @@
         span{
             @include absolute(left 50%);
             @include translateX(-50%);
+        }
+    }
+}
+
+nav[class*="menu--main-navigation"] .gva_menu{
+    > .menu-item--expanded > a {
+        letter-spacing: normal;
+        &::after {
+            @include absolute(left 50% bottom 15px);
+            @include square(7px);
+            @include translateX(-50%);
+            background: svg(arrow-down);
+            display: inline-block;
+            content: "";
         }
     }
 }

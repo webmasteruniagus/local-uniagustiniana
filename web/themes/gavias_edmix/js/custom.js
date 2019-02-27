@@ -37,6 +37,8 @@
         select_24 = ".characteristics",
         select_25 = ".block-uniagustiniana > div",
         select_26 = ".field--name-field-color-texto",
+        select_27 = ".services-news",
+        select_28 = ".gsc-column",
 
         class_1 = "is--open",
         class_2 = "sidebar--fixed",
@@ -213,6 +215,12 @@
                 createVariableCss('color_2', secondColor);
                 createVariableCss('color_3', textColor);
                 
+            },
+
+            students: function() {
+                $(select_27 + ', ' + select_28).click(function(e) {
+                    console.log(e);
+                });
             }
         };
     }());
@@ -231,6 +239,10 @@
         // Página de facultad
         if ($(select_17).length > 0) {
             UniCustom.facultad_acordeon();
+        }
+        // Página de estudiantes
+        if ($(select_27).length > 0) {
+            UniCustom.students();
         }
     });
 
