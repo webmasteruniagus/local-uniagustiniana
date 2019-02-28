@@ -34,14 +34,16 @@
                     background: none;
                     margin: 0;
                     padding: 0;
-                    margin-left: 10px;
 
                     a {
                         color: $theme-color-rgba;
-
+                        margin-left: 10px;
+                        
                         &.active,
                         &:hover { color: darken($theme-color-rgba, 20%) }
                     }
+
+                    a[href*="/campus-"].active { display: none; }
                 }
             }
         }

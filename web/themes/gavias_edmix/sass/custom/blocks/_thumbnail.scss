@@ -96,14 +96,22 @@
         }
         // Categorias
         .views-field-field-category {
+            position: relative;
             line-height: 16px;
             margin-bottom: 5px;
 
             &,
-            a { color: $brand-danger; }
+            a {
+                font-size: 12px;
+                color: $color_6;
+            }
+
+            a { word-break: break-all; }
         }
     }
 }
+// Card - services
+.services-news .gsc-column:not(.col-lg-12) { cursor: pointer; }
 
 /*
 ===========================================================

@@ -85,12 +85,12 @@
 
             if (e.matches) {
                 select2.classList.add(class_4);
-                select3.classList.add(class_4);
+                if (select3 != null) select3.classList.add(class_4);
                 select1.parentNode.insertBefore(select2, select1);
                 select1.parentNode.insertBefore(select3, select1);
             } else {
                 select2.classList.remove(class_4);
-                select3.classList.remove(class_4);
+                if (select3 != null) select3.classList.remove(class_4);
                 parent1.prepend(select3);
                 parent2.append(select2);
             }
@@ -218,8 +218,9 @@
             },
 
             students: function() {
-                $(select_27 + ', ' + select_28).click(function(e) {
-                    console.log(e);
+                $(select_27 + ' ' + select_28 + ':not(.col-lg-12)').click(function(e) {
+                    let url = $(this).find('.title a').attr('href');
+                    location.href = url;
                 });
             }
         };
