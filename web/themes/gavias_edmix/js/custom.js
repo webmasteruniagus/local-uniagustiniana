@@ -85,12 +85,12 @@
 
             if (e.matches) {
                 select2.classList.add(class_4);
-                if (select3 != null) select3.classList.add(class_4);
+                select3.classList.add(class_4);
                 select1.parentNode.insertBefore(select2, select1);
                 select1.parentNode.insertBefore(select3, select1);
             } else {
                 select2.classList.remove(class_4);
-                if (select3 != null) select3.classList.remove(class_4);
+                select3.classList.remove(class_4);
                 parent1.prepend(select3);
                 parent2.append(select2);
             }
@@ -120,8 +120,10 @@
                 createVariableCss('scrollWidth', getScrollBarWidth());
 
                 // Escuchar cambio en media query
-                mq1.addListener(moveMenuRol);
-                moveMenuRol(mq1);
+                if (document.querySelector(select_4) != null) {
+                    mq1.addListener(moveMenuRol);
+                    moveMenuRol(mq1);
+                }
             },
 
             move_networks: function() {
