@@ -66,6 +66,8 @@ content:
     third_party_settings: {  }
 hidden:
   field_category: true
+  field_convocatoria: true
+  field_documentos: true
   field_event_end: true
   field_sede: true
   langcode: true

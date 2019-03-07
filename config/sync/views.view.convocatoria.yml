@@ -17,6 +17,7 @@ dependencies:
     - group
     - image
     - node
+    - options
     - text
     - user
 _core:
@@ -223,6 +224,45 @@ display:
           entity_field: type
           plugin_id: bundle
           group: 1
+        field_convocatoria_value:
+          id: field_convocatoria_value
+          table: node__field_convocatoria
+          field: field_convocatoria_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            Convocatoria: Convocatoria
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         created:
           id: created
@@ -382,13 +422,78 @@ display:
       defaults:
         style: false
         row: false
-        filters: true
-        filter_groups: true
+        filters: false
+        filter_groups: false
       row:
         type: 'entity:node'
         options:
           relationship: none
           view_mode: teaser
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            event: event
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
+        field_convocatoria_value:
+          id: field_convocatoria_value
+          table: node__field_convocatoria
+          field: field_convocatoria_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            Convocatoria: Convocatoria
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -883,39 +988,14 @@ display:
         style: false
         row: false
         css_class: false
-        filters: false
-        filter_groups: false
+        filters: true
+        filter_groups: true
       row:
         type: 'entity:node'
         options:
           relationship: none
           view_mode: teaser_2
       css_class: events-list
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            event: event
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
     cache_metadata:
       max-age: -1
       contexts:
