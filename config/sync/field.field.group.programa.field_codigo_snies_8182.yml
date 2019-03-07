@@ -9,7 +9,7 @@ id: group.programa.field_codigo_snies_8182
 field_name: field_codigo_snies_8182
 entity_type: group
 bundle: programa
-label: 'Código SNIES 8182'
+label: 'Código SNIES'
 description: ''
 required: false
 translatable: false
