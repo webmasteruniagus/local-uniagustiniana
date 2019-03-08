@@ -39,6 +39,9 @@
         select_26 = ".field--name-field-color-texto",
         select_27 = ".services-news",
         select_28 = ".gsc-column",
+        select_29 = ".menu-bartop",
+        select_30 = ".topbar-right",
+        select_31 = ".topbar-close",
 
         class_1 = "is--open",
         class_2 = "sidebar--fixed",
@@ -124,6 +127,11 @@
                     mq1.addListener(moveMenuRol);
                     moveMenuRol(mq1);
                 }
+
+                // Menú hamburguesa del menu top
+                $(select_29 + ', ' + select_31).on('click', function() {
+                    $(select_30).toggleClass(class_1);
+                });
             },
 
             move_networks: function() {
