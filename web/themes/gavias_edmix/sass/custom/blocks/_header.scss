@@ -149,10 +149,21 @@
     }
 }
 
+.col-lg-9.p-static {
+    @media screen and (min-width: $screen-md-min){
+        margin-top: 15px;
+    }
+}
+
 // Header (Logo y menú principal)
 .menu--main .gva_menu {
     > li > a {
         letter-spacing: normal;
+        padding: {
+            left: 5px;
+            right: 5px;
+        }
+
         span{
             @include absolute(left 50%);
             @include translateX(-50%);
