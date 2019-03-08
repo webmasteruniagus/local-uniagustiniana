@@ -33,7 +33,7 @@ class SearchProgram extends FormBase {
         $form['search'] = array(
             '#type' => 'textfield',
             '#attributes' => [
-                'placeholder' => t('Ej: Diseño gráfico')
+                'placeholder' => t('Ej: Mecatrónica')
             ],
             '#autocomplete_route_name' => 'uniagustiniana.program_autocomplete',
         );
