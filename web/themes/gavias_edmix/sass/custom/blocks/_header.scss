@@ -9,7 +9,7 @@
     // Networks
     .topbar-left {
         >div {
-            @media (max-width: $screen-xs) {
+            @media (max-width: $screen-md) {
                 float: none;
                 text-align: center;
             }
@@ -156,17 +156,31 @@
 }
 
 // Header (Logo y menú principal)
-.menu--main .gva_menu {
-    > li > a {
-        letter-spacing: normal;
-        padding: {
-            left: 5px;
-            right: 5px;
+.menu--main {
+    .menu_rol {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .gva_menu {
+
+        > li > a {
+            letter-spacing: normal;
+            padding: {
+                left: 5px;
+                right: 5px;
+            }
+    
+            span{
+                @include absolute(left 50%);
+                @include translateX(-50%);
+            }
         }
 
-        span{
-            @include absolute(left 50%);
-            @include translateX(-50%);
+        @media (max-width: $screen-md) {
+            .menu-item--expanded  .icaret {
+                left: auto;
+                right: 0;
+            }
         }
     }
 }

@@ -39,9 +39,9 @@
         select_26 = ".field--name-field-color-texto",
         select_27 = ".services-news",
         select_28 = ".gsc-column",
-        select_29 = ".menu-bartop",
-        select_30 = ".topbar-right",
-        select_31 = ".topbar-close",
+        select_29 = ".gva-search-region",
+        select_30 = "#header",
+        select_31 = ".search-content",
 
         class_1 = "is--open",
         class_2 = "sidebar--fixed",
@@ -82,20 +82,28 @@
         function moveMenuRol(e) {
             let select1 = document.querySelector(select_6),
                 select2 = document.querySelector(select_7),
-                select3 = document.querySelector(select_4),
+                select3 = document.querySelector(select_4)
+                    ? document.querySelector(select_4)
+                    : false,
                 parent1 = document.querySelector(select_5),
                 parent2 = document.querySelector(select_25);
 
             if (e.matches) {
                 select2.classList.add(class_4);
-                select3.classList.add(class_4);
                 select1.parentNode.insertBefore(select2, select1);
-                select1.parentNode.insertBefore(select3, select1);
+
+                if (select3) {
+                    select3.classList.add(class_4);
+                    select1.parentNode.insertBefore(select3, select1);
+                }
             } else {
                 select2.classList.remove(class_4);
-                select3.classList.remove(class_4);
-                parent1.prepend(select3);
                 parent2.append(select2);
+                
+                if (select3) {
+                    select3.classList.remove(class_4);
+                    parent1.prepend(select3);
+                }
             }
         }
 
@@ -123,15 +131,18 @@
                 createVariableCss('scrollWidth', getScrollBarWidth());
 
                 // Escuchar cambio en media query
-                if (document.querySelector(select_4) != null) {
-                    mq1.addListener(moveMenuRol);
-                    moveMenuRol(mq1);
-                }
+                mq1.addListener(moveMenuRol);
+                moveMenuRol(mq1);
 
-                // Menú hamburguesa del menu top
-                $(select_29 + ', ' + select_31).on('click', function() {
-                    $(select_30).toggleClass(class_1);
-                });
+                if ($(select_29).length > 0) {
+                    $(select_29 + ' i').on('click', function() {
+                        $(select_31).css({
+                            position: 'fixed',
+                            top: $(select_30)[0].clientHeight,
+                            right: 0
+                        });
+                    });
+                }
             },
 
             move_networks: function() {

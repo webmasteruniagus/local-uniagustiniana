@@ -79,16 +79,20 @@
 }
 
 // Search - global
-.search-content {
-    top: 52px !important;
+header .area-main-menu .gva-search-region.show .search-content {
+    max-width: 500px;
+    width: 100%;
 
     #search-block-form { @include flexbox; }
 
-    @media (max-width: $screen-md) { top: 76px !important; }
-    
+    .js-form-type-search {
+        width: 100%;
+
+        input#edit-keys { width: 100%; }
+    }
+
     @media (max-width: $screen-xs) {
-        top: 52px !important;
-        left: calc((100vw / 1.7) * -1);
+        border-top: 1px solid rgba(0,0,0,.1);
     }
 }
 
