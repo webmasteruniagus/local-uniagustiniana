@@ -1,4 +1,4 @@
-uuid: 4d068c4f-084e-42aa-bcbd-451d299b0f28
+uuid: 735396f1-20fa-4d3c-bced-3035bd23f456
 langcode: es
 status: true
 dependencies:
@@ -10,15 +10,15 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: gaviassliderlayerslideunidades
+id: gaviassliderlayerfacultades
 theme: gavias_edmix
 region: other
 weight: 0
 provider: null
-plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____3'
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____9'
 settings:
-  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____3'
-  label: 'Gavias SliderLayer - Slide Unidades'
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____9'
+  label: 'Gavias SliderLayer - Facultades'
   provider: gavias_sliderlayer
   label_display: '0'
 visibility: {  }

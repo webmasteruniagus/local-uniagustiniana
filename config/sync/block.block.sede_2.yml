@@ -21,7 +21,7 @@ provider: null
 plugin: 'facet_block:sede_eventos'
 settings:
   id: 'facet_block:sede_eventos'
-  label: Sección
+  label: Unidades
   provider: facets
   label_display: visible
   block_id: sede_2

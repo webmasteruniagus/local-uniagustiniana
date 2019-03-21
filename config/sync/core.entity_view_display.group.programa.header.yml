@@ -9,6 +9,8 @@ dependencies:
     - field.field.group.programa.field_codigo_snies_8182
     - field.field.group.programa.field_color_principal
     - field.field.group.programa.field_color_secundario
+    - field.field.group.programa.field_color_texto
+    - field.field.group.programa.field_correo_de_contacto
     - field.field.group.programa.field_duracion
     - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
@@ -68,7 +70,7 @@ third_party_settings:
         ft:
           id: expert
           settings:
-            lb: '!Bienvenido¡, permitenos darle la bienvenida a conocer nuestra institución, diligencia los siguientes datos'
+            lb: '¡Bienvenido!, permítenos darle la bienvenida a conocer nuestra institución, diligencia los siguientes datos'
             prefix: ''
             lbw: true
             lbw-el: ''
@@ -204,6 +206,8 @@ hidden:
   field_ciudad: true
   field_color_principal: true
   field_color_secundario: true
+  field_color_texto: true
+  field_correo_de_contacto: true
   field_duracion: true
   field_facultad: true
   field_fecha_de_resolucion: true

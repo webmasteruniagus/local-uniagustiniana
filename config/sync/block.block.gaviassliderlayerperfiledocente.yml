@@ -1,4 +1,4 @@
-uuid: 3af2de39-605e-407c-9976-cbd3b8ee8b6b
+uuid: 52993f41-7c0a-4654-997d-301bda5d35ce
 langcode: es
 status: true
 dependencies:
@@ -10,15 +10,15 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: gaviassliderlayerslidersuba1
+id: gaviassliderlayerperfiledocente
 theme: gavias_edmix
 region: other
 weight: 0
 provider: null
-plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____2'
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____10'
 settings:
-  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____2'
-  label: 'Gavias SliderLayer - Slider Suba #1'
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____10'
+  label: 'Gavias SliderLayer - Perfile Docente'
   provider: gavias_sliderlayer
   label_display: '0'
 visibility: {  }

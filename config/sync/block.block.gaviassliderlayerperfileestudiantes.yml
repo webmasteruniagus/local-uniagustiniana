@@ -1,5 +1,5 @@
-uuid: 73a5c806-e69f-42af-bc1b-832c5a5334a8
-langcode: en
+uuid: 0d1864a5-8de1-487f-a767-92dde5af13a0
+langcode: es
 status: true
 dependencies:
   module:
@@ -10,15 +10,15 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: gaviassliderlayerslider1
+id: gaviassliderlayerperfileestudiantes
 theme: gavias_edmix
 region: other
 weight: 0
 provider: null
-plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____8'
 settings:
-  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____1'
-  label: 'Gavias SliderLayer - Slider #1'
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____8'
+  label: 'Gavias SliderLayer - Perfile Estudiantes'
   provider: gavias_sliderlayer
   label_display: '0'
 visibility: {  }

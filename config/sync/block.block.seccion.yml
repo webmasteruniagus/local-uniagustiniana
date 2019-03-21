@@ -21,7 +21,7 @@ provider: null
 plugin: 'facet_block:seccion'
 settings:
   id: 'facet_block:seccion'
-  label: Sección
+  label: Unidades
   provider: facets
   label_display: visible
   block_id: seccion
