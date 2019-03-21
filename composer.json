@@ -63,7 +63,8 @@
         "drupal/color_field": "^2.0",
         "drupal/field_group_easy_responsive_tabs": "^1.0",
         "drupal/smtp": "^1.0@beta",
-        "drupal/page_manager": "^4.0@beta"
+        "drupal/page_manager": "^4.0@beta",
+        "drupal/google_tag": "^1.1"
     },
     "require-dev": {
         "behat/mink": "~1.7",
