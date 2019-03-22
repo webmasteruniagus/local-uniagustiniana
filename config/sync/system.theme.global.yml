@@ -1,8 +1,8 @@
 favicon:
-  mimetype: image/vnd.microsoft.icon
-  path: ''
+  mimetype: image/jpeg
+  path: 'public://WhatsApp Image 2019-03-22 at 10.58.37 AM.jpeg'
   url: ''
-  use_default: true
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true

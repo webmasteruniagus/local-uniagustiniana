@@ -7,9 +7,9 @@ logo:
   use_default: 1
   path: 'public://logo.png'
 favicon:
-  use_default: 1
-  path: 'public://favicon.ico'
-  mimetype: image/vnd.microsoft.icon
+  use_default: 0
+  path: 'public://WhatsApp Image 2019-03-22 at 10.58.37 AM_0.jpeg'
+  mimetype: image/jpeg
 theme_skin: ''
 enable_customize: '0'
 sticky_menu: '0'
