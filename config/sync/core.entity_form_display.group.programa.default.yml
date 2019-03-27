@@ -11,10 +11,12 @@ dependencies:
     - field.field.group.programa.field_color_texto
     - field.field.group.programa.field_correo_de_contacto
     - field.field.group.programa.field_duracion
+    - field.field.group.programa.field_estudio_de_homologacion
     - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
     - field.field.group.programa.field_frase_plan_de_estudios
     - field.field.group.programa.field_imagen
+    - field.field.group.programa.field_inscripcion
     - field.field.group.programa.field_materias
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
@@ -26,6 +28,7 @@ dependencies:
     - field.field.group.programa.field_tipo_de_formacion
     - field.field.group.programa.field_titulo
     - field.field.group.programa.field_total_creditos
+    - field.field.group.programa.field_valor_semestre
     - field.field.group.programa.field_vigencia
     - field.field.group.programa.field_vision
     - group.type.programa
@@ -96,6 +99,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_estudio_de_homologacion:
+    weight: 29
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_facultad:
     weight: 1
     settings: {  }
@@ -123,6 +133,13 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_inscripcion:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_materias:
     type: entity_reference_paragraphs
@@ -200,6 +217,13 @@ content:
     region: content
   field_total_creditos:
     weight: 16
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_valor_semestre:
+    weight: 30
     settings:
       placeholder: ''
     third_party_settings: {  }

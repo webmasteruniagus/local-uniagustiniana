@@ -11,10 +11,12 @@ dependencies:
     - field.field.group.programa.field_color_texto
     - field.field.group.programa.field_correo_de_contacto
     - field.field.group.programa.field_duracion
+    - field.field.group.programa.field_estudio_de_homologacion
     - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
     - field.field.group.programa.field_frase_plan_de_estudios
     - field.field.group.programa.field_imagen
+    - field.field.group.programa.field_inscripcion
     - field.field.group.programa.field_materias
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
@@ -26,6 +28,7 @@ dependencies:
     - field.field.group.programa.field_tipo_de_formacion
     - field.field.group.programa.field_titulo
     - field.field.group.programa.field_total_creditos
+    - field.field.group.programa.field_valor_semestre
     - field.field.group.programa.field_vigencia
     - field.field.group.programa.field_vision
     - group.type.programa
@@ -115,10 +118,12 @@ hidden:
   field_codigo_snies_8182: true
   field_correo_de_contacto: true
   field_duracion: true
+  field_estudio_de_homologacion: true
   field_facultad: true
   field_fecha_de_resolucion: true
   field_frase_plan_de_estudios: true
   field_imagen: true
+  field_inscripcion: true
   field_materias: true
   field_metodologia: true
   field_mision: true
@@ -130,6 +135,7 @@ hidden:
   field_tipo_de_formacion: true
   field_titulo: true
   field_total_creditos: true
+  field_valor_semestre: true
   field_vigencia: true
   field_vision: true
   label: true

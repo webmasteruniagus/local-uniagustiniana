@@ -1,0 +1,20 @@
+uuid: 834c7776-6144-43ef-aabb-00f2041e7041
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_valor_semestre
+field_name: field_valor_semestre
+entity_type: group
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

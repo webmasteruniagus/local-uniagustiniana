@@ -1,0 +1,20 @@
+uuid: 91ade6e0-41ce-4bca-ba07-fc4d8feb8e80
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_inscripcion
+field_name: field_inscripcion
+entity_type: group
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

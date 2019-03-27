@@ -1,0 +1,23 @@
+uuid: c2be9079-9eb1-4eb5-9701-87e7993327bd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_valor_semestre
+    - group.type.programa
+id: group.programa.field_valor_semestre
+field_name: field_valor_semestre
+entity_type: group
+bundle: programa
+label: 'Valor semestre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: integer

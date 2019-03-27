@@ -12,10 +12,12 @@ dependencies:
     - field.field.group.programa.field_color_texto
     - field.field.group.programa.field_correo_de_contacto
     - field.field.group.programa.field_duracion
+    - field.field.group.programa.field_estudio_de_homologacion
     - field.field.group.programa.field_facultad
     - field.field.group.programa.field_fecha_de_resolucion
     - field.field.group.programa.field_frase_plan_de_estudios
     - field.field.group.programa.field_imagen
+    - field.field.group.programa.field_inscripcion
     - field.field.group.programa.field_materias
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
@@ -27,6 +29,7 @@ dependencies:
     - field.field.group.programa.field_tipo_de_formacion
     - field.field.group.programa.field_titulo
     - field.field.group.programa.field_total_creditos
+    - field.field.group.programa.field_valor_semestre
     - field.field.group.programa.field_vigencia
     - field.field.group.programa.field_vision
     - group.type.programa
@@ -58,9 +61,13 @@ third_party_settings:
         - 'dynamic_block_field:group-formulario'
         - group_d
         - label
+        - field_facultad
         - field_codigo_snies_8182
         - field_sede
         - group_formulario
+        - field_inscripcion
+        - field_estudio_de_homologacion
+        - field_valor_semestre
     fields:
       'dynamic_block_field:group-formulario':
         plugin_id: 'dynamic_block_field:group-formulario'
@@ -132,8 +139,12 @@ third_party_settings:
     group_d:
       children:
         - label
+        - field_facultad
         - field_codigo_snies_8182
         - field_sede
+        - field_inscripcion
+        - field_estudio_de_homologacion
+        - field_valor_semestre
       parent_name: group_contenido_sobre_la_imagen
       weight: 20
       format_type: html_element
@@ -154,11 +165,28 @@ mode: header
 content:
   field_codigo_snies_8182:
     type: string
-    weight: 22
+    weight: 23
     region: ds_content
     label: inline
     settings:
       link_to_entity: false
+    third_party_settings: {  }
+  field_estudio_de_homologacion:
+    type: number_integer
+    weight: 26
+    region: ds_content
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_facultad:
+    type: entity_reference_label
+    weight: 22
+    region: ds_content
+    label: inline
+    settings:
+      link: true
     third_party_settings: {  }
   field_imagen:
     weight: 1
@@ -176,13 +204,38 @@ content:
             classes: {  }
     type: responsive_image
     region: ds_content
+  field_inscripcion:
+    type: number_integer
+    weight: 25
+    region: ds_content
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_sede:
     type: entity_reference_label
-    weight: 23
+    weight: 24
     region: ds_content
     label: inline
     settings:
       link: true
+    third_party_settings: {  }
+  field_valor_semestre:
+    type: number_integer
+    weight: 27
+    region: ds_content
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
   label:
     type: string
@@ -209,7 +262,6 @@ hidden:
   field_color_texto: true
   field_correo_de_contacto: true
   field_duracion: true
-  field_facultad: true
   field_fecha_de_resolucion: true
   field_frase_plan_de_estudios: true
   field_materias: true

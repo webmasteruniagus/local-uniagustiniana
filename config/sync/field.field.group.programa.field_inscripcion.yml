@@ -1,0 +1,23 @@
+uuid: 3eca0552-1b55-4823-bcda-e59137ff2dc4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_inscripcion
+    - group.type.programa
+id: group.programa.field_inscripcion
+field_name: field_inscripcion
+entity_type: group
+bundle: programa
+label: Inscripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: integer

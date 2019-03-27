@@ -1,0 +1,20 @@
+uuid: 82aeb864-4ae9-4ad8-8a70-f098677903eb
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_estudio_de_homologacion
+field_name: field_estudio_de_homologacion
+entity_type: group
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
