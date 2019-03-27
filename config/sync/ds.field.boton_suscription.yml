@@ -1,0 +1,11 @@
+id: boton_suscription
+label: 'Boton suscription'
+ui_limit: ''
+properties:
+  content:
+    value: '<a href="https://siga.uniagustiniana.edu.co/paquetes/modulo_preinscripcion/app.php/preinscripcion" >Incripción</a>'
+    format: full_html
+type: token
+type_label: 'Token field'
+entities:
+  group: group

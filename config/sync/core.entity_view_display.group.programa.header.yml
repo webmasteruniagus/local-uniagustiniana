@@ -57,8 +57,8 @@ third_party_settings:
     regions:
       ds_content:
         - field_imagen
+        - 'dynamic_token_field:group-boton_suscription'
         - group_contenido_sobre_la_imagen
-        - 'dynamic_block_field:group-formulario'
         - group_d
         - label
         - field_facultad
@@ -69,45 +69,18 @@ third_party_settings:
         - field_estudio_de_homologacion
         - field_valor_semestre
     fields:
-      'dynamic_block_field:group-formulario':
-        plugin_id: 'dynamic_block_field:group-formulario'
-        weight: 4
-        label: above
+      'dynamic_token_field:group-boton_suscription':
+        plugin_id: 'dynamic_token_field:group-boton_suscription'
+        weight: 0
+        label: hidden
         formatter: default
-        ft:
-          id: expert
-          settings:
-            lb: '¡Bienvenido!, permítenos darle la bienvenida a conocer nuestra institución, diligencia los siguientes datos'
-            prefix: ''
-            lbw: true
-            lbw-el: ''
-            lbw-cl: title
-            lbw-at: ''
-            lb-col: true
-            ow-el: ''
-            ow-cl: form-contact-wrapper
-            ow-at: ''
-            fis: true
-            fis-el: ''
-            fis-cl: form-contact--wrapper
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
   field_group:
     group_contenido_sobre_la_imagen:
       children:
         - group_d
         - group_formulario
       parent_name: ''
-      weight: 2
+      weight: 1
       format_type: html_element
       format_settings:
         label: 'Contenido sobre la imagen'
@@ -122,7 +95,7 @@ third_party_settings:
       label: 'Contenido sobre la imagen'
     group_formulario:
       children:
-        - 'dynamic_block_field:group-formulario'
+        - 'dynamic_token_field:group-boton_suscription'
       parent_name: group_contenido_sobre_la_imagen
       weight: 24
       format_type: html_element
@@ -196,7 +169,7 @@ content:
       link: true
     third_party_settings: {  }
   field_imagen:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       responsive_image_style: imagen_principal_del_programa
