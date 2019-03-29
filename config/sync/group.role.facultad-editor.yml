@@ -1,0 +1,33 @@
+uuid: 4950fb47-b620-4b7a-bc6e-3cc7356ecc6f
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.facultad
+id: facultad-editor
+label: Editor
+weight: 6
+internal: false
+audience: member
+group_type: facultad
+permissions_ui: true
+permissions:
+  - 'edit group'
+  - 'view group'
+  - 'access group_node overview'
+  - 'create group_node:event entity'
+  - 'delete own group_node:event entity'
+  - 'update own group_node:event entity'
+  - 'view group_node:event entity'
+  - 'create group_node:event content'
+  - 'delete own group_node:event content'
+  - 'update own group_node:event content'
+  - 'view group_node:event content'
+  - 'create group_node:news entity'
+  - 'delete own group_node:news entity'
+  - 'update own group_node:news entity'
+  - 'view group_node:news entity'
+  - 'create group_node:news content'
+  - 'delete own group_node:news content'
+  - 'update own group_node:news content'
+  - 'view group_node:news content'

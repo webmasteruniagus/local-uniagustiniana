@@ -1,0 +1,49 @@
+uuid: 420523c4-36e6-492f-8600-9dca6f0943fe
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.unidad
+id: unidad-editor
+label: Editor
+weight: 5
+internal: false
+audience: member
+group_type: unidad
+permissions_ui: true
+permissions:
+  0: 'access group_node overview'
+  1: 'create group_node:event entity'
+  2: 'delete own group_node:event entity'
+  3: 'update own group_node:event entity'
+  4: 'create group_node:event content'
+  5: 'delete own group_node:event content'
+  6: 'update own group_node:event content'
+  7: 'view group_node:event content'
+  8: 'create group_node:news entity'
+  9: 'delete own group_node:news entity'
+  10: 'view group_node:news entity'
+  11: 'create group_node:news content'
+  12: 'delete own group_node:news content'
+  13: 'update own group_node:news content'
+  14: 'view group_node:news content'
+  15: 'create group_node:pagina_basica entity'
+  16: 'delete own group_node:pagina_basica entity'
+  17: 'update own group_node:pagina_basica entity'
+  18: 'view group_node:pagina_basica entity'
+  19: 'create group_node:pagina_basica content'
+  20: 'delete own group_node:pagina_basica content'
+  21: 'update own group_node:pagina_basica content'
+  22: 'view group_node:pagina_basica content'
+  23: 'create group_node:servicios entity'
+  24: 'delete own group_node:servicios entity'
+  25: 'update own group_node:servicios entity'
+  26: 'view group_node:servicios entity'
+  27: 'create group_node:servicios content'
+  28: 'delete own group_node:servicios content'
+  29: 'update own group_node:servicios content'
+  30: 'view group_node:servicios content'
+  31: 'edit group'
+  32: 'view group'
+  39: 'view group_node:event entity'
+  46: 'update own group_node:news entity'

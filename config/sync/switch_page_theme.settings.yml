@@ -1,0 +1,16 @@
+spt_table:
+  -
+    status: '1'
+    pages: "/group/*/members\r\n/group/*/nodes"
+    theme: seven
+    weight: '-10'
+    roles:
+      anonymous: 0
+      authenticated: 0
+      administrator: 0
+      comunicaciones: 0
+      editor: 0
+    language:
+      en: 0
+      es: 0
+    remove: Remove

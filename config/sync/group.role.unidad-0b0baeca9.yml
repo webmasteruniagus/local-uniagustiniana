@@ -1,0 +1,17 @@
+uuid: 6a2f8994-bb95-460e-92bf-ad8c7392e4a1
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.unidad
+  enforced:
+    config:
+      - user.role.editor
+id: unidad-0b0baeca9
+label: Editor
+weight: 4
+internal: true
+audience: outsider
+group_type: unidad
+permissions_ui: false
+permissions: {  }

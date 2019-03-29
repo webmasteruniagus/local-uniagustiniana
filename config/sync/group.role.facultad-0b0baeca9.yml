@@ -1,0 +1,17 @@
+uuid: 8d87b56c-d3e1-4e6f-8806-8ddbcbd56cff
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.facultad
+  enforced:
+    config:
+      - user.role.editor
+id: facultad-0b0baeca9
+label: Editor
+weight: 4
+internal: true
+audience: outsider
+group_type: facultad
+permissions_ui: false
+permissions: {  }

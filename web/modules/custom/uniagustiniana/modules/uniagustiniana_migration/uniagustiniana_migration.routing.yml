@@ -7,7 +7,7 @@ uniagustiniana_migration.main:
     _form: '\Drupal\uniagustiniana_migration\Form\MigrationNews'
     _title: 'Uniagustiniana migracion noticias'
   requirements:
-    _permission: 'administer uniagustiniana_main_menu'
+    _permission: 'administer site configuration'
 
 uniagustiniana_migration.events:
   path: '/admin/uniagustiniana/migration_events'
@@ -15,5 +15,4 @@ uniagustiniana_migration.events:
     _form: '\Drupal\uniagustiniana_migration\Form\MigrationEvents'
     _title: 'Uniagustiniana migracion eventos'
   requirements:
-    _permission: 'administer uniagustiniana_main_menu'
-
+    _permission: 'administer site configuration'

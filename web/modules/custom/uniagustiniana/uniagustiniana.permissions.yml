@@ -1,0 +1,4 @@
+'administer uniagustiniana_main_menu':
+  title: 'Uniagustiniana main menu'
+  description: 'This permission allow user to main menu.'
+  restrict access: TRUE

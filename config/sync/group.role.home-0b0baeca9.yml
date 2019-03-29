@@ -1,0 +1,17 @@
+uuid: 41f04c28-2012-40aa-9f25-f95c77d19974
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.home
+  enforced:
+    config:
+      - user.role.editor
+id: home-0b0baeca9
+label: Editor
+weight: 4
+internal: true
+audience: outsider
+group_type: home
+permissions_ui: false
+permissions: {  }

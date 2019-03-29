@@ -1,0 +1,41 @@
+uuid: 3dccc47b-3abb-410f-b47c-812b4991f6c0
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.home
+id: home-editor
+label: Editor
+weight: 7
+internal: false
+audience: member
+group_type: home
+permissions_ui: true
+permissions:
+  - 'edit group'
+  - 'view group'
+  - 'access group_node overview'
+  - 'create group_node:event entity'
+  - 'delete own group_node:event entity'
+  - 'update own group_node:event entity'
+  - 'view group_node:event entity'
+  - 'create group_node:event content'
+  - 'delete own group_node:event content'
+  - 'update own group_node:event content'
+  - 'view group_node:event content'
+  - 'create group_node:news entity'
+  - 'delete own group_node:news entity'
+  - 'update own group_node:news entity'
+  - 'view group_node:news entity'
+  - 'create group_node:news content'
+  - 'delete own group_node:news content'
+  - 'update own group_node:news content'
+  - 'view group_node:news content'
+  - 'create group_node:pagina_basica entity'
+  - 'delete own group_node:pagina_basica entity'
+  - 'update own group_node:pagina_basica entity'
+  - 'view group_node:pagina_basica entity'
+  - 'create group_node:pagina_basica content'
+  - 'delete own group_node:pagina_basica content'
+  - 'update own group_node:pagina_basica content'
+  - 'view group_node:pagina_basica content'

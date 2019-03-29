@@ -1,0 +1,33 @@
+uuid: d72a55b1-5da7-4036-8a86-26d4c44142a0
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.programa
+id: programa-editor
+label: Editor
+weight: 8
+internal: false
+audience: member
+group_type: programa
+permissions_ui: true
+permissions:
+  - 'edit group'
+  - 'view group'
+  - 'access group_node overview'
+  - 'create group_node:event entity'
+  - 'delete own group_node:event entity'
+  - 'update own group_node:event entity'
+  - 'view group_node:event entity'
+  - 'create group_node:event content'
+  - 'delete own group_node:event content'
+  - 'update own group_node:event content'
+  - 'view group_node:event content'
+  - 'create group_node:news entity'
+  - 'delete own group_node:news entity'
+  - 'update own group_node:news entity'
+  - 'view group_node:news entity'
+  - 'create group_node:news content'
+  - 'delete own group_node:news content'
+  - 'update own group_node:news content'
+  - 'view group_node:news content'

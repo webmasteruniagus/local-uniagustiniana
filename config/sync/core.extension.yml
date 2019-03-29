@@ -82,6 +82,7 @@ module:
   social_media: 0
   state_machine: 0
   statistics: 0
+  switch_page_theme: 0
   system: 0
   taxonomy: 0
   text: 0

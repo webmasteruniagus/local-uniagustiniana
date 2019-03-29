@@ -1,0 +1,17 @@
+uuid: f6e2787e-4d5b-4f05-bf3f-32a30dad9c5a
+langcode: es
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 4
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer uniagustiniana_main_menu'
+  - 'create documentos entities'
+  - 'create terms in blogs'
+  - 'edit any documentos entities'
+  - 'edit terms in blogs'
+  - 'view the administration theme'
