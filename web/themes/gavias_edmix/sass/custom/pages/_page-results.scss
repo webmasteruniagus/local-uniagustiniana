@@ -36,6 +36,23 @@
     }
 
     .pager ul { padding: 0; }
+
+    .bef-exposed-form {
+        @include flexbox;
+        @include align-items(center);
+        @include flex-wrap(wrap);
+
+        label { display: none; }
+        select { height: 35px; }
+        input[type="submit"] {
+            margin: 15px 0 20px;
+            @media (max-width: 991px) { margin: 0; }
+        }
+
+        @media (max-width: 991px) {
+            > div { padding-right: 0; }
+        }
+    }
 }
 
 
