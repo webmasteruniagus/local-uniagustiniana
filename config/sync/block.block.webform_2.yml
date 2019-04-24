@@ -20,7 +20,7 @@ provider: null
 plugin: webform_block
 settings:
   id: webform_block
-  label: Contactenos
+  label: Contáctenos
   provider: webform
   label_display: visible
   webform_id: formulario_contacto

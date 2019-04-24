@@ -278,7 +278,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 8
+          items_per_page: 30
           offset: null
       css_class: text-center
       style:

@@ -1,9 +1,9 @@
-uuid: 7323f96a-3dd4-4fff-b572-4344175f7472
-langcode: en
+uuid: 4c42a840-62ca-4de8-b216-5cf82ba63937
+langcode: es
 status: true
 dependencies:
   content:
-    - 'block_content:basic:7e26e9e5-a2f4-4e12-9643-7c8954f954ef'
+    - 'block_content:basic:8a7132b5-5ae1-4ec8-92d1-8ce0a1124b45'
   module:
     - block_content
     - gaviasthemer
@@ -12,15 +12,15 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: sociallinksfooter
+id: chat
 theme: gavias_edmix
 region: before_footer
-weight: -27
+weight: -26
 provider: null
-plugin: 'block_content:7e26e9e5-a2f4-4e12-9643-7c8954f954ef'
+plugin: 'block_content:8a7132b5-5ae1-4ec8-92d1-8ce0a1124b45'
 settings:
-  id: 'block_content:7e26e9e5-a2f4-4e12-9643-7c8954f954ef'
-  label: 'Conectate con nosotros'
+  id: 'block_content:8a7132b5-5ae1-4ec8-92d1-8ce0a1124b45'
+  label: Chat
   provider: block_content
   label_display: '0'
   status: true

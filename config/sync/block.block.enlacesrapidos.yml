@@ -20,7 +20,7 @@ provider: null
 plugin: 'block_content:bc6fe579-eddc-4e8c-9626-05523c69c2f6'
 settings:
   id: 'block_content:bc6fe579-eddc-4e8c-9626-05523c69c2f6'
-  label: 'Enlaces Rapidos'
+  label: 'Enlaces Rápidos'
   provider: block_content
   label_display: visible
   status: true

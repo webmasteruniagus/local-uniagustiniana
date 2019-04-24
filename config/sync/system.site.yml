@@ -1,6 +1,6 @@
 uuid: e652c8c3-1b8e-40bc-bced-de3282f72a01
 name: 'Universidad Agustiniana'
-mail: webmaster@uniagustiniana.edu.co
+mail: info@uniagustiniana.edu.co
 slogan: 'Porque Uniagustiniana Es creer en ti'
 page:
   403: ''
@@ -12,3 +12,4 @@ langcode: es
 default_langcode: es
 _core:
   default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''
