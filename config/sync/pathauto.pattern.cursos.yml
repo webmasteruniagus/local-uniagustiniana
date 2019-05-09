@@ -1,0 +1,23 @@
+uuid: c8a45afa-091e-4492-815e-8ca969616000
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - ctools
+id: cursos
+label: Cursos
+type: 'canonical_entities:commerce_product'
+pattern: 'curso/[commerce_product:title]'
+selection_criteria:
+  d50fb675-5f47-40ac-9da8-dbbaf331b49c:
+    id: 'entity_bundle:commerce_product'
+    bundles:
+      course: course
+    negate: false
+    context_mapping:
+      commerce_product: commerce_product
+    uuid: d50fb675-5f47-40ac-9da8-dbbaf331b49c
+selection_logic: and
+weight: -5
+relationships: {  }

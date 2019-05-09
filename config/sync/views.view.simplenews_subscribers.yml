@@ -21,7 +21,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Máster
     position: 0
     display_options:
       access:
@@ -44,8 +44,8 @@ display:
         options:
           submit_button: Aplicar
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -57,18 +57,18 @@ display:
           id: 0
           total_pages: null
           tags:
-            previous: '‹ previous'
-            next: 'next ›'
-            first: '« first'
-            last: 'last »'
+            previous: '‹ anterior'
+            next: 'siguiente ›'
+            first: '« primero'
+            last: 'última »'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Elementos por página'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Todo -'
             offset: false
-            offset_label: Offset
+            offset_label: Desplazamiento
           quantity: 9
       style:
         type: table
@@ -85,7 +85,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Email
+          label: 'Correo electrónico'
           exclude: false
           alter:
             alter_text: false
@@ -133,7 +133,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Username
+          label: 'Nombre de usuario'
           exclude: false
           alter:
             alter_text: false
@@ -244,7 +244,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Active
+          label: Activo
           exclude: false
           alter:
             alter_text: false
@@ -299,7 +299,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Created
+          label: Creado
           exclude: false
           alter:
             alter_text: false
@@ -411,7 +411,7 @@ display:
           exposed: true
           expose:
             operator_id: mail_op
-            label: Email
+            label: 'Correo electrónico'
             description: ''
             use_operator: false
             operator: mail_op
@@ -491,7 +491,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: Active
+            label: Activo
             description: ''
             use_operator: false
             operator: status_op
@@ -532,7 +532,7 @@ display:
           exposed: true
           expose:
             operator_id: subscriptions_status_op
-            label: Status
+            label: Estado
             description: ''
             use_operator: false
             operator: subscriptions_status_op
@@ -593,7 +593,7 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: Página
     position: 1
     display_options:
       display_extenders: {  }

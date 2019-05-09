@@ -342,12 +342,12 @@ display:
         - url
       tags:
         - 'config:core.entity_view_display.paragraph.materia.default'
+        - 'config:core.entity_view_display.paragraph.materias_por_semestre.default'
         - 'config:core.entity_view_display.paragraph.paragraphs_images.default'
         - 'config:core.entity_view_display.paragraph.paragraphs_text.default'
         - 'config:core.entity_view_display.paragraph.paragraphs_video.default'
-        - 'config:core.entity_view_display.paragraph.titulo_resumen.default'
-        - 'config:core.entity_view_display.paragraph.materias_por_semestre.default'
         - 'config:core.entity_view_display.paragraph.requisitos_de_ingreso.default'
+        - 'config:core.entity_view_display.paragraph.titulo_resumen.default'
   block_3:
     display_plugin: block
     id: block_3

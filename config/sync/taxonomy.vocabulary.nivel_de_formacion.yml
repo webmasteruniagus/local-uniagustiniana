@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Nivel de formación'
 vid: nivel_de_formacion
 description: ''
-hierarchy: 0
 weight: 0

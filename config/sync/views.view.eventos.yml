@@ -1065,12 +1065,12 @@ display:
                 operator: '>='
                 value:
                   type: offset
-                  value: now
+                  value: '-1 day'
                   min: ''
                   max: ''
               2:
                 title: 'Eventos finalizados'
-                operator: '<'
+                operator: '<='
                 value:
                   type: offset
                   value: now
@@ -1146,7 +1146,8 @@ display:
       path: eventos
       exposed_block: false
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
     cache_metadata:

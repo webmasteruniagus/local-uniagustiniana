@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.servicios.body
+    - field.field.node.servicios.field_image
     - node.type.servicios
   module:
     - text

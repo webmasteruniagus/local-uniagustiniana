@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.group.teaser
     - group.type.facultad
-    - group.type.programa
   module:
     - group
 id: facultad
