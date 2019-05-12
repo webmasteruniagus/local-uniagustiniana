@@ -11,7 +11,7 @@ gavias_sl_group.admin.add:
   defaults:
     _title: 'Add Group Slider'
     _form: '\Drupal\gavias_sliderlayer\Form\GroupForm'
-  requirements: 
+  requirements:
     _permission: 'administer gaviassliderlayer'
 
 gavias_sl_group.admin.clone:
@@ -19,7 +19,7 @@ gavias_sl_group.admin.clone:
   defaults:
     _title: 'Add Group Slider'
     _form: '\Drupal\gavias_sliderlayer\Form\GroupClone'
-  requirements: 
+  requirements:
     _permission: 'administer gaviassliderlayer'
 
 gavias_sl_group.admin.config:
@@ -86,7 +86,7 @@ gavias_sl_sliders.admin.form:
   defaults:
     _title: 'Edit Slider'
     _controller: '\Drupal\gavias_sliderlayer\Controller\SliderController::gavias_sl_sliders_edit'
-  requirements: 
+  requirements:
     _permission: 'administer gaviassliderlayer'
 
 gavias_sl_sliders.admin.save:
@@ -94,7 +94,7 @@ gavias_sl_sliders.admin.save:
   defaults:
     _title: 'Edit Slider'
     _controller: '\Drupal\gavias_sliderlayer\Controller\SliderController::gavias_sliderlayer_save'
-  requirements: 
+  requirements:
     _permission: 'administer gaviassliderlayer'
 
 gavias_sl_sliders.admin.duplicate:
@@ -102,7 +102,7 @@ gavias_sl_sliders.admin.duplicate:
   defaults:
     _title: 'Slider Duplicate'
     _form: '\Drupal\gavias_sliderlayer\Form\SliderDuplicate'
-  requirements: 
+  requirements:
     _permission: 'administer gaviassliderlayer'
 
 # File slider layer
@@ -119,5 +119,13 @@ gavias_sliderlayer.admin.get_images_upload:
   defaults:
     _title: 'Save configuration of Gavias SliderLayer'
     _controller: '\Drupal\gavias_sliderlayer\Controller\FileController::get_images_upload'
+  requirements:
+    _permission: 'administer gaviassliderlayer'
+
+gavias_sliderlayer.config_slider:
+  path: '/admin/uniagustiniana/slider'
+  defaults:
+    _form: '\Drupal\gavias_sliderlayer\Form\ConfigurationForm'
+    _title: 'Configuracion Slider'
   requirements:
     _permission: 'administer gaviassliderlayer'

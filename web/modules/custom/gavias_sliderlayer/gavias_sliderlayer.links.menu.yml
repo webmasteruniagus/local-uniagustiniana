@@ -4,3 +4,10 @@ gavias_sl_group.admin:
   parent: system.admin_structure
   route_name: gavias_sl_group.admin
 
+gavias_sliderlayer.config_slider:
+  title: 'Gavias Slider Config'
+  route_name: gavias_sliderlayer.config_slider
+  route_parameters: { package: 'Slider' }
+  description: 'Configracion slider principal'
+  parent: uniagustiniana.main
+  weight: 98

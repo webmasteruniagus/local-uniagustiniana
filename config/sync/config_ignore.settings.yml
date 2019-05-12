@@ -1,5 +1,6 @@
 ignored_config_entities:
-  - google_tag.settings
+  0: google_tag.settings
+  2: gavias_sliderlayer.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
 langcode: es
