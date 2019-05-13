@@ -24,3 +24,7 @@ web/themes/*/docs
 web/sites/*/settings.local.php
 web/sites/development.services.yml
 web/sites/*/services.yml
+
+# Ignore config chat
+
+chat/configs/config.yml
