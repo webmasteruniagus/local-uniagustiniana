@@ -309,7 +309,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Status
+          label: Estado
           exclude: false
           alter:
             alter_text: false
@@ -354,7 +354,7 @@ display:
           type: boolean
           settings:
             format: custom
-            format_custom_true: Published
+            format_custom_true: Publicado
             format_custom_false: Unpublished
           group_column: value
           group_columns: {  }
@@ -793,7 +793,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: Published
+                title: Publicado
                 operator: '='
                 value: '1'
               2:
@@ -925,7 +925,7 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: Página
     position: 1
     display_options:
       display_extenders: {  }
