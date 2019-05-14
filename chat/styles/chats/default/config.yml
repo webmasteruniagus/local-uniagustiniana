@@ -8,7 +8,7 @@ chat:
         resizable: true
     # These params are used to customize chat popup.
     iframe:
-        css: iframe.css
+        css: custom.css
 
 mail:
     # These params are used for send mail windows opened via JavaScript's window.open.
