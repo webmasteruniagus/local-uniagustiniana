@@ -14,15 +14,18 @@
   width: 510px;
   height: 480px;
   margin: 0;
+  margin-bottom: -7px;
   padding: 0px;
   outline: 0;
   overflow: hidden;
   z-index: 100;
   background: url("images/ajax-loader.gif") center center no-repeat #f1f2f2;
-  border: 1px solid #aaa;
-  box-shadow: 0 1px 1px 1px #ddd;
-  -moz-box-shadow: 0 1px 1px 1px #ddd;
-  -webkit-box-shadow: 0 1px 1px 1px #ddd;
+  border: 1px solid #283646;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
+}
+
+.mibew-chat-frame #page-title {
+  display: none;
 }
 
 @media (max-width: 480px) {
