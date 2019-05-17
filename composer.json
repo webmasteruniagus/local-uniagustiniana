@@ -70,7 +70,8 @@
         "drupal/switch_page_theme": "^1.0",
         "drupal/better_exposed_filters": "^3.0@alpha",
         "drupal/shortcode": "^1.0@RC",
-        "drupal/mailchimp": "^1.8"
+        "drupal/mailchimp": "^1.8",
+        "drupal/seo_checklist": "^4.1"
     },
     "require-dev": {
         "behat/mink": "~1.7",

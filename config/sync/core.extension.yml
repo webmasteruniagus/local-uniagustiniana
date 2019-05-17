@@ -5,6 +5,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  checklistapi: 0
   ckeditor: 0
   color: 0
   color_field: 0
@@ -80,6 +81,7 @@ module:
   search: 0
   search_api: 0
   search_api_db: 0
+  seo_checklist: 0
   shortcode: 0
   shortcode_basic_tags: 0
   shortcode_example: 0
