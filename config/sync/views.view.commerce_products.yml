@@ -20,7 +20,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Máster
     position: 0
     display_options:
       access:
@@ -43,8 +43,8 @@ display:
         options:
           submit_button: Filtro
           reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -187,7 +187,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Title
+          label: Título
           exclude: false
           alter:
             alter_text: false
@@ -364,7 +364,7 @@ display:
           settings:
             format: custom
             format_custom_true: Publicado
-            format_custom_false: Unpublished
+            format_custom_false: 'No publicado'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -552,7 +552,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: Título
             description: ''
             use_operator: false
             operator: title_op

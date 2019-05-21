@@ -20,7 +20,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Máster
     position: 0
     display_options:
       access:
@@ -43,8 +43,8 @@ display:
         options:
           submit_button: Aplicar
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -58,8 +58,8 @@ display:
           tags:
             previous: ‹‹
             next: ››
-            first: '« First'
-            last: 'Última »'
+            first: '« Primero'
+            last: 'Último »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -179,7 +179,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Title
+          label: Título
           exclude: false
           alter:
             alter_text: false
@@ -244,7 +244,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Content type'
+          label: 'Tipo de contenido'
           exclude: false
           alter:
             alter_text: false
@@ -355,7 +355,7 @@ display:
           settings:
             format: custom
             format_custom_true: Publicado
-            format_custom_false: Unpublished
+            format_custom_false: 'No publicado'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -767,7 +767,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Published status'
+            label: 'Estado de publicación'
             description: ''
             use_operator: false
             operator: status_op
@@ -782,7 +782,7 @@ display:
               group_admin: '0'
           is_grouped: true
           group_info:
-            label: 'Published status'
+            label: 'Estado de publicación'
             description: ''
             identifier: status
             optional: true
@@ -797,7 +797,7 @@ display:
                 operator: '='
                 value: '1'
               2:
-                title: Unpublished
+                title: 'No publicado'
                 operator: '='
                 value: '0'
           entity_type: node
@@ -858,7 +858,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No content available.'
+          content: 'No hay contenido disponible.'
           plugin_id: text_custom
       relationships:
         group_content:

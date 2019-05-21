@@ -68,8 +68,8 @@ display:
         options:
           submit_button: Aplicar
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -181,8 +181,8 @@ display:
           tags:
             previous: '‹ Anterior'
             next: 'Siguiente >'
-            first: '« First'
-            last: 'Última »'
+            first: '« Primero'
+            last: 'Último »'
           quantity: 9
       query:
         type: views_query
@@ -241,7 +241,7 @@ display:
       arguments: {  }
       display_extenders: {  }
     display_plugin: default
-    display_title: Master
+    display_title: Máster
     id: default
     position: 0
     cache_metadata:

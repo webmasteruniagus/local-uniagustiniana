@@ -71,7 +71,11 @@
         "drupal/better_exposed_filters": "^3.0@alpha",
         "drupal/shortcode": "^1.0@RC",
         "drupal/mailchimp": "^1.8",
-        "drupal/seo_checklist": "^4.1"
+        "drupal/seo_checklist": "^4.1",
+        "drupal/coffee": "^1.0@beta",
+        "drupal/hreflang": "^1.1",
+        "drupal/xmlsitemap": "^1.0@alpha",
+        "drupal/yoast_seo": "^1.5"
     },
     "require-dev": {
         "behat/mink": "~1.7",

@@ -4,11 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.simplenews_issue.body
+    - field.field.node.simplenews_issue.field_meta_tags
+    - field.field.node.simplenews_issue.field_yoast_seo
     - field.field.node.simplenews_issue.simplenews_issue
     - node.type.simplenews_issue
   module:
+    - metatag
     - path
     - text
+    - yoast_seo
 _core:
   default_config_hash: WqeUSrMFjkfE6sD1OFP-91spC9kIXK8gtJ_qXf4bKDg
 id: node.simplenews_issue.default
@@ -30,6 +34,19 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_meta_tags:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_yoast_seo:
+    weight: 123
+    settings:
+      body: body
+    third_party_settings: {  }
+    type: yoast_seo_widget
     region: content
   gva_box_layout:
     type: options_select
@@ -118,6 +135,11 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
+    settings: {  }
     third_party_settings: {  }
     region: content
 hidden: {  }

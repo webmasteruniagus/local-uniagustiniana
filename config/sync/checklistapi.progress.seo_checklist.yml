@@ -1,16 +1,28 @@
 progress:
-  '#changed': 1558056590
+  '#changed': 1558476346
   '#changed_by': '1'
-  '#completed_items': 9
+  '#completed_items': 31
   '#items':
     install_and_enable_seo_checklist_module:
       '#completed': 1558056222
+      '#uid': '1'
+    install_and_enable_coffee_module:
+      '#completed': 1558471947
+      '#uid': '1'
+    configure_coffee_module:
+      '#completed': 1558471947
+      '#uid': '1'
+    install_and_enable_admin_toolbar_module:
+      '#completed': 1558471947
       '#uid': '1'
     install_composer_command_line_tool:
       '#completed': 1558056590
       '#uid': '1'
     install_drush_command_line_tool:
       '#completed': 1558056590
+      '#uid': '1'
+    enable_clean_urls:
+      '#completed': 1558471983
       '#uid': '1'
     install_and_enable_redirect_module:
       '#completed': 1558056222
@@ -29,4 +41,58 @@ progress:
       '#uid': '1'
     install_and_enable_metatag_module:
       '#completed': 1558056222
+      '#uid': '1'
+    set_metatags_for_your_site:
+      '#completed': 1558472477
+      '#uid': '1'
+    install_and_enable_alternate_hreflang_module:
+      '#completed': 1558472477
+      '#uid': '1'
+    install_and_enable_xml_sitemap_module:
+      '#completed': 1558474834
+      '#uid': '1'
+    configure_xml_sitemap_module:
+      '#completed': 1558474834
+      '#uid': '1'
+    set_up_cron:
+      '#completed': 1558474834
+      '#uid': '1'
+    add_xml_sitemap_to_your_robotstxt_file:
+      '#completed': 1558475994
+      '#uid': '1'
+    install_and_enable_google_analytics_module:
+      '#completed': 1558476346
+      '#uid': '1'
+    configure_google_analytics_module:
+      '#completed': 1558476346
+      '#uid': '1'
+    sign_in_to_google_analytics_and_create_an_analytics_property_for_your_website:
+      '#completed': 1558476346
+      '#uid': '1'
+    verify_your_site_is_sending_data_to_google_analytics:
+      '#completed': 1558476346
+      '#uid': '1'
+    cache_the_google_analytics_code:
+      '#completed': 1558476346
+      '#uid': '1'
+    alt_install_and_enable_piwik_web_analytics:
+      '#completed': 1558476346
+      '#uid': '1'
+    alt_configure_piwik_web_analytics:
+      '#completed': 1558476346
+      '#uid': '1'
+    configure_text_formats_to_use_linkit_module:
+      '#completed': 1558476308
+      '#uid': '1'
+    configure_text_formats_to_use_d8_editor_advanced_link_module:
+      '#completed': 1558476308
+      '#uid': '1'
+    install_and_enable_sitemap_module:
+      '#completed': 1558476308
+      '#uid': '1'
+    configure_sitemap_module:
+      '#completed': 1558476308
+      '#uid': '1'
+    make_sure_website_is_responsive:
+      '#completed': 1558476308
       '#uid': '1'

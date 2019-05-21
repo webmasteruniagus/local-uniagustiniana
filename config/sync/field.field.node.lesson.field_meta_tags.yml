@@ -1,0 +1,21 @@
+uuid: 5b691d98-a11d-425a-802b-85f02d916dc1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.lesson
+  module:
+    - metatag
+id: node.lesson.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: lesson
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag
