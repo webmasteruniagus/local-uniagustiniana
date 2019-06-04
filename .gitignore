@@ -27,4 +27,4 @@ web/sites/*/services.yml
 
 # Ignore config chat
 chat/configs/config.yml
-chat/cache/stash/*
+chat/cache/*
