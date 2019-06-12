@@ -24,6 +24,11 @@
     }
 }
 
+.live-chat {
+    @include position(fixed, 20px 20px bottom top);
+    z-index: 2;
+}
+
 // Global margins and paddings for top and bottom
 @each $number in $numbers {
     // Pixels
