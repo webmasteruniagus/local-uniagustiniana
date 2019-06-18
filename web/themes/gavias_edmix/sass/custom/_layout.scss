@@ -26,6 +26,8 @@
 
 .live-chat {
     @include position(fixed, bottom 20px right 20px);
+    @include border-radius(5px 5px 1px 1px);
+    overflow: hidden;
     z-index: 2;
 }
 
