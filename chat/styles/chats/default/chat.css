@@ -351,6 +351,8 @@ a:hover .image-close-window {
 
 /* sending message area (#send) */
 #post-message {
+    display: flex;
+    justify-content: space-between;
 }
 #send-message,
 .submit-button,
