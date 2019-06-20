@@ -1,0 +1,16 @@
+uniagustiniana_directory.js:
+  version: 1.0
+  dependencies:
+    - core/jquery
+  js:
+    js/libs-2.js: {}
+    js/orgchartapp.js: {}
+    js/models.js: {}
+    js/collections.js: {}
+    js/views.js: {}
+    js/routers.js: {}
+  css:
+    theme:
+      css/normalize.css: {}
+      css/fonts.css: {}
+      css/main.css: {}

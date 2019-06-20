@@ -1,0 +1,200 @@
+<div class="diseno-12 banner-directory">
+    <div class="twig-image-1">
+        <img src="/modules/custom/uboyaca_directory/images/banner-directorio/imagen_directorio.jpg" alt="Imagen del Directorio" alt="Imagen del Directorio">
+    </div>
+    <div class="text-content">
+        <div class="field-inner">
+            <div class="col-xs-12 col-md-6">
+                <h1 class="twig-title">Directorio</h1>
+                <div class="twig-bocadillo">
+                    <p>Directorio General de la Universidad de Boyacá</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- back button -->
+<div class="org-chart-header">
+    <div class="org-back-button-container">
+        <a href="/directory/#org" id="org-back-button">Regresar</a>
+    </div>
+</div>
+
+<!-- Search form -->
+<div class="wrapper-org-search-form">
+    <form id="org-search-form">
+        <div class="search-box">
+            <div class="form-item">
+                <input type="text" class="form-text" name="org-search-term" placeholder="Nombre, Área, Cargo, Ciudad" />
+            </div>
+            <div class="form-actions">
+                <button class="form-submit" type="submit">Buscar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+<!-- Items -->
+<div class="org-search-items-result org-chart">
+
+    <% if(items.length <= 0) {%>
+        <h3>No hay perfiles que coincidan con "
+            <%= term %>"</h3>
+        <% } else { %>
+            <h1>
+                Resultados encontrados para "
+                <%= term %>"
+            </h1>
+            <ul class="item-list">
+
+                <%
+			items.models = items.models.sort(function(a, b) {
+				return a.attributes.codigo - b.attributes.codigo;
+			});
+		%>
+
+                    <% jQuery.each( items.models, function(key, item ){ %>
+                        <li class="perfil-item">
+                            <!-- <div class="wrapper-item">
+					<div class="left" style="background-image:url('<%= item.get('fotografia') %>')">
+						<h3><%= item.get('cargo') %></h3>
+					</div>
+
+					<div class="right">
+						<h3><%= item.get('nombre').toLowerCase() %></h3>
+						<p><%= item.get('cargo').toLowerCase() %></p>
+						<p class="additional-data">
+							<a class="" href="#org/<%= item.get('id') %>">
+								<span class="strong">Área de trabajo:</span> <%= item.get('area').toLowerCase() %>
+							</a>
+						</p>
+						<p class="additional-data"><span class="strong">Ciudad:</span> <%= item.get('ciudad').toLowerCase() %></p>
+						<p class="additional-data"><span class="strong">Dirección:</span> <%= item.get('direccion') %></p>
+						<p class="additional-data">
+							<img src="<%= window.OrgChartApp.orgChartImagePath %>regalo.png">
+							<span class="strong">Extension: </span> <span><%= item.get('extension') %></span>
+						</p>
+						<p class="additional-data">
+							<img src="<%= window.OrgChartApp.orgChartImagePath %>correo.png">
+							<span class="strong">Correo electrónico: </span> <span style="text-transform:lowercase;">
+							<a href="mailto:<%= item.get('correo') %>"><%= item.get('correo') %></a></span>
+						</p>
+						<p class="additional-data">
+							<img src="<%= window.OrgChartApp.orgChartImagePath %>telefono.png">
+							<span class="strong">Teléfono de oficina: </span> <span><%= item.get('telefono') %></span>
+						</p>
+					</div>
+				</div> -->
+
+                            <div class="wrapper-item">
+                                <!--<div class="item-left" style="background-image:url('<%= item.get('fotografia') %>')">
+						<h1 class="area-title"><%= item.get('area').toLowerCase() %></h1>
+					</div>-->
+
+                                <% if (item.get('fotografia') == null) { %>
+                                    <div class="perfil-img" style="background-image: url('/modules/custom/uboyaca_directory/images/uboyaca-isotipo.jpg')">
+                                    </div>
+                                    <% } else { %>
+                                        <div class="perfil-img" style="background-image: url('<%= item.get('fotografia') %>')">
+                                        </div>
+                                        <% } %>
+
+                                            <div class="item-data">
+                                                <%
+							var name = item.get('nombre');
+
+							var arr = name.split(' ');
+							var arrConvertName = [];
+							arr.forEach(function(element) {
+								arrConvertName.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
+							});
+						%>
+                                                    <h3>
+                                                        <%= arrConvertName.join(' ') %>
+                                                    </h3>
+                                                    <% 
+							var position = item.get('cargo');
+							var arr = position.split(' ');
+							var arrConvertPosition = [];
+							arr.forEach(function(element) {
+								arrConvertPosition.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
+							}); 
+						%>
+                                                        <p>
+                                                            <%= arrConvertPosition.join(' ') %>
+                                                        </p>
+                                            </div>
+                                            <!-- Item description -->
+                                            <div class="item-description">
+                                                <!--<a href="#" class="org-close-description-item">
+								<img src="<%= window.OrgChartApp.orgChartImagePath %>cerrar.png"/>
+							</a>-->
+                                                <div class="item-p marker">
+                                                    <p class="additional-data">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="75" viewBox="0 0 56 75">
+											<path fill="#6d6d6e" fill-rule="evenodd" d="M27.973 40.206a12.193 12.193 0 0 1-12.234-12.233 12.193 12.193 0 0 1 12.234-12.234 12.193 12.193 0 0 1 12.233 12.234 12.193 12.193 0 0 1-12.233 12.233m0-40.206C12.606 0 .149 12.606 0 28.196c.075 5.446 1.641 10.593 4.401 14.845l21.408 29.912c.597 1.119 1.418 1.64 2.164 1.64.82 0 1.566-.521 2.163-1.64L51.47 43.04c2.76-4.327 4.4-9.4 4.4-14.845C55.797 12.606 43.34 0 27.974 0" style="mix-blend-mode:multiply"/>
+										</svg>
+
+                                                        <span class="strong">Ciudad/Sede:</span> <span><%= item.get('ciudad') %></span>
+                                                    </p>
+                                                    <% if (item.get('ubicacion') != null) { %>
+                                                        <p class="additional-data"><span class="strong">Ubicación: </span><span><%= item.get('ubicacion') %></span></p>
+                                                        <% } %>
+                                                            <% if (item.get('area') != null) { %>
+                                                                <p class="additional-data"><span class="strong">Dependencia: </span><span><%= item.get('area').toLowerCase() %></span></p>
+                                                                <% } %>
+                                                </div>
+
+                                                <div class="item-p phone">
+                                                    <p class="additional-data">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13">
+											<path fill="#6d6d6e" fill-rule="evenodd" d="M12.749 9.438L10.1 8.076a.89.89 0 0 0-1.094.237l-.977 1.242c-.948-.518-1.658-.99-2.502-1.835-.887-.888-1.361-1.613-1.849-2.53l1.228-.961a.882.882 0 0 0 .236-1.095L3.782.499A.882.882 0 0 0 2.523.175L.837 1.298a1.332 1.332 0 0 0-.576 1.185c.028.475.087 1.08.205 1.51.49 1.879 1.673 3.831 3.316 5.474 1.643 1.643 3.596 2.826 5.475 3.316.428.102 1.021.162 1.51.206.473.028.931-.192 1.184-.591l1.095-1.703a.85.85 0 0 0-.297-1.258"/>
+										</svg>
+                                                        <% if (item.get('telefono') != null && item.get('telefono') != 0) { %>
+                                                            <span class="strong">Teléfono: </span> <span><%= item.get('telefono') %></span>
+                                                            <% } %>
+                                                                <% if (item.get('extension') != null && item.get('extension') != 0) { %>
+                                                                    <span class="strong">Ext.:</span> <span><%= item.get('extension') %></span>
+                                                                    <% } %>
+                                                    </p>
+                                                    <!-- <p class="additional-data"><span class="strong">Teléfono dependencia: </span></p> -->
+                                                </div>
+
+                                                <div class="item-p email">
+                                                    <p class="additional-data">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13">
+											<path fill="#6d6d6e" fill-rule="evenodd" d="M12.178 9.613a.686.686 0 0 1 .039.867c-.195.252-.531.274-.748.046l-.002-.002-2.693-2.838-.802.92c-.648.744-1.706.747-2.355 0l-.801-.92-2.684 2.838a.481.481 0 0 1-.75-.04.687.687 0 0 1 .036-.869h.002l2.644-2.793-2.66-3.065a.684.684 0 0 1-.017-.868.508.508 0 0 1 .33-.187c.16-.02.318.05.43.182l4.214 4.85c.194.223.664.223.86 0l4.229-4.85a.48.48 0 0 1 .748-.012.687.687 0 0 1 .009.87l-.014.015-2.667 3.057 2.652 2.8zm.304-8.787H.987c-.356 0-.64.374-.64.842v10.093c0 .466.284.841.64.841h11.495c.354 0 .638-.375.638-.84V1.667c0-.468-.284-.842-.638-.842z"/>
+										</svg>
+
+                                                        <span class="strong">Correo: </span> <span style="text-transform:lowercase;">
+										<a href="mailto:<%= item.get('correo') %>"><%= item.get('correo') %></a></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                            </div>
+                        </li>
+                        <% }) %>
+            </ul>
+            <% } %>
+</div>
+
+<!-- Paginator -->
+<%
+if( total > 12 ) {
+
+	var numPages = total / 12
+%>
+    <div class="wrapper-org-search-paginator">
+        <ul>
+            <% for( i = 0; i <= numPages; i++ ){ %>
+                <li>
+                    <a href="#org/search/<%= term %>/<%= i + 1 %>" <%=( page==( i+1)) ? 'class="active"': '' %> ></a>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+    <% } %>

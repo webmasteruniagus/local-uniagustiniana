@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function uniagustiniana_directory_theme($existing, $type, $theme, $path) {
+  return [
+    'template-directory' => [],
+  ];
+}

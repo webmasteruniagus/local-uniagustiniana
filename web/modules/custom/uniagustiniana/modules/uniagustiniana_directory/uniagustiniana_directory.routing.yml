@@ -1,0 +1,13 @@
+uniagustiniana_directory.json:
+  path: 'directory/json'
+  defaults:
+    _controller: '\Drupal\uniagustiniana_directory\Controller\JsonDirectory::viewJson'
+  requirements:
+    _permission: 'access content'
+
+uniagustiniana_directory.directory:
+  path: 'directory'
+  defaults:
+    _controller: '\Drupal\uniagustiniana_directory\Controller\CallbackDirectory::viewDirectory'
+  requirements:
+    _permission: 'access content'
