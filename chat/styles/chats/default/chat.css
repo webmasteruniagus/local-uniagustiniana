@@ -421,7 +421,7 @@ a:hover .image-close-window {
     font-weight: normal;
     font-size: 13px;
     font-family: Arial, sans-serif;
-    padding: 10px 14px 50px;
+    padding: 10px 14px 30px;
     background: white;
 }
 .info-message {
@@ -502,11 +502,11 @@ ul li {
     0 0 8px rgba(102, 175, 233, 0.6);
 }
 #content-wrapper textarea {
-    height: 100px;
+    height: 60px;
 }
 #content-wrapper input,
 .headers-inwards-wrapper-bottom-right input {
-    height: 45px;
+    height: 30px;
 }
 #ajax-loader {
     display: none;
