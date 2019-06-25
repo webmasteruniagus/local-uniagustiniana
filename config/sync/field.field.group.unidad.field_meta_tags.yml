@@ -1,0 +1,21 @@
+uuid: 6b134f27-19aa-4f7e-a280-5ed8467437d2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_meta_tags
+    - group.type.unidad
+  module:
+    - metatag
+id: group.unidad.field_meta_tags
+field_name: field_meta_tags
+entity_type: group
+bundle: unidad
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

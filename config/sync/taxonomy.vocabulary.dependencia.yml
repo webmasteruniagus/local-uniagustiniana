@@ -1,0 +1,8 @@
+uuid: 30eee58a-4772-4571-8395-3a25f6392ae8
+langcode: es
+status: true
+dependencies: {  }
+name: Dependencia
+vid: dependencia
+description: 'Dependencia para organizar el organigrama'
+weight: 0

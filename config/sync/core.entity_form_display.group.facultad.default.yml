@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.group.facultad.field_block_builder
+    - field.field.group.facultad.field_meta_tags
     - field.field.group.facultad.field_mision
     - field.field.group.facultad.field_por_que_estudiar
     - group.type.facultad
   module:
     - gavias_blockbuilder
+    - metatag
     - path
 id: group.facultad.default
 targetEntityType: group
@@ -20,6 +22,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_widget
+    region: content
+  field_meta_tags:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_mision:
     weight: 33

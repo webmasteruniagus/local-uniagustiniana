@@ -1,0 +1,19 @@
+uuid: 783c5112-b7ff-4423-8819-17fca2652029
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_jefe
+field_name: field_jefe
+entity_type: user
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

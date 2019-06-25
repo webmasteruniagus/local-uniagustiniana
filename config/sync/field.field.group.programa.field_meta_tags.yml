@@ -1,0 +1,21 @@
+uuid: 99ecdb03-9eb3-4386-816c-1d347857f57a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_meta_tags
+    - group.type.programa
+  module:
+    - metatag
+id: group.programa.field_meta_tags
+field_name: field_meta_tags
+entity_type: group
+bundle: programa
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

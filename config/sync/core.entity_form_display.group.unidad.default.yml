@@ -8,6 +8,7 @@ dependencies:
     - field.field.group.unidad.field_correo_de_contacto
     - field.field.group.unidad.field_imagen
     - field.field.group.unidad.field_imagen_menu_secundario
+    - field.field.group.unidad.field_meta_tags
     - field.field.group.unidad.field_resumen
     - field.field.group.unidad.field_resumen_menu_secundario
     - field.field.group.unidad.field_subtitulo
@@ -19,6 +20,7 @@ dependencies:
     - field_group
     - gavias_blockbuilder
     - image
+    - metatag
     - paragraphs
     - path
 third_party_settings:
@@ -101,6 +103,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_meta_tags:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_resumen:
     weight: 33

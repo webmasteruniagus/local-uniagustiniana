@@ -1,0 +1,21 @@
+uuid: 369b9db0-b490-4c62-ab2b-e6575e9e9025
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_meta_tags
+    - group.type.home
+  module:
+    - metatag
+id: group.home.field_meta_tags
+field_name: field_meta_tags
+entity_type: group
+bundle: home
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

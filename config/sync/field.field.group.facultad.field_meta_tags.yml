@@ -1,0 +1,21 @@
+uuid: e163ff79-53e7-4c84-bd0d-8ac51eafcb1c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_meta_tags
+    - group.type.facultad
+  module:
+    - metatag
+id: group.facultad.field_meta_tags
+field_name: field_meta_tags
+entity_type: group
+bundle: facultad
+label: 'Meta tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -18,6 +18,7 @@ dependencies:
     - field.field.group.programa.field_imagen
     - field.field.group.programa.field_inscripcion
     - field.field.group.programa.field_materias
+    - field.field.group.programa.field_meta_tags
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
     - field.field.group.programa.field_nivel_de_formacion
@@ -36,6 +37,7 @@ dependencies:
     - color_field
     - ds
     - gavias_blockbuilder
+    - metatag
 third_party_settings:
   ds:
     layout:
@@ -58,11 +60,18 @@ third_party_settings:
         - field_color_principal
         - field_color_secundario
         - field_color_texto
+        - field_meta_tags
+        - addtoany
 id: group.programa.default
 targetEntityType: group
 bundle: programa
 mode: default
 content:
+  addtoany:
+    weight: 5
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
   field_block_builder:
     weight: 0
     label: hidden
@@ -110,6 +119,13 @@ content:
       opacity: '1'
     third_party_settings: {  }
     type: color_field_formatter_text
+    region: ds_content
+  field_meta_tags:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: ds_content
 hidden:
   changed: true

@@ -8,6 +8,7 @@ dependencies:
     - field.field.group.unidad.field_correo_de_contacto
     - field.field.group.unidad.field_imagen
     - field.field.group.unidad.field_imagen_menu_secundario
+    - field.field.group.unidad.field_meta_tags
     - field.field.group.unidad.field_resumen
     - field.field.group.unidad.field_resumen_menu_secundario
     - field.field.group.unidad.field_subtitulo
@@ -17,6 +18,7 @@ dependencies:
   module:
     - ds
     - gavias_blockbuilder
+    - metatag
 third_party_settings:
   ds:
     layout:
@@ -36,17 +38,31 @@ third_party_settings:
     regions:
       ds_content:
         - field_block_builder
+        - field_meta_tags
+        - addtoany
 id: group.unidad.default
 targetEntityType: group
 bundle: unidad
 mode: default
 content:
+  addtoany:
+    weight: 2
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
   field_block_builder:
     weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_formatter
+    region: ds_content
+  field_meta_tags:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: ds_content
 hidden:
   changed: true

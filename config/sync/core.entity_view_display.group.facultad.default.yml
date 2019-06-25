@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.group.facultad.field_block_builder
+    - field.field.group.facultad.field_meta_tags
     - field.field.group.facultad.field_mision
     - field.field.group.facultad.field_por_que_estudiar
     - group.type.facultad
   module:
     - ds
     - gavias_blockbuilder
+    - metatag
 third_party_settings:
   ds:
     layout:
@@ -29,17 +31,31 @@ third_party_settings:
     regions:
       ds_content:
         - field_block_builder
+        - field_meta_tags
+        - addtoany
 id: group.facultad.default
 targetEntityType: group
 bundle: facultad
 mode: default
 content:
+  addtoany:
+    weight: 2
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
   field_block_builder:
     weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_formatter
+    region: ds_content
+  field_meta_tags:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: ds_content
 hidden:
   changed: true

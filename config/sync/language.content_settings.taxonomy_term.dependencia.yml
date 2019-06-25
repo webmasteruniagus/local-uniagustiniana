@@ -1,0 +1,11 @@
+uuid: 8d302585-60b4-4d19-b7ce-295bfeed2f0d
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.dependencia
+id: taxonomy_term.dependencia
+target_entity_type_id: taxonomy_term
+target_bundle: dependencia
+default_langcode: site_default
+language_alterable: false
