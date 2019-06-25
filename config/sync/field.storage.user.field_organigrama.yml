@@ -1,0 +1,18 @@
+uuid: 6b48a892-74d9-4398-863f-795cef66bc5e
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_organigrama
+field_name: field_organigrama
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

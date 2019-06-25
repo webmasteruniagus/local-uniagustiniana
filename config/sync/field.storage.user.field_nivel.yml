@@ -1,0 +1,20 @@
+uuid: b282d28b-9827-4e5d-a718-5447c2631e1b
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_nivel
+field_name: field_nivel
+entity_type: user
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

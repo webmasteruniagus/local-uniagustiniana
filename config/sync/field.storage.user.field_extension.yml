@@ -1,0 +1,20 @@
+uuid: 8dcaa58a-2783-4ab0-8bda-c02c905b7d75
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_extension
+field_name: field_extension
+entity_type: user
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

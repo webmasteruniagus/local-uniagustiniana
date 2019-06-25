@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.group.home.field_activar_menu
     - field.field.group.home.field_block_builder
+    - field.field.group.home.field_meta_tags
     - group.type.home
   module:
     - gavias_blockbuilder
+    - metatag
     - path
 id: group.home.default
 targetEntityType: group
@@ -26,6 +28,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: blockbuilder_widget
+    region: content
+  field_meta_tags:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   label:
     type: string_textfield

@@ -1,0 +1,24 @@
+uuid: d3b794f2-1f32-4a9a-b337-e13b0955482d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_nivel
+  module:
+    - user
+id: user.user.field_nivel
+field_name: field_nivel
+entity_type: user
+bundle: user
+label: Nivel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

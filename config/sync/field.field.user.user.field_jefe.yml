@@ -1,0 +1,29 @@
+uuid: 3d8cedf6-e372-4387-95e0-12a08643feb7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_jefe
+  module:
+    - user
+id: user.user.field_jefe
+field_name: field_jefe
+entity_type: user
+bundle: user
+label: Jefe
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

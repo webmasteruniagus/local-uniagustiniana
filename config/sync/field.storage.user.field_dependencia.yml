@@ -1,0 +1,20 @@
+uuid: cd94ffa8-9a18-4249-ac36-e5a93f0cb672
+langcode: es
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_dependencia
+field_name: field_dependencia
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

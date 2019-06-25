@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.group.home.field_activar_menu
     - field.field.group.home.field_block_builder
+    - field.field.group.home.field_meta_tags
     - group.type.home
   module:
     - ds
     - gavias_blockbuilder
+    - metatag
 third_party_settings:
   ds:
     layout:
@@ -50,6 +52,13 @@ content:
     third_party_settings: {  }
     type: blockbuilder_formatter
     region: ds_content
+  field_meta_tags:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
 hidden:
   changed: true
   created: true

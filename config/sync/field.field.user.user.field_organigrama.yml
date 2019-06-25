@@ -1,0 +1,24 @@
+uuid: 58a0789f-7f3e-43d6-bc14-26c123f4abe6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_organigrama
+  module:
+    - user
+id: user.user.field_organigrama
+field_name: field_organigrama
+entity_type: user
+bundle: user
+label: Organigrama
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean
