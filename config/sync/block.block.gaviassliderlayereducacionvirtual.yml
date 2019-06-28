@@ -1,0 +1,24 @@
+uuid: 0a2bf8f3-3419-46aa-a878-5338fc413b66
+langcode: es
+status: true
+dependencies:
+  module:
+    - gavias_sliderlayer
+    - gaviasthemer
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: gaviassliderlayereducacionvirtual
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____13'
+settings:
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____13'
+  label: 'Gavias SliderLayer - Educación Virtual'
+  provider: gavias_sliderlayer
+  label_display: '0'
+visibility: {  }

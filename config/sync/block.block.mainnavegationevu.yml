@@ -1,9 +1,9 @@
-uuid: 1137a85b-25bf-4356-9ad5-68e6d739a619
-langcode: en
+uuid: 9283ef80-963d-4004-868a-4c489a3440ae
+langcode: es
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.main-navegation-evu
   module:
     - gaviasthemer
     - system
@@ -12,15 +12,15 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: mainnavigation
+id: mainnavegationevu
 theme: gavias_edmix
 region: main_menu
 weight: 0
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'system_menu_block:main-navegation-evu'
 settings:
-  id: 'system_menu_block:main'
-  label: 'Main navigation'
+  id: 'system_menu_block:main-navegation-evu'
+  label: 'Main Navegation EVU'
   provider: system
   label_display: '0'
   level: 1
@@ -29,6 +29,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/group/57\r\n/group/90"
+    pages: "/group/57\r\n/group/61"
     negate: true
     context_mapping: {  }

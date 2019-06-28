@@ -11,7 +11,7 @@ dependencies:
     - gavias_edmix
 third_party_settings:
   gaviasthemer:
-    classes: ''
+    classes: live-chat
 id: chat
 theme: gavias_edmix
 region: before_footer

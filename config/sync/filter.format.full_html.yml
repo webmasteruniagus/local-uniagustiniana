@@ -51,18 +51,6 @@ filters:
     status: true
     weight: 0
     settings: {  }
-  shortcode_corrector:
-    id: shortcode_corrector
-    provider: shortcode
-    status: true
-    weight: 0
-    settings: {  }
-  gbb_shortcode_corrector:
-    id: gbb_shortcode_corrector
-    provider: gavias_blockbuilder
-    status: true
-    weight: 0
-    settings: {  }
   shortcode:
     id: shortcode
     provider: shortcode
@@ -80,3 +68,15 @@ filters:
       dropcap: '1'
       quote: '1'
       col: '1'
+  shortcode_corrector:
+    id: shortcode_corrector
+    provider: shortcode
+    status: true
+    weight: 0
+    settings: {  }
+  gbb_shortcode_corrector:
+    id: gbb_shortcode_corrector
+    provider: gavias_blockbuilder
+    status: true
+    weight: 0
+    settings: {  }
