@@ -1,12 +1,12 @@
 api_key: 39674fd2f249969598ca7e1495a22914-us3
-cron: true
+cron: false
 batch_limit: 100
 api_classname: Mailchimp\Mailchimp
 test_mode: false
 _core:
   default_config_hash: x8k6uOqmSHPqpp71jYGxHF3_SAs3U-Pha3YCntQIhPU
 langcode: es
-enable_connected: true
+enable_connected: false
 connected_id: null
 connected_paths: null
 webhook_hash: f65cab83a1bcdcb93badc764f6bbe598
