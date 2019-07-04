@@ -77,7 +77,8 @@
         "drupal/xmlsitemap": "^1.0@alpha",
         "drupal/yoast_seo": "^1.5",
         "drupal/admin_toolbar": "^1.27",
-        "drupal/addtoany": "^1.12"
+        "drupal/addtoany": "^1.12",
+        "drupal/webform_mailchimp": "^5.4"
     },
     "require-dev": {
         "behat/mink": "~1.7",
