@@ -23,7 +23,7 @@ elements: "name:\n  '#type': textfield\n  '#title': name\n  '#title_display': in
 css: ''
 javascript: ''
 settings:
-  ajax: true
+  ajax: false
   ajax_scroll_top: form
   page: true
   page_submit_path: ''
@@ -101,7 +101,7 @@ settings:
   confirmation_type: url_message
   confirmation_title: ''
   confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
+  confirmation_url: /gracias
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -125,6 +125,7 @@ settings:
   results_disabled: false
   results_disabled_ignore: false
   token_update: false
+  form_remote_addr: true
 access:
   create:
     roles:
