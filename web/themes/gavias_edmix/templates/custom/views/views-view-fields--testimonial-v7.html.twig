@@ -1,0 +1,32 @@
+<div class="row">
+   <div class="row-wrapper clearfix">
+      <div class="gsc-column col-lg-6 col-md-6 col-sm-12 col-xs-12">
+         <div class="widget gsc-video-box clearfix">
+            <div class="video-inner">
+               <div class="image">
+                  <img src="{{ fields.field_testimonial_image.content|striptags|trim }}" alt="">
+               </div>
+               <div class="video-body">
+                  <a class="popup-video gsc-video-link" href="{{ fields.field_testimonial_video.content|striptags|trim }}">
+                     <i class="fa icon-play space-40"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="gsc-column col-lg-6 col-md-6 col-sm-12 col-xs-12">
+         <div class="widget gsc-call-to-action button-bottom text-dark text-left">
+            <div class="content-inner clearfix">
+               <div class="content">
+                  <h2 class="title">
+                     <span>{{ fields.field_testimonial_name.content }}</span>
+                  </h2>
+                  <div class="desc">
+                     <p>{{ fields.body.content|striptags|trim }}</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

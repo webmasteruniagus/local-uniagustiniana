@@ -1,0 +1,10 @@
+uuid: ede4ee55-7549-4594-b5e3-a2de1e79e651
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.tienda
+label: Tienda
+targetEntityType: commerce_product
+cache: true

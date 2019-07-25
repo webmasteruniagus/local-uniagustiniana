@@ -1,0 +1,20 @@
+uuid: cc931286-b0c0-469e-af49-2aeac3e97e17
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - datetime
+id: commerce_product.field_inicio
+field_name: field_inicio
+entity_type: commerce_product
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

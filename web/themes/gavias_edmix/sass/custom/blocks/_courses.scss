@@ -1,0 +1,46 @@
+// Bloque de cursos - especialmente para la tienda
+.store-courses {
+  .views-exposed-form {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    margin-bottom: 40px;
+
+    input[type="submit"] {
+      height: 50px;
+      padding: 0 80px;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      @include flex-direction(column);
+
+      .js-form-item {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  .content-box {
+    >.field,
+    .price {
+      @include flexbox;
+      font-family: $headings-font-family;
+      font-size: 12px;
+      color: black;
+    }
+
+    .field__label {
+      margin-right: 5px;
+
+      &::after {
+        display: inline;
+        content: ':';
+      }
+    }
+
+    .field--name-price {
+      margin-left: 5px;
+    }
+  }
+}

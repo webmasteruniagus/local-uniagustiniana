@@ -39,17 +39,11 @@ third_party_settings:
       ds_content:
         - field_block_builder
         - field_meta_tags
-        - addtoany
 id: group.unidad.default
 targetEntityType: group
 bundle: unidad
 mode: default
 content:
-  addtoany:
-    weight: 2
-    region: ds_content
-    settings: {  }
-    third_party_settings: {  }
   field_block_builder:
     weight: 0
     label: hidden
@@ -65,6 +59,7 @@ content:
     type: metatag_empty_formatter
     region: ds_content
 hidden:
+  addtoany: true
   changed: true
   created: true
   field_acordeon: true

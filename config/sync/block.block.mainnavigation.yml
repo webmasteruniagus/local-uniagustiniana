@@ -29,6 +29,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/group/57\r\n/group/90"
+    pages: "/group/90\r\n/group/57"
     negate: true
     context_mapping: {  }
