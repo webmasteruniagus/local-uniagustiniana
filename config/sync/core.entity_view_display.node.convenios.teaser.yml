@@ -1,0 +1,32 @@
+uuid: b53509f5-2428-41f9-a03d-c48a3b2c07e8
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.convenios.body
+    - node.type.convenios
+  module:
+    - text
+    - user
+id: node.convenios.teaser
+targetEntityType: node
+bundle: convenios
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  langcode: true

@@ -1,0 +1,41 @@
+uuid: d5ce8c48-5b70-4e9e-a5f0-8ab950a99bc3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.convenios.body
+    - field.field.node.convenios.field_logo_convenio
+    - node.type.convenios
+  module:
+    - image
+    - text
+    - user
+id: node.convenios.default
+targetEntityType: node
+bundle: convenios
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_logo_convenio:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  langcode: true

@@ -1,0 +1,15 @@
+uuid: 5694acf8-b709-435d-997f-82a6c8674106
+langcode: es
+status: true
+dependencies: {  }
+name: logo_convenio_250x100_
+label: 'Logo convenio (250x100)'
+effects:
+  df96f3f3-f577-4538-88a6-2a9026b36abd:
+    uuid: df96f3f3-f577-4538-88a6-2a9026b36abd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 100
+      anchor: center-center

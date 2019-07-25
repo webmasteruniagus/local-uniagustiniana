@@ -1,0 +1,15 @@
+uuid: 86eeada9-1a33-4f18-a143-836cf530154a
+langcode: es
+status: true
+dependencies: {  }
+name: store_testimonial
+label: 'Store testimonial (800×540)'
+effects:
+  66b340fb-74c8-4f49-a174-da893d9fc76f:
+    uuid: 66b340fb-74c8-4f49-a174-da893d9fc76f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 540
+      anchor: center-center

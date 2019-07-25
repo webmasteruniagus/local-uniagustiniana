@@ -1,0 +1,62 @@
+uuid: a148dc35-bfa9-4345-a7fc-af340b129042
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.convenios.body
+    - field.field.node.convenios.field_logo_convenio
+    - image.style.thumbnail
+    - node.type.convenios
+  module:
+    - image
+    - text
+id: node.convenios.default
+targetEntityType: node
+bundle: convenios
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_logo_convenio:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  gva_box_layout: true
+  gva_breadcrumb: true
+  gva_header: true
+  gva_node_class: true
+  gva_node_layout: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true
+  url_redirects: true

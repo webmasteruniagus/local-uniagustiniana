@@ -1,0 +1,24 @@
+uuid: d0a32508-5872-4e3a-92e5-169d1e3b0c77
+langcode: es
+status: true
+dependencies:
+  module:
+    - gavias_sliderlayer
+    - gaviasthemer
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: gaviassliderlayerslidertienda
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____14'
+settings:
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____14'
+  label: 'Gavias SliderLayer - Slider tienda'
+  provider: gavias_sliderlayer
+  label_display: '0'
+visibility: {  }

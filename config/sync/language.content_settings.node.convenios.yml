@@ -1,0 +1,11 @@
+uuid: 993e761e-7d94-4f03-970c-833e9d64e289
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.convenios
+id: node.convenios
+target_entity_type_id: node
+target_bundle: convenios
+default_langcode: site_default
+language_alterable: false
