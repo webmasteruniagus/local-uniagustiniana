@@ -23,7 +23,7 @@ elements: "name:\n  '#type': textfield\n  '#title': name\n  '#title_display': in
 css: ''
 javascript: ''
 settings:
-  ajax: true
+  ajax: false
   ajax_scroll_top: form
   page: true
   page_submit_path: ''
@@ -101,7 +101,7 @@ settings:
   confirmation_type: url_message
   confirmation_title: ''
   confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
+  confirmation_url: /gracias
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -125,6 +125,7 @@ settings:
   results_disabled: false
   results_disabled_ignore: false
   token_update: false
+  form_remote_addr: true
 access:
   create:
     roles:
@@ -222,15 +223,15 @@ handlers:
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      subject: 'UNIAGUSTINIANA - Registro exitoso'
+      body: "<p>Enviado {{ webform_token('[webform_submission:created]', webform_submission) }}</p>\r\n<p>Información</p>\r\n{{ webform_token('[webform_submission:values]', webform_submission) }}\r\n"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
       html: true
       attachments: false
-      twig: false
+      twig: true
       debug: false
       reply_to: ''
       return_path: ''

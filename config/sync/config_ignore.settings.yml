@@ -1,6 +1,7 @@
 ignored_config_entities:
   0: google_tag.settings
   2: gavias_sliderlayer.settings
+  4: smtp.settings
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
 langcode: es
