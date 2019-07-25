@@ -1,0 +1,5 @@
+config:
+  main_slider: '8'
+  permanent: 0
+  expiration: 1561754820
+  second_slider: '12'

@@ -4,6 +4,7 @@
     @include flexbox;
     @include justify-content(center);
     @include align-items(center);
+    @include flex-wrap(wrap);
     margin-bottom: 40px;
 
     input[type="submit"] {
@@ -17,6 +18,65 @@
       .js-form-item {
         width: 100%;
         padding: 0;
+      }
+    }
+
+    > .fieldgroup {
+      margin-top: 20px;
+      order: 1;
+      flex-basis: 100%;
+
+      legend { display: none; }
+
+      .fieldgroup {
+        @include flexbox;
+        @include justify-content(center);
+        @include flex-wrap(wrap);
+
+        @media screen and (max-width: $screen-xs) {
+          @include justify-content(flex-start);
+        }
+
+        input[type="checkbox"] {
+          display: none;
+
+          &:checked + label {
+            color: $theme-color;
+          }
+        }
+
+        label {
+          @include position(relative, 0);
+          padding: 0 40px 0 0;
+          color:$black;
+          text-transform: uppercase;
+          cursor: pointer;
+
+          &:hover {
+            color: $theme-color;
+          }
+
+          &::after {
+            @include absolute(bottom 0 right 20px);
+            @include size(1px, 15px);
+            @include transform(translateY(-50%));
+            background: rgba($black, .1);
+            z-index: 1;
+            content: '';
+          }
+        }
+
+        > .form-item {
+          padding: 0;
+
+          &:last-child label::after {
+            display: none;
+          }
+
+          @media screen and (max-width: $screen-xs-max) {
+            width: auto;
+          }
+        }
       }
     }
   }
