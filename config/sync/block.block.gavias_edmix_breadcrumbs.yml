@@ -9,7 +9,7 @@ dependencies:
     - gavias_edmix
 third_party_settings:
   gaviasthemer:
-    breadcrumb_background_image_path: 'public://Uniagustiniana2.jpg'
+    breadcrumb_background_image_path: 'public://Uniagustiniana4.jpg'
     breadcrumb_background_color: ''
     breadcrumb_background_position: 'center top'
     breadcrumb_background_repeat: no-repeat
@@ -19,7 +19,7 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: gavias_edmix_breadcrumbs
 theme: gavias_edmix
-region: breadcrumbs
+region: other
 weight: -8
 provider: null
 plugin: system_breadcrumb_block

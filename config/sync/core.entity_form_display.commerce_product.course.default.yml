@@ -14,12 +14,16 @@ dependencies:
     - field.field.commerce_product.course.field_course_level
     - field.field.commerce_product.course.field_course_teacher
     - field.field.commerce_product.course.field_course_video
+    - field.field.commerce_product.course.field_inicio
+    - field.field.commerce_product.course.field_modalidad
+    - field.field.commerce_product.course.field_sede
     - field.field.commerce_product.course.stores
     - field.field.commerce_product.course.variations
     - image.style.thumbnail
   module:
     - comment
     - commerce
+    - datetime
     - image
     - imce
     - path
@@ -40,24 +44,24 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_course_category:
-    weight: 9
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_course_comment:
-    weight: 16
+    weight: 19
     settings: {  }
     third_party_settings: {  }
     type: comment_default
     region: content
   field_course_duration:
-    weight: 11
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -65,14 +69,14 @@ content:
     type: string_textfield
     region: content
   field_course_featured:
-    weight: 14
+    weight: 17
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_course_features:
-    weight: 12
+    weight: 15
     settings:
       size: 60
       placeholder: ''
@@ -80,7 +84,7 @@ content:
     type: string_textfield
     region: content
   field_course_images:
-    weight: 8
+    weight: 12
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber
@@ -90,35 +94,58 @@ content:
     type: image_image
     region: content
   field_course_level:
-    weight: 13
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_course_teacher:
-    weight: 10
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_course_video:
-    weight: 15
+    weight: 18
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_inicio:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_modalidad:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sede:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 7
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -126,7 +153,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 11
     region: content
     third_party_settings: {  }
   stores:
@@ -149,7 +176,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS

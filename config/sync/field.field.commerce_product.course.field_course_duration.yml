@@ -9,7 +9,7 @@ id: commerce_product.course.field_course_duration
 field_name: field_course_duration
 entity_type: commerce_product
 bundle: course
-label: 'Course Duration'
+label: Duración
 description: ''
 required: false
 translatable: false

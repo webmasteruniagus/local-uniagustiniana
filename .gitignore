@@ -28,3 +28,11 @@ web/sites/*/services.yml
 # Ignore config chat
 chat/configs/config.yml
 chat/cache/*
+
+*.vim
+*.swo
+*.swp
+*.orig
+*.out
+.idea/*
+*.*~

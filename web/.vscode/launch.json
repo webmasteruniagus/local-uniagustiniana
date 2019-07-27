@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "configurations": [
+    {
+      "name": "Agustiniana",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://agustiniana.local.com",
+      "webRoot": "${workspaceFolder}"
+    },
+  ]
+}

@@ -1,0 +1,38 @@
+uuid: a2aa2f4e-d581-4737-a136-0f528e5c7f3a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_logo_convenio
+    - node.type.convenios
+  module:
+    - image
+id: node.convenios.field_logo_convenio
+field_name: field_logo_convenio
+entity_type: node
+bundle: convenios
+label: 'Logo convenio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 250x100
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

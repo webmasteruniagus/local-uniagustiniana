@@ -7,12 +7,14 @@ dependencies:
     - core.entity_view_mode.commerce_product.featured
     - core.entity_view_mode.commerce_product.featured_2
     - core.entity_view_mode.commerce_product.teaser
+    - core.entity_view_mode.commerce_product.tienda
     - taxonomy.vocabulary.category_course
   content:
     - 'taxonomy_term:category_course:5f46e11d-907e-4e6f-b203-b9bd7025915d'
     - 'taxonomy_term:category_course:601dff76-d3e1-4ba4-9c45-49c56744ec89'
     - 'taxonomy_term:category_course:ec6a3513-5ce3-43a3-9599-08b2bbd13ef5'
   module:
+    - better_exposed_filters
     - commerce
     - commerce_product
     - gavias_view
@@ -70,16 +72,16 @@ display:
           default_row_class: true
           uses_fields: false
           items_lg: '4'
-          items_md: '4'
+          items_md: '3'
           items_sm: '2'
-          items_xs: '2'
+          items_xs: '1'
           el_class: ''
           el_id: ''
       row:
         type: 'entity:commerce_product'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: tienda
       fields:
         title:
           table: commerce_product_field_data
@@ -275,11 +277,270 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags: {  }
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Tienda cursos'
+    position: 5
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      pager:
+        type: full
+        options:
+          items_per_page: 8
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Anterior'
+            next: 'Siguiente >'
+            first: '« Primero'
+            last: 'Último »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      defaults:
+        pager: false
+        filters: false
+        filter_groups: false
+        use_ajax: false
+        exposed_form: false
+      filters:
+        type:
+          id: type
+          table: commerce_product_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            course: course
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            hide_single_bundle: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: commerce_product
+          entity_field: type
+          plugin_id: commerce_entity_bundle
+        status:
+          id: status
+          table: commerce_product_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: commerce_product
+          entity_field: status
+          plugin_id: boolean
+        title:
+          id: title
+          table: commerce_product_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: Titúlo
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: title_op
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              comunicaciones: '0'
+              editor: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: Título
+            description: null
+            identifier: title
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          entity_type: commerce_product
+          entity_field: title
+          plugin_id: string
+        field_course_category_target_id:
+          id: field_course_category_target_id
+          table: commerce_product__field_course_category
+          field: field_course_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_course_category_target_id_op
+            label: Categoría
+            description: ''
+            use_operator: false
+            operator: field_course_category_target_id_op
+            identifier: field_course_category_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              comunicaciones: '0'
+              editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: 'Course Category (field_course_category)'
+            description: null
+            identifier: field_course_category_target_id
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: category_course
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      use_ajax: true
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Ordenar por'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          input_required: false
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          bef:
+            general:
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              autosubmit: true
+              autosubmit_exclude_textfield: true
+              autosubmit_hide: false
+            title:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                placeholder_text: ''
+            field_course_category_target_id:
+              bef_format: bef
+              more_options:
+                bef_select_all_none: false
+                bef_select_all_none_nested: true
+                bef_collapsible: false
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
+          text_input_required_format: full_html
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+      tags: {  }
   block_3:
     display_plugin: block
     id: block_3
     display_title: 'Courses Carousel'
-    position: 5
+    position: 6
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -331,7 +592,7 @@ display:
     display_plugin: block
     id: block_4
     display_title: 'Featured Courses 1'
-    position: 6
+    position: 7
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -505,7 +766,7 @@ display:
     display_plugin: block
     id: block_5
     display_title: 'Recent Courses'
-    position: 8
+    position: 9
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -997,7 +1258,7 @@ display:
     display_plugin: page
     id: course_filter
     display_title: 'Page - Course Filter'
-    position: 9
+    position: 10
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -1253,7 +1514,7 @@ display:
     display_plugin: block
     id: courses_featured
     display_title: 'Featured Courses 2'
-    position: 7
+    position: 8
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -1409,7 +1670,7 @@ display:
     display_plugin: page
     id: page_1
     display_title: 'Page - Courses'
-    position: 9
+    position: 11
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -1665,7 +1926,7 @@ display:
     display_plugin: page
     id: page_2
     display_title: 'Page - Courses Grid'
-    position: 9
+    position: 12
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -1793,7 +2054,7 @@ display:
     display_plugin: page
     id: page_3
     display_title: 'Course Taxonomy Term'
-    position: 12
+    position: 13
     display_options:
       display_extenders: {  }
       display_description: ''

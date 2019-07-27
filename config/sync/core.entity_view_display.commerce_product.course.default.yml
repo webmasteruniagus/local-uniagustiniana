@@ -15,6 +15,9 @@ dependencies:
     - field.field.commerce_product.course.field_course_level
     - field.field.commerce_product.course.field_course_teacher
     - field.field.commerce_product.course.field_course_video
+    - field.field.commerce_product.course.field_inicio
+    - field.field.commerce_product.course.field_modalidad
+    - field.field.commerce_product.course.field_sede
     - field.field.commerce_product.course.stores
     - field.field.commerce_product.course.variations
   module:
@@ -31,29 +34,29 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: -4
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_course_category:
-    weight: 11
-    label: hidden
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_course_comment:
-    weight: 12
-    label: hidden
+    type: comment_default
+    weight: 11
+    region: content
+    label: above
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    type: comment_default
-    region: content
   field_course_duration:
-    weight: 13
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -61,25 +64,25 @@ content:
     type: string
     region: content
   field_course_featured:
-    weight: 14
-    label: hidden
+    type: boolean
+    weight: 6
+    region: content
+    label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
-    region: content
   field_course_features:
-    weight: 15
-    label: hidden
+    type: string
+    weight: 9
+    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_course_images:
-    weight: 16
+    weight: 3
     label: hidden
     settings:
       image_style: ''
@@ -88,23 +91,31 @@ content:
     type: image
     region: content
   field_course_level:
-    weight: 17
-    label: hidden
+    type: list_default
+    weight: 8
+    region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
-    region: content
   field_course_teacher:
-    weight: 18
-    label: hidden
+    type: entity_reference_label
+    weight: 7
+    region: content
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_course_video:
-    weight: 19
+    weight: 5
     label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_modalidad:
+    weight: 13
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -113,14 +124,22 @@ content:
   title:
     label: hidden
     type: string
-    weight: -5
+    weight: 0
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  uid:
+    type: entity_reference_label
+    weight: 10
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   variations:
     type: commerce_add_to_cart
-    weight: 10
+    weight: 12
     label: hidden
     settings:
       combine: true
@@ -128,6 +147,7 @@ content:
     region: content
 hidden:
   created: true
+  field_inicio: true
+  field_sede: true
   langcode: true
   stores: true
-  uid: true
