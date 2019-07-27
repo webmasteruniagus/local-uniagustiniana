@@ -38,7 +38,7 @@
                     a {
                         color: $theme-color-rgba;
                         margin-left: 10px;
-                        
+
                         &.active,
                         &:hover { color: darken($theme-color-rgba, 20%) }
                     }
@@ -113,7 +113,7 @@
                     li {
                         @include size(100%);
                         margin: 0;
-    
+
                         a {
                             display: block;
                             text-transform: uppercase;
@@ -156,7 +156,7 @@
 }
 
 // Header (Logo y menú principal)
-.menu--main {
+[class*=menu--main] {
     .menu_rol {
         border-bottom: 1px solid rgba(0,0,0,0.1);
     }
@@ -169,9 +169,9 @@
                 left: 5px;
                 right: 5px;
             }
-    
+
             span{
-                @include absolute(left 50%);
+                @include absolute(left 50% bottom 15px);
                 @include translateX(-50%);
             }
         }
@@ -185,19 +185,19 @@
     }
 }
 
-nav[class*="menu--main-navigation"] .gva_menu{
-    > .menu-item--expanded > a {
-        letter-spacing: normal;
-        &::after {
-            @include absolute(left 50% bottom 15px);
-            @include square(7px);
-            @include translateX(-50%);
-            background: svg(arrow-down);
-            display: inline-block;
-            content: "";
-        }
-    }
-}
+// nav[class*="menu--main-navigation"] .gva_menu{
+//     > .menu-item--expanded > a {
+//         letter-spacing: normal;
+//         &::after {
+//             @include absolute(left 50% bottom 15px);
+//             @include square(7px);
+//             @include translateX(-50%);
+//             background: svg(arrow-down);
+//             display: inline-block;
+//             content: "";
+//         }
+//     }
+// }
 
 /*
 ===========================================================
