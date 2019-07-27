@@ -1,0 +1,18 @@
+uuid: cd0dc0ac-5760-4a4d-92e6-03b0af9946c2
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  children:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

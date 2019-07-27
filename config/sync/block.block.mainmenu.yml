@@ -1,4 +1,4 @@
-uuid: a33d2d7e-8c3f-4450-934b-34de8bc82cf9
+uuid: 6f2defc2-96b7-4e65-8e3a-c4136b84d665
 langcode: es
 status: true
 dependencies:
@@ -10,15 +10,15 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: programasdefacultad
+id: mainmenu
 theme: gavias_edmix
-region: other
-weight: -14
+region: main_menu
+weight: -30
 provider: null
-plugin: ProgramasFacultad
+plugin: MainMenu
 settings:
-  id: ProgramasFacultad
-  label: 'Programas de facultad'
+  id: MainMenu
+  label: 'Main Menu'
   provider: uniagustiniana
   label_display: '0'
 visibility: {  }

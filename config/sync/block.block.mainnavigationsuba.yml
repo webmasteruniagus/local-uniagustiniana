@@ -14,8 +14,8 @@ third_party_settings:
     classes: ''
 id: mainnavigationsuba
 theme: gavias_edmix
-region: main_menu
-weight: 0
+region: other
+weight: -27
 provider: null
 plugin: 'system_menu_block:main-navigation-suba'
 settings:
@@ -26,9 +26,4 @@ settings:
   level: 1
   depth: 0
   expand_all_items: false
-visibility:
-  request_path:
-    id: request_path
-    pages: /group/57
-    negate: false
-    context_mapping: {  }
+visibility: {  }

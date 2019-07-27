@@ -13,7 +13,7 @@ third_party_settings:
 id: findtheprogramofyourinterest
 theme: gavias_edmix
 region: other
-weight: 0
+weight: -25
 provider: null
 plugin: SerchProgramBlock
 settings:

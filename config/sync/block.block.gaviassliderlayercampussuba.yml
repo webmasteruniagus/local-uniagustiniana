@@ -13,7 +13,7 @@ third_party_settings:
 id: gaviassliderlayercampussuba
 theme: gavias_edmix
 region: other
-weight: 0
+weight: -22
 provider: null
 plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____7'
 settings:

@@ -69,6 +69,7 @@ module:
   mailchimp: 0
   mailchimp_lists: 0
   mailchimp_signup: 0
+  menu_item_extras: 0
   menu_ui: 0
   metatag: 0
   metatag_facebook: 0

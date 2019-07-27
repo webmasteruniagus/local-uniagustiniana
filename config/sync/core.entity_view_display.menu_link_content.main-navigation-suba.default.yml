@@ -1,0 +1,20 @@
+uuid: ac5d72a2-9a8c-4d28-8183-2044fc08dc0a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main-navigation-suba.field_aplicar_menu
+    - system.menu.main-navigation-suba
+id: menu_link_content.main-navigation-suba.default
+targetEntityType: menu_link_content
+bundle: main-navigation-suba
+mode: default
+content:
+  children:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_aplicar_menu: true
+  langcode: true

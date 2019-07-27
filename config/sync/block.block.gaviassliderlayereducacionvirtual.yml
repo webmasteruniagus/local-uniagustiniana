@@ -3,7 +3,6 @@ langcode: es
 status: true
 dependencies:
   module:
-    - gavias_sliderlayer
     - gaviasthemer
   theme:
     - gavias_edmix
@@ -13,7 +12,7 @@ third_party_settings:
 id: gaviassliderlayereducacionvirtual
 theme: gavias_edmix
 region: other
-weight: 0
+weight: -21
 provider: null
 plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____13'
 settings:
