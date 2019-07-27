@@ -1,5 +1,5 @@
 config:
-  main_slider: '8'
+  main_slider: '1'
   permanent: 0
-  expiration: 1561754820
+  expiration: 1557554400
   second_slider: '12'

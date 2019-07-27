@@ -3,7 +3,7 @@ langcode: es
 status: true
 dependencies:
   module:
-    - gavias_blockbuilder
+    - shortcode
 _core:
   default_config_hash: KUjJ8Ti_ZJSlhGM88E_mhJP-8mmQRNUB6RFof615Kt0
 name: 'Restricted HTML'
@@ -33,13 +33,24 @@ filters:
     settings: {  }
   shortcode:
     id: shortcode
-    provider: gavias_blockbuilder
+    provider: shortcode
     status: true
     weight: 0
-    settings: {  }
+    settings:
+      button: '1'
+      quote: '1'
+      item: '1'
+      random: '1'
+      dropcap: '1'
+      highlight: '1'
+      clear: '1'
+      link: '1'
+      block: '1'
+      img: '1'
+      col: '1'
   shortcode_corrector:
     id: shortcode_corrector
-    provider: gavias_blockbuilder
+    provider: shortcode
     status: true
     weight: 0
     settings: {  }

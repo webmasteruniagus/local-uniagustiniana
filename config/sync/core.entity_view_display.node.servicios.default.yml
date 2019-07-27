@@ -71,5 +71,6 @@ content:
     type: string
     region: content
 hidden:
+  addtoany: true
   langcode: true
   links: true
