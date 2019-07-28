@@ -186,8 +186,8 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      subject: 'UNIAGUSTINIANA - Registro exitoso'
+      body: "<p>Enviado {{ webform_token('[webform_submission:created]', webform_submission) }}</p>\r\n<p>Información</p>\r\n{{ webform_token('[webform_submission:values]', webform_submission) }}\r\n"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -220,8 +220,8 @@ handlers:
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      subject: 'UNIAGUSTINIANA - Registro exitoso'
+      body: "<p>Enviado {{ webform_token('[webform_submission:created]', webform_submission) }}</p>\r\n<p>Información</p>\r\n{{ webform_token('[webform_submission:values]', webform_submission) }}\r\n"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

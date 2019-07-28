@@ -1,0 +1,15 @@
+uuid: 79e8cc5c-a2b2-4123-95aa-fcc0547a002d
+langcode: es
+status: true
+dependencies: {  }
+name: cursos_relacionados_150x120_
+label: 'Cursos relacionados (150x120)'
+effects:
+  132d30a6-4c1f-41c1-89b2-96f81c41aa94:
+    uuid: 132d30a6-4c1f-41c1-89b2-96f81c41aa94
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 150
+      height: 120
+      anchor: center-center

@@ -1,0 +1,35 @@
+uuid: 6a453bd9-8c72-4b98-80ab-5d0b4777b6ee
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.courses
+  module:
+    - gaviasthemer
+    - system
+    - views
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: views_block__courses_block_9
+theme: gavias_edmix
+region: sidebar_right
+weight: 0
+provider: null
+plugin: 'views_block:courses-block_9'
+settings:
+  id: 'views_block:courses-block_9'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/product/*'
+    negate: false
+    context_mapping: {  }
