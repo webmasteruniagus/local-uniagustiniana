@@ -29,4 +29,5 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_logo_convenio: true
   langcode: true
