@@ -1,4 +1,4 @@
-<div class="diseno-12 banner-directory">
+<!-- <div class="diseno-12 banner-directory">
     <div class="twig-image-1">
         <img src="/modules/custom/uboyaca_directory/images/banner-directorio/imagen_directorio.jpg" alt="Imagen del Directorio" alt="Imagen del Directorio">
     </div>
@@ -12,31 +12,24 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<!-- back button -->
-<div class="org-chart-header">
-    <div class="org-back-button-container">
-        <a href="/directory/#org" id="org-back-button">Regresar</a>
-    </div>
-</div>
-
-<!-- Search form -->
-<div class="wrapper-org-search-form">
-    <form id="org-search-form">
-        <div class="search-box">
-            <div class="form-item">
-                <input type="text" class="form-text" name="org-search-term" placeholder="Nombre, Área, Cargo, Ciudad" />
-            </div>
-            <div class="form-actions">
-                <button class="form-submit" type="submit">Buscar</button>
-            </div>
-        </div>
+<div class="header-char-directory">
+    <!-- Search form -->
+    <form class="directory-form" id="org-search-form">
+      <p class="directory-form__title">Estas viendo: Organigrama</p>
+      <p class="directory-form__subtitle">Si deseas ver una búsqueda personalizada escribe en el campo de abajo</p>
+      <div class="directory-form__search">
+        <input type="text" class="directory-form__search-input" name="org-search-term" placeholder="Asamblea genera..." />
+        <button class="directory-form__search-submit fa fa-search" type="submit"></button>
+      </div>
     </form>
 </div>
 
-
-
+<!-- back button -->
+<div class="directory-btn">
+  <a class="directory-btn__top" href="/directory/#org" id="org-back-button">Regresar</a>
+</div>
 
 <!-- Items -->
 <div class="org-search-items-result org-chart">
@@ -116,13 +109,13 @@
                                                     <h3>
                                                         <%= arrConvertName.join(' ') %>
                                                     </h3>
-                                                    <% 
+                                                    <%
 							var position = item.get('cargo');
 							var arr = position.split(' ');
 							var arrConvertPosition = [];
 							arr.forEach(function(element) {
 								arrConvertPosition.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
-							}); 
+							});
 						%>
                                                         <p>
                                                             <%= arrConvertPosition.join(' ') %>
