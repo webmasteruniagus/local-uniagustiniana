@@ -32,156 +32,82 @@
 </div>
 
 <!-- Items -->
-<div class="org-search-items-result org-chart">
-
+<div class="org-results">
     <% if(items.length <= 0) {%>
-        <h3>No hay perfiles que coincidan con "
-            <%= term %>"</h3>
-        <% } else { %>
-            <h1>
-                Resultados encontrados para "
-                <%= term %>"
-            </h1>
-            <ul class="item-list">
+        <!-- <h3 class="org-results__title org-title">No hay perfiles que coincidan con "<%= term %>"</h3> -->
+    <% } else { %>
+        <!-- <h1 class="org-results__title org-title"> Resultados encontrados para "<%= term %>"</h1> -->
+        <ul class="org-results__list results-list">
+            <%
 
-                <%
-			items.models = items.models.sort(function(a, b) {
-				return a.attributes.codigo - b.attributes.codigo;
-			});
-		%>
+            items.models = items.models.sort(function(a, b) {
+                return a.attributes.codigo - b.attributes.codigo;
+            });
 
-                    <% jQuery.each( items.models, function(key, item ){ %>
-                        <li class="perfil-item">
-                            <!-- <div class="wrapper-item">
-					<div class="left" style="background-image:url('<%= item.get('fotografia') %>')">
-						<h3><%= item.get('cargo') %></h3>
-					</div>
+            jQuery.each( items.models, function(key, item ) {
 
-					<div class="right">
-						<h3><%= item.get('nombre').toLowerCase() %></h3>
-						<p><%= item.get('cargo').toLowerCase() %></p>
-						<p class="additional-data">
-							<a class="" href="#org/<%= item.get('id') %>">
-								<span class="strong">Área de trabajo:</span> <%= item.get('area').toLowerCase() %>
-							</a>
-						</p>
-						<p class="additional-data"><span class="strong">Ciudad:</span> <%= item.get('ciudad').toLowerCase() %></p>
-						<p class="additional-data"><span class="strong">Dirección:</span> <%= item.get('direccion') %></p>
-						<p class="additional-data">
-							<img src="<%= window.OrgChartApp.orgChartImagePath %>regalo.png">
-							<span class="strong">Extension: </span> <span><%= item.get('extension') %></span>
-						</p>
-						<p class="additional-data">
-							<img src="<%= window.OrgChartApp.orgChartImagePath %>correo.png">
-							<span class="strong">Correo electrónico: </span> <span style="text-transform:lowercase;">
-							<a href="mailto:<%= item.get('correo') %>"><%= item.get('correo') %></a></span>
-						</p>
-						<p class="additional-data">
-							<img src="<%= window.OrgChartApp.orgChartImagePath %>telefono.png">
-							<span class="strong">Teléfono de oficina: </span> <span><%= item.get('telefono') %></span>
-						</p>
-					</div>
-				</div> -->
+            %>
+                <li class="results-list__item">
+                    <div class="main-data">
+                        <h3>
+                            <%
+                                var name = item.get('nombre'),
+                                    arr = name.split(' '),
+                                    arrConvertName = [];
 
-                            <div class="wrapper-item">
-                                <!--<div class="item-left" style="background-image:url('<%= item.get('fotografia') %>')">
-						<h1 class="area-title"><%= item.get('area').toLowerCase() %></h1>
-					</div>-->
+                                arr.forEach(function(element) {
+                                    arrConvertName.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
+                                });
+                            %>
 
-                                <% if (item.get('fotografia') == null) { %>
-                                    <div class="perfil-img" style="background-image: url('/modules/custom/uboyaca_directory/images/uboyaca-isotipo.jpg')">
-                                    </div>
-                                    <% } else { %>
-                                        <div class="perfil-img" style="background-image: url('<%= item.get('fotografia') %>')">
-                                        </div>
-                                        <% } %>
+                            <%= arrConvertName.join(' ') %>
+                        </h3>
+                        <p>
+                            <%
+                                var position = item.get('cargo'),
+                                    arr = position.split(' '),
+                                    arrConvertPosition = [];
 
-                                            <div class="item-data">
-                                                <%
-							var name = item.get('nombre');
-
-							var arr = name.split(' ');
-							var arrConvertName = [];
-							arr.forEach(function(element) {
-								arrConvertName.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
-							});
-						%>
-                                                    <h3>
-                                                        <%= arrConvertName.join(' ') %>
-                                                    </h3>
-                                                    <%
-							var position = item.get('cargo');
-							var arr = position.split(' ');
-							var arrConvertPosition = [];
-							arr.forEach(function(element) {
-								arrConvertPosition.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
-							});
-						%>
-                                                        <p>
-                                                            <%= arrConvertPosition.join(' ') %>
-                                                        </p>
-                                            </div>
-                                            <!-- Item description -->
-                                            <div class="item-description">
-                                                <!--<a href="#" class="org-close-description-item">
-								<img src="<%= window.OrgChartApp.orgChartImagePath %>cerrar.png"/>
-							</a>-->
-                                                <div class="item-p marker">
-                                                    <p class="additional-data">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="75" viewBox="0 0 56 75">
-											<path fill="#6d6d6e" fill-rule="evenodd" d="M27.973 40.206a12.193 12.193 0 0 1-12.234-12.233 12.193 12.193 0 0 1 12.234-12.234 12.193 12.193 0 0 1 12.233 12.234 12.193 12.193 0 0 1-12.233 12.233m0-40.206C12.606 0 .149 12.606 0 28.196c.075 5.446 1.641 10.593 4.401 14.845l21.408 29.912c.597 1.119 1.418 1.64 2.164 1.64.82 0 1.566-.521 2.163-1.64L51.47 43.04c2.76-4.327 4.4-9.4 4.4-14.845C55.797 12.606 43.34 0 27.974 0" style="mix-blend-mode:multiply"/>
-										</svg>
-
-                                                        <span class="strong">Ciudad/Sede:</span> <span><%= item.get('ciudad') %></span>
-                                                    </p>
-                                                    <% if (item.get('ubicacion') != null) { %>
-                                                        <p class="additional-data"><span class="strong">Ubicación: </span><span><%= item.get('ubicacion') %></span></p>
-                                                        <% } %>
-                                                            <% if (item.get('area') != null) { %>
-                                                                <p class="additional-data"><span class="strong">Dependencia: </span><span><%= item.get('area').toLowerCase() %></span></p>
-                                                                <% } %>
-                                                </div>
-
-                                                <div class="item-p phone">
-                                                    <p class="additional-data">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13">
-											<path fill="#6d6d6e" fill-rule="evenodd" d="M12.749 9.438L10.1 8.076a.89.89 0 0 0-1.094.237l-.977 1.242c-.948-.518-1.658-.99-2.502-1.835-.887-.888-1.361-1.613-1.849-2.53l1.228-.961a.882.882 0 0 0 .236-1.095L3.782.499A.882.882 0 0 0 2.523.175L.837 1.298a1.332 1.332 0 0 0-.576 1.185c.028.475.087 1.08.205 1.51.49 1.879 1.673 3.831 3.316 5.474 1.643 1.643 3.596 2.826 5.475 3.316.428.102 1.021.162 1.51.206.473.028.931-.192 1.184-.591l1.095-1.703a.85.85 0 0 0-.297-1.258"/>
-										</svg>
-                                                        <% if (item.get('telefono') != null && item.get('telefono') != 0) { %>
-                                                            <span class="strong">Teléfono: </span> <span><%= item.get('telefono') %></span>
-                                                            <% } %>
-                                                                <% if (item.get('extension') != null && item.get('extension') != 0) { %>
-                                                                    <span class="strong">Ext.:</span> <span><%= item.get('extension') %></span>
-                                                                    <% } %>
-                                                    </p>
-                                                    <!-- <p class="additional-data"><span class="strong">Teléfono dependencia: </span></p> -->
-                                                </div>
-
-                                                <div class="item-p email">
-                                                    <p class="additional-data">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13">
-											<path fill="#6d6d6e" fill-rule="evenodd" d="M12.178 9.613a.686.686 0 0 1 .039.867c-.195.252-.531.274-.748.046l-.002-.002-2.693-2.838-.802.92c-.648.744-1.706.747-2.355 0l-.801-.92-2.684 2.838a.481.481 0 0 1-.75-.04.687.687 0 0 1 .036-.869h.002l2.644-2.793-2.66-3.065a.684.684 0 0 1-.017-.868.508.508 0 0 1 .33-.187c.16-.02.318.05.43.182l4.214 4.85c.194.223.664.223.86 0l4.229-4.85a.48.48 0 0 1 .748-.012.687.687 0 0 1 .009.87l-.014.015-2.667 3.057 2.652 2.8zm.304-8.787H.987c-.356 0-.64.374-.64.842v10.093c0 .466.284.841.64.841h11.495c.354 0 .638-.375.638-.84V1.667c0-.468-.284-.842-.638-.842z"/>
-										</svg>
-
-                                                        <span class="strong">Correo: </span> <span style="text-transform:lowercase;">
-										<a href="mailto:<%= item.get('correo') %>"><%= item.get('correo') %></a></span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                            </div>
-                        </li>
-                        <% }) %>
-            </ul>
-            <% } %>
+                                arr.forEach(function(element) {
+                                    arrConvertPosition.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
+                                });
+                            %>
+                            <%= arrConvertPosition.join(' ') %>
+                        </p>
+                        <div class="main-data__data main-data__data--area">
+                            <img src="<%= window.OrgChartApp.orgChartImagePath %>user.png">
+                            <a class="data-second data-area" href="#org/<%= item.get('id') %>"><%= item.get('area').toLowerCase() %></a>
+                        </div>
+                        <div class="main-data__data main-data__data--phone">
+                            <img src="<%= window.OrgChartApp.orgChartImagePath %>phone.png">
+                            <p class="data-second data-phone"><%=item.get('telefono')%><% if (item.get('extension') != null) {%><span> (<%=item.get('extension')%>)</span><% }%></p>
+                        </div>
+                        <a class="main-data__data main-data__data--email" href="mailto:<%= item.get('correo') %>"><%= item.get('correo') %></a>
+                    </div>
+                    <div class="description">
+                       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quo voluptatum animi obcaecati, sit aspernatur itaque officia autem.</p>
+                    </div>
+                    <div class="profile-image">
+                        <% if (item.get('fotografia') != null) { %>
+                            <img src="<%= item.get('fotografia') %>" alt="">
+                        <% } else { %>
+                            <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png" alt="">
+                        <% } %>
+                        <p><%= item.get('area').toLowerCase() %></p>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
 </div>
 
 <!-- Paginator -->
 <%
-if( total > 12 ) {
+    if( total > 12 ) {
 
 	var numPages = total / 12
 %>
-    <div class="wrapper-org-search-paginator">
+    <div class="org-results-paginator">
         <ul>
             <% for( i = 0; i <= numPages; i++ ){ %>
                 <li>
@@ -190,4 +116,4 @@ if( total > 12 ) {
                 <% } %>
         </ul>
     </div>
-    <% } %>
+<% } %>

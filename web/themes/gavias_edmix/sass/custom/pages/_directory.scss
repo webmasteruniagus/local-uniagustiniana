@@ -48,3 +48,94 @@
     }
   }
 }
+
+// Resultados
+
+.org-results {
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+
+  .results-list {
+    @include clear-list;
+
+    &__item {
+      @include flexbox;
+      @include justify-content(space-between);
+      padding: {
+        top: 40px;
+        bottom: 40px;
+        left: 20px;
+      }
+      border-bottom: 1px solid $theme-color;
+
+      p {
+         @include font-size(font-size, 16px);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .main-data,
+      .profile-image {
+        @include flex-shrink(0);
+        @include flex-basis(270px);
+        @include size(100%);
+      }
+
+      .main-data {
+        h3 {
+          @include font-size(font-size, 18px);
+          margin: 0;
+        }
+
+        > p {
+          color: $theme-color;
+        }
+
+        > div {
+          @include flexbox;
+          @include align-items(center);
+
+          img {
+            @include size(18px);
+            margin-right: 5px;
+          }
+
+          p {
+            @include font-size(font-size, 14px);
+            margin-bottom: 20px;
+          }
+        }
+
+        > a {
+          color: $theme-color;
+          font-weight: bold;
+        }
+      }
+
+      .description {
+        line-height: 21px;
+        padding: {
+          left: 20px;
+          right: 20px;
+        }
+      }
+
+      .profile-image {
+        @include position(relative, 0);
+
+        p {
+          @include absolute(bottom 0 left 0);
+          @include size(90%);
+          @include border-radius(5px);
+          font-weight: bold;
+          color: $white;
+          padding: 5px;
+          background-color: $theme-color;
+        }
+      }
+    }
+  }
+}

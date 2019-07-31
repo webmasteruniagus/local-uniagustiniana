@@ -39,6 +39,14 @@
     flex-shrink: $shrink;
 }
 
+
+@mixin flex-basis($basis) {
+  -webkit-flex-basis: $basis;
+  -moz-flex-basis: $basis;
+  -ms-flex-basis: $basis;
+  flex-basis: $basis;
+}
+
 /// Centrar vertical y horizontalmente los elementos de un contenedor flexible
 @mixin center-content {
     @include justify-content(center);
