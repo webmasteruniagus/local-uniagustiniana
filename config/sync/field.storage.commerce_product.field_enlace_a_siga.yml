@@ -1,0 +1,19 @@
+uuid: e26a0b1f-acf3-42f2-b86b-44346d937781
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - link
+id: commerce_product.field_enlace_a_siga
+field_name: field_enlace_a_siga
+entity_type: commerce_product
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

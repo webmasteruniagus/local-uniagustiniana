@@ -24,21 +24,22 @@
   <div class="single-course">
     <div class="image course-images lightGallery">
       {% if product.field_course_images %}
-        {{ product.field_course_images }} 
+        {{ product.field_course_images }}
       {% endif %}
       {% if video_link %}
           <a class="video-link popup-video" href="{{ video_link }}"><i class="fa fa-video-camera"></i></a>
       {% endif %}
     </div>
-    
+
     <div class="course-content">
       <h1{{ title_attributes.addClass('post-title') }}>{{ product.title }}</h1>
-      
+
       <div class="add-to-cart-content-inner">
         {{product.variation_price|raw}}
-        {{product.variations|raw}}
+        {# {{product.variations|raw}} #}
+        {{product.field_enlace_a_siga}}
       </div>
-       
+
       <div class="course-meta clearfix">
         {% if product.field_course_teacher %}
           <div class="meta-item">
@@ -58,8 +59,8 @@
               <div class="val">{{ product.field_course_category }}</div>
             </div>
           </div>
-        {% endif %}  
-    
+        {% endif %}
+
         {% if product.field_course_duration %}
           <div class="meta-item">
             <div class="icon icon-duration"></div>
@@ -103,10 +104,10 @@
 
       <div class="post-content">
         <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-          {{- product|without('field_course_level', 'field_course_features', 'field_course_featured', 'field_course_teacher', 'field_course_duration', 'field_course_images', 'comment', 'field_course_video', 'variation_price', 'variations' ,'field_course_category', 'field_course_comment') -}}
+          {{- product|without('field_course_level', 'field_course_features', 'field_course_featured', 'field_course_teacher', 'field_course_duration', 'field_course_images', 'comment', 'field_course_video', 'variation_price', 'variations' ,'field_course_category', 'field_course_comment', 'field_enlace_a_siga') -}}
         </div>
       </div>
-        
+
       <div class="course-features">
         {{ product.field_course_features }}
       </div>
@@ -115,13 +116,13 @@
         <div class="block-info-title">{{'Lessons Of Course'}}</div>
         <div class="content-inner">{{ drupal_view('lessons', 'lesson_block') }}</div>
       </div>
-      
+
       {% if product.field_course_comment %}
         <div id="node-single-comment">
           {{ product.field_course_comment }}
         </div>
       {% endif %}
-    
+
 
     </div>
   </div>

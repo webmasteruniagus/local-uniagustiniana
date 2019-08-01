@@ -15,6 +15,7 @@ dependencies:
     - field.field.commerce_product.course.field_course_level
     - field.field.commerce_product.course.field_course_teacher
     - field.field.commerce_product.course.field_course_video
+    - field.field.commerce_product.course.field_enlace_a_siga
     - field.field.commerce_product.course.field_inicio
     - field.field.commerce_product.course.field_modalidad
     - field.field.commerce_product.course.field_sede
@@ -23,7 +24,9 @@ dependencies:
   module:
     - comment
     - commerce_product
+    - ds
     - image
+    - link
     - options
     - text
 id: commerce_product.course.default
@@ -113,6 +116,46 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_enlace_a_siga:
+    weight: 14
+    label: hidden
+    settings:
+      trim_length: 80
+      url_plain: true
+      target: _blank
+      url_only: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: a
+            fi-cl: 'btn btn-primary'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: link
+    region: content
   field_modalidad:
     weight: 13
     label: above
@@ -150,4 +193,5 @@ hidden:
   field_inicio: true
   field_sede: true
   langcode: true
+  search_api_excerpt: true
   stores: true

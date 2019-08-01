@@ -31,6 +31,39 @@
     z-index: 2;
 }
 
+// Enlace temporal
+.field--name-field-enlace-a-siga a {
+    background: $theme-color;
+    color: $white;
+    overflow: hidden;
+    @include transition(all 0.3s);
+    @include border-radius(30px);
+    font-family: $font-second;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 22px 8px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    @include box-shadow(0px 5px 10px 0px rgba(0, 0, 0, 0.1));
+    border: 1px solid $theme-color;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $theme-color;
+      background: $white;
+    }
+
+    .button--inverted {
+      background: none;
+      color: #fff;
+    }
+}
+
 // Global margins and paddings for top and bottom
 @each $number in $numbers {
     // Pixels
