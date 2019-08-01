@@ -1,0 +1,24 @@
+uuid: 7c1ab090-ab20-4f01-b474-aa056eed9e73
+langcode: es
+status: true
+dependencies:
+  module:
+    - gavias_sliderlayer
+    - gaviasthemer
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: gaviassliderlayerfacultaddeartes
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____15'
+settings:
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____15'
+  label: 'Gavias SliderLayer - Facultad de artes'
+  provider: gavias_sliderlayer
+  label_display: '0'
+visibility: {  }
