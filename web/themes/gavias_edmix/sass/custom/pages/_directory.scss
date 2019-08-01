@@ -98,7 +98,6 @@
 }
 
 // Resultados
-
 .org-results {
   max-width: 920px;
   margin: 0 auto;
@@ -155,6 +154,11 @@
 
           p {
             @include font-size(font-size, 14px);
+          }
+
+          &--area {
+            margin-bottom: 5px;
+            line-height: 20px;
           }
 
           &--phone {

@@ -121,17 +121,17 @@
 
 <!-- Paginator -->
 <%
-    if( total > 12 ) {
+  if( total > 12 ) {
 
 	var numPages = total / 12
 %>
-    <div class="org-results-paginator">
-        <ul>
-            <% for( i = 0; i <= numPages; i++ ){ %>
-                <li>
-                    <a href="#org/search/<%= term %>/<%= i + 1 %>" <%=( page==( i+1)) ? 'class="active"': '' %> ></a>
-                </li>
-                <% } %>
-        </ul>
-    </div>
+  <nav class="pager" role="navigation">
+    <ul class="pager__items js-pager__items">
+      <% for( i = 0; i <= numPages; i++ ){ %>
+        <li <%=( page==( i+1)) ? 'class="is-active"': '' %>>
+          <a href="#org/search/<%= term %>/<%= i + 1 %>"><%= i + 1 %></a>
+        </li>
+      <% } %>
+    </ul>
+  </div>
 <% } %>
