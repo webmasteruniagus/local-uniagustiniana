@@ -89,3 +89,15 @@
         }
     }
 }
+
+//
+%rrow-search {
+    @include absolute(bottom -15px left 50%);
+    @include transform(rotate(-45deg) translateX(-50%));
+    @include square(30px);
+    @include transform-origin(left, center);
+    border-left: 1px solid $theme-color;
+    border-bottom: 1px solid $theme-color;
+    background: $white;
+    content: '';
+}

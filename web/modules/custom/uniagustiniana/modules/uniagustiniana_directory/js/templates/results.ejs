@@ -15,15 +15,27 @@
 </div> -->
 
 <div class="header-char-directory">
-    <!-- Search form -->
+  <div class="search-top">
     <form class="directory-form" id="org-search-form">
       <p class="directory-form__title">Estas viendo: Organigrama</p>
-      <p class="directory-form__subtitle">Si deseas ver una búsqueda personalizada escribe en el campo de abajo</p>
+      <p class="directory-form__subtitle">Si deseas ver una búsqueda
+        personalizada
+        escribe en el campo de abajo</p>
       <div class="directory-form__search">
-        <input type="text" class="directory-form__search-input" name="org-search-term" placeholder="Asamblea genera..." />
-        <button class="directory-form__search-submit fa fa-search" type="submit"></button>
+        <input type="text" class="directory-form__search-input"
+          name="org-search-term" placeholder="Asamblea genera..." />
+        <button class="directory-form__search-submit fa fa-search"
+          type="submit"></button>
       </div>
     </form>
+  </div>
+  <div class="search-bottom">
+    <div class="content-word">
+        <% var termin = term.charAt(0).toUpperCase()+term.substr(1) %>
+        <p><%= termin %></p>
+        <hr>
+    </div>
+  </div>
 </div>
 
 <!-- back button -->
@@ -33,12 +45,9 @@
 
 <!-- Items -->
 <div class="org-results">
-    <% if(items.length <= 0) {%>
-        <!-- <h3 class="org-results__title org-title">No hay perfiles que coincidan con "<%= term %>"</h3> -->
-    <% } else { %>
-        <!-- <h1 class="org-results__title org-title"> Resultados encontrados para "<%= term %>"</h1> -->
+    <% if(items.length > 0) {%>
         <ul class="org-results__list results-list">
-            <%
+          <%
 
             items.models = items.models.sort(function(a, b) {
                 return a.attributes.codigo - b.attributes.codigo;
@@ -47,10 +56,10 @@
             jQuery.each( items.models, function(key, item ) {
 
             %>
-                <li class="results-list__item">
-                    <div class="main-data">
-                        <h3>
-                            <%
+          <li class="results-list__item">
+            <div class="main-data">
+              <h3 class="main-data__nombre">
+                <%
                                 var name = item.get('nombre'),
                                     arr = name.split(' '),
                                     arrConvertName = [];
@@ -60,10 +69,10 @@
                                 });
                             %>
 
-                            <%= arrConvertName.join(' ') %>
-                        </h3>
-                        <p>
-                            <%
+                <%= arrConvertName.join(' ') %>
+              </h3>
+              <p class="main-data__cargo">
+                <%
                                 var position = item.get('cargo'),
                                     arr = position.split(' '),
                                     arrConvertPosition = [];
@@ -72,32 +81,41 @@
                                     arrConvertPosition.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
                                 });
                             %>
-                            <%= arrConvertPosition.join(' ') %>
-                        </p>
-                        <div class="main-data__data main-data__data--area">
-                            <img src="<%= window.OrgChartApp.orgChartImagePath %>user.png">
-                            <a class="data-second data-area" href="#org/<%= item.get('id') %>"><%= item.get('area').toLowerCase() %></a>
-                        </div>
-                        <div class="main-data__data main-data__data--phone">
-                            <img src="<%= window.OrgChartApp.orgChartImagePath %>phone.png">
-                            <p class="data-second data-phone"><%=item.get('telefono')%><% if (item.get('extension') != null) {%><span> (<%=item.get('extension')%>)</span><% }%></p>
-                        </div>
-                        <a class="main-data__data main-data__data--email" href="mailto:<%= item.get('correo') %>"><%= item.get('correo') %></a>
-                    </div>
-                    <div class="description">
-                       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quo voluptatum animi obcaecati, sit aspernatur itaque officia autem.</p>
-                    </div>
-                    <div class="profile-image">
-                        <% if (item.get('fotografia') != null) { %>
-                            <img src="<%= item.get('fotografia') %>" alt="">
-                        <% } else { %>
-                            <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png" alt="">
-                        <% } %>
-                        <p><%= item.get('area').toLowerCase() %></p>
-                    </div>
-                </li>
-            <% }); %>
+                <%= arrConvertPosition.join(' ') %>
+              </p>
+              <div class="main-data__content main-data__content--area">
+                <img src="<%= window.OrgChartApp.orgChartImagePath %>user.png">
+                <a class="data-area"
+                  href="#org/<%= item.get('id') %>"><%= item.get('area').toLowerCase() %></a>
+              </div>
+              <div class="main-data__content main-data__content--phone">
+                <img src="<%= window.OrgChartApp.orgChartImagePath %>phone.png">
+                <p class="data-phone">
+                  <%=item.get('telefono')%><% if (item.get('extension') != null) {%><span>
+                    (<%=item.get('extension')%>)</span><% }%></p>
+              </div>
+              <a class="main-data__email"
+                href="mailto:<%= item.get('correo') %>"><%= item.get('correo') %></a>
+            </div>
+            <div class="description">
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maiores quo voluptatum animi obcaecati, sit aspernatur itaque
+                officia autem.</p>
+            </div>
+            <div class="profile-image">
+              <% if (item.get('fotografia') != null) { %>
+              <img src="<%= item.get('fotografia') %>" alt="">
+              <% } else { %>
+              <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png"
+                alt="">
+              <% } %>
+              <p><%= item.get('area').toLowerCase() %></p>
+            </div>
+          </li>
+          <% }); %>
         </ul>
+    <% } else { %>
+        <h3 class="org-results__title org-title">No se han encontrado resultados.</h3>
     <% } %>
 </div>
 
