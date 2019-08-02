@@ -217,6 +217,7 @@
         @include flexbox;
         @include flex-wrap(wrap);
         @include justify-content(space-between);
+        @include size(100%);
         padding: {
           left: 0;
           top: 80px;

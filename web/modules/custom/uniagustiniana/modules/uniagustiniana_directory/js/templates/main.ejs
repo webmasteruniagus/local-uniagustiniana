@@ -40,7 +40,7 @@
           <div class="wrapper-item level-1">
             <div class="perfil-img">
               <% if (rectoria.get('fotografia') == null) { %>
-                <img src="<%= window.OrgChartApp.orgChartImagePath %>prueba.png" alt="">
+                <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.jpg" alt="">
               <% } else { %>
                 <img src="<%= rectoria.get('fotografia') %>" alt="">
               <% } %>
@@ -65,7 +65,7 @@
               <div class="wrapper-item level-<%= child.get('nivel') %>">
                 <div class="perfil-img">
                   <% if (child.get('fotografia') == null) { %>
-                    <img src="<%= window.OrgChartApp.orgChartImagePath %>prueba.png" alt="">
+                    <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.jpg" alt="">
                   <% } else { %>
                     <img src="<%= child.get('fotografia') %>" alt="">
                   <% } %>
