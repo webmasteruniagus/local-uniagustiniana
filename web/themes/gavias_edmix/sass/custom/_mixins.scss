@@ -102,6 +102,10 @@
     background: $bgcolor;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
+
+    @media (max-width: $screen-sm) {
+      margin-top: 0;
+    }
 }
 
 // flecha del bloque del buscador
@@ -114,6 +118,11 @@
     border-bottom: 1px solid $theme-color;
     background: $white;
     content: '';
+
+    @media (max-width: $screen-sm) {
+        @include square(30px);
+        bottom: -15px;
+    }
 }
 
 //linea vertical en el directorio
