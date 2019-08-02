@@ -78,7 +78,7 @@
       hr {
         margin: {
           top: 8px;
-          bottom: 30px;
+          bottom: 35px;
         };
         border-color: $theme-color;
       }
@@ -94,6 +94,119 @@
     @extend %rrow-search;
     z-index: 0;
     bottom: -14px;
+  }
+}
+
+// Vista principal del organigrama
+.org-chart-main {
+  .org-draw {
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    @include flexbox;
+    list-style: none;
+    margin-top: 70px;
+    padding: 0;
+
+    .item-superior {
+      max-width: 500px;
+
+      img {
+        max-height: 190px;
+      }
+
+      h2 {
+        @include position_directory($color_7, 18px, 12px);
+      }
+
+      &__item::after {
+        @extend %vertical-line;
+        @include size(4px, 40px);
+        margin: 0 auto;
+
+      }
+    }
+
+    .item-secondary {
+      @include flexbox;
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+
+      .perfil-item {
+        @include flexbox;
+        @include flex-basis(315px);
+        @include justify-content(center);
+        @include align-items(flex-start);
+
+        h2 {
+          @include position_directory($theme-color, 16px, 10px);
+        }
+
+        &.main {
+          .perfil-img .watch-team {
+            left: auto;
+            right: 20px;
+          }
+
+          h2 {
+            @include position_directory($color_8, 16px, 12px);
+            text-transform: uppercase;
+          }
+        }
+
+        &.with-raya {
+          @include position(relative, 0);
+          margin-bottom: 50px;
+
+          &:nth-last-child(1),
+          &:nth-last-child(2) {
+            margin: 0;
+          }
+
+          &::before {
+            @extend %vertical-line;
+            @include absolute(top 50% left 95%);
+            @include size(180px, 4px);
+          }
+
+          &:nth-child(2n + 2)::before {
+            display: none;
+          }
+        }
+
+        .perfil-img {
+          @include position(relative, 0);
+
+          .watch-team {
+            @include absolute(bottom 15px left 30px);
+            @include border-radius(50px);
+            display: block;
+            color: $white;
+            padding: 2px 18px;
+            background: $color_8;
+          }
+        }
+      }
+
+      .level-2 {
+        @include position(relative, 0);
+        @include flexbox;
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+        padding: {
+          left: 0;
+          top: 80px;
+        }
+        max-width: 775px;
+        list-style: none;
+
+        &::before {
+          @extend %vertical-line;
+          @include absolute(top 0 left 50%);
+          @include translateX(-50%);
+          @include size(4px, calc(100% - 120px));
+        }
+      }
+    }
   }
 }
 

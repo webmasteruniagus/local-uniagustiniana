@@ -8,363 +8,75 @@
         escribe en el campo de abajo</p>
       <div class="directory-form__search">
         <input type="text" class="directory-form__search-input"
-          name="org-search-term" placeholder="Asamblea genera..." />
+          name="org-search-term" placeholder="Buscar" />
         <button class="directory-form__search-submit fa fa-search"
           type="submit"></button>
       </div>
     </form>
   </div>
   <div class="search-bottom">
+      <div class="content-word">
+        <hr>
+      </div>
   </div>
 </div>
 
 <!-- Make a list of nodes -->
-<figure id="org-chart-draw-container" class="org-chart cf">
+<figure id="org-chart-draw-container" class="org-chart-main">
   <div class="org-draw-wrapper">
     <ul class="org-draw level-1">
       <li class="item-superior">
-        <div class="item-supeior__item item-supeior__item--one">
-          <div class="perfil-img">
-            <img src="/modules/custom/uniagustiniana/modules/uniagustiniana_directory/images/banner-directorio/imagen_directorio.jpg" alt="">
-          </div>
+        <div class="item-superior__item item-superior__item--one">
+          <img src="/modules/custom/uniagustiniana/modules/uniagustiniana_directory/images/banner-directorio/imagen_directorio.jpg" alt="">
           <h2>ASAMBLEA GENERAL</h2>
         </div>
-        <div class="item-supeior__item item-supeior__item--two">
-          <div class="perfil-img">
-            <img src="/modules/custom/uniagustiniana/modules/uniagustiniana_directory/images/banner-directorio/imagen_directorio.jpg" alt="">
-          </div>
-          <h2>CONSEJO SUPEIOR</h2>
+        <div class="item-superior__item item-superior__item--two">
+          <img src="/modules/custom/uniagustiniana/modules/uniagustiniana_directory/images/banner-directorio/imagen_directorio.jpg" alt="">
+          <h2>CONSEJO SUPERIOR</h2>
         </div>
       </li>
-      <li class="item">
+      <li class="item-secondary">
         <div class="perfil-item with-line main">
           <div class="wrapper-item level-1">
-            <% if (rectoria.get('fotografia') == null) { %>
             <div class="perfil-img">
-                <img src="'/modules/custom/uboyaca_directory/images/uboyaca-isotipo.jpg'" alt="">
-            </div>
-            <% } else { %>
-            <div class="perfil-img">
+              <% if (rectoria.get('fotografia') == null) { %>
+                <img src="<%= window.OrgChartApp.orgChartImagePath %>prueba.png" alt="">
+              <% } else { %>
                 <img src="<%= rectoria.get('fotografia') %>" alt="">
+              <% } %>
+
+              <a class="watch-team" href="#org/<%= rectoria.get('id') %>">Ver información</a>
             </div>
-            <% } %>
 
             <% if (rectoria.get('area') != null) { %>
-            <h2><%= rectoria.get('area').toLowerCase() %></h2>
+              <h2 class="perfil-area"><%= rectoria.get('area').toLowerCase() %></h2>
             <% } %>
-
-            <div class="item-data">
-              <h3>
-                <%
-                    var name = rectoria.get('nombre');
-
-                    var arr = name.split(' ');
-                    var arrConvertName = [];
-                    arr.forEach(function(element) {
-                        arrConvertName.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
-                    });
-                %>
-                <%= arrConvertName.join(' ') %>
-              </h3>
-              <p>
-                <%
-										var position = rectoria.get('cargo');
-										var arr = position.split(' ');
-										var arrConvertPosition = [];
-										arr.forEach(function(element) {
-							  				arrConvertPosition.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
-										});
-										%>
-                <%= arrConvertPosition.join(' ') %>
-              </p>
-
-              <a class="watch-team" href="#org/<%= rectoria.get('id') %>">
-                <?xml version="1.0" encoding="UTF-8"?>
-                <svg width="23px" height="18px" viewBox="0 0 23 18"
-                  version="1.1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-                  <title>Team</title>
-                  <desc>Created with Sketch.</desc>
-                  <defs></defs>
-                  <g id="Page-1" stroke="none" stroke-width="1" fill="none"
-                    fill-rule="evenodd" opacity="0.5" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <g id="27.0directorio"
-                      transform="translate(-1265.000000, -1142.000000)"
-                      fill="#6D6D6E">
-                      <g id="Group-61"
-                        transform="translate(988.000000, 1127.000000)">
-                        <g id="Group-3"
-                          transform="translate(266.000000, 15.000000)">
-                          <g id="Team"
-                            transform="translate(11.000000, 0.000000)">
-                            <g id="Layer_1">
-                              <g id="Group">
-                                <g id="Group-12"
-                                  transform="translate(15.310345, 9.103448)">
-                                  <path
-                                    d="M1.63215517,3.43727586 L5.44753448,3.43727586 C6.32387536,3.43753282 7.0342258,4.14788326 7.03448276,5.02422414 L7.03448276,8.27586207 L0.0452068966,8.27586207 L0.0452068966,5.02422414 C0.0452068966,4.14751971 0.75591626,3.43681034 1.63262069,3.43681034 L1.63215517,3.43727586 Z"
-                                    id="Shape"></path>
-                                  <circle id="Oval" cx="3.53983598"
-                                    cy="1.4913966" r="1.39655172"></circle>
-                                </g>
-                                <g id="Group-14"
-                                  transform="translate(0.000000, 9.103448)">
-                                  <path
-                                    d="M1.58741379,3.43727586 L5.40232759,3.43727586 C6.27885025,3.43727582 6.98948433,4.14770151 6.98974138,5.02422414 L6.98974138,8.27586207 L0,8.27586207 L0,5.02422414 C-3.10096776e-16,4.14751971 0.710709364,3.43681034 1.58741379,3.43681034 L1.58741379,3.43727586 Z"
-                                    id="Shape"></path>
-                                  <circle id="Oval" cx="3.49464678"
-                                    cy="1.4913966" r="1.39655172"></circle>
-                                </g>
-                                <path
-                                  d="M8.2592069,4.92206897 L14.0856207,4.92206897 C14.9621433,4.92232601 15.672569,5.63296009 15.672569,6.50948276 L15.672569,11.1530172 L6.67225862,11.1530172 L6.67225862,6.50901724 C6.67251567,5.63249461 7.38314975,4.92206893 8.25967241,4.92206897 L8.2592069,4.92206897 Z"
-                                  id="Shape"></path>
-                                <circle id="Oval" cx="11.1724138"
-                                  cy="1.97631839" r="1.97631839"></circle>
-                              </g>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </svg>
-              </a>
-            </div>
-
-
-
-
-            <!-- Item description -->
-            <div class="item-description">
-              <!--<a href="#" class="org-close-description-item">
-									<img src="<%= window.OrgChartApp.orgChartImagePath %>cerrar.png"/>
-								</a>-->
-              <div class="item-p marker">
-                <p class="additional-data">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="56" height="75"
-                    viewBox="0 0 56 75">
-                    <path fill="#6d6d6e" fill-rule="evenodd"
-                      d="M27.973 40.206a12.193 12.193 0 0 1-12.234-12.233 12.193 12.193 0 0 1 12.234-12.234 12.193 12.193 0 0 1 12.233 12.234 12.193 12.193 0 0 1-12.233 12.233m0-40.206C12.606 0 .149 12.606 0 28.196c.075 5.446 1.641 10.593 4.401 14.845l21.408 29.912c.597 1.119 1.418 1.64 2.164 1.64.82 0 1.566-.521 2.163-1.64L51.47 43.04c2.76-4.327 4.4-9.4 4.4-14.845C55.797 12.606 43.34 0 27.974 0"
-                      style="mix-blend-mode:multiply" />
-                  </svg>
-
-                  <span class="strong">Ciudad/Sede:</span>
-                  <span><%= rectoria.get('ciudad') %></span>
-                </p>
-                <% if (rectoria.get('ubicacion') != null) { %>
-                <p class="additional-data"><span class="strong">Ubicación:
-                  </span><span><%= rectoria.get('ubicacion') %></span></p>
-                <% } %>
-
-              </div>
-
-              <div class="item-p phone">
-                <p class="additional-data">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                    viewBox="0 0 14 13">
-                    <path fill="#6d6d6e" fill-rule="evenodd"
-                      d="M12.749 9.438L10.1 8.076a.89.89 0 0 0-1.094.237l-.977 1.242c-.948-.518-1.658-.99-2.502-1.835-.887-.888-1.361-1.613-1.849-2.53l1.228-.961a.882.882 0 0 0 .236-1.095L3.782.499A.882.882 0 0 0 2.523.175L.837 1.298a1.332 1.332 0 0 0-.576 1.185c.028.475.087 1.08.205 1.51.49 1.879 1.673 3.831 3.316 5.474 1.643 1.643 3.596 2.826 5.475 3.316.428.102 1.021.162 1.51.206.473.028.931-.192 1.184-.591l1.095-1.703a.85.85 0 0 0-.297-1.258" />
-                  </svg>
-                  <% if (rectoria.get('telefono') != null && rectoria.get('telefono') != 0) { %>
-                  <span class="strong">Teléfono: </span>
-                  <span><%= rectoria.get('telefono') %></span>
-                  <% } %>
-                  <% if (rectoria.get('extension') != null && rectoria.get('extension') != 0) { %>
-                  <span class="strong">Ext.:</span>
-                  <span><%= rectoria.get('extension') %></span>
-                  <% } %>
-                </p>
-                <!-- <p class="additional-data"><span class="strong">Teléfono dependencia: </span></p> -->
-              </div>
-
-              <div class="item-p email">
-                <p class="additional-data">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"
-                    viewBox="0 0 14 13">
-                    <path fill="#6d6d6e" fill-rule="evenodd"
-                      d="M12.178 9.613a.686.686 0 0 1 .039.867c-.195.252-.531.274-.748.046l-.002-.002-2.693-2.838-.802.92c-.648.744-1.706.747-2.355 0l-.801-.92-2.684 2.838a.481.481 0 0 1-.75-.04.687.687 0 0 1 .036-.869h.002l2.644-2.793-2.66-3.065a.684.684 0 0 1-.017-.868.508.508 0 0 1 .33-.187c.16-.02.318.05.43.182l4.214 4.85c.194.223.664.223.86 0l4.229-4.85a.48.48 0 0 1 .748-.012.687.687 0 0 1 .009.87l-.014.015-2.667 3.057 2.652 2.8zm.304-8.787H.987c-.356 0-.64.374-.64.842v10.093c0 .466.284.841.64.841h11.495c.354 0 .638-.375.638-.84V1.667c0-.468-.284-.842-.638-.842z" />
-                  </svg>
-
-                  <span class="strong">Correo: </span> <span
-                    style="text-transform:lowercase;">
-
-                    <a
-                      href="mailto:<%= rectoria.get('correo') %>"><%= rectoria.get('correo') %></a></span>
-                </p>
-              </div>
-            </div>
           </div>
         </div>
 
         <ul class="level-2">
-
           <%
-							rectoriaChildren = rectoriaChildren.sort(function(a, b) {
-								return a.attributes.codigo - b.attributes.codigo;
-							});
-						%>
-
+            rectoriaChildren = rectoriaChildren.sort(function(a, b) {
+              return a.attributes.codigo - b.attributes.codigo;
+            });
+          %>
           <% jQuery.each( rectoriaChildren, function(key, child ){ %>
-          <li class="perfil-item with-raya">
-            <div class="wrapper-item level-<%= child.get('nivel') %>"
-              style="background-image:url('<%= child.get('fotografia') %>')">
-              <% if (child.get('fotografia') == null) { %>
-              <div class="perfil-img"
-                style="background-image: url('/modules/custom/uboyaca_directory/images/uboyaca-isotipo.jpg')">
-              </div>
-              <% } else { %>
-              <div class="perfil-img"
-                style="background-image: url('<%= child.get('fotografia') %>')">
-              </div>
-              <% } %>
-
-
-              <div class="item-data">
-                <h3>
-                  <%
-									var name = child.get('nombre');
-
-									var arr = name.split(' ');
-									var arrConvertName = [];
-									arr.forEach(function(element) {
-										arrConvertName.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
-									});
-									%>
-                  <%= arrConvertName.join(' ') %>
-                </h3>
-
-                <%
-															var position = child.get('cargo');
-															var arr = position.split(' ');
-															var arrConvertPosition = [];
-															arr.forEach(function(element) {
-																  arrConvertPosition.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
-															});
-															%>
-                <p>
-                  <%= arrConvertPosition.join(' ') %>
-                </p>
-
-                <a class="watch-team" href="#org/<%= child.get('id') %>">
-                  <?xml version="1.0" encoding="UTF-8"?>
-                  <svg width="23px" height="18px" viewBox="0 0 23 18"
-                    version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-                    <title>Team</title>
-                    <desc>Created with Sketch.</desc>
-                    <defs></defs>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none"
-                      fill-rule="evenodd" opacity="0.5" stroke-linecap="round"
-                      stroke-linejoin="round">
-                      <g id="27.0directorio"
-                        transform="translate(-1265.000000, -1142.000000)"
-                        fill="#6D6D6E">
-                        <g id="Group-61"
-                          transform="translate(988.000000, 1127.000000)">
-                          <g id="Group-3"
-                            transform="translate(266.000000, 15.000000)">
-                            <g id="Team"
-                              transform="translate(11.000000, 0.000000)">
-                              <g id="Layer_1">
-                                <g id="Group">
-                                  <g id="Group-12"
-                                    transform="translate(15.310345, 9.103448)">
-                                    <path
-                                      d="M1.63215517,3.43727586 L5.44753448,3.43727586 C6.32387536,3.43753282 7.0342258,4.14788326 7.03448276,5.02422414 L7.03448276,8.27586207 L0.0452068966,8.27586207 L0.0452068966,5.02422414 C0.0452068966,4.14751971 0.75591626,3.43681034 1.63262069,3.43681034 L1.63215517,3.43727586 Z"
-                                      id="Shape"></path>
-                                    <circle id="Oval" cx="3.53983598"
-                                      cy="1.4913966" r="1.39655172"></circle>
-                                  </g>
-                                  <g id="Group-14"
-                                    transform="translate(0.000000, 9.103448)">
-                                    <path
-                                      d="M1.58741379,3.43727586 L5.40232759,3.43727586 C6.27885025,3.43727582 6.98948433,4.14770151 6.98974138,5.02422414 L6.98974138,8.27586207 L0,8.27586207 L0,5.02422414 C-3.10096776e-16,4.14751971 0.710709364,3.43681034 1.58741379,3.43681034 L1.58741379,3.43727586 Z"
-                                      id="Shape"></path>
-                                    <circle id="Oval" cx="3.49464678"
-                                      cy="1.4913966" r="1.39655172"></circle>
-                                  </g>
-                                  <path
-                                    d="M8.2592069,4.92206897 L14.0856207,4.92206897 C14.9621433,4.92232601 15.672569,5.63296009 15.672569,6.50948276 L15.672569,11.1530172 L6.67225862,11.1530172 L6.67225862,6.50901724 C6.67251567,5.63249461 7.38314975,4.92206893 8.25967241,4.92206897 L8.2592069,4.92206897 Z"
-                                    id="Shape"></path>
-                                  <circle id="Oval" cx="11.1724138"
-                                    cy="1.97631839" r="1.97631839"></circle>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </g>
-                  </svg>
-                </a>
-              </div>
-
-
-              <!-- Item description -->
-              <div class="item-description">
-                <div class="item-p marker">
-                  <p class="additional-data">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="56"
-                      height="75" viewBox="0 0 56 75">
-                      <path fill="#6d6d6e" fill-rule="evenodd"
-                        d="M27.973 40.206a12.193 12.193 0 0 1-12.234-12.233 12.193 12.193 0 0 1 12.234-12.234 12.193 12.193 0 0 1 12.233 12.234 12.193 12.193 0 0 1-12.233 12.233m0-40.206C12.606 0 .149 12.606 0 28.196c.075 5.446 1.641 10.593 4.401 14.845l21.408 29.912c.597 1.119 1.418 1.64 2.164 1.64.82 0 1.566-.521 2.163-1.64L51.47 43.04c2.76-4.327 4.4-9.4 4.4-14.845C55.797 12.606 43.34 0 27.974 0"
-                        rectoria style="mix-blend-mode:multiply" />
-                    </svg>
-
-                    <span class="strong">Ciudad/Sede:</span>
-                    <span><%= child.get('ciudad') %></span>
-                  </p>
-                  <% if (child.get('ubicacion') != null) { %>
-                  <p class="additional-data"><span class="strong">Ubicación:
-                    </span><span><%= child.get('ubicacion') %></span></p>
+            <li class="perfil-item with-raya">
+              <div class="wrapper-item level-<%= child.get('nivel') %>">
+                <div class="perfil-img">
+                  <% if (child.get('fotografia') == null) { %>
+                    <img src="<%= window.OrgChartApp.orgChartImagePath %>prueba.png" alt="">
+                  <% } else { %>
+                    <img src="<%= child.get('fotografia') %>" alt="">
                   <% } %>
-                  <% if (child.get('area') != null) { %>
-                  <p class="additional-data"><span class="strong">Dependencia:
-                    </span><span><%= child.get('area').toLowerCase() %></span>
-                  </p>
-                  <% } %>
+                  <a class="watch-team" href="#org/<%= child.get('id') %>">Ver información</a>
                 </div>
 
-                <div class="item-p phone">
-                  <p class="additional-data">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14"
-                      height="13" viewBox="0 0 14 13">
-                      <path fill="#6d6d6e" fill-rule="evenodd"
-                        d="M12.749 9.438L10.1 8.076a.89.89 0 0 0-1.094.237l-.977 1.242c-.948-.518-1.658-.99-2.502-1.835-.887-.888-1.361-1.613-1.849-2.53l1.228-.961a.882.882 0 0 0 .236-1.095L3.782.499A.882.882 0 0 0 2.523.175L.837 1.298a1.332 1.332 0 0 0-.576 1.185c.028.475.087 1.08.205 1.51.49 1.879 1.673 3.831 3.316 5.474 1.643 1.643 3.596 2.826 5.475 3.316.428.102 1.021.162 1.51.206.473.028.931-.192 1.184-.591l1.095-1.703a.85.85 0 0 0-.297-1.258" />
-                    </svg>
-                    <% if (child.get('telefono') != null && child.get('telefono') != 0) { %>
-                    <span class="strong">Teléfono: </span>
-                    <span><%= child.get('telefono') %></span>
-                    <% } %>
-                    <% if (child.get('extension') != null && child.get('extension') != 0) { %>
-                    <span class="strong">Ext.:</span>
-                    <span><%= child.get('extension') %></span>
-                    <% } %>
-                  </p>
-                  <!-- <p class="additional-data"><span class="strong">Teléfono dependencia: </span></p> -->
-                </div>
-
-                <div class="item-p email">
-                  <p class="additional-data">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14"
-                      height="13" viewBox="0 0 14 13">
-                      <path fill="#6d6d6e" fill-rule="evenodd"
-                        d="M12.178 9.613a.686.686 0 0 1 .039.867c-.195.252-.531.274-.748.046l-.002-.002-2.693-2.838-.802.92c-.648.744-1.706.747-2.355 0l-.801-.92-2.684 2.838a.481.481 0 0 1-.75-.04.687.687 0 0 1 .036-.869h.002l2.644-2.793-2.66-3.065a.684.684 0 0 1-.017-.868.508.508 0 0 1 .33-.187c.16-.02.318.05.43.182l4.214 4.85c.194.223.664.223.86 0l4.229-4.85a.48.48 0 0 1 .748-.012.687.687 0 0 1 .009.87l-.014.015-2.667 3.057 2.652 2.8zm.304-8.787H.987c-.356 0-.64.374-.64.842v10.093c0 .466.284.841.64.841h11.495c.354 0 .638-.375.638-.84V1.667c0-.468-.284-.842-.638-.842z" />
-                    </svg>
-
-                    <span class="strong">Correo: </span> <span
-                      style="text-transform:lowercase;">
-                      <a
-                        href="mailto:<%= child.get('correo') %>"><%= child.get('correo') %></a>
-                    </span>
-                  </p>
-                </div>
+                <% if (child.get('area') != null) { %>
+                <h2 class="perfil-area"><%= child.get('area').toLowerCase() %></h2>
+                <% } %>
               </div>
-            </div>
-          </li>
+            </li>
           <% }) %>
         </ul>
       </li>

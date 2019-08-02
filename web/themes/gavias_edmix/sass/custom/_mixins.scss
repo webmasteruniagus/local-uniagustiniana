@@ -90,14 +90,35 @@
     }
 }
 
-//
+// Area brand to directory
+@mixin position_directory($bgcolor, $fontsize, $padding) {
+    color: $white;
+    font-size: $fontsize;
+    padding: $padding;
+    margin: {
+      top: 5px;
+      bottom: 0;
+    };
+    background: $bgcolor;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+// flecha del bloque del buscador
 %rrow-search {
-    @include absolute(bottom -15px left 50%);
+    @include absolute(bottom -25px left 50%);
     @include transform(rotate(-45deg) translateX(-50%));
-    @include square(30px);
+    @include square(50px);
     @include transform-origin(left, center);
     border-left: 1px solid $theme-color;
     border-bottom: 1px solid $theme-color;
     background: $white;
+    content: '';
+}
+
+//linea vertical en el directorio
+%vertical-line {
+    display: block;
+    background: $theme-color;
     content: '';
 }

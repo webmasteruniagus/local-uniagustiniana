@@ -23,7 +23,7 @@
         escribe en el campo de abajo</p>
       <div class="directory-form__search">
         <input type="text" class="directory-form__search-input"
-          name="org-search-term" placeholder="Asamblea genera..." />
+          name="org-search-term" placeholder="Buscar" />
         <button class="directory-form__search-submit fa fa-search"
           type="submit"></button>
       </div>
@@ -48,66 +48,58 @@
     <% if(items.length > 0) {%>
         <ul class="org-results__list results-list">
           <%
-
             items.models = items.models.sort(function(a, b) {
-                return a.attributes.codigo - b.attributes.codigo;
+              return a.attributes.codigo - b.attributes.codigo;
             });
 
             jQuery.each( items.models, function(key, item ) {
+          %>
 
-            %>
           <li class="results-list__item">
             <div class="main-data">
               <h3 class="main-data__nombre">
                 <%
-                                var name = item.get('nombre'),
-                                    arr = name.split(' '),
-                                    arrConvertName = [];
+                  var name = item.get('nombre'),
+                    arr = name.split(' '),
+                    arrConvertName = [];
 
-                                arr.forEach(function(element) {
-                                    arrConvertName.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
-                                });
-                            %>
+                  arr.forEach(function(element) {
+                    arrConvertName.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
+                  });
+                %>
 
                 <%= arrConvertName.join(' ') %>
               </h3>
               <p class="main-data__cargo">
                 <%
-                                var position = item.get('cargo'),
-                                    arr = position.split(' '),
-                                    arrConvertPosition = [];
+                  var position = item.get('cargo'),
+                    arr = position.split(' '),
+                    arrConvertPosition = [];
 
-                                arr.forEach(function(element) {
-                                    arrConvertPosition.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
-                                });
-                            %>
+                  arr.forEach(function(element) {
+                    arrConvertPosition.push(element.charAt(0).toUpperCase()+element.substr(1).toLowerCase());
+                  });
+                %>
                 <%= arrConvertPosition.join(' ') %>
               </p>
               <div class="main-data__content main-data__content--area">
                 <img src="<%= window.OrgChartApp.orgChartImagePath %>user.png">
-                <a class="data-area"
-                  href="#org/<%= item.get('id') %>"><%= item.get('area').toLowerCase() %></a>
+                <a class="data-area" href="#org/<%= item.get('id') %>"><%= item.get('area').toLowerCase() %></a>
               </div>
               <div class="main-data__content main-data__content--phone">
                 <img src="<%= window.OrgChartApp.orgChartImagePath %>phone.png">
-                <p class="data-phone">
-                  <%=item.get('telefono')%><% if (item.get('extension') != null) {%><span>
-                    (<%=item.get('extension')%>)</span><% }%></p>
+                <p class="data-phone"> <%=item.get('telefono')%><% if (item.get('extension') != null) {%> <span>(<%=item.get('extension')%>)</span><% }%></p>
               </div>
-              <a class="main-data__email"
-                href="mailto:<%= item.get('correo') %>"><%= item.get('correo') %></a>
+              <a class="main-data__email" href="mailto:<%= item.get('correo') %>"><%= item.get('correo') %></a>
             </div>
             <div class="description">
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores quo voluptatum animi obcaecati, sit aspernatur itaque
-                officia autem.</p>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quo voluptatum animi obcaecati, sit aspernatur itaque cofficia autem.</p>
             </div>
             <div class="profile-image">
               <% if (item.get('fotografia') != null) { %>
-              <img src="<%= item.get('fotografia') %>" alt="">
+                <img src="<%= item.get('fotografia') %>" alt="">
               <% } else { %>
-              <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png"
-                alt="">
+                <img src="<%= window.OrgChartApp.orgChartImagePath %>prueba.png" alt="">
               <% } %>
               <p><%= item.get('area').toLowerCase() %></p>
             </div>
@@ -115,7 +107,7 @@
           <% }); %>
         </ul>
     <% } else { %>
-        <h3 class="org-results__title org-title">No se han encontrado resultados.</h3>
+      <h3 class="org-results__title org-title">No se han encontrado resultados.</h3>
     <% } %>
 </div>
 
