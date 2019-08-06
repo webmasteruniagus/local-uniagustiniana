@@ -44,7 +44,7 @@
 </div>
 
 <!-- Items -->
-<div class="org-results">
+<div class="org-results org-chart-section">
     <% if(items.length > 0) {%>
         <ul class="org-results__list results-list">
           <%
@@ -99,7 +99,7 @@
               <% if (item.get('fotografia') != null) { %>
                 <img src="<%= item.get('fotografia') %>" alt="">
               <% } else { %>
-                <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.jpg" alt="">
+                <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png" alt="">
               <% } %>
               <p><%= item.get('area').toLowerCase() %></p>
             </div>

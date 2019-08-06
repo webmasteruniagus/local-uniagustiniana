@@ -1,0 +1,20 @@
+uuid: 288e998c-a750-40ad-86c8-e57100e24f8d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_descripcion
+  module:
+    - user
+id: user.user.field_descripcion
+field_name: field_descripcion
+entity_type: user
+bundle: user
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

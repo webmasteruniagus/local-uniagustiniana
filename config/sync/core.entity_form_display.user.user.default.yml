@@ -6,6 +6,7 @@ dependencies:
     - field.field.user.user.commerce_remote_id
     - field.field.user.user.field_cargo
     - field.field.user.user.field_dependencia
+    - field.field.user.user.field_descripcion
     - field.field.user.user.field_extension
     - field.field.user.user.field_jefe
     - field.field.user.user.field_nivel
@@ -71,6 +72,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_descripcion:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_extension:
     weight: 10

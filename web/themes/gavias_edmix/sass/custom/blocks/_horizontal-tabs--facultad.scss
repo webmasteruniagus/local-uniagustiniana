@@ -53,13 +53,24 @@
             @include transition(opacity .50s linear);
             opacity: 0;
             padding: 30px;
-            
+
             &.resp-tab-content-active { opacity: 1; }
         }
     }
 
     // Modo acordeon en móviles
     @media screen and (max-width: $screen-xs-max) { .resp-accordion { display: none; } }
+}
+
+#block-programasdefacultad {
+    .tab-pane a[href*="/group/"] {
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &.btn {
+            padding: 4px 15px 4px;
+        }
+    }
 }
 /*
 ===========================================================

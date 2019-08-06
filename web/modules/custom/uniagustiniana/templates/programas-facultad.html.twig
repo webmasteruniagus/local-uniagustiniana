@@ -35,7 +35,10 @@
                         <b>Tipo de formación: </b>{{ list.field_tipo_de_formacion_value }}
                         <br>
                         <br>
-                        Dirigido a: {{ list.field_perfil_profesional_value }} <a href="/group/{{ list.id }}">ver más.</a>
+                        Dirigido a: {{ list.field_perfil_profesional_value }}
+                        <br>
+                        <br>
+                        <a class="btn btn--primary" href="/group/{{ list.id }}">Leer más.</a>
                     </p>
                 </div>
             {% endfor %}

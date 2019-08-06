@@ -82,13 +82,13 @@
 					</div>
 					<div class="perfil-img">
 						<% if (parent.get('fotografia') == null) { %>
-							<img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.jpg" alt="">
+							<img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png" alt="">
 						<% } else { %>
 							<img src="<%= parent.get('fotografia') %>" alt="">
 						<% } %>
 					</div>
-					<p class="item-data__area"><%= parent.get('area').toLowerCase() %></p>
 				</div>
+				<h2 class="item-data__area"><%= parent.get('area').toLowerCase() %></h2>
 			</div>
 			<% if( children[1].items.length > 0 ) { %>
 				<ul class="level-3">
@@ -139,15 +139,13 @@
 							</div>
 							<div class="perfil-img">
 								<% if (child.get('fotografia') == null) { %>
-									<img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.jpg" alt="">
+									<img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png" alt="">
 								<% } else { %>
 									<img src="<%= child.get('fotografia') %>" alt="">
 								<% } %>
 							</div>
-							<p class="item-data__area">
-								<%= child.get('area').toLowerCase() %>
-							</p>
 						</div>
+						<h2 class="item-data__area"><%= parent.get('area').toLowerCase() %></h2>
 					</li>
 					<% }) %>
 				</ul>
@@ -200,15 +198,13 @@
 						</div>
 						<div class="perfil-img">
 							<% if (child.get('fotografia') == null) { %>
-								<img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.jpg" alt="">
+								<img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png" alt="">
 							<% } else { %>
 								<img src="<%= child.get('fotografia') %>" alt="">
 							<% } %>
 						</div>
-						<p class="item-data__area">
-							<%= child.get('area').toLowerCase() %>
-						</p>
 					</div>
+					<h2 class="item-data__area"><%= parent.get('area').toLowerCase() %></h2>
 				</li>
 				<% }) %>
 			</ul>
@@ -261,15 +257,13 @@
 							</div>
 							<div class="perfil-img">
 								<% if (child.get('fotografia') == null) { %>
-									<img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.jpg" alt="">
+									<img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png" alt="">
 								<% } else { %>
 									<img src="<%= child.get('fotografia') %>" alt="">
 								<% } %>
 							</div>
-							<p class="item-data__area">
-								<%= child.get('area').toLowerCase() %>
-							</p>
 						</div>
+						<h2 class="item-data__area"><%= parent.get('area').toLowerCase() %></h2>
 					</li>
 					<% }) %>
 				</ul>

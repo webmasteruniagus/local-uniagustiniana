@@ -6,6 +6,7 @@ dependencies:
     - field.field.user.user.commerce_remote_id
     - field.field.user.user.field_cargo
     - field.field.user.user.field_dependencia
+    - field.field.user.user.field_descripcion
     - field.field.user.user.field_extension
     - field.field.user.user.field_jefe
     - field.field.user.user.field_nivel
@@ -40,6 +41,14 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_descripcion:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_extension:
     weight: 9

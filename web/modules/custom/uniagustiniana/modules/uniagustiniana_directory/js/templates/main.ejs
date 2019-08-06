@@ -22,7 +22,7 @@
 </div>
 
 <!-- Make a list of nodes -->
-<figure id="org-chart-draw-container" class="org-chart-main">
+<figure id="org-chart-draw-container" class="org-chart-main org-chart-section">
   <div class="org-draw-wrapper">
     <ul class="org-draw level-1">
       <li class="item-superior">
@@ -40,7 +40,7 @@
           <div class="wrapper-item level-1">
             <div class="perfil-img">
               <% if (rectoria.get('fotografia') == null) { %>
-                <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.jpg" alt="">
+                <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png" alt="">
               <% } else { %>
                 <img src="<%= rectoria.get('fotografia') %>" alt="">
               <% } %>
@@ -65,7 +65,7 @@
               <div class="wrapper-item level-<%= child.get('nivel') %>">
                 <div class="perfil-img">
                   <% if (child.get('fotografia') == null) { %>
-                    <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.jpg" alt="">
+                    <img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png" alt="">
                   <% } else { %>
                     <img src="<%= child.get('fotografia') %>" alt="">
                   <% } %>

@@ -1,13 +1,19 @@
 // Contenedor principal del directorio
 #org-chart-canvas {
+  margin: 20px auto;
+}
+
+.org-chart-section {
   @include size(100%);
   max-width: 1000px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 // Header
 .header-char-directory {
   @include position(relative, 0);
   @include box-shadow(0 0 8px 2px rgba($theme-color, .4));
+  max-width: 1010px;
+  margin: 0 auto;
 
   .search-top {
     padding: 50px 2%;
@@ -119,6 +125,7 @@
       max-width: 500px;
 
       img {
+        @extend %img-size;
         max-height: 190px;
       }
 
@@ -204,6 +211,10 @@
           @include justify-content(center);
           @include align-items(center);
 
+          img {
+            @extend %img-size;
+          }
+
           .watch-team {
             @include absolute(bottom 15px left 30px);
             @include border-radius(50px);
@@ -241,6 +252,153 @@
         }
       }
     }
+  }
+}
+
+// Interna usuario
+.ut-org-subchart-draw {
+  padding: 0;
+  list-style: none;
+
+  .perfil-item {
+    width: 100%;
+
+    .wrapper-item {
+      @include flexbox;
+      @include flex-wrap(wrap);
+      @include box-shadow(0 0 10px 0px rgba($black, .3));
+    }
+
+    &.main {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .wrapper-item {
+        @include justify-content(space-between);
+
+        .item-data,
+        .description {
+          @include size(calc((100% - 340px) / 2));
+        }
+
+        .item-data__area {
+          @include flex-shrink(0);
+          @include flex-basis(100%);
+        }
+
+        .perfil-img {
+          @include size(340px, 250px);
+
+          img {
+            @extend %img-size;
+          }
+        }
+      }
+
+      h2 {
+        @include position_directory($color_8, 16px, 12px);
+        text-transform: uppercase;
+      }
+    }
+
+    &.with-raya {
+      // align-self: flex-start;
+      max-width: 500px;
+
+      .wrapper-item {
+        > div {
+          @include size(50%);
+        }
+
+        .item-data__area {
+          @include flex-shrink(0);
+          @include flex-basis(100%);
+        }
+      }
+
+      h2 {
+        @include position_directory($color_9, 16px, 10px);
+      }
+
+      // &:nth-child(2n + 1) {
+      //   align-self: flex-start;
+      //   margin-top: -165px;
+      // }
+
+      // &:nth-child(2n + 2) {
+      //   align-self: flex-end;
+      //   margin-top: 165px;
+      // }
+    }
+
+    .item-data {
+      padding: 30px 0;
+      padding-left: 30px;
+
+      &__nombre {
+        @include font-size(font-size, 18px);
+        margin: 0;
+      }
+
+      &__cargo {
+        color: $theme-color;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+
+      &__content {
+        @include flexbox;
+        @include align-items(center);
+
+        img {
+          @include size(18px);
+          margin-right: 5px;
+        }
+
+        p {
+          @include font-size(font-size, 14px);
+        }
+
+        &--area {
+          margin-bottom: 5px;
+          line-height: 20px;
+        }
+
+        &--phone {
+          margin-bottom: 20px;
+        }
+      }
+
+      &__email {
+        color: $theme-color;
+        font-weight: bold;
+      }
+    }
+
+    .description {
+      line-height: 21px;
+      padding: 30px 20px;
+    }
+
+    .perfil-image {
+      @include position(relative, 0);
+      @include flexbox;
+      @include justify-content(center);
+      @include align-items(center);
+
+      img {
+        @extend %img-size;
+      }
+    }
+  }
+
+  ul {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 }
 
@@ -329,6 +487,13 @@
 
       .profile-image {
         @include position(relative, 0);
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+
+        img {
+          @extend %img-size;
+        }
 
         p {
           @include absolute(bottom 0 left 0);
