@@ -135,7 +135,7 @@
 									<p class="data-phone"> <%=child.get('telefono')%><% if (child.get('extension') != null) {%> <span>(<%=child.get('extension')%>)</span><% }%></p>
 								</div>
 								<a class="item-data__email" href="mailto:<%= child.get('correo') %>"><%= child.get('correo') %></a>
-								<a class="watch-team" href="#org/<%= child.get('id') %>">Ver información</a>
+								<a class="watch-team btn btn--primary" href="#org/<%= child.get('id') %>">Ver información</a>
 							</div>
 							<div class="perfil-img">
 								<% if (child.get('fotografia') == null) { %>
@@ -145,7 +145,7 @@
 								<% } %>
 							</div>
 						</div>
-						<h2 class="item-data__area"><%= parent.get('area').toLowerCase() %></h2>
+						<h2 class="item-data__area"><%= child.get('area').toLowerCase() %></h2>
 					</li>
 					<% }) %>
 				</ul>
@@ -194,7 +194,7 @@
 								<p class="data-phone"> <%=child.get('telefono')%><% if (child.get('extension') != null) {%> <span>(<%=child.get('extension')%>)</span><% }%></p>
 							</div>
 							<a class="item-data__email" href="mailto:<%= child.get('correo') %>"><%= child.get('correo') %></a>
-							<a class="watch-team" href="#org/<%= child.get('id') %>">Ver información</a>
+							<a class="watch-team btn btn--primary" href="#org/<%= child.get('id') %>">Ver información</a>
 						</div>
 						<div class="perfil-img">
 							<% if (child.get('fotografia') == null) { %>
@@ -204,7 +204,7 @@
 							<% } %>
 						</div>
 					</div>
-					<h2 class="item-data__area"><%= parent.get('area').toLowerCase() %></h2>
+					<h2 class="item-data__area"><%= child.get('area').toLowerCase() %></h2>
 				</li>
 				<% }) %>
 			</ul>
@@ -253,7 +253,7 @@
 									<p class="data-phone"> <%=child.get('telefono')%><% if (child.get('extension') != null) {%> <span>(<%=child.get('extension')%>)</span><% }%></p>
 								</div>
 								<a class="item-data__email" href="mailto:<%= child.get('correo') %>"><%= child.get('correo') %></a>
-								<a class="watch-team" href="#org/<%= child.get('id') %>">Ver información</a>
+								<a class="watch-team btn btn--primary" href="#org/<%= child.get('id') %>">Ver información</a>
 							</div>
 							<div class="perfil-img">
 								<% if (child.get('fotografia') == null) { %>
@@ -263,7 +263,7 @@
 								<% } %>
 							</div>
 						</div>
-						<h2 class="item-data__area"><%= parent.get('area').toLowerCase() %></h2>
+						<h2 class="item-data__area"><%= child.get('area').toLowerCase() %></h2>
 					</li>
 					<% }) %>
 				</ul>

@@ -261,20 +261,28 @@
   list-style: none;
 
   .perfil-item {
+    align-self: flex-start;
     width: 100%;
 
     .wrapper-item {
       @include flexbox;
       @include flex-wrap(wrap);
       @include box-shadow(0 0 10px 0px rgba($black, .3));
+      overflow: hidden;
+      background-color: $white;
     }
 
     &.main {
       max-width: 800px;
-      margin: 0 auto;
+      margin: 0 auto 65px;
 
       .wrapper-item {
         @include justify-content(space-between);
+
+        .item-data {
+          padding: 30px;
+          padding-right: 0;
+        }
 
         .item-data,
         .description {
@@ -302,12 +310,20 @@
     }
 
     &.with-raya {
-      // align-self: flex-start;
+      align-self: flex-start;
       max-width: 500px;
 
       .wrapper-item {
+        .item-data {
+          padding: {
+            top: 15px;
+            bottom: 10px;
+            left: 15px;
+          }
+        }
+
         > div {
-          @include size(50%);
+          @include size(50%, 200px);
         }
 
         .item-data__area {
@@ -321,19 +337,19 @@
       }
 
       // &:nth-child(2n + 1) {
-      //   align-self: flex-start;
-      //   margin-top: -165px;
+      //   margin-top: -5px;
       // }
 
-      // &:nth-child(2n + 2) {
-      //   align-self: flex-end;
-      //   margin-top: 165px;
-      // }
+      &:nth-child(2n + 2) {
+        margin-top: 120px;
+      }
     }
 
     .item-data {
-      padding: 30px 0;
-      padding-left: 30px;
+      @include flexbox;
+      @include flex-direction(column);
+      @include align-items(flex-start);
+      word-break: break-all;
 
       &__nombre {
         @include font-size(font-size, 18px);
@@ -343,7 +359,6 @@
       &__cargo {
         color: $theme-color;
         line-height: 20px;
-        margin-bottom: 10px;
       }
 
       &__content {
@@ -360,18 +375,21 @@
         }
 
         &--area {
-          margin-bottom: 5px;
-          line-height: 20px;
-        }
-
-        &--phone {
-          margin-bottom: 20px;
+          line-height: 18px;
         }
       }
 
       &__email {
         color: $theme-color;
         font-weight: bold;
+        line-height: 18px;
+      }
+
+      .watch-team {
+        padding: 0 10px;
+        text-transform: none;
+        font-weight: normal;
+        margin-top: 10px;
       }
     }
 
@@ -380,7 +398,7 @@
       padding: 30px 20px;
     }
 
-    .perfil-image {
+    .perfil-img {
       @include position(relative, 0);
       @include flexbox;
       @include justify-content(center);
