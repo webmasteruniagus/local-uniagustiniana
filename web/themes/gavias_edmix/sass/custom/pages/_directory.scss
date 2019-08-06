@@ -159,7 +159,7 @@
             right: 20px;
           }
 
-          h2 {
+          .perfil-area {
             @include position_directory($color_8, 16px, 12px);
             text-transform: uppercase;
           }
@@ -173,8 +173,12 @@
             margin-bottom: 20px;
           }
 
-          h2 {
+          .perfil-area {
             @include position_directory($theme-color, 16px, 10px);
+
+            &--orange {
+              background-color: $color_9;
+            }
           }
 
           &::before {
@@ -195,6 +199,10 @@
 
         .perfil-img {
           @include position(relative, 0);
+          @include flexbox;
+          @include size(315px, 206px);
+          @include justify-content(center);
+          @include align-items(center);
 
           .watch-team {
             @include absolute(bottom 15px left 30px);
