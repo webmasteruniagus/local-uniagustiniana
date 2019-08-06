@@ -89,6 +89,7 @@ class MainMenu extends BlockBase implements ContainerFactoryPluginInterface {
     }
     // Menu principal.
     elseif ($current_path == '/group/61') {
+      $this->tempStore->set('main_menu', FALSE);
       $name = 'mainnavigation';
     }
     else {
