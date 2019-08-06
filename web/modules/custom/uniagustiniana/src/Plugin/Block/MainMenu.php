@@ -96,18 +96,16 @@ class MainMenu extends BlockBase implements ContainerFactoryPluginInterface {
       if ($session_path) {
         $query = $this->database->select('menu_link_content_data', 'mlc');
         $query->addField('mlc', 'menu_name');
-        $query->condition('mlc.link__uri', '%' . $current_path . '%', 'LIKE');
+        $query->join('menu_link_content_data', 'mlc1', 'mlc.menu_name = mlc1.menu_name');
+        $query->condition('mlc.link__uri', '%' . $session_path . '%', 'LIKE');
+        $query->condition('mlc1.link__uri', '%' . $current_path . '%', 'LIKE');
         $result = $query->execute()->fetchObject();
         $name = 'mainnavigation';
         if ($result) {
-          $query1 = $this->database->select('menu_link_content_data', 'mlc');
-          $query1->addField('mlc', 'menu_name');
-          $query1->condition('mlc.link__uri', '%' . $session_path . '%', 'LIKE');
-          $result1 = $query1->execute()->fetchObject();
-          if ($result1->menu_name == 'main-navigation-suba') {
+          if ($result->menu_name == 'main-navigation-suba') {
             $name = 'mainnavigationsuba';
           }
-          elseif ($result1->menu_name == 'main-navegation-evu') {
+          elseif ($result->menu_name == 'main-navegation-evu') {
             $name = 'mainnavegationevu';
           }
         }
