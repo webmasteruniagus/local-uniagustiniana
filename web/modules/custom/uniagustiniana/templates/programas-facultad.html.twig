@@ -13,14 +13,14 @@
         <ul class="nav nav-tabs">
             {% for key, list in programas %}
 
-                <li {% if key == 0 %}class="active"{% endif %}> 
+                <li {% if key == 0 %}class="active"{% endif %}>
                     <a data-toggle="tab" href="#tab-pro-{{ key }}">{{ list.label }}</a>
-                </li> 
+                </li>
             {% endfor %}
         </ul>
         <div class="tab-content">
             {% for key, list in programas %}
-                <div id="tab-pro-{{ key }}" class="tab-pane fade {% if key == 0 %}in active{% endif %}"> 
+                <div id="tab-pro-{{ key }}" class="tab-pane fade {% if key == 0 %}in active{% endif %}">
                     <p>
                         <a href="/group/{{ list.id }}">{{ list.label }}</a>
                         <br>
@@ -35,13 +35,10 @@
                         <b>Tipo de formación: </b>{{ list.field_tipo_de_formacion_value }}
                         <br>
                         <br>
-                        Dirigido a: {{ list.field_perfil_profesional_value }}
+                        Dirigido a: {{ list.field_perfil_profesional_value }} <a href="/group/{{ list.id }}">ver más.</a>
                     </p>
-                </div> 
+                </div>
             {% endfor %}
         </div>
     </div>
 </div>
-
-
-
