@@ -3,7 +3,6 @@ langcode: es
 status: true
 dependencies:
   module:
-    - gavias_sliderlayer
     - gaviasthemer
   theme:
     - gavias_edmix
