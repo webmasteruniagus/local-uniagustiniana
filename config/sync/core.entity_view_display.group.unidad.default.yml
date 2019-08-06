@@ -73,4 +73,5 @@ hidden:
   field_unidades: true
   label: true
   langcode: true
+  search_api_excerpt: true
   uid: true
