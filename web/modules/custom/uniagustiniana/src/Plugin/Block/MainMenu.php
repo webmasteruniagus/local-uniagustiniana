@@ -9,6 +9,7 @@ use Drupal\Core\Entity\EntityViewBuilderInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Path\CurrentPathStack;
+use Drupal\user\PrivateTempStoreFactory;
 
 /**
  * Provides a 'MenuAccount' Block.
@@ -38,15 +39,22 @@ class MainMenu extends BlockBase implements ContainerFactoryPluginInterface {
    * @var Drupal\Core\Path\CurrentPathStack
    */
   protected $currentPath;
+  /**
+   * Variables de sesion.
+   *
+   * @var Drupal\user\PrivateTempStoreFactory
+   */
+  protected $tempStore;
 
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityViewBuilderInterface $block_view_builder, Connection $connection, CurrentPathStack $currentPath) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityViewBuilderInterface $block_view_builder, Connection $connection, CurrentPathStack $currentPath, PrivateTempStoreFactory $temp_store_factory) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->blockViewBuilder = $block_view_builder;
     $this->database = $connection;
     $this->currentPath = $currentPath;
+    $this->tempStore = $temp_store_factory->get('uniagustiniana');
   }
 
   /**
@@ -59,7 +67,8 @@ class MainMenu extends BlockBase implements ContainerFactoryPluginInterface {
       $plugin_definition,
       $container->get('entity.manager')->getViewBuilder('block'),
       $container->get('database'),
-      $container->get('path.current')
+      $container->get('path.current'),
+      $container->get('user.private_tempstore')
     );
   }
 
@@ -68,21 +77,46 @@ class MainMenu extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function build() {
     $current_path = $this->currentPath->getPath();
-    $query = $this->database->select('menu_link_content_data', 'mlc');
-    $query->addField('mlc', 'menu_name');
-    $query->condition('mlc.link__uri', '%' . $current_path . '%', 'LIKE');
-    $query->innerJoin('menu_link_content__field_aplicar_menu', 'mla', 'mlc.id = mla.entity_id');
-    $query->condition('mla.field_aplicar_menu_value', 1, '=');
-    $result = $query->execute()->fetchObject();
-    $name = 'mainnavigation';
-    if ($result) {
-      if ($result->menu_name == 'main-navigation-suba') {
-        $name = 'mainnavigationsuba';
+    // Virtualidad.
+    if ($current_path == '/group/90') {
+      $this->tempStore->set('main_menu', $current_path);
+      $name = 'mainnavegationevu';
+    }
+    // Suba.
+    elseif ($current_path == '/group/57') {
+      $this->tempStore->set('main_menu', $current_path);
+      $name = 'mainnavigationsuba';
+    }
+    // Menu principal.
+    elseif ($current_path == '/group/61') {
+      $name = 'mainnavigation';
+    }
+    else {
+      $session_path = $this->tempStore->get('main_menu') ?? FALSE;
+      if ($session_path) {
+        $query = $this->database->select('menu_link_content_data', 'mlc');
+        $query->addField('mlc', 'menu_name');
+        $query->condition('mlc.link__uri', '%' . $current_path . '%', 'LIKE');
+        $result = $query->execute()->fetchObject();
+        $name = 'mainnavigation';
+        if ($result) {
+          $query1 = $this->database->select('menu_link_content_data', 'mlc');
+          $query1->addField('mlc', 'menu_name');
+          $query1->condition('mlc.link__uri', '%' . $session_path . '%', 'LIKE');
+          $result1 = $query1->execute()->fetchObject();
+          if ($result1->menu_name == 'main-navigation-suba') {
+            $name = 'mainnavigationsuba';
+          }
+          elseif ($result1->menu_name == 'main-navegation-evu') {
+            $name = 'mainnavegationevu';
+          }
+        }
       }
-      elseif ($result->menu_name == 'main-navegation-evu') {
-        $name = 'mainnavegationevu';
+      else {
+        $name = 'mainnavigation';
       }
     }
+
     $block = Block::load($name);
     $block_content = $this->blockViewBuilder->view($block);
 
