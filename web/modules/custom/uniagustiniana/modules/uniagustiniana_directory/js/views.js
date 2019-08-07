@@ -175,6 +175,15 @@
 
                 }
 
+                /**
+                 * Scroll top animate
+                 */
+            ,   scrollTopAnimate: function() {
+                    $('body, html').animate({
+                      scrollTop: $('#org-chart-canvas').offset().top
+                    }, 700);
+                }
+
 
                 /**
                 * Searchs an item by name or area

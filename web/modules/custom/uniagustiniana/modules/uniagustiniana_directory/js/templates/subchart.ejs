@@ -33,7 +33,9 @@
 %>
 
 <div class="directory-btn">
-	<a class="directory-btn__top" href="/directory/#org"  id="org-back-button">Volver</a>
+	<a class="directory-btn__top" href="/directory/#org"  id="org-back-button">
+		<i class="fa fa-arrow-left"></i>
+	</a>
 </div>
 
 <!-- Make a list of nodes -->
@@ -77,9 +79,13 @@
 						</div>
 						<a class="item-data__email" href="mailto:<%= parent.get('correo') %>"><%= parent.get('correo') %></a>
 					</div>
-					<div class="description">
-						<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quo voluptatum animi obcaecati, sit aspernatur itaque cofficia autem.</p>
-					</div>
+					<% if (parent.get('descripcion') != null) {%>
+              <div class="description">
+                <p>
+                  <%= parent.get('descripcion') %>
+                </p>
+              </div>
+            <% } %>
 					<div class="perfil-img">
 						<% if (parent.get('fotografia') == null) { %>
 							<img src="<%= window.OrgChartApp.orgChartImagePath %>isotipo.png" alt="">
@@ -286,10 +292,5 @@
 					type="submit"></button>
 			</div>
 		</form>
-	</div>
-	<div class="search-bottom">
-		<div class="content-word">
-			<hr>
-		</div>
 	</div>
 </div>

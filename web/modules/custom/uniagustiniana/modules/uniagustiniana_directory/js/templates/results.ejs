@@ -40,7 +40,9 @@
 
 <!-- back button -->
 <div class="directory-btn">
-  <a class="directory-btn__top" href="/directory/#org" id="org-back-button">Regresar</a>
+  <a class="directory-btn__top" href="/directory/#org" id="org-back-button">
+    <i class="fa fa-arrow-left"></i>
+  </a>
 </div>
 
 <!-- Items -->
@@ -92,9 +94,13 @@
               </div>
               <a class="main-data__email" href="mailto:<%= item.get('correo') %>"><%= item.get('correo') %></a>
             </div>
-            <div class="description">
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quo voluptatum animi obcaecati, sit aspernatur itaque cofficia autem.</p>
-            </div>
+            <% if (item.get('descripcion') != null) {%>
+              <div class="description">
+                <p>
+                  <%= item.get('descripcion') %>
+                </p>
+              </div>
+            <% } %>
             <div class="profile-image">
               <% if (item.get('fotografia') != null) { %>
                 <img src="<%= item.get('fotografia') %>" alt="">

@@ -111,6 +111,17 @@
   }
 }
 
+// Botón de regresar
+.directory-btn {
+  max-width: 1010px;
+  margin: 20px auto;
+
+  a {
+    font-size: 20px;
+    color: $theme-color;
+  }
+}
+
 // Vista principal del organigrama
 .org-chart-main {
   .org-draw {
@@ -137,7 +148,6 @@
         @extend %vertical-line;
         @include size(4px, 40px);
         margin: 0 auto;
-
       }
     }
 
@@ -192,6 +202,7 @@
             @extend %vertical-line;
             @include absolute(top 50% left 99%);
             @include size(24%, 4px);
+            z-index: -1;
 
             @media (max-width: $screen-sm) {
               display: none;
@@ -210,6 +221,7 @@
           @include size(315px, 206px);
           @include justify-content(center);
           @include align-items(center);
+          @include box-shadow(0 0 10px 0px rgba($black, .3));
 
           img {
             @extend %img-size;
@@ -257,8 +269,21 @@
 
 // Interna usuario
 .ut-org-subchart-draw {
+  @include position(relative, 0);
   padding: 0;
   list-style: none;
+  margin-bottom: 50px;
+
+  &::before {
+    @extend %vertical-line;
+    @include absolute(top 0 left 50%);
+    @include translateX(-50%);
+    @include size(4px, calc(100% - 117px));
+  }
+
+  >li {
+    @include position(relative, 0);
+  }
 
   .perfil-item {
     align-self: flex-start;
@@ -274,7 +299,8 @@
 
     &.main {
       max-width: 800px;
-      margin: 0 auto 65px;
+      margin: 0 auto 120px;
+      background-color: $white;
 
       .wrapper-item {
         @include justify-content(space-between);
@@ -310,8 +336,10 @@
     }
 
     &.with-raya {
+      @include position(relative, 0);
       align-self: flex-start;
       max-width: 500px;
+      background-color: $white;
 
       .wrapper-item {
         .item-data {
@@ -336,12 +364,28 @@
         @include position_directory($color_9, 16px, 10px);
       }
 
-      // &:nth-child(2n + 1) {
-      //   margin-top: -5px;
-      // }
+      &::before {
+        @extend %vertical-line;
+        @include absolute(top 50% left 99%);
+        @include size(18%, 4px);
+        z-index: -1;
+
+        @media (max-width: $screen-sm) {
+          display: none;
+        }
+      }
+
+      &:nth-child(2n + 1) {
+        margin-top: -60px;
+      }
 
       &:nth-child(2n + 2) {
-        margin-top: 120px;
+        margin-top: 60px;
+
+        &::before {
+          left: auto;
+          right: 99%;
+        }
       }
     }
 
@@ -523,6 +567,52 @@
           padding: 5px;
           background-color: $theme-color;
         }
+      }
+    }
+  }
+}
+
+.footer-char-directory  {
+  .directory-form {
+    @include size(100%);
+    max-width: 800px;
+    margin: 0 auto;
+
+    // Titulo y subtitulo
+    &__title,
+    &__subtitle {
+      line-height: 20px;
+      font-size: 16px;
+      color: $theme-color;
+    }
+
+    // Título
+    &__title {
+      font-weight: bold;
+    }
+
+    // Buscador
+    &__search {
+      @include position(relative, null);
+      margin-top: 30px;
+
+      // Input
+      input {
+        @include size(100%);
+        @include border-radius(5px);
+        border: 2px solid $theme-color;
+      }
+
+      // Submit
+      button {
+        @include absolute(top 2px right 2px);
+        @include size(45px, 90%);
+        @include border-radius(5px);
+        @include appearance;
+        font-size: 20px;
+        color: $theme-color;
+        border: none;
+        background: $white;
       }
     }
   }
