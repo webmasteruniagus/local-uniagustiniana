@@ -13,10 +13,10 @@ settings:
   allowed_values:
     -
       value: begin
-      label: Begin
+      label: Principiante
     -
       value: master
-      label: Master
+      label: Mestro
   allowed_values_function: ''
 module: options
 locked: false

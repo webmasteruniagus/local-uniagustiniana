@@ -11,7 +11,7 @@ id: commerce_product.course.field_course_comment
 field_name: field_course_comment
 entity_type: commerce_product
 bundle: course
-label: 'Course Comment'
+label: 'Comentario del curso'
 description: ''
 required: false
 translatable: false

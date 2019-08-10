@@ -9,7 +9,7 @@ id: commerce_product.course.field_course_video
 field_name: field_course_video
 entity_type: commerce_product
 bundle: course
-label: 'Course Video'
+label: 'Vídeo del curso'
 description: ''
 required: false
 translatable: false

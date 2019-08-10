@@ -9,7 +9,7 @@ id: commerce_product.course.field_course_featured
 field_name: field_course_featured
 entity_type: commerce_product
 bundle: course
-label: 'Course Featured'
+label: 'Curso destacado'
 description: ''
 required: false
 translatable: false
