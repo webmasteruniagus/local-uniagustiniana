@@ -17,6 +17,7 @@ dependencies:
     - field.field.commerce_product.course.field_enlace_a_siga
     - field.field.commerce_product.course.field_inicio
     - field.field.commerce_product.course.field_modalidad
+    - field.field.commerce_product.course.field_programa
     - field.field.commerce_product.course.field_sede
     - field.field.commerce_product.course.stores
     - field.field.commerce_product.course.variations
@@ -25,6 +26,7 @@ dependencies:
     - comment
     - commerce
     - datetime
+    - file
     - image
     - imce
     - link
@@ -136,6 +138,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_programa:
+    weight: 21
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_sede:
     weight: 4
