@@ -16,7 +16,7 @@ third_party_settings:
 id: views_block__grupo_contenido_block_1
 theme: gavias_edmix
 region: sidebar_right
-weight: -25
+weight: -33
 provider: null
 plugin: 'views_block:grupo_contenido-block_1'
 settings:

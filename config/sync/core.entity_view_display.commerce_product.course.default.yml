@@ -18,6 +18,7 @@ dependencies:
     - field.field.commerce_product.course.field_enlace_a_siga
     - field.field.commerce_product.course.field_inicio
     - field.field.commerce_product.course.field_modalidad
+    - field.field.commerce_product.course.field_programa
     - field.field.commerce_product.course.field_sede
     - field.field.commerce_product.course.stores
     - field.field.commerce_product.course.variations
@@ -25,6 +26,7 @@ dependencies:
     - comment
     - commerce_product
     - ds
+    - file
     - image
     - link
     - options
@@ -163,6 +165,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_programa:
+    weight: 15
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   title:
     label: hidden

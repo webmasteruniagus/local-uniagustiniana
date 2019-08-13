@@ -45,6 +45,12 @@ filters:
       allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre>'
       filter_html_help: true
       filter_html_nofollow: false
+  gbb_shortcode_corrector:
+    id: gbb_shortcode_corrector
+    provider: gavias_blockbuilder
+    status: true
+    weight: 0
+    settings: {  }
   gbbshortcode:
     id: gbbshortcode
     provider: gavias_blockbuilder
@@ -71,12 +77,6 @@ filters:
   shortcode_corrector:
     id: shortcode_corrector
     provider: shortcode
-    status: true
-    weight: 0
-    settings: {  }
-  gbb_shortcode_corrector:
-    id: gbb_shortcode_corrector
-    provider: gavias_blockbuilder
     status: true
     weight: 0
     settings: {  }

@@ -2,7 +2,10 @@ uuid: 4c42a840-62ca-4de8-b216-5cf82ba63937
 langcode: es
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:8a7132b5-5ae1-4ec8-92d1-8ce0a1124b45'
   module:
+    - block_content
     - gaviasthemer
   theme:
     - gavias_edmix
