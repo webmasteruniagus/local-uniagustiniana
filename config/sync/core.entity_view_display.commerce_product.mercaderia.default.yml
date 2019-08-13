@@ -1,0 +1,108 @@
+uuid: 84fec167-3628-444e-844e-fb0311ea5522
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.mercaderia
+    - field.field.commerce_product.mercaderia.body
+    - field.field.commerce_product.mercaderia.field_course_images
+    - field.field.commerce_product.mercaderia.stores
+    - field.field.commerce_product.mercaderia.variations
+  module:
+    - commerce_product
+    - ds
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      ds_content:
+        - title
+        - body
+        - langcode
+        - uid
+        - created
+        - stores
+        - variations
+        - field_course_images
+id: commerce_product.mercaderia.default
+targetEntityType: commerce_product
+bundle: mercaderia
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: timestamp_ago
+    weight: 4
+    region: content
+    label: above
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+  field_course_images:
+    weight: 7
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  langcode:
+    type: language
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+  stores:
+    type: entity_reference_entity_view
+    weight: 5
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  title:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  uid:
+    type: author
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 6
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,21 @@
+uuid: 9ff7aef6-c2ac-4a7b-8794-7ab5e48340bc
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.productos_uniagustiniana
+    - field.storage.commerce_order.order_items
+id: commerce_order.productos_uniagustiniana.order_items
+field_name: order_items
+entity_type: commerce_order
+bundle: productos_uniagustiniana
+label: 'Order items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_order_item'
+  handler_settings: {  }
+field_type: entity_reference

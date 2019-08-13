@@ -1,0 +1,57 @@
+uuid: b0e0040b-0f14-4350-89c8-ecae0c03f766
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.productos_uniagustiniana
+    - field.field.commerce_order.productos_uniagustiniana.order_items
+  module:
+    - commerce_order
+    - inline_entity_form
+id: commerce_order.productos_uniagustiniana.default
+targetEntityType: commerce_order
+bundle: productos_uniagustiniana
+mode: default
+content:
+  adjustments:
+    type: commerce_adjustment_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  billing_profile:
+    type: commerce_billing_profile
+    weight: 0
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  cart:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 20
+    region: content
+    third_party_settings: {  }
+  order_items:
+    type: inline_entity_form_complex
+    weight: 0
+    settings:
+      override_labels: true
+      label_singular: 'order item'
+      label_plural: 'order items'
+      form_mode: default
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  ip_address: true
+  mail: true
+  order_number: true
+  state: true
+  store_id: true
+  uid: true

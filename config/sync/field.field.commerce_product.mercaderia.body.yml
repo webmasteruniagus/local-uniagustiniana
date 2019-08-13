@@ -1,0 +1,22 @@
+uuid: cb372091-4fd4-480d-9e59-f05b56ecb5e5
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.mercaderia
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.mercaderia.body
+field_name: body
+entity_type: commerce_product
+bundle: mercaderia
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+field_type: text_with_summary

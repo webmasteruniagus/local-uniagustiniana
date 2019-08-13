@@ -1,0 +1,11 @@
+uuid: 04561e08-5967-4487-9ddb-13c39dba5325
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.mercaderia
+id: commerce_product.mercaderia
+target_entity_type_id: commerce_product
+target_bundle: mercaderia
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,22 @@
+uuid: 43eaf544-c823-46c4-824b-73fe845e3efb
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - commerce_checkout
+third_party_settings:
+  commerce_cart:
+    cart_form_view: commerce_cart_form
+    cart_block_view: commerce_cart_block
+  commerce_checkout:
+    checkout_flow: default
+label: 'Productos Uniagustiniana'
+id: productos_uniagustiniana
+workflow: order_default
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: webmaster@uniagustiniana.edu.co
+traits: {  }
+locked: false

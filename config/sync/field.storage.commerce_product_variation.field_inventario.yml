@@ -1,0 +1,19 @@
+uuid: 1397f42a-013d-4360-a73b-5ec38b055224
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - commerce_stock_field
+id: commerce_product_variation.field_inventario
+field_name: field_inventario
+entity_type: commerce_product_variation
+type: commerce_stock_level
+settings: {  }
+module: commerce_stock_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

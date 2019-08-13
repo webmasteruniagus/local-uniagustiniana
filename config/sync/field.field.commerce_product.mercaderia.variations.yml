@@ -1,0 +1,24 @@
+uuid: e575c524-bc50-4c36-9ee5-4c183931e6ae
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.mercaderia
+    - commerce_product.commerce_product_variation_type.mercaderia
+    - field.storage.commerce_product.variations
+id: commerce_product.mercaderia.variations
+field_name: variations
+entity_type: commerce_product
+bundle: mercaderia
+label: Variations
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_product_variation'
+  handler_settings:
+    target_bundles:
+      - mercaderia
+field_type: entity_reference

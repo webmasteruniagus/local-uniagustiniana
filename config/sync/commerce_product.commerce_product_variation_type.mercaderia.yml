@@ -1,0 +1,10 @@
+uuid: b38128db-1118-4c7e-81f1-2d1fb3d1a6f7
+langcode: es
+status: true
+dependencies: {  }
+id: mercaderia
+label: Mercadería
+orderItemType: default
+generateTitle: null
+traits: {  }
+locked: false

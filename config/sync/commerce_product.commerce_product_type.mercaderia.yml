@@ -1,0 +1,12 @@
+uuid: 3fdaf49a-424e-4928-8122-a718f4a98dce
+langcode: es
+status: true
+dependencies: {  }
+id: mercaderia
+label: Mercadería
+description: 'Categoría de productos para la tienda de la agustiniana.'
+variationType: mercaderia
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

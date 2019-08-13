@@ -1,0 +1,7 @@
+default_service_id: local_stock
+_core:
+  default_config_hash: z4CtmoUxBut4Mcj1tjlQENFUSkRGQUNtX6e1z1xDhYU
+langcode: es
+commerce_product_variation_course_service_id: always_in_stock
+commerce_product_variation_mercaderia_service_id: local_stock
+stock_events_plugin_id: core_stock_events
