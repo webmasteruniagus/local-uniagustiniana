@@ -42,6 +42,7 @@
         select_29 = ".gva-search-region",
         select_30 = "#header",
         select_31 = ".search-content",
+        select_32 = ".webform-submission-curso-form",
 
         class_1 = "is--open",
         class_2 = "sidebar--fixed",
@@ -50,7 +51,7 @@
         class_5 = "page-program",
         class_6 = "tabs_horizontal",
         class_7 = "tabs_vertical",
-        
+
         query_1;
 
     /**
@@ -99,7 +100,7 @@
             } else {
                 select2.classList.remove(class_4);
                 parent2.append(select2);
-                
+
                 if (select3) {
                     select3.classList.remove(class_4);
                     parent1.prepend(select3);
@@ -201,7 +202,7 @@
                 // Contar filtros realizados
                 $(select_16).each(function() {
                     let actived = $(this).children('.is-active')[0] !== undefined;
-                    
+
                     if (actived) filtersDone += 1;
                 });
 
@@ -235,13 +236,19 @@
                 createVariableCss('opacity_1', mainColorOpacity);
                 createVariableCss('color_2', secondColor);
                 createVariableCss('color_3', textColor);
-                
+
             },
 
             students: function() {
                 $(select_27 + ' ' + select_28 + ':not(.col-lg-12)').click(function(e) {
                     let url = $(this).find('.title a').attr('href');
                     location.href = url;
+                });
+            },
+
+            hide_form: () => {
+                $(select_32).submit(function() {
+                    $(this).hide();
                 });
             }
         };
@@ -265,6 +272,10 @@
         // Página de estudiantes
         if ($(select_27).length > 0) {
             UniCustom.students();
+        }
+        // Formulario de interna de programa
+        if ($(select_32).length > 0) {
+            UniCustom.hide_form();
         }
     });
 
