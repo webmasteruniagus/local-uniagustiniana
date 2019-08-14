@@ -108,6 +108,27 @@ header .area-main-menu .gva-search-region.show .search-content {
     }
 }
 
+// Descargar programa en interna de programa
+.webform-submission-curso-form {
+    .form-cursos-wrapper {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+
+        .js-form-item input {
+            @include size(100%, 45px);
+            margin-bottom: 30px;
+            background-color: rgba(0, 0, 0, .04);
+            border: 0;
+        }
+
+        .form-actions {
+            text-align: center;
+            margin: 20px 0 50px;
+        }
+    }
+}
+
 /*
 ===========================================================
                         Fin de bloque para formularios
