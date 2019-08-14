@@ -25,3 +25,11 @@ uniagustiniana.program_autocomplete:
     _format: json
   requirements:
     _access: 'TRUE'
+
+uniagustiniana.download_program:
+  path: 'download_program/{fid}'
+  defaults:
+    _controller: '\Drupal\uniagustiniana\Controller\Download::file'
+    _title: 'Universidad agustiniana'
+  requirements:
+    _permission: 'access content'

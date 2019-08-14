@@ -106,6 +106,9 @@ function uniagustiniana_form_alter(&$form, FormStateInterface $form_state, $form
             '#value' => $id_programa[0]['target_id'],
           ];
           $form['actions']['submit']['#submit'][] = 'uniagustiniana_curso_form_submit';
+          $form['actions']['submit']['#attributes'] = [
+            'formTarget' => '_blank',
+          ];
         }
       }
     }
@@ -116,7 +119,9 @@ function uniagustiniana_form_alter(&$form, FormStateInterface $form_state, $form
  * Custom submit handler for login form.
  */
 function uniagustiniana_curso_form_submit($form, FormStateInterface $form_state) {
-  // $form_state->setRedirect('custom.redirect_callback');
+  $form_state->setRedirect('uniagustiniana.download_program', [
+    'fid' => $form_state->getValue('id_programa'),
+  ]);
 }
 
 /**
