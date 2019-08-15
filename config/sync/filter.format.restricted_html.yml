@@ -31,12 +31,6 @@ filters:
     status: true
     weight: 0
     settings: {  }
-  shortcode_corrector:
-    id: shortcode_corrector
-    provider: shortcode
-    status: true
-    weight: 0
-    settings: {  }
   shortcode:
     id: shortcode
     provider: shortcode
@@ -54,3 +48,9 @@ filters:
       block: '1'
       img: '1'
       col: '1'
+  shortcode_corrector:
+    id: shortcode_corrector
+    provider: shortcode
+    status: true
+    weight: 0
+    settings: {  }
