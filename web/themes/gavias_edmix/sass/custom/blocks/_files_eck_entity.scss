@@ -65,7 +65,10 @@
     // Excel
     .file--x-office-spreadsheet a::before { background: svg('excel'); }
     // Word
-    .file--x-office-document a::before { background: svg('doc'); }
+    .file--x-office-document a::before { background: svg('word'); }
+    // PowerPoint
+    .file--x-office-presentation a::before { background: svg('ppt'); }
+
 }
 
 /*
