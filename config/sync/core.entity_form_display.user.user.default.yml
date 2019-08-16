@@ -33,6 +33,7 @@ third_party_settings:
         - field_jefe
         - field_nivel
         - field_sede
+        - field_descripcion
       parent_name: ''
       weight: 7
       format_type: details

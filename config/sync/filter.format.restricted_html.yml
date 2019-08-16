@@ -1,9 +1,7 @@
 uuid: fcdd228c-9c20-4a63-a0f1-50ab8d5d2c44
 langcode: es
 status: true
-dependencies:
-  module:
-    - shortcode
+dependencies: {  }
 _core:
   default_config_hash: KUjJ8Ti_ZJSlhGM88E_mhJP-8mmQRNUB6RFof615Kt0
 name: 'Restricted HTML'
@@ -28,29 +26,6 @@ filters:
   filter_caption:
     id: filter_caption
     provider: filter
-    status: true
-    weight: 0
-    settings: {  }
-  shortcode:
-    id: shortcode
-    provider: shortcode
-    status: true
-    weight: 0
-    settings:
-      button: '1'
-      quote: '1'
-      item: '1'
-      random: '1'
-      dropcap: '1'
-      highlight: '1'
-      clear: '1'
-      link: '1'
-      block: '1'
-      img: '1'
-      col: '1'
-  shortcode_corrector:
-    id: shortcode_corrector
-    provider: shortcode
     status: true
     weight: 0
     settings: {  }
