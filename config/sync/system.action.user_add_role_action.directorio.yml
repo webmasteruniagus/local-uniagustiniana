@@ -1,0 +1,14 @@
+uuid: f93639a2-14f1-43ec-8bd0-c11bb1e59a0a
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.directorio
+  module:
+    - user
+id: user_add_role_action.directorio
+label: 'Añade el rol Directorio al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: directorio

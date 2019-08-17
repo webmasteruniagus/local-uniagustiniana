@@ -1,0 +1,17 @@
+uuid: eabe6cf3-3fed-41de-a76e-a24c4bbd6afd
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.facultad
+  enforced:
+    config:
+      - user.role.directorio
+id: facultad-01d10594e
+label: Directorio
+weight: 5
+internal: true
+audience: outsider
+group_type: facultad
+permissions_ui: false
+permissions: {  }

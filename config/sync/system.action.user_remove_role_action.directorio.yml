@@ -1,0 +1,14 @@
+uuid: fbd0a856-1330-4de0-a8b1-4bc1169f5757
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.directorio
+  module:
+    - user
+id: user_remove_role_action.directorio
+label: 'Elimina el rol Directorio al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: directorio

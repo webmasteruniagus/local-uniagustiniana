@@ -1,0 +1,17 @@
+uuid: eae9e61d-2748-424e-85ce-81fd71deaf2c
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.unidad
+  enforced:
+    config:
+      - user.role.directorio
+id: unidad-01d10594e
+label: Directorio
+weight: 5
+internal: true
+audience: outsider
+group_type: unidad
+permissions_ui: false
+permissions: {  }

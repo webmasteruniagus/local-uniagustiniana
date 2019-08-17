@@ -1,0 +1,9 @@
+uuid: b5760694-58e5-438a-bf36-28ad76d81e6f
+langcode: es
+status: true
+dependencies: {  }
+id: directorio
+label: Directorio
+weight: 5
+is_admin: null
+permissions: {  }

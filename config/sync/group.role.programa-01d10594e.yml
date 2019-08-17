@@ -1,0 +1,17 @@
+uuid: 9b0dfaf5-3183-4ec9-89e0-b9368b7987c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.programa
+  enforced:
+    config:
+      - user.role.directorio
+id: programa-01d10594e
+label: Directorio
+weight: 5
+internal: true
+audience: outsider
+group_type: programa
+permissions_ui: false
+permissions: {  }

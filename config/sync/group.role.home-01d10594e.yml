@@ -1,0 +1,17 @@
+uuid: 05093fce-f663-4727-b08c-558d334305a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - group.type.home
+  enforced:
+    config:
+      - user.role.directorio
+id: home-01d10594e
+label: Directorio
+weight: 5
+internal: true
+audience: outsider
+group_type: home
+permissions_ui: false
+permissions: {  }
