@@ -51,6 +51,7 @@ class JsonDirectory extends ControllerBase {
   public function viewJson() {
     $query = $this->db->select('users_field_data', 'u');
     $query->addField('u', 'uid', 'id');
+    $query->addField('u', 'mail', 'correo');
     $query->addField('un', 'field_nivel_value', 'nivel');
     $query->addField('unom', 'field_nombres_value', 'nombre');
     $query->addField('ucar', 'field_cargo_value', 'cargo');
