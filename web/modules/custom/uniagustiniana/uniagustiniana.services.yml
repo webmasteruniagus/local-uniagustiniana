@@ -1,0 +1,5 @@
+services:
+
+  uniagustiniana.soap_siga:
+    class: \Drupal\uniagustiniana\Services\SoapSiga
+    arguments: ["@config.factory"]

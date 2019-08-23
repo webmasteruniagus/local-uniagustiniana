@@ -179,3 +179,11 @@ function uniagustiniana_tokens($type, $tokens, array $data, array $options, Bubb
   // Return the replacements.
   return $replacements;
 }
+
+/**
+ * Implements hook_cron().
+ */
+function uniagustiniana_cron() {
+  $batch = \Drupal::service('uniagustiniana.soap_siga');
+  $batch->getCurses();
+}
