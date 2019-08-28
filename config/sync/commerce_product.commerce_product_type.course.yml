@@ -6,5 +6,7 @@ id: course
 label: Course
 description: ''
 variationType: course
+multipleVariations: true
 injectVariationFields: true
 traits: {  }
+locked: false

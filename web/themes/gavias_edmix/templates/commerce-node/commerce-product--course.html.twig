@@ -100,20 +100,33 @@
             </div>
           </div>
         {% endif %}
+
+        {% if product.field_modalidad %}
+          <div class="meta-item">
+            <div class="icon icon-modality"></div>
+            <div class="content">
+              <div class="lab">{{ 'Modality'|t }}</div>
+              <div class="val">{{ product.field_modalidad }}</div>
+            </div>
+          </div>
+        {% endif %}
       </div>
 
       <div class="post-content">
         <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-          {{- product|without('field_course_level', 'field_course_features', 'field_course_featured', 'field_course_teacher', 'field_course_duration', 'field_course_images', 'comment', 'field_course_video', 'variation_price', 'variations' ,'field_course_category', 'field_course_comment', 'field_enlace_a_siga') -}}
+{{- product|without('field_course_level', 'field_course_features', 'field_course_featured', 'field_course_teacher', 'field_course_duration', 'field_course_images', 'comment', 'field_course_video', 'variation_price', 'field_modalidad', 'variations' ,'field_course_category', 'field_course_comment', 'field_enlace_a_siga') -}}
+
         </div>
       </div>
 
-      <div class="course-features">
-        {{ product.field_course_features }}
-      </div>
+      {% if product.field_course_features[0] %}
+        <div class="course-features">
+          {{ product.field_course_features }}
+        </div>
+      {% endif %}
 
       <div class="course-lessons block-info">
-        <div class="block-info-title">Características del curso</div>
+        <div class="block-info-title">Lecciones del curso</div>
         <div class="content-inner">{{ drupal_view('lessons', 'lesson_block') }}</div>
       </div>
 
