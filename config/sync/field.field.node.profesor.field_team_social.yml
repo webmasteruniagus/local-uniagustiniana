@@ -1,0 +1,23 @@
+uuid: 42b6ef68-7909-4763-b4ff-548582a5d411
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_social
+    - node.type.profesor
+  module:
+    - field_collection
+id: node.profesor.field_team_social
+field_name: field_team_social
+entity_type: node
+bundle: profesor
+label: 'Redes sociales'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

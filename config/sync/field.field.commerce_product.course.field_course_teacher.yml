@@ -5,7 +5,7 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.course
     - field.storage.commerce_product.field_course_teacher
-    - node.type.team
+    - node.type.profesor
 id: commerce_product.course.field_course_teacher
 field_name: field_course_teacher
 entity_type: commerce_product
@@ -20,7 +20,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      team: team
+      profesor: profesor
     sort:
       field: _none
     auto_create: false

@@ -1,0 +1,113 @@
+uuid: 26b9a2f7-4662-451e-93c3-b331b506adba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.profesor.body
+    - field.field.node.profesor.field_meta_tags
+    - field.field.node.profesor.field_team_contact
+    - field.field.node.profesor.field_team_education
+    - field.field.node.profesor.field_team_email
+    - field.field.node.profesor.field_team_image
+    - field.field.node.profesor.field_team_position
+    - field.field.node.profesor.field_team_social
+    - field.field.node.profesor.field_yoast_seo
+    - image.style.height
+    - node.type.profesor
+  module:
+    - ds
+    - field_collection
+    - image
+    - metatag
+    - text
+    - user
+    - yoast_seo
+id: node.profesor.default
+targetEntityType: node
+bundle: profesor
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_meta_tags:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_team_contact:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_team_education:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_team_email:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_team_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: height
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+  field_team_position:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_team_social:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_items
+    region: content
+  field_yoast_seo:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: yoastseo_formatter
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: b29108ee-c2ae-4501-8819-e9ff1067c886
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_email
+    - node.type.profesor
+id: node.profesor.field_team_email
+field_name: field_team_email
+entity_type: node
+bundle: profesor
+label: 'Correo electrónico'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

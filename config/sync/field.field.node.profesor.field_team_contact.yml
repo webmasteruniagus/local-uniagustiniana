@@ -1,0 +1,19 @@
+uuid: dd59595c-0dc6-4aa3-9dd7-ee18f6ceb6e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_contact
+    - node.type.profesor
+id: node.profesor.field_team_contact
+field_name: field_team_contact
+entity_type: node
+bundle: profesor
+label: Contacto
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

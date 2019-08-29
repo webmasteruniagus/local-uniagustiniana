@@ -1,0 +1,22 @@
+uuid: ceedd20a-46f8-4e1a-b61f-de52b3259e1b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.profesor
+  module:
+    - text
+id: node.profesor.body
+field_name: body
+entity_type: node
+bundle: profesor
+label: Perfil
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: b2968302-295f-491c-b1de-f6e6487b20bc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_education
+    - node.type.profesor
+id: node.profesor.field_team_education
+field_name: field_team_education
+entity_type: node
+bundle: profesor
+label: Educación
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

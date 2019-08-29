@@ -105,9 +105,12 @@ content:
     region: content
   field_course_teacher:
     weight: 16
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_buttons
+    type: entity_reference_autocomplete_tags
     region: content
   field_course_video:
     weight: 20

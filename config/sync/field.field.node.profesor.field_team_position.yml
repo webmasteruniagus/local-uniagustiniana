@@ -1,0 +1,19 @@
+uuid: a4814ff0-a3dd-4b25-bbfe-39cfb684a4d8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_position
+    - node.type.profesor
+id: node.profesor.field_team_position
+field_name: field_team_position
+entity_type: node
+bundle: profesor
+label: 'Posición o cargo'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
