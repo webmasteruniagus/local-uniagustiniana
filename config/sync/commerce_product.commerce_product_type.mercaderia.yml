@@ -3,7 +3,7 @@ langcode: es
 status: true
 dependencies: {  }
 id: mercaderia
-label: Mercadería
+label: Productos
 description: 'Categoría de productos para la tienda de la agustiniana.'
 variationType: mercaderia
 multipleVariations: true

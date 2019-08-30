@@ -83,6 +83,10 @@
         <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
           {{ content|without('field_team_name', 'field_team_contact', 'field_team_image', 'field_team_contact', 'field_team_quote', 'field_team_social', 'field_team_education', 'field_team_position', 'field_team_email', 'field_team_description', 'comment') }}
         </div>
+
+        {% if content.field_team_quote[0] %}
+          <div class="team-quote"> {{content.field_team_quote}} </div>
+        {% endif %}
       </div>
   </div>
 </article>

@@ -3,8 +3,8 @@ langcode: es
 status: true
 dependencies: {  }
 id: mercaderia
-label: Mercadería
+label: Productos
 orderItemType: default
-generateTitle: null
+generateTitle: false
 traits: {  }
 locked: false

@@ -1,0 +1,19 @@
+uuid: f03790a0-7494-4b75-9c98-30b7394f27dd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_quote
+    - node.type.profesor
+id: node.profesor.field_team_quote
+field_name: field_team_quote
+entity_type: node
+bundle: profesor
+label: Frase
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

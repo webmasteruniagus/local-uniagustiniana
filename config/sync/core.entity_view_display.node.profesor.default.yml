@@ -6,10 +6,12 @@ dependencies:
     - field.field.node.profesor.body
     - field.field.node.profesor.field_meta_tags
     - field.field.node.profesor.field_team_contact
+    - field.field.node.profesor.field_team_description
     - field.field.node.profesor.field_team_education
     - field.field.node.profesor.field_team_email
     - field.field.node.profesor.field_team_image
     - field.field.node.profesor.field_team_position
+    - field.field.node.profesor.field_team_quote
     - field.field.node.profesor.field_team_social
     - field.field.node.profesor.field_yoast_seo
     - image.style.height
@@ -49,6 +51,13 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_team_description:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_team_education:
     weight: 6
     label: hidden
@@ -87,6 +96,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_team_quote:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_team_social:
     weight: 4

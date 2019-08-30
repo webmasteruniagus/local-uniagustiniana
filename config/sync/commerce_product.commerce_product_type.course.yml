@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: course
-label: Course
+label: Cursos
 description: ''
 variationType: course
 multipleVariations: true

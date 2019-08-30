@@ -179,7 +179,18 @@ display:
             label: ''
           granularity: second
       title: Lessons
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<div class="block-info-title">Lecciones del curso</div>'
+          plugin_id: text_custom
       footer: {  }
       empty: {  }
       relationships: {  }

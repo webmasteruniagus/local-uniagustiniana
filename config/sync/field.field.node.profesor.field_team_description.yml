@@ -1,0 +1,21 @@
+uuid: 7da8c04d-eb37-46b6-aa12-f341ffa37e98
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_description
+    - node.type.profesor
+  module:
+    - text
+id: node.profesor.field_team_description
+field_name: field_team_description
+entity_type: node
+bundle: profesor
+label: Descripción
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

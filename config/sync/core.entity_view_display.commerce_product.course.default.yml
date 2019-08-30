@@ -24,6 +24,7 @@ dependencies:
   module:
     - commerce_product
     - image
+    - link
     - options
     - text
 id: commerce_product.course.default
@@ -64,6 +65,14 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
+  field_course_features:
+    type: string
+    weight: 12
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_course_images:
     weight: 3
     label: hidden
@@ -96,6 +105,18 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_enlace_a_siga:
+    type: link
+    weight: 11
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
   field_modalidad:
     type: string
     weight: 10
@@ -123,8 +144,6 @@ content:
 hidden:
   created: true
   field_course_comment: true
-  field_course_features: true
-  field_enlace_a_siga: true
   field_inicio: true
   field_programa: true
   field_sede: true
