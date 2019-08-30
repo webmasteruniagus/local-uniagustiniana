@@ -114,8 +114,7 @@
 
       <div class="post-content">
         <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-{{- product|without('field_course_level', 'field_course_features', 'field_course_featured', 'field_course_teacher', 'field_course_duration', 'field_course_images', 'comment', 'field_course_video', 'variation_price', 'field_modalidad', 'variations' ,'field_course_category', 'field_course_comment', 'field_enlace_a_siga') -}}
-
+{{- product|without('field_course_level', 'field_course_features', 'field_course_featured', 'field_course_teacher', 'field_course_duration', 'field_course_images', 'comment', 'field_course_video', 'variation_price', 'field_modalidad', 'variations' ,'field_course_category', 'field_course_comment', 'field_enlace_a_siga', 'field_financiacion', 'field_financieras') -}}
         </div>
       </div>
 
@@ -128,6 +127,25 @@
       <div class="course-lessons block-info">
         <div class="content-inner">{{ drupal_view('lessons', 'lesson_block') }}</div>
       </div>
+
+      {% if product.field_financiacion %}
+        <div class="financiacion row">
+          <div class="financiacion__title col-sm-3 col-xs-12">
+            <h3>Financiación</h4>
+          </div>
+          <div class="financiacion-content col-sm-9 col-xs-12">
+            <h4 class="financiacion-content__title">Apoyo financiero, ¡Porque darte alternativas, es creer en ti!</h4>
+            <div class="financiacion-content__description">
+              {{ product.field_financiacion }}
+            </div>
+            <div class="financiacion-content__financieras">
+              {% if product.field_financieras %}
+                {{ product.field_financieras }}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
 
       {% if product.field_course_comment %}
         <div id="node-single-comment">

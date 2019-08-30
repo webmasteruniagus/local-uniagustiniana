@@ -1,0 +1,29 @@
+uuid: b18b1d99-5df4-40ee-9cfb-f6d59c91ae31
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.course
+    - field.storage.commerce_product.field_financieras
+    - taxonomy.vocabulary.financieras
+id: commerce_product.course.field_financieras
+field_name: field_financieras
+entity_type: commerce_product
+bundle: course
+label: Financieras
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      financieras: financieras
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

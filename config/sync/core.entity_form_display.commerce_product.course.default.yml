@@ -15,6 +15,8 @@ dependencies:
     - field.field.commerce_product.course.field_course_teacher
     - field.field.commerce_product.course.field_course_video
     - field.field.commerce_product.course.field_enlace_a_siga
+    - field.field.commerce_product.course.field_financiacion
+    - field.field.commerce_product.course.field_financieras
     - field.field.commerce_product.course.field_inicio
     - field.field.commerce_product.course.field_modalidad
     - field.field.commerce_product.course.field_programa
@@ -127,6 +129,20 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_financiacion:
+    weight: 22
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_financieras:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_inicio:
     weight: 6
