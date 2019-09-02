@@ -12,11 +12,20 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: begin
-      label: Principiante
+      value: beggin
+      label: Principiantes
     -
-      value: master
-      label: Mestro
+      value: intermediate
+      label: Intermedio
+    -
+      value: intermediatet
+      label: 'Intermedio - Teórico/Práctico'
+    -
+      value: advanced
+      label: Avanzado
+    -
+      value: diplomat
+      label: Diplomado
   allowed_values_function: ''
 module: options
 locked: false
