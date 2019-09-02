@@ -39,9 +39,6 @@ header{
 .icon-students{
    background: url('#{$base-theme-image-path}/student.png') no-repeat scroll center center transparent;
 }
-.icon-modality {
-   background: url('#{$base-theme-image-path}/modality.png') no-repeat scroll center center transparent;
-}
 
 .gbb-row.gsc-equal-height .column-content-inner{
    @include translateY(0);

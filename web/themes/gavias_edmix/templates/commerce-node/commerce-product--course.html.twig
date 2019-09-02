@@ -110,6 +110,26 @@
             </div>
           </div>
         {% endif %}
+
+        {% if product.field_sede %}
+          <div class="meta-item">
+            <div class="icon icon-sede"></div>
+            <div class="content">
+              <div class="lab">{{ 'Sede'|t }}</div>
+              <div class="val">{{ product.field_sede }}</div>
+            </div>
+          </div>
+        {% endif %}
+
+        {% if product.field_inicio %}
+          <div class="meta-item">
+            <div class="icon icon-calendar"></div>
+            <div class="content">
+              <div class="lab">{{ 'inicio'|t }}</div>
+              <div class="val">{{ product.field_inicio }}</div>
+            </div>
+          </div>
+        {% endif %}
       </div>
 
       <div class="post-content">

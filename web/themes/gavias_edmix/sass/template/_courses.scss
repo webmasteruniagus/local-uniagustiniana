@@ -71,7 +71,7 @@
       z-index: 9;
       @include opacity(0);
       @include transition(all 0.35s);
-    } 
+    }
     .icon-expand{
       position: absolute;
       top: 15px;
@@ -87,7 +87,7 @@
       right: 45px;
       color: rgba(255, 255, 255, 0.8);
       z-index: 11;
-      font-size: 18px; 
+      font-size: 18px;
       line-height: 1;
     }
   }
@@ -172,7 +172,7 @@
           font-size: 22px;
           position: relative;
           min-height: auto;
-        } 
+        }
         .teacher{
           margin: 10px 0;
           a{
@@ -306,7 +306,7 @@
               text-decoration: underline;
             }
           }
-        } 
+        }
         .teacher{
           margin: 10px 0;
           a{
@@ -461,11 +461,11 @@
       color: $white;
       @include opacity(1);
     }
-    input::-moz-placeholder {  
+    input::-moz-placeholder {
       color: $white;
       @include opacity(1);
     }
-    input:-ms-input-placeholder {  
+    input:-ms-input-placeholder {
       color: $white;
     }
   }
@@ -715,7 +715,7 @@
       z-index: 9;
       @include opacity(0);
       @include transition(all 0.35s);
-    } 
+    }
     .icon-expand{
       position: absolute;
       top: 15px;
@@ -732,7 +732,7 @@
       right: 45px;
       color: $theme-color;
       z-index: 11;
-      font-size: 18px; 
+      font-size: 18px;
       line-height: 1;
       @include opacity(0.8);
     }
@@ -842,6 +842,15 @@
         }
         &.icon-duration{
           background: url('#{$base-theme-image-path}/icon-clock.png') no-repeat scroll center center transparent;
+        }
+        &.icon-modality {
+          background: url('#{$base-theme-image-path}/modality.png') no-repeat scroll center center transparent;
+        }
+        &.icon-sede {
+          background: url('#{$base-theme-image-path}/sede.png') no-repeat scroll center center transparent;
+        }
+        &.icon-calendar {
+          background: url('#{$base-theme-image-path}/calendar.png') no-repeat scroll center center transparent;
         }
       }
       .content{
@@ -983,7 +992,7 @@
   .lessons{
     .back-to-course{
       margin-bottom: 15px;
-      font-weight: 700; 
+      font-weight: 700;
       font-family: $font-second;
       color: $black;
       a{
