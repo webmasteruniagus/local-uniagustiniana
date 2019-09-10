@@ -8,16 +8,16 @@ dependencies:
 id: cursos
 label: Cursos
 type: 'canonical_entities:commerce_product'
-pattern: 'curso/[commerce_product:title]'
+pattern: 'cursos-y-diplomados/[commerce_product:title]'
 selection_criteria:
-  d50fb675-5f47-40ac-9da8-dbbaf331b49c:
+  ecfd7082-0737-4e31-b1d1-029818297db4:
     id: 'entity_bundle:commerce_product'
     bundles:
       course: course
     negate: false
     context_mapping:
       commerce_product: commerce_product
-    uuid: d50fb675-5f47-40ac-9da8-dbbaf331b49c
+    uuid: ecfd7082-0737-4e31-b1d1-029818297db4
 selection_logic: and
 weight: -5
 relationships: {  }
