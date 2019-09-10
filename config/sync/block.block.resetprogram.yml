@@ -16,7 +16,7 @@ third_party_settings:
 id: resetprogram
 theme: gavias_edmix
 region: sidebar_left
-weight: -25
+weight: -34
 provider: null
 plugin: 'facets_summary_block:reset_program'
 settings:

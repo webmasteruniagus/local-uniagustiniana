@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.group.field_duracion
     - field.storage.group.field_imagen
+    - field.storage.group.field_metodologia
     - search_api.server.server
   module:
     - group
@@ -31,6 +32,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.group.field_imagen
+  field_metodologia:
+    label: 'Metodología:'
+    datasource_id: 'entity:group'
+    property_path: field_metodologia
+    type: string
+    dependencies:
+      config:
+        - field.storage.group.field_metodologia
   group_program_facultad:
     label: 'Programa facultad'
     property_path: search_api_group_program_facultad

@@ -29,5 +29,15 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_meta_tags: true
+  field_team_contact: true
+  field_team_description: true
+  field_team_education: true
+  field_team_email: true
+  field_team_image: true
+  field_team_position: true
+  field_team_quote: true
+  field_team_social: true
+  field_yoast_seo: true
   langcode: true
   search_api_excerpt: true
