@@ -1,4 +1,4 @@
-uuid: fe5c085a-ce3e-4eb1-ab7c-294a8b91c79e
+uuid: 090e8e10-2c95-43f3-b487-106c2f7b94cf
 langcode: es
 status: true
 dependencies:
@@ -15,9 +15,9 @@ theme: gavias_edmix
 region: other
 weight: 0
 provider: null
-plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____15'
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____12'
 settings:
-  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____15'
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____12'
   label: 'Gavias SliderLayer - Educación continuada'
   provider: gavias_sliderlayer
   label_display: '0'
