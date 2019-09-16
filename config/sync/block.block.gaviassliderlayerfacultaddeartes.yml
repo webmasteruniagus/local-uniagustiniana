@@ -12,7 +12,7 @@ third_party_settings:
 id: gaviassliderlayerfacultaddeartes
 theme: gavias_edmix
 region: other
-weight: 0
+weight: -10
 provider: null
 plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____15'
 settings:

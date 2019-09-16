@@ -13,7 +13,7 @@ third_party_settings:
 id: programasdefacultad
 theme: gavias_edmix
 region: other
-weight: -14
+weight: -17
 provider: null
 plugin: ProgramasFacultad
 settings:

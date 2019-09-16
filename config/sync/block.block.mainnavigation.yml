@@ -15,7 +15,7 @@ third_party_settings:
 id: mainnavigation
 theme: gavias_edmix
 region: other
-weight: -28
+weight: -33
 provider: null
 plugin: 'system_menu_block:main'
 settings:

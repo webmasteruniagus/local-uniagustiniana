@@ -1,4 +1,4 @@
-uuid: f531ea8e-708f-483c-b257-07305a6249ab
+uuid: fe5c085a-ce3e-4eb1-ab7c-294a8b91c79e
 langcode: es
 status: true
 dependencies:
@@ -10,15 +10,15 @@ dependencies:
 third_party_settings:
   gaviasthemer:
     classes: ''
-id: gaviassliderlayercustom
+id: gaviassliderlayereducacioncontinuada
 theme: gavias_edmix
 region: other
-weight: -18
+weight: 0
 provider: null
-plugin: gavias_sliderlayer_custom_block
+plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____15'
 settings:
-  id: gavias_sliderlayer_custom_block
-  label: 'Gavias SliderLayer Custom'
+  id: 'gavias_sliderlayer_block:gavias_sliderlayer_block____15'
+  label: 'Gavias SliderLayer - Educación continuada'
   provider: gavias_sliderlayer
   label_display: '0'
 visibility: {  }

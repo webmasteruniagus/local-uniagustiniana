@@ -15,7 +15,7 @@ third_party_settings:
 id: exposedformcoursescourse_filter
 theme: gavias_edmix
 region: other
-weight: -24
+weight: -29
 provider: null
 plugin: 'views_exposed_filter_block:courses-course_filter'
 settings:

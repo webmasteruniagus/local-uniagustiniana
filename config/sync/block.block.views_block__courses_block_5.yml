@@ -15,7 +15,7 @@ third_party_settings:
 id: views_block__courses_block_5
 theme: gavias_edmix
 region: other
-weight: -21
+weight: -26
 provider: null
 plugin: 'views_block:courses-block_5'
 settings:

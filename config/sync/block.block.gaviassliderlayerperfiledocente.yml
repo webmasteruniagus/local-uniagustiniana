@@ -13,7 +13,7 @@ third_party_settings:
 id: gaviassliderlayerperfiledocente
 theme: gavias_edmix
 region: other
-weight: -18
+weight: -22
 provider: null
 plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____10'
 settings:

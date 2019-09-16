@@ -15,7 +15,7 @@ third_party_settings:
 id: webform
 theme: gavias_edmix
 region: other
-weight: -11
+weight: -14
 provider: null
 plugin: webform_block
 settings:

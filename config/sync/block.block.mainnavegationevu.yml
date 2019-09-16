@@ -15,7 +15,7 @@ third_party_settings:
 id: mainnavegationevu
 theme: gavias_edmix
 region: other
-weight: -29
+weight: -34
 provider: null
 plugin: 'system_menu_block:main-navegation-evu'
 settings:

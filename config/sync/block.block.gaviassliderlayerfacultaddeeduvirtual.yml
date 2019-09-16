@@ -12,7 +12,7 @@ third_party_settings:
 id: gaviassliderlayerfacultaddeeduvirtual
 theme: gavias_edmix
 region: other
-weight: 0
+weight: -12
 provider: null
 plugin: 'gavias_sliderlayer_block:gavias_sliderlayer_block____17'
 settings:
