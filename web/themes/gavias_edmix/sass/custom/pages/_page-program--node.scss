@@ -189,12 +189,31 @@
 // SOBREESCRIBIR COLORES POR EL COLOR ASIGNADO DESDE CONFIGURACIÓN
 // ==================================================================================
 .page-program  {
+    .messages__wrapper {
+        width: 100vw;
+        max-width: initial;
+        padding: 0;
+        border: none;
+        margin-left: calc(((100vw - 100%) / 2) * -1);
+
+        .messages.messages--status {
+            padding: 10px 20px;
+            color: white;
+            margin: 0;
+            line-height: 20px;
+
+             @media screen and (max-width: $screen-sm) {
+                 text-align: center;
+             }
+        }
+    }
     // Ocultar campos
     .field--type-color-field-type,
     .gavias-skin-demo .control-panel, { display: none; }
     // Sobreescribir borde con !IMPORTANT
     .btn-white:hover,
     input.js-form-submit,
+    .messages.messages--status,
     .block.block-simplenews .form-actions input#edit-subscribe { border-color: var(--color_2) !important; }
     #search-block-form input.form-submit:hover { border: 1px solid var(--color_2) !important; }
     // Sobreescribir fondo con !IMPORTANT
@@ -208,6 +227,7 @@
     .owl-carousel .owl-nav>div,
     .owl-carousel .owl-nav>div:hover,
     #search-block-form input.form-submit,
+    .messages.messages--status,
     .block.block-simplenews .form-actions input#edit-subscribe { background: var(--color_2) !important; }
 
     input.js-form-submit:hover,
