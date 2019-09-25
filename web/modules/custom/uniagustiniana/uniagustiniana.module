@@ -126,7 +126,7 @@ function ask_for_information_form_submit($form, FormStateInterface $form_state) 
   $form_state->setRedirect('entity.group.canonical', [
     'group' => $form_state->getValue('seleccionar_programa')
   ]);
-  drupal_set_message('Se ha solicitado información');
+  drupal_set_message('Gracias por registrarte, un asesor se comunicará contigo para ampliar la información del programa de tu interés.');
 }
 
 /**

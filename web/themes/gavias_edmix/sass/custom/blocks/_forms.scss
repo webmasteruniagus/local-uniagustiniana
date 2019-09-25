@@ -6,216 +6,251 @@
 
 // Contat - home
 .form-contact {
-    .form-contact--header {
-        background: $color_1;
+  .form-contact--header {
+    background: $color_1;
 
-        &.widget.gsc-heading {
-            .heading-line { display: none; }
+    &.widget.gsc-heading {
+      .heading-line {
+        display: none;
+      }
 
-            @media (max-width: $screen-xs) { padding: 25px 20px; }
-        }
+      @media (max-width: $screen-xs) {
+        padding: 25px 20px;
+      }
     }
-    .form-contact--wrapper {
-        padding: 42px;
-        background: $white;
+  }
 
-        textarea,
-        input {
-            @include border-radius(3px);
-            height: 50px;
-        }
+  .form-contact--wrapper {
+    padding: 42px;
+    background: $white;
 
-        @media (max-width: $screen-xs) { padding: 30px 25px; }
+    textarea,
+    input {
+      @include border-radius(3px);
+      height: 50px;
     }
+
+    @media (max-width: $screen-xs) {
+      padding: 30px 25px;
+    }
+  }
 }
 
 // Bloque de búsqueda de programa - home
 #search-program {
-    @include flexbox;
-    @include flex-wrap(wrap);
-    @include justify-content(center);
-    margin-bottom: 30px;
-    text-align: center;
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  margin-bottom: 30px;
+  text-align: center;
 
-    h3 {
-        @include flex-shrink(0);
-        @include size(100%);
-        font-size: $font-size-h1;
+  h3 {
+    @include flex-shrink(0);
+    @include size(100%);
+    font-size: $font-size-h1;
 
-        &::after {
-            @include pseudo-element;
-            @include size(50px, 2px);
-            @include center-block;
-            @include margin(top, 20px);
-            @include margin(bottom, 20px);
-            background: $white;
-        }
+    &::after {
+      @include pseudo-element;
+      @include size(50px, 2px);
+      @include center-block;
+      @include margin(top, 20px);
+      @include margin(bottom, 20px);
+      background: $white;
+    }
+  }
+
+  input[type="text"] {
+    @include size(100%, 50px);
+    @include border-radius(25px);
+    margin-bottom: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: $text-color;
+  }
+
+  input[type="submit"] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 50px;
+  }
+
+  @media screen and (max-width: 648px) {
+    .js-form-item-search {
+      width: calc(100% - 100px);
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .js-form-item-search {
+      width: 100%;
     }
 
     input[type="text"] {
-        @include size(100%, 50px);
-        @include border-radius(25px);
-        margin-bottom: 20px;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        color: $text-color;
+      @include border-radius(25px);
     }
 
     input[type="submit"] {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        height: 50px;
+      @include border-radius(25px);
+      @include size(50%, 50px);
     }
-
-    @media screen and (max-width: 648px) { .js-form-item-search { width: calc(100% - 100px) } }
-    @media screen and (max-width: 400px) {
-        .js-form-item-search {width: 100%; }
-        input[type="text"] { @include border-radius(25px); }
-        input[type="submit"] {
-            @include border-radius(25px);
-            @include size(50%, 50px);
-        }
-    }
+  }
 }
 
 // Search - global
 header .area-main-menu .gva-search-region.show .search-content {
-    max-width: 500px;
+  max-width: 500px;
+  width: 100%;
+
+  #search-block-form {
+    @include flexbox;
+  }
+
+  .js-form-type-search {
     width: 100%;
 
-    #search-block-form { @include flexbox; }
-
-    .js-form-type-search {
-        width: 100%;
-
-        input#edit-keys { width: 100%; }
+    input#edit-keys {
+      width: 100%;
     }
+  }
 
-    @media (max-width: $screen-xs) {
-        border-top: 1px solid rgba(0,0,0,.1);
-    }
+  @media (max-width: $screen-xs) {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
 
 // Contactenos - Unidad
 .form-contact-unit {
-    max-width: 100%;
+  max-width: 100%;
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        width: 100%;
-        margin-bottom: 5px;
-    }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }
 
 // Descargar programa en interna de programa
 .webform-submission-curso-form {
-    .form-cursos-wrapper {
-        margin-top: 20px;
-        padding-top: 20px;
-        border-top: 1px solid rgba(0, 0, 0, .1);
+  .form-cursos-wrapper {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 
-        .js-form-item input {
-            @include size(100%, 45px);
-            margin-bottom: 30px;
-            background-color: rgba(0, 0, 0, .04);
-            border: 0;
-        }
-
-        .form-actions {
-            text-align: center;
-            margin: 20px 0 50px;
-        }
+    .js-form-item input {
+      @include size(100%, 45px);
+      margin-bottom: 30px;
+      background-color: rgba(0, 0, 0, 0.04);
+      border: 0;
     }
+
+    .form-actions {
+      text-align: center;
+      margin: 20px 0 50px;
+    }
+  }
 }
 
 // Formulario de solicitar información en el home
 .form-ask-for-information {
-    @include position(relative, 0);
+  @include position(relative, 0);
 
-    @media screen and (max-width: $screen-sm) {
-      padding: {
-          left: 15px;
-          right: 15px;
-      }
+  @media screen and (max-width: $screen-sm) {
+    padding: {
+      left: 15px;
+      right: 15px;
     }
+  }
 
-    >.column-content-inner { @include position(relative, 0); }
+  > .column-content-inner {
+		@include position(relative, 0);
+		max-width: 1200px;
+		padding: 0 15px;
+		margin: 0 auto;
+  }
 
-    &::before {
-        @include position(absolute, top 0 left 0);
-        @include square(100%);
-        display: block;
-        background: rgba($black, .4);
-        content: '';
-    }
+  &::before {
+    @include position(absolute, top 0 left 0);
+    @include square(100%);
+    display: block;
+    background: rgba($black, 0.4);
+    content: "";
+  }
+
+  .container-form-ask {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-wrap(wrap);
 
     .js-form-item {
-        input,
-        select {
-            border: 1px solid $white;
-            background: transparent;
-            color: $white;
-            width: 100%;
+      width: calc((100% / 6) - 20px);
+      margin-right: 20px;
 
-            option {
-                color: $black;
-            }
+      input,
+      select {
+        border: 1px solid $white;
+        background: transparent;
+        color: $white;
+        width: 100%;
 
-            @media screen and (max-width: $screen-sm) {
-              height: 45px;
-            }
-        }
-
-        input {
-            @include border-radius(30px);
-        }
-
-        ::-webkit-input-placeholder { color: $white }
-        input:-moz-placeholder { color: $white }
-
-    }
-
-    .container-form-ask {
-        @include flexbox;
-        @include justify-content(center);
-        @include align-items(center);
-        @include flex-wrap(wrap);
-
-        .js-form-item {
-            width: calc((100% / 6) - 20px);
-            margin-right: 20px;
+        option {
+          color: $black;
         }
 
         @media screen and (max-width: $screen-sm) {
-            max-width: 480px;
-            width: 100%;
-            margin: 0 auto;
-
-            .js-form-item {
-              width: 100%;
-              margin-right: 0;
-              margin-bottom: 10px;
-            }
+          height: 45px;
         }
+      }
+
+      input {
+        @include border-radius(30px);
+      }
+
+      ::-webkit-input-placeholder {
+        color: $white;
+      }
+
+      input:-moz-placeholder {
+        color: $white;
+      }
     }
 
-    .form-item-terms-and-conditions {
-        text-align: center;
-        margin: 20px 0 0;
+    @media screen and (max-width: $screen-sm) {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
 
-        a {
-            color: $white;
-
-            &:hover {
-                text-decoration: underline;
-            }
-
-            @media screen and (max-width: $screen-sm) {
-              text-decoration: underline;
-            }
-        }
+      .js-form-item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
     }
+  }
+
+  .js-form-item-term-and-conditions {
+    text-align: center;
+		margin: 20px 0 0;
+
+		label {
+			color: $white;
+			font-weight: normal;
+
+			a {
+        color: $white;
+				font-weight: bold;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				@media screen and (max-width: $screen-sm) {
+					text-decoration: underline;
+				}
+			}
+		}
+  }
 }
 
 /*
