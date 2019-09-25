@@ -113,6 +113,20 @@ function uniagustiniana_form_alter(&$form, FormStateInterface $form_state, $form
       }
     }
   }
+
+  if (isset($form['#webform_id']) && $form['#webform_id'] == 'formulario_home') {
+    $form['actions']['submit']['#submit'][] = 'ask_for_information_form_submit';
+  }
+}
+
+/**
+ * Custom submit handler for aks for information form.
+ */
+function ask_for_information_form_submit($form, FormStateInterface $form_state) {
+  $form_state->setRedirect('entity.group.canonical', [
+    'group' => $form_state->getValue('seleccionar_programa')
+  ]);
+  drupal_set_message('Se ha solicitado información');
 }
 
 /**
