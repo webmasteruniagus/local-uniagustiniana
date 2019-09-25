@@ -1,4 +1,4 @@
-(function($, undefined) {
+(function($, Drupal) {
     "use strict";
 
     /**
@@ -43,6 +43,13 @@
         select_30 = "#header",
         select_31 = ".search-content",
         select_32 = ".webform-submission-curso-form",
+
+        element_1,
+        element_2,
+
+        regex_1 = /[^a-z A-Z ñáéíóú ÁÉÍÓÚÜÑ]+/g,
+        regex_2 = /(^|[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ])([a-záéíóúüñ])/g,
+        regex_3 = /[^0-9]+/g,
 
         class_1 = "is--open",
         class_2 = "sidebar--fixed",
@@ -250,6 +257,36 @@
                 $(select_32).submit(function() {
                     $(this).hide();
                 });
+            },
+
+            format_input_text: () => {
+                const events = ["keyup", "blur"]
+                let value_o
+
+                Array.from(element_1).map(el => {
+                    events.map(event => {
+                        el.addEventListener(event, () => {
+                            value_o = el.value.replace(regex_1, "")
+                            el.value = value_o.toLowerCase().replace(regex_2, w => w.toUpperCase())
+                        })
+                        el.dispatchEvent(new Event(event));
+                    })
+                })
+            },
+
+            format_input_number: () => {
+                const events = ["keyup", "blur"]
+                let value_o
+
+                Array.from(element_2).map(el => {
+                    events.map(event => {
+                        el.addEventListener(event, () => {
+                            value_o = el.value.replace(regex_3, "")
+                            el.value = value_o
+                        })
+                        el.dispatchEvent(new Event(event));
+                    })
+                })
             }
         };
     }());
@@ -285,4 +322,21 @@
       }
     })
 
-}(jQuery));
+    Drupal.behaviors.inputsValidations = {
+        attach: function(context, settings) {
+            element_1 = document.querySelectorAll('input[data-input-text]');
+            element_2 = document.querySelectorAll('input[data-input-number]');
+
+            // Inputs de texto
+            if ($(element_1).length > 0) {
+                UniCustom.format_input_text();
+            }
+
+            // Inputs de texto
+            if ($(element_2).length > 0) {
+                UniCustom.format_input_number();
+            }
+        }
+    }
+
+}(jQuery, Drupal));
