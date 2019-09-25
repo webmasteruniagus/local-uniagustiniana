@@ -129,6 +129,95 @@ header .area-main-menu .gva-search-region.show .search-content {
     }
 }
 
+// Formulario de solicitar información en el home
+.form-ask-for-information {
+    @include position(relative, 0);
+
+    @media screen and (max-width: $screen-sm) {
+      padding: {
+          left: 15px;
+          right: 15px;
+      }
+    }
+
+    >.column-content-inner { @include position(relative, 0); }
+
+    &::before {
+        @include position(absolute, top 0 left 0);
+        @include square(100%);
+        display: block;
+        background: rgba($black, .4);
+        content: '';
+    }
+
+    .js-form-item {
+        input,
+        select {
+            border: 1px solid $white;
+            background: transparent;
+            color: $white;
+            width: 100%;
+
+            option {
+                color: $black;
+            }
+
+            @media screen and (max-width: $screen-sm) {
+              height: 45px;
+            }
+        }
+
+        input {
+            @include border-radius(30px);
+        }
+
+        ::-webkit-input-placeholder { color: $white }
+        input:-moz-placeholder { color: $white }
+
+    }
+
+    .container-form-ask {
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-wrap(wrap);
+
+        .js-form-item {
+            width: calc((100% / 6) - 20px);
+            margin-right: 20px;
+        }
+
+        @media screen and (max-width: $screen-sm) {
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
+
+            .js-form-item {
+              width: 100%;
+              margin-right: 0;
+              margin-bottom: 10px;
+            }
+        }
+    }
+
+    .form-item-terms-and-conditions {
+        text-align: center;
+        margin: 20px 0 0;
+
+        a {
+            color: $white;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            @media screen and (max-width: $screen-sm) {
+              text-decoration: underline;
+            }
+        }
+    }
+}
+
 /*
 ===========================================================
                         Fin de bloque para formularios

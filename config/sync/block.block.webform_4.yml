@@ -1,0 +1,29 @@
+uuid: 7417a7a5-9095-4bad-a2d4-6bcc8f49fc00
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.formulario_home
+  module:
+    - gaviasthemer
+    - webform
+  theme:
+    - gavias_edmix
+third_party_settings:
+  gaviasthemer:
+    classes: ''
+id: webform_4
+theme: gavias_edmix
+region: other
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Formulario home - Inscríbete'
+  provider: webform
+  label_display: '0'
+  webform_id: formulario_home
+  default_data: ''
+  redirect: false
+visibility: {  }
