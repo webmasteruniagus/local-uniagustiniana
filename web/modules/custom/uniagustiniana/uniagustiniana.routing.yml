@@ -33,3 +33,11 @@ uniagustiniana.download_program:
     _title: 'Universidad agustiniana'
   requirements:
     _permission: 'access content'
+
+uniagustiniana.config:
+  path: '/admin/uniagustiniana/config'
+  defaults:
+    _form: '\Drupal\uniagustiniana\Form\ConfigurationForm'
+    _title: 'Uniagustiniana configuraciones'
+  requirements:
+    _permission: 'administer site configuration'

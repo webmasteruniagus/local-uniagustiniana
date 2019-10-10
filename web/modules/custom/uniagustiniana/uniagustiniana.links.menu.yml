@@ -4,3 +4,11 @@ uniagustiniana.main:
   parent: system.admin
   route_name: uniagustiniana.main
   weight: 100
+
+uniagustiniana.config:
+  title: 'Configuraciones del sitio'
+  route_name: uniagustiniana.config
+  route_parameters: { package: 'Config' }
+  description: 'Configuraciones'
+  parent: uniagustiniana.main
+  weight: 99
