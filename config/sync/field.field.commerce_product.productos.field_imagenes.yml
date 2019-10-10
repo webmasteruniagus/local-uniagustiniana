@@ -1,20 +1,20 @@
-uuid: 98088f17-7668-41da-864f-f02d2cd6ad95
+uuid: a31b30f8-0542-457c-bcc4-02ddb7bc0adf
 langcode: es
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_type.mercaderia
-    - field.storage.commerce_product.field_course_images
+    - commerce_product.commerce_product_type.productos
+    - field.storage.commerce_product.field_imagenes
   module:
     - image
-id: commerce_product.mercaderia.field_course_images
-field_name: field_course_images
+id: commerce_product.productos.field_imagenes
+field_name: field_imagenes
 entity_type: commerce_product
-bundle: mercaderia
-label: 'Imágenes de producto'
-description: ''
-required: true
-translatable: true
+bundle: productos
+label: 'Imágenes del producto'
+description: 'Imágenes a mostrar de esté producto'
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -24,7 +24,7 @@ settings:
   max_resolution: ''
   min_resolution: ''
   alt_field: true
-  alt_field_required: true
+  alt_field_required: false
   title_field: false
   title_field_required: false
   default_image:

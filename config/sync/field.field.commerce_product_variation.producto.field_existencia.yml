@@ -1,0 +1,23 @@
+uuid: f91a44c6-4422-4b8c-afbf-0a06cd194451
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.producto
+    - field.storage.commerce_product_variation.field_existencia
+  module:
+    - commerce_stock_field
+id: commerce_product_variation.producto.field_existencia
+field_name: field_existencia
+entity_type: commerce_product_variation
+bundle: producto
+label: Existencia
+description: 'Existencia por producto'
+required: false
+translatable: false
+default_value:
+  -
+    value: null
+default_value_callback: ''
+settings: {  }
+field_type: commerce_stock_level

@@ -1,9 +1,9 @@
-uuid: b38128db-1118-4c7e-81f1-2d1fb3d1a6f7
+uuid: 750d0ff7-5708-4951-b3d3-2608b1001ff1
 langcode: es
 status: true
 dependencies: {  }
-id: mercaderia
-label: Productos
+id: producto
+label: Producto
 orderItemType: default
 generateTitle: false
 traits: {  }

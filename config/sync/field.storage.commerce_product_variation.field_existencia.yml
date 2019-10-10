@@ -1,12 +1,12 @@
-uuid: 1397f42a-013d-4360-a73b-5ec38b055224
+uuid: 51772edf-7b5b-4be1-aff7-29e84024f791
 langcode: es
 status: true
 dependencies:
   module:
     - commerce_product
     - commerce_stock_field
-id: commerce_product_variation.field_inventario
-field_name: field_inventario
+id: commerce_product_variation.field_existencia
+field_name: field_existencia
 entity_type: commerce_product_variation
 type: commerce_stock_level
 settings: {  }

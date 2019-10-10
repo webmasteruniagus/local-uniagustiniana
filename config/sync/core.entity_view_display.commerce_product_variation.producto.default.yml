@@ -1,20 +1,20 @@
-uuid: e7de4ea5-5ee1-44d8-a082-71158f5f343f
+uuid: 24f28c70-b58a-4c69-9a22-2ad17b88f777
 langcode: es
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_variation_type.mercaderia
-    - field.field.commerce_product_variation.mercaderia.field_inventario
+    - commerce_product.commerce_product_variation_type.producto
+    - field.field.commerce_product_variation.producto.field_existencia
   module:
     - commerce_price
     - commerce_stock_field
-id: commerce_product_variation.mercaderia.default
+id: commerce_product_variation.producto.default
 targetEntityType: commerce_product_variation
-bundle: mercaderia
+bundle: producto
 mode: default
 content:
-  field_inventario:
-    weight: 1
+  field_existencia:
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }

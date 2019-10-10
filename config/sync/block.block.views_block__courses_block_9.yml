@@ -5,8 +5,8 @@ dependencies:
   config:
     - views.view.courses
   module:
+    - ctools
     - gaviasthemer
-    - system
     - views
   theme:
     - gavias_edmix
@@ -28,8 +28,10 @@ settings:
   items_per_page: none
   context_mapping: {  }
 visibility:
-  request_path:
-    id: request_path
-    pages: '/product/*'
+  'entity_bundle:commerce_product':
+    id: 'entity_bundle:commerce_product'
+    bundles:
+      course: course
     negate: false
-    context_mapping: {  }
+    context_mapping:
+      commerce_product: '@commerce_product.product_route_context:commerce_product'

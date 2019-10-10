@@ -1,16 +1,16 @@
-uuid: 7fac8a56-0e5b-42ff-b4bf-32b25331c202
+uuid: c38ed927-2ce2-4ef1-bb21-67ba284a1929
 langcode: es
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_variation_type.mercaderia
-    - field.field.commerce_product_variation.mercaderia.field_inventario
+    - commerce_product.commerce_product_variation_type.producto
+    - field.field.commerce_product_variation.producto.field_existencia
   module:
     - commerce_price
     - commerce_stock_field
-id: commerce_product_variation.mercaderia.default
+id: commerce_product_variation.producto.default
 targetEntityType: commerce_product_variation
-bundle: mercaderia
+bundle: producto
 mode: default
 content:
   commerce_stock_always_in_stock:
@@ -20,8 +20,8 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  field_inventario:
-    weight: 91
+  field_existencia:
+    weight: 92
     settings:
       custom_transaction_note: false
       default_transaction_note: 'Transaction issued by stock level field.'

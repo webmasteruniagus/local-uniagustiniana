@@ -1,0 +1,34 @@
+uuid: 6cf57723-16c1-4939-a07e-92f771b640a6
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - ctools
+    - language
+id: productos_agustiniana
+label: Productos
+type: 'canonical_entities:commerce_product'
+pattern: 'producto/[commerce_product:title]'
+selection_criteria:
+  9fbe9817-0f3b-4b5c-96bd-30ef5f4252c7:
+    id: 'entity_bundle:commerce_product'
+    bundles:
+      productos: productos
+    negate: false
+    context_mapping:
+      commerce_product: commerce_product
+    uuid: 9fbe9817-0f3b-4b5c-96bd-30ef5f4252c7
+  1cd885b4-68e0-4ea9-a7e2-3317302c0163:
+    id: language
+    langcodes:
+      es: es
+    negate: false
+    context_mapping:
+      language: 'commerce_product:langcode:language'
+    uuid: 1cd885b4-68e0-4ea9-a7e2-3317302c0163
+selection_logic: and
+weight: -10
+relationships:
+  'commerce_product:langcode:language':
+    label: Idioma

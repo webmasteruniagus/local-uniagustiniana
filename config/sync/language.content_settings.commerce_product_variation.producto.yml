@@ -1,0 +1,11 @@
+uuid: 3f8b46dd-1b0f-4fc9-b2d4-2a2ddbf6ee54
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.producto
+id: commerce_product_variation.producto
+target_entity_type_id: commerce_product_variation
+target_bundle: producto
+default_langcode: site_default
+language_alterable: false

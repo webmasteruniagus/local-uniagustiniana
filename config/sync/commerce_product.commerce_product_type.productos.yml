@@ -1,0 +1,12 @@
+uuid: c112fa1a-459e-40c7-b7a1-5d8c90121383
+langcode: es
+status: true
+dependencies: {  }
+id: productos
+label: Productos
+description: 'Mercadería uniagustiniana'
+variationType: producto
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

@@ -1,15 +1,15 @@
-uuid: e575c524-bc50-4c36-9ee5-4c183931e6ae
+uuid: 38ae3460-60e5-4ffe-8834-bc0a0c6b2c5e
 langcode: es
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_type.mercaderia
-    - commerce_product.commerce_product_variation_type.mercaderia
+    - commerce_product.commerce_product_type.productos
+    - commerce_product.commerce_product_variation_type.producto
     - field.storage.commerce_product.variations
-id: commerce_product.mercaderia.variations
+id: commerce_product.productos.variations
 field_name: variations
 entity_type: commerce_product
-bundle: mercaderia
+bundle: productos
 label: Variations
 description: ''
 required: true
@@ -20,5 +20,5 @@ settings:
   handler: 'default:commerce_product_variation'
   handler_settings:
     target_bundles:
-      - mercaderia
+      - producto
 field_type: entity_reference

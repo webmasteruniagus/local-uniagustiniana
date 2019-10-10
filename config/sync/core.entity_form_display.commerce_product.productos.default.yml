@@ -1,22 +1,24 @@
-uuid: f4c78efd-57e2-49ee-87b5-cc4292164932
+uuid: f5abcb6c-ad22-48df-ab8a-5db2fc0addc0
 langcode: es
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_type.mercaderia
-    - field.field.commerce_product.mercaderia.body
-    - field.field.commerce_product.mercaderia.field_course_images
-    - field.field.commerce_product.mercaderia.stores
-    - field.field.commerce_product.mercaderia.variations
+    - commerce_product.commerce_product_type.productos
+    - field.field.commerce_product.productos.body
+    - field.field.commerce_product.productos.field_imagenes
+    - field.field.commerce_product.productos.field_inventario
+    - field.field.commerce_product.productos.stores
+    - field.field.commerce_product.productos.variations
     - image.style.thumbnail
   module:
     - commerce
+    - commerce_stock_field
     - image
     - path
     - text
-id: commerce_product.mercaderia.default
+id: commerce_product.productos.default
 targetEntityType: commerce_product
-bundle: mercaderia
+bundle: productos
 mode: default
 content:
   body:
@@ -34,13 +36,22 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_course_images:
-    weight: 91
+  field_imagenes:
+    weight: 92
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_inventario:
+    weight: 91
+    settings:
+      custom_transaction_note: false
+      default_transaction_note: 'Transaction issued by stock level field.'
+      step: '1'
+    third_party_settings: {  }
+    type: commerce_stock_level_simple_transaction
     region: content
   langcode:
     type: language_select
