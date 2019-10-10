@@ -184,7 +184,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: culma6@gmail.com
+      to_mail: econtinua@uniagustiniana.edu.co
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
