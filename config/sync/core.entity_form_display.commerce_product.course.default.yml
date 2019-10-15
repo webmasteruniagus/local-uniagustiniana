@@ -5,6 +5,7 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.course
     - field.field.commerce_product.course.body
+    - field.field.commerce_product.course.field_codigo_siga
     - field.field.commerce_product.course.field_course_category
     - field.field.commerce_product.course.field_course_comment
     - field.field.commerce_product.course.field_course_duration
@@ -54,6 +55,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_codigo_siga:
+    weight: 24
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_course_category:
     weight: 17
     settings: {  }
