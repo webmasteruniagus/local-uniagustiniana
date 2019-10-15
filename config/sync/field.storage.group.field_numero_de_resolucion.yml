@@ -1,0 +1,21 @@
+uuid: 91a6aa35-cd3e-4f99-9d9d-75273277ab1b
+langcode: es
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_numero_de_resolucion
+field_name: field_numero_de_resolucion
+entity_type: group
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
