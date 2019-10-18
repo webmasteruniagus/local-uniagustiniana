@@ -4,6 +4,7 @@
  * @file
  */
 
+use Drupal\commerce_product\Entity\Product;
 use Drupal\views\ViewExecutable;
 use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -97,7 +98,7 @@ function uniagustiniana_form_alter(&$form, FormStateInterface $form_state, $form
         && $path[1] == 'product'
         && isset($path[2])
         && is_numeric($path[2])) {
-      $product = \Drupal\commerce_product\Entity\Product::load((int) $path[2]);
+      $product = Product::load((int) $path[2]);
       if ($product) {
         $id_programa = $product->get('field_programa')->getValue();
         if (isset($id_programa[0]['target_id'])) {
@@ -124,7 +125,7 @@ function uniagustiniana_form_alter(&$form, FormStateInterface $form_state, $form
  */
 function ask_for_information_form_submit($form, FormStateInterface $form_state) {
   $form_state->setRedirect('entity.group.canonical', [
-    'group' => $form_state->getValue('seleccionar_programa')
+    'group' => $form_state->getValue('seleccionar_programa'),
   ]);
   drupal_set_message('Gracias por registrarte, un asesor se comunicará contigo para ampliar la información del programa de tu interés.');
 }
@@ -200,4 +201,27 @@ function uniagustiniana_tokens($type, $tokens, array $data, array $options, Bubb
 function uniagustiniana_cron() {
   $batch = \Drupal::service('uniagustiniana.soap_siga');
   $batch->getCurses();
+}
+
+/**
+ * Implements hook_mail().
+ */
+function uniagustiniana_mail($key, &$message, $params) {
+  $options = [
+    'langcode' => $message['langcode'],
+  ];
+  switch ($key) {
+    case 'notification':
+      $message['headers'] = [
+        'MIME-Version' => '1.0',
+        'Content-Type' => 'text/html; charset=UTF-8; format=flowed; delsp=yes',
+        'Content-Transfer-Encoding' => '8Bit',
+        'X-Mailer' => 'Drupal',
+      ];
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Notificacion: @title', ['@title' => $params['title']], $options);
+      $message['body'][] = $params['message'];
+      break;
+  }
+
 }

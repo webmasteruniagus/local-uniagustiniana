@@ -1,0 +1,12 @@
+theme: current
+defaults:
+  sender: php_mail
+  formatter: mime_mail
+_core:
+  default_config_hash: IhwTepsVwtbtbcT5GzQKhCXDCRvbk3MNkWqPiuiZ10s
+langcode: es
+modules:
+  uniagustiniana:
+    agustiniana:
+      formatter: mime_mail
+      sender: php_mail
