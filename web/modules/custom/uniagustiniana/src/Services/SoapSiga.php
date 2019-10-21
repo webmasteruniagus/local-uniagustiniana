@@ -47,15 +47,18 @@ class SoapSiga {
 
   private $url;
 
+  private $info;
+
   /**
    * Constructor del formulario.
    */
   public function __construct(ConfigFactoryInterface $config_factory, Connection $connection, RendererInterface $renderer, MailManagerInterface $mail_manager) {
     $this->configFactory = $config_factory->get('uniagustiniana.settings');
+    $this->info = $this->configFactory->get('siga');
     $this->database = $connection;
     $this->renderer = $renderer;
     $this->mailManager = $mail_manager;
-    $this->url = 'http://agustinianaprueba.datasae.com/paquetes/WebServices/web/app.php/api/';
+    $this->url = $this->info['url'];
   }
 
   /**
@@ -64,8 +67,8 @@ class SoapSiga {
   public function getToken() {
     try {
       $client = new Soapclient($this->url . 'obtener_token?wsdl');
-      $client_id = 'agustiniana_webservice';
-      $secret = 'LcU54XCSqzRU';
+      $client_id = $this->info['client_id'];
+      $secret = $this->info['secret'];
       $res = $client->generarToken($client_id, $secret);
       if (is_null($res->access_token)) {
         $error = json_decode($res->ERROR);
@@ -89,7 +92,7 @@ class SoapSiga {
     if (!empty($this->token)) {
       try {
         $client = new Soapclient($this->url . 'usuario?wsdl');
-        $res = $client->autenticar($this->token, 'pablovelez', 'hola1234');
+        $res = $client->autenticar($this->token, $this->info['usuario'], $this->info['clave']);
         if (is_null($res->TOKEN)) {
           throw new SoapFault("Error", $res->ERROR);
         }
@@ -116,7 +119,7 @@ class SoapSiga {
         $res = $client->retornarInformacionCursos($this->tokenAuthentication, '2019');
         $module = 'uniagustiniana';
         $key = 'notification';
-        $to = 'culma6@gmail.com';
+        $to = $this->info['email'];
         if (!empty($res->PROGRAMAS)) {
           $ids = [];
           $rows = [];
@@ -151,7 +154,7 @@ class SoapSiga {
             '#rows' => $rows,
             '#empty' => 'No se encontro información',
           ];
-          $params['message'] = $this->renderer->render($table);
+          $params['message'] = $this->renderer->renderPlain($table);
           $params['title'] = 'Programas siga que no existen en el portal';
         }
         else {

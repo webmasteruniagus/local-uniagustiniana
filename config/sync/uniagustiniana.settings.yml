@@ -1,2 +1,9 @@
 basic:
   label_program: 'Licenciatura de Filosofía'
+siga:
+  url: 'http://agustinianaprueba.datasae.com/paquetes/WebServices/web/app.php/api/'
+  client_id: agustiniana_webservice
+  secret: LcU54XCSqzRU
+  usuario: pablovelez
+  clave: hola1234
+  email: aculma@seedem.co
