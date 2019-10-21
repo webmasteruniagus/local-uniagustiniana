@@ -1,0 +1,19 @@
+uuid: 361a27e9-ef97-447f-8917-5f4c1a0da2c7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_numero_de_resolucion
+    - group.type.programa
+id: group.programa.field_numero_de_resolucion
+field_name: field_numero_de_resolucion
+entity_type: group
+bundle: programa
+label: 'Resolución de registro del programa:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

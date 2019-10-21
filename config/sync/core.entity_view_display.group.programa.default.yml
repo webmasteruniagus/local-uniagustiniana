@@ -22,6 +22,7 @@ dependencies:
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
     - field.field.group.programa.field_nivel_de_formacion
+    - field.field.group.programa.field_numero_de_resolucion
     - field.field.group.programa.field_objetivo_del_programa
     - field.field.group.programa.field_perfil_profesional
     - field.field.group.programa.field_periocidad
@@ -144,6 +145,7 @@ hidden:
   field_metodologia: true
   field_mision: true
   field_nivel_de_formacion: true
+  field_numero_de_resolucion: true
   field_objetivo_del_programa: true
   field_perfil_profesional: true
   field_periocidad: true
@@ -156,4 +158,5 @@ hidden:
   field_vision: true
   label: true
   langcode: true
+  search_api_excerpt: true
   uid: true

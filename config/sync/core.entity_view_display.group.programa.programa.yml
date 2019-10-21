@@ -19,9 +19,11 @@ dependencies:
     - field.field.group.programa.field_imagen
     - field.field.group.programa.field_inscripcion
     - field.field.group.programa.field_materias
+    - field.field.group.programa.field_meta_tags
     - field.field.group.programa.field_metodologia
     - field.field.group.programa.field_mision
     - field.field.group.programa.field_nivel_de_formacion
+    - field.field.group.programa.field_numero_de_resolucion
     - field.field.group.programa.field_objetivo_del_programa
     - field.field.group.programa.field_perfil_profesional
     - field.field.group.programa.field_periocidad
@@ -58,14 +60,14 @@ third_party_settings:
       ds_content:
         - field_perfil_profesional
         - group_programa_block_2
-        - field_titulo
         - field_objetivo_del_programa
+        - field_titulo
         - field_codigo_snies_8182
         - field_fecha_de_resolucion
-        - group_column_1
         - field_vigencia
-        - field_ciudad
+        - group_column_1
         - group_column_2
+        - field_ciudad
         - field_sede
         - field_nivel_de_formacion
         - field_metodologia
@@ -73,6 +75,7 @@ third_party_settings:
         - field_periocidad
         - field_duracion
         - field_total_creditos
+        - field_numero_de_resolucion
         - group_row_wrapper
   field_group:
     group_programa_block_2:
@@ -106,6 +109,7 @@ third_party_settings:
         - field_periocidad
         - field_duracion
         - field_total_creditos
+        - field_numero_de_resolucion
       parent_name: group_row_wrapper
       weight: 4
       format_type: html_element
@@ -185,15 +189,21 @@ content:
       link_to_entity: false
     third_party_settings: {  }
   field_fecha_de_resolucion:
-    type: datetime_time_ago
+    type: datetime_custom
     weight: 3
     region: ds_content
     label: inline
     settings:
-      future_format: '@interval hence'
-      past_format: '@interval ago'
-      granularity: 2
-    third_party_settings: {  }
+      timezone_override: ''
+      date_format: Y-m-d
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_metodologia:
     type: list_default
     weight: 8
@@ -216,6 +226,14 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+  field_numero_de_resolucion:
+    type: string
+    weight: 13
+    region: ds_content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_objetivo_del_programa:
     type: basic_string
     weight: 1
@@ -275,6 +293,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  addtoany: true
   changed: true
   created: true
   field_block_builder: true
@@ -288,9 +307,11 @@ hidden:
   field_imagen: true
   field_inscripcion: true
   field_materias: true
+  field_meta_tags: true
   field_mision: true
   field_valor_semestre: true
   field_vision: true
   label: true
   langcode: true
+  search_api_excerpt: true
   uid: true
