@@ -6,6 +6,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Render\RendererInterface;
 use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use SoapClient;
 use SoapFault;
 
@@ -38,6 +39,12 @@ class SoapSiga {
    * @var \Drupal\Core\Mail\MailManagerInterface
    */
   protected $mailManager;
+  /**
+   * Servicio para cargar entidad.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
 
   private $token;
 
@@ -52,12 +59,13 @@ class SoapSiga {
   /**
    * Constructor del formulario.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, Connection $connection, RendererInterface $renderer, MailManagerInterface $mail_manager) {
+  public function __construct(ConfigFactoryInterface $config_factory, Connection $connection, RendererInterface $renderer, MailManagerInterface $mail_manager, EntityTypeManagerInterface $entity_type_manager) {
     $this->configFactory = $config_factory->get('uniagustiniana.settings');
     $this->info = $this->configFactory->get('siga');
     $this->database = $connection;
     $this->renderer = $renderer;
     $this->mailManager = $mail_manager;
+    $this->entityTypeManager = $entity_type_manager;
     $this->url = $this->info['url'];
   }
 
@@ -121,29 +129,38 @@ class SoapSiga {
         $key = 'notification';
         $to = $this->info['email'];
         if (!empty($res->PROGRAMAS)) {
-          $ids = [];
           $rows = [];
           foreach ($res->PROGRAMAS as $value) {
-            $ids[] = $value['programa_codigo'];
             $rows[$value['programa_codigo']] = [
               'codigo' => $value['programa_codigo'],
               'nombre' => $value['programa_nombre'],
               'facultad' => $value['programa_facultad'],
               'sede' => $value['programa_sede'],
+              'url' => $value['url_inscripcion'],
             ];
           }
-          $query = $this->database->select('commerce_product__field_codigo_siga', 'cpfc');
-          $query->addField('cpfc', 'field_codigo_siga_value');
-          $query->condition('cpfc.field_codigo_siga_value', $ids, 'IN');
-          $results = $query->execute()->fetchAll();
-          foreach ($results as $result) {
-            unset($rows[$result->field_codigo_siga_value]);
+          $products = $this->entityTypeManager->getStorage('commerce_product')->loadMultiple();
+          foreach ($products as $product) {
+            $idSiga = $product->get('field_codigo_siga')->getValue();
+            if (isset($rows[$idSiga[0]['value']])) {
+              $product->set('field_curso_activo', 1);
+              $product->set('field_enlace_a_siga', [
+                'uri' => $rows[$idSiga[0]['value']]['url'],
+                'title' => 'Enlace',
+              ]);
+              unset($rows[$idSiga[0]['value']]);
+            }
+            else {
+              $product->set('field_curso_activo', 0);
+            }
+            $product->save();
           }
           $header = [
             'codigo' => 'Codigo',
             'nombre' => 'Nombre',
             'facultad' => 'Facultad',
             'sede' => 'Sede',
+            'url' => 'URL',
           ];
           $table['table'] = [
             '#type' => 'table',
@@ -161,7 +178,9 @@ class SoapSiga {
           $params['message'] = 'No se encontraron programas';
           $params['title'] = 'Error al conectarse con el servicio SIGA';
         }
-        $this->mailManager->mail($module, $key, $to, "es", $params, NULL, TRUE);
+        if ($rows) {
+          $this->mailManager->mail($module, $key, $to, "es", $params, NULL, TRUE);
+        }
       }
       catch (SoapFault $e) {
         $this->error = $e->getMessage();

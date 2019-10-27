@@ -12,39 +12,10 @@ dependencies:
     - field_group
     - file
 third_party_settings:
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      ds_content:
-        - group_div
-        - title
-        - document_pdf
-        - field_archivo
-        - field_categoria
-    fields:
-      document_pdf:
-        plugin_id: document_pdf
-        weight: 2
-        label: hidden
-        formatter: default
   field_group:
     group_div:
       children:
         - title
-        - document_pdf
         - field_archivo
         - field_categoria
       parent_name: ''
@@ -61,6 +32,28 @@ third_party_settings:
         id: ''
         classes: eck-entity
       label: Adjuntos
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - langcode
+        - created
+        - field_mostrar_pdf
+        - title
+        - field_archivo
+        - field_categoria
 id: documentos.documento.default
 targetEntityType: documentos
 bundle: documento
@@ -81,7 +74,7 @@ content:
             lb-col: false
             classes: {  }
     type: file_default
-    region: ds_content
+    region: content
   field_categoria:
     weight: 4
     label: above
@@ -96,12 +89,12 @@ content:
             lb-col: false
             classes: {  }
     type: entity_reference_label
-    region: ds_content
+    region: content
   title:
     label: hidden
     type: string
     weight: 1
-    region: ds_content
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -116,3 +109,4 @@ hidden:
   created: true
   field_mostrar_pdf: true
   langcode: true
+  search_api_excerpt: true

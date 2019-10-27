@@ -15,6 +15,7 @@ dependencies:
     - field.field.commerce_product.course.field_course_level
     - field.field.commerce_product.course.field_course_teacher
     - field.field.commerce_product.course.field_course_video
+    - field.field.commerce_product.course.field_curso_activo
     - field.field.commerce_product.course.field_enlace_a_siga
     - field.field.commerce_product.course.field_financiacion
     - field.field.commerce_product.course.field_financieras
@@ -29,9 +30,9 @@ dependencies:
     - datetime
     - ds
     - image
-    - link
     - options
     - text
+    - uniagustiniana
 id: commerce_product.course.default
 targetEntityType: commerce_product
 bundle: course
@@ -111,16 +112,11 @@ content:
     type: string
     region: content
   field_enlace_a_siga:
-    type: link
+    type: commerce_plugin_url_siga
     weight: 11
     region: content
     label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+    settings: {  }
     third_party_settings: {  }
   field_financiacion:
     weight: 13
@@ -197,6 +193,7 @@ hidden:
   created: true
   field_codigo_siga: true
   field_course_comment: true
+  field_curso_activo: true
   field_programa: true
   langcode: true
   search_api_excerpt: true
