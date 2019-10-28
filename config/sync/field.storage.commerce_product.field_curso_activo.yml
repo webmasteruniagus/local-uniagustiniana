@@ -1,0 +1,18 @@
+uuid: 7566cddf-5afc-4b3f-857a-f9b822a7454a
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_curso_activo
+field_name: field_curso_activo
+entity_type: commerce_product
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

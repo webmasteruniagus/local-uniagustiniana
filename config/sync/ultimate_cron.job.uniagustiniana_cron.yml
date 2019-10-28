@@ -1,0 +1,29 @@
+uuid: 5a152e58-6652-4510-9a56-5ab4d154d02b
+langcode: es
+status: true
+dependencies:
+  module:
+    - uniagustiniana
+title: 'Default cron handler'
+id: uniagustiniana_cron
+weight: 0
+module: uniagustiniana
+callback: uniagustiniana_cron
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '0+@ 0 * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000
