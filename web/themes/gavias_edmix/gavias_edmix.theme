@@ -366,6 +366,11 @@ function gavias_edmix_theme_suggestions_page_alter(array &$suggestions, array $v
       array_splice($suggestions, 1, 0, 'page__group__' . $group->bundle());
     }
   }
+  if ($product = \Drupal::request()->attributes->get('commerce_product')) {
+    if ($product->bundle() == 'productos' || $product->bundle() == 'course') {
+      array_splice($suggestions, 1, 0, 'page__commerce__' . $product->bundle());
+    }
+  }
 }
 
 function gavias_edmix_theme_suggestions_field_alter(&$suggestions, $variables) {

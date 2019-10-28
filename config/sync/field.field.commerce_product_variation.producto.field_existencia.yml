@@ -11,13 +11,13 @@ id: commerce_product_variation.producto.field_existencia
 field_name: field_existencia
 entity_type: commerce_product_variation
 bundle: producto
-label: Existencia
-description: 'Existencia por producto'
+label: Existencias
+description: 'Cantidades existentes'
 required: false
 translatable: false
 default_value:
   -
-    value: null
+    value: 0
 default_value_callback: ''
 settings: {  }
 field_type: commerce_stock_level

@@ -1,0 +1,14 @@
+uuid: 542d9dd0-b914-4753-950f-4908c9dc0bba
+langcode: es
+status: true
+dependencies: {  }
+name: products_gallery_thumbs_115x115
+label: 'Products gallery thumbs 115x115'
+effects:
+  2a41cd8f-3451-493c-8c23-37dcc2d24833:
+    uuid: 2a41cd8f-3451-493c-8c23-37dcc2d24833
+    id: image_resize
+    weight: 1
+    data:
+      width: 115
+      height: 115

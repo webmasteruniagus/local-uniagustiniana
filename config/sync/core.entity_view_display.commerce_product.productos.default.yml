@@ -12,7 +12,8 @@ dependencies:
   module:
     - commerce_product
     - commerce_stock_field
-    - image
+    - ds
+    - image_url_formatter
     - text
 id: commerce_product.productos.default
 targetEntityType: commerce_product
@@ -22,18 +23,27 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 4
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_imagenes:
     weight: 1
-    label: above
+    label: hidden
     settings:
+      url_type: '1'
       image_style: ''
       image_link: ''
-    third_party_settings: {  }
-    type: image
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image_url
     region: content
   field_inventario:
     weight: 3
@@ -52,12 +62,12 @@ content:
     third_party_settings: {  }
   variations:
     type: commerce_add_to_cart
-    weight: 2
+    weight: 4
+    region: content
     label: above
     settings:
       combine: true
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   langcode: true

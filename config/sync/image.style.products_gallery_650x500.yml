@@ -1,0 +1,14 @@
+uuid: 12a090a9-8241-467a-9557-057b8ff2edac
+langcode: es
+status: true
+dependencies: {  }
+name: products_gallery_650x500
+label: 'Products gallery 650x500'
+effects:
+  cd9e6430-14d7-421f-942a-4700004bb6b8:
+    uuid: cd9e6430-14d7-421f-942a-4700004bb6b8
+    id: image_resize
+    weight: 1
+    data:
+      width: 650
+      height: 500

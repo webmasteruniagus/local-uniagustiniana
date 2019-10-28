@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: productos
 label: Productos
-description: 'Mercadería uniagustiniana'
+description: 'Productos de la universidad agustiniana'
 variationType: producto
 multipleVariations: true
 injectVariationFields: true

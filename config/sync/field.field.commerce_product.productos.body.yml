@@ -11,7 +11,7 @@ id: commerce_product.productos.body
 field_name: body
 entity_type: commerce_product
 bundle: productos
-label: Body
+label: Descripción
 description: ''
 required: false
 translatable: true

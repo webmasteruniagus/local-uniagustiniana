@@ -1,0 +1,69 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<article{{ attributes}}>
+  <div class="products-mercaderia">
+
+    <div class="product-content">
+      <h1{{ title_attributes.addClass('post-title') }}>{{ product.title }}</h1>
+
+      <div class="product-slider">
+        <div class="swiper-container products-gallery--top">
+          <div class="swiper-wrapper">
+            {% for item in product.field_imagenes['#items'] %}
+              <div class="swiper-slide">
+                <img src="{{ file_url(item.entity.uri.value|image_style('products_gallery_650x500')) }}" alt="{{item.values.alt}}">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="swiper-container products-gallery--thumbs">
+          <div class="swiper-wrapper">
+            {% for item in product.field_imagenes['#items'] %}
+              <div class="swiper-slide">
+                <img src="{{ file_url(item.entity.uri.value|image_style('products_gallery_thumbs_115x115')) }}" alt="{{item.values.alt}}">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="product-description">
+        {% if product.body %}
+          {{ product.body }}
+        {% endif %}
+      </div>
+
+      <div class="add-to-cart-content-inner">
+        {{product.variation_price|raw}}
+        {{product.variation_list_price|raw}}
+        {{product.variations|raw}}
+      </div>
+
+      <div class="post-content">
+        <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+          {{- product|without('field_imagenes', 'body', 'variation_price', 'variations', 'field_existencia', 'title', 'field_inventario', 'variation_list_price', 'variation_field_existencia') -}}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
