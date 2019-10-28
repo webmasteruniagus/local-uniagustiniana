@@ -93,7 +93,7 @@ class ConfigurationForm extends ConfigFormBase {
     ];
 
     $form['siga']['email'] = [
-      '#type' => 'email',
+      '#type' => 'textfield',
       '#title' => 'Correos',
       '#default_value' => $siga['email'] ?? FALSE,
       '#description' => $this->t('Si desea mas de un correo separarlos por ,'),

@@ -141,19 +141,21 @@ class SoapSiga {
           }
           $products = $this->entityTypeManager->getStorage('commerce_product')->loadMultiple();
           foreach ($products as $product) {
-            $idSiga = $product->get('field_codigo_siga')->getValue();
-            if (isset($rows[$idSiga[0]['value']])) {
-              $product->set('field_curso_activo', 1);
-              $product->set('field_enlace_a_siga', [
-                'uri' => $rows[$idSiga[0]['value']]['url'],
-                'title' => 'Enlace',
-              ]);
-              unset($rows[$idSiga[0]['value']]);
+            if ($product->bundle() == 'course') {
+              $idSiga = $product->get('field_codigo_siga')->getValue();
+              if (isset($rows[$idSiga[0]['value']])) {
+                $product->set('field_curso_activo', 1);
+                $product->set('field_enlace_a_siga', [
+                  'uri' => $rows[$idSiga[0]['value']]['url'],
+                  'title' => 'Realizar inscripción',
+                ]);
+                unset($rows[$idSiga[0]['value']]);
+              }
+              else {
+                $product->set('field_curso_activo', 0);
+              }
+              $product->save();
             }
-            else {
-              $product->set('field_curso_activo', 0);
-            }
-            $product->save();
           }
           $header = [
             'codigo' => 'Codigo',
