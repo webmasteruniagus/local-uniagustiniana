@@ -3,7 +3,15 @@
                         Página de cursos
 ===========================================================
 */
+.add-to-cart-content-inner {
+  @include flexbox;
+  @include align-items(center);
 
+  .disabled-course {
+    color: #C67C22;
+    font-weight: bold;
+  }
+}
 .financiacion {
   &__title {
     h3 {

@@ -40,7 +40,7 @@ class CustomFieldUrlSiga extends FormatterBase {
     }
     else {
       $elements = [
-        '#markup' => "Este curso no se encuentra activo en el momento",
+        '#markup' => "<p class='disabled-course'>Este curso no se encuentra activo en el momento.</p>",
       ];
     }
 
