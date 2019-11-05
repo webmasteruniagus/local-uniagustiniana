@@ -97,6 +97,8 @@ function uniagustiniana_form_alter(&$form, FormStateInterface $form_state, $form
         && $path[1] == 'product'
         && isset($path[2])
         && is_numeric($path[2])) {
+      $form['elements']['curso']['#default_value'] = $path[2];
+      $form['elements']['curso']['#access'] = FALSE;
       $product = \Drupal\commerce_product\Entity\Product::load((int) $path[2]);
       if ($product) {
         $id_programa = $product->get('field_programa')->getValue();

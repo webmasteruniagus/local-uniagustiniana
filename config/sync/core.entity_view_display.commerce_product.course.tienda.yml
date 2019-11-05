@@ -137,6 +137,9 @@ hidden:
   field_course_level: true
   field_course_teacher: true
   field_enlace_a_siga: true
+  field_financiacion: true
+  field_financieras: true
+  field_programa: true
   langcode: true
   search_api_excerpt: true
   stores: true
