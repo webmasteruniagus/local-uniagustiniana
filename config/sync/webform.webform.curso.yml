@@ -12,7 +12,7 @@ id: curso
 title: Curso
 description: ''
 category: ''
-elements: "title:\n  '#type': processed_text\n  '#admin_title': Título\n  '#text': '<h2 class=\"block-title\"><span>Para descargar el programa diligencia el formulario</span></h2>'\n  '#format': full_html\ncontainer:\n  '#type': container\n  '#attributes':\n    class:\n      - form-cursos-wrapper\n  nombre:\n    '#type': textfield\n    '#title': 'Nombre completo'\n    '#title_display': invisible\n    '#placeholder': 'Nombre completo*'\n    '#autocomplete': 'off'\n    '#required': true\n  email:\n    '#type': email\n    '#title': Email\n    '#title_display': invisible\n    '#placeholder': 'Email*'\n    '#autocomplete': 'off'\n    '#required': true\n  celular:\n    '#type': tel\n    '#title': Celular\n    '#title_display': invisible\n    '#placeholder': 'Celular*'\n    '#autocomplete': 'off'\n    '#required': true\n  actions:\n    '#type': webform_actions\n    '#title': 'Submit button(s)'\n    '#submit__label': 'Descargar programa'"
+elements: "title:\n  '#type': processed_text\n  '#admin_title': Título\n  '#text': '<h2 class=\"block-title\"><span>Para descargar el programa diligencia el formulario</span></h2>'\n  '#format': full_html\ncontainer:\n  '#type': container\n  '#attributes':\n    class:\n      - form-cursos-wrapper\n  nombre:\n    '#type': textfield\n    '#title': 'Nombre completo'\n    '#title_display': invisible\n    '#placeholder': 'Nombre completo*'\n    '#autocomplete': 'off'\n    '#required': true\n  email:\n    '#type': email\n    '#title': Email\n    '#title_display': invisible\n    '#placeholder': 'Email*'\n    '#autocomplete': 'off'\n    '#required': true\n  celular:\n    '#type': tel\n    '#title': Celular\n    '#title_display': invisible\n    '#placeholder': 'Celular*'\n    '#autocomplete': 'off'\n    '#required': true\n  actions:\n    '#type': webform_actions\n    '#title': 'Submit button(s)'\n    '#submit__label': 'Descargar programa'\ncurso:\n  '#type': webform_entity_select\n  '#title': Curso\n  '#title_display': invisible\n  '#description_display': invisible\n  '#target_type': commerce_product\n  '#selection_handler': 'default:commerce_product'\n  '#selection_settings':\n    target_bundles:\n      course: course"
 css: ''
 javascript: ''
 settings:
@@ -194,7 +194,7 @@ handlers:
       from_options: {  }
       from_name: _default
       subject: 'UNIAGUSTINIANA | EDUCONTINUA - Registro exitoso'
-      body: "<p>Submitted on {{ webform_token('[webform_submission:created]', webform_submission) }}</p>\r\n<p>Submitted by: {{ webform_token('[webform_submission:user]', webform_submission) }}</p>\r\n<p>Submitted values are:</p>\r\n{{ webform_token('[webform_submission:values]', webform_submission) }}\r\n"
+      body: "<p>Enviado {{ webform_token('[webform_submission:created]', webform_submission) }}</p>\r\n<p>Información</p>\r\n{{ webform_token('[webform_submission:values]', webform_submission) }}\r\n"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
