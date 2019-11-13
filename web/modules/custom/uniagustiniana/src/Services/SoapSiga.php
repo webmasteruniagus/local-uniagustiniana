@@ -117,7 +117,6 @@ class SoapSiga {
           'uri' => '',
           'stream_context' => $this->context,
         ]);
-        // $client = new Soapclient($this->url . 'usuario?wsdl');
         $res = $client->autenticar($this->token, $this->info['usuario'], $this->info['clave']);
         if (is_null($res->TOKEN)) {
           throw new SoapFault("Error", $res->ERROR);
@@ -145,7 +144,6 @@ class SoapSiga {
           'uri' => '',
           'stream_context' => $this->context,
         ]);
-        // $client = new Soapclient($this->url . 'oferta_academica?wsdl');
         // '2019', 'PREG', '1.
         $res = $client->retornarInformacionCursos($this->tokenAuthentication, '2019');
         $module = 'uniagustiniana';
