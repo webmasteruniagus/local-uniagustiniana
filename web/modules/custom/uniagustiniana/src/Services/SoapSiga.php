@@ -56,6 +56,8 @@ class SoapSiga {
 
   private $info;
 
+  private $context;
+
   /**
    * Constructor del formulario.
    */
@@ -67,6 +69,13 @@ class SoapSiga {
     $this->mailManager = $mail_manager;
     $this->entityTypeManager = $entity_type_manager;
     $this->url = $this->info['url'];
+    $this->context = stream_context_create([
+      'ssl' => [
+        'verify_peer' => FALSE,
+        'verify_peer_name' => FALSE,
+        'allow_self_signed' => TRUE,
+      ],
+    ]);
   }
 
   /**
@@ -74,7 +83,11 @@ class SoapSiga {
    */
   public function getToken() {
     try {
-      $client = new Soapclient($this->url . 'obtener_token?wsdl');
+      $client = new SoapClient(NULL, [
+        'location' => $this->url . 'obtener_token',
+        'uri' => '',
+        'stream_context' => $this->context,
+      ]);
       $client_id = $this->info['client_id'];
       $secret = $this->info['secret'];
       $res = $client->generarToken($client_id, $secret);
@@ -99,7 +112,12 @@ class SoapSiga {
     $this->getToken();
     if (!empty($this->token)) {
       try {
-        $client = new Soapclient($this->url . 'usuario?wsdl');
+        $client = new SoapClient(NULL, [
+          'location' => $this->url . 'usuario',
+          'uri' => '',
+          'stream_context' => $this->context,
+        ]);
+        // $client = new Soapclient($this->url . 'usuario?wsdl');
         $res = $client->autenticar($this->token, $this->info['usuario'], $this->info['clave']);
         if (is_null($res->TOKEN)) {
           throw new SoapFault("Error", $res->ERROR);
@@ -122,7 +140,12 @@ class SoapSiga {
     $this->getTokenCursos();
     if (!empty($this->tokenAuthentication)) {
       try {
-        $client = new Soapclient($this->url . 'oferta_academica?wsdl');
+        $client = new SoapClient(NULL, [
+          'location' => $this->url . 'oferta_academica',
+          'uri' => '',
+          'stream_context' => $this->context,
+        ]);
+        // $client = new Soapclient($this->url . 'oferta_academica?wsdl');
         // '2019', 'PREG', '1.
         $res = $client->retornarInformacionCursos($this->tokenAuthentication, '2019');
         $module = 'uniagustiniana';
