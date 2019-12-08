@@ -145,7 +145,7 @@ class SoapSiga {
           'stream_context' => $this->context,
         ]);
         // '2019', 'PREG', '1.
-        $res = $client->retornarInformacionCursos($this->tokenAuthentication, '2019');
+        $res = $client->retornarInformacionCursos($this->tokenAuthentication, '2020', 'PREG', '1');
         $module = 'uniagustiniana';
         $key = 'notification';
         $to = $this->info['email'];
