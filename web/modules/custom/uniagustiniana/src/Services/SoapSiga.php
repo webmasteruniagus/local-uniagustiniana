@@ -145,7 +145,7 @@ class SoapSiga {
           'stream_context' => $this->context,
         ]);
         // '2019', 'PREG', '1.
-        $res = $client->retornarInformacionCursos($this->tokenAuthentication, '2019');
+        $res = $client->retornarInformacionCursos($this->tokenAuthentication, $this->info['ano'], $this->info['argument'], '1');
         $module = 'uniagustiniana';
         $key = 'notification';
         $to = $this->info['email'];
@@ -201,7 +201,7 @@ class SoapSiga {
           $params['message'] = 'No se encontraron programas';
           $params['title'] = 'Error al conectarse con el servicio SIGA';
         }
-        if ($rows) {
+        if (isset($rows)) {
           $this->mailManager->mail($module, $key, $to, "es", $params, NULL, TRUE);
         }
       }

@@ -92,6 +92,21 @@ class ConfigurationForm extends ConfigFormBase {
       ],
     ];
 
+    $form['siga']['ano'] = [
+      '#type' => 'number',
+      '#title' => 'Año',
+      '#default_value' => $siga['ano'] ?? FALSE,
+      '#required' => TRUE,
+    ];
+
+    $form['siga']['argument'] = [
+      '#type' => 'textfield',
+      '#title' => 'Argumento',
+      '#default_value' => $siga['argument'] ?? FALSE,
+      '#required' => TRUE,
+      '#description' => $this->t('Ejemplo PREG o CURS'),
+    ];
+
     $form['siga']['email'] = [
       '#type' => 'textfield',
       '#title' => 'Correos',
