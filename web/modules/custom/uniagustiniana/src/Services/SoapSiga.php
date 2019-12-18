@@ -145,13 +145,15 @@ class SoapSiga {
           'stream_context' => $this->context,
         ]);
         // '2019', 'PREG', '1.
-        $res = $client->retornarInformacionCursos($this->tokenAuthentication, $this->info['ano'], $this->info['argument'], '1');
+        $resTagasta = $client->retornarInformacionCursos($this->tokenAuthentication, $this->info['ano'], $this->info['argument'], '1');
+        $resVirtual = $client->retornarInformacionCursos($this->tokenAuthentication, $this->info['ano'], $this->info['argument'], '4');
         $module = 'uniagustiniana';
         $key = 'notification';
         $to = $this->info['email'];
-        if (!empty($res->PROGRAMAS)) {
+        if (!empty($resTagasta->PROGRAMAS) || !empty($resVirtual->PROGRAMAS)) {
+          $programas = array_merge($resTagasta->PROGRAMAS, $resVirtual->PROGRAMAS);
           $rows = [];
-          foreach ($res->PROGRAMAS as $value) {
+          foreach ($programas as $value) {
             $rows[$value['programa_codigo']] = [
               'codigo' => $value['programa_codigo'],
               'nombre' => $value['programa_nombre'],
