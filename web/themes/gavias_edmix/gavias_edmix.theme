@@ -60,6 +60,10 @@ function gavias_edmix_preprocess_page(&$variables) {
   $custom_social_link['youtube']    = theme_get_setting('youtube');
   $custom_social_link['vimeo']      = theme_get_setting('vimeo');
   $custom_social_link['tumblr']     = theme_get_setting('tumblr');
+  #--PRUEBA--#
+  $custom_social_link['mail']     = theme_get_setting('mail');
+  $custom_social_link['siga']     = theme_get_setting('siga');
+    #--PRUEBA--#
   $variables['custom_social_link']  = $custom_social_link;
 
   $custom_account = '';

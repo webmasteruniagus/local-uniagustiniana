@@ -177,6 +177,20 @@ function gavias_edmix_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Link Tumblr'),
     '#default_value' => theme_get_setting('tumblr'),
   );
+  #-------------PRUEBA------------#
+  
+  $form['social']['mail'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Mail'),
+    '#default_value' => theme_get_setting('mail'),
+  );
+  $form['social']['siga'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Siga'),
+    '#default_value' => theme_get_setting('siga'),
+  );
+  
+  #-------------------------------#
 
   /*--------- Setting Footer ------------ */
   $form['footer'] = array(
